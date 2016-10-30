@@ -62,3 +62,29 @@
 
 3.bevel  斜面
 
+\#内置画矩形的API
+
+1.ctx.rect\(起始x轴坐标, 起始y轴坐标,宽,高 \);
+
+2 .ctx.fillrect\(\); 
+
+3 .ctx.fillrect\(\);
+
+\#清除画布
+
+ctx.clearRect\(\),清除之后,可以重新绘制图形
+
+\#设置虚线  ctx.setLineDash\( \[5,3\] \);
+
+\*传一个代表空白部分和实线部分都是这个值
+
+\*多个值: 按顺序排\(实线开始\),偶数值是一组
+
+\#ctx.getLineDash\(\) 获取线条绘制规则
+
+\#ctx.lineDashOffset = 3; 设置偏移量
+
+
+
+
+
