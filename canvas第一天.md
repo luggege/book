@@ -70,7 +70,7 @@
 
 2 .ctx.fillrect\(\);
 
-3 .ctx.fillrect\(\);
+3 .ctx.strokerect\(\);
 
 \#清除画布
 
