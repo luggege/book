@@ -24,3 +24,15 @@
 
 \*ctx.lineWidth = 6;  \(属性,无单位\)
 
+\#闭合路径
+
+\*ctx.closePath\(\);  解决锯齿
+
+\#清除当前路径,开启新路径  \*ctx.beginPath\(\)
+
+\#填充  
+
+\*ctx.fill\(\);
+
+\#\#填充色  ctx.fillStyle = 颜色表示;
+
