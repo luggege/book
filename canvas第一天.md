@@ -10,6 +10,8 @@
 
 1.先移动钢笔到指定位置    ctx.moveTo\(\)
 
+\*有了 ctx.stroke\(\) 之后,不设当前位置也可以
+
 2.开始画线条  ctx.lineTo\(\)
 
 3.描边路径  ctx.stroke\(\)
@@ -83,6 +85,4 @@ ctx.clearRect\(\),清除之后,可以重新绘制图形
 \# 获取线条绘制规则  ctx.getLineDash\(\)
 
 \# 设置偏移量  ctx.lineDashOffset = 3;
-
-
 
