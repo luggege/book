@@ -66,7 +66,7 @@
 
 1.ctx.rect\(起始x轴坐标, 起始y轴坐标,宽,高 \);
 
-2 .ctx.fillrect\(\); 
+2 .ctx.fillrect\(\);
 
 3 .ctx.fillrect\(\);
 
@@ -80,9 +80,9 @@ ctx.clearRect\(\),清除之后,可以重新绘制图形
 
 \*多个值: 按顺序排\(实线开始\),偶数值是一组
 
-\#ctx.getLineDash\(\) 获取线条绘制规则
+\# 获取线条绘制规则  ctx.getLineDash\(\) 
 
-\#ctx.lineDashOffset = 3; 设置偏移量
+\# 设置偏移量  ctx.lineDashOffset = 3; 
 
 
 
