@@ -30,9 +30,17 @@ ctx.font = 和css语法一样;
 
 注意:　１.字体大小必须带单位，支持ＣＳＳ的所有表示方式．　２.必须加一个额外样式才会生效
 
-\#\#1.填充文字
+\#\#2.填充文字
 
 ctx.fillText\(文字,参考x轴坐标, 参考Y轴坐标,限制文字的最大长度\(可选\) \);
 
+\#\#文字的水平对齐方式
 
+\*ctx.textAlign = "left \|\| start" \/ "right \|\| end"\/ "center";   默认start
+
+\#\#文字的垂直对齐方式
+
+\*ctx.textBaseline  = "top"  \/ "bottom" \/ "middle" \/   
+
+"alphabetic"\(默认基线\)  \/ "hanging" \/" ideographic"
 
