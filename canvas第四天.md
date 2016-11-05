@@ -21,7 +21,11 @@ gameScene模块
 -draw: 绘制大地
 -updata: 更新下一帧绘制时需要的数据
 ###sky模块
+-draw: 绘制天空
+-updata: 更新下一帧绘制时需要的数据
 ###pipe模块
+-draw: 绘制管道
+-updata: 更新下一帧绘制时需要的数据
 ###gameScene模块
 -addListener: 添加小鸟死亡事件的听众
 -trrigerBirdOver: 通知听众
