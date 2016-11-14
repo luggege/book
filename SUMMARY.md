@@ -12,5 +12,7 @@
 * [canvas第三天](canvas第3天.md)
 * [canvas第四天](canvas第四天.md)
 * [面向对象](面向对象.md)
-* [面向对象day3-jQuery](面向对象day3-jquery.md)
+* [day3-jQuery-DOM操作](面向对象day3-jquery.md)
+* [jQuery-事件操作](jquery-事件操作.md)
+* [流行框架](ajax请求数据.md)
 
