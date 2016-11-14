@@ -14,5 +14,5 @@
 * [面向对象](面向对象.md)
 * [day3-jQuery-DOM操作](面向对象day3-jquery.md)
 * [jQuery-事件操作](jquery-事件操作.md)
-* [流行框架](ajax请求数据.md)
+* [ ](ajax请求数据.md)
 

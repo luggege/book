@@ -1,6 +1,6 @@
 ###shell分类
->1.图形界面shell
->2.命令行shell(linux下面有bash(默认))
+* 1.图形界面shell
+* 2.命令行shell(linux下面有bash(默认))
 ##bash常见命令
 命令 [-option] [参数]
 1.pwd  print Working Directory : 查看当前目录
