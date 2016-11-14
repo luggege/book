@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [canvas](chapter1.md)
+    * [canvas day1](canvas-day1.md)
 * [canvas第二天](canvas第二天.md)
 * [继承](继承.md)
 * [JavaScript高级第四天](javascript高级第四天.md)
