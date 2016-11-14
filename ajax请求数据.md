@@ -42,8 +42,8 @@ yy复制当前行
 >4.git add
 >5.git checkout 将缓存区的内容还原到工作区
 >6.git commit -m  永久存盘(必须添编号)
->6.git log 查看当前版本/存盘点/历史
->7.git reset --hard 提交ID
+>7.git log 查看当前版本/存盘点/历史
+>8.git reset --hard 提交ID
 
 
 
