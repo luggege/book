@@ -1,4 +1,4 @@
-##sell分类
+##shell分类
 * 图形界面shell
 * 命令行shell
 ##bash属于shell
