@@ -8,9 +8,10 @@
     * [canvas day4](canvas第四天.md)
 * [JavaScript高级和面向对象](javascript高级和面向对象.md)
     * [JavaScript高级 day1](javascript高级.md)
+    * [javascript day4](javascript-day4.md)
     * [继承](继承.md)
     * [面向对象 day2](面向对象.md)
-    * [javascript day4](javascript-day4.md)
+    * 面向对象 day3
 * [面向对象第5天](面向对象第5天.md)
 * [面向对象第6天](面向对象第6天.md)
 * [面向对象第7天](面向对象第7天.md)
