@@ -5,3 +5,6 @@ disabled 是一个无值属性,通过ng-变成angular形式,就可以设置其�
 
 ###url
 截取的是锚点后面的内容
+
+###$http
+本质是对XMLHttpRequest对象的封装
