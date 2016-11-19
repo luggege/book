@@ -14,3 +14,21 @@ url地址
 
 ###接口方式
 SOAP  RESTFUL(angularjs优先支持这种方式,默认就会将对象形式的{age: 10}===>字符串形式:age=10(key=value&key=value的形式))
+
+###配置
+config方法,允许一次配置多个服务
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
