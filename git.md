@@ -127,11 +127,28 @@ Linux默认使用bash
 >git checkout SHA -- "某个文件"，代表只是从SHA这个版中取出特定的文件，
 
 * git reset --hard 工作区会变 暂缓区会变 历史会变
+* git reset --soft 只改变历史
+* git reset --mixed(默认)  工作区不会变, 历史改变, 暂存区改变 
 
-
+* git checkout 只是取出特定的文件,不会改变历史
 
 **git reset和git checkout是有区别的: git reset 会重写历史,git checkout 不会**
 
+### 更新本地仓库为远程仓库
+** git fetch 远程仓库地址 **
+** git fetch 远程仓库地址 分支名称**
+
+###git fetch 和 git pull区别
+* git fetch 只是更新到本地仓库,代码不会体现到相应的工作目录中,需要merge 一下. git branch -a可以查看所有分支(本地分支+远程分支)
+
+* git pull  将其所有的分支都更新过来了
+
+###删除远程分支
+* git push origin --delete
+* git push origin: 分支名称
+
+###gitignore 创建忽略文件
+将不需要提交的文件名放到这个目录中,将来提交的时候就不会将其提交上去
 
 
 
