@@ -151,6 +151,21 @@ Linux默认使用bash
 将不需要提交的文件名放到这个目录中,将来提交的时候就不会将其提交上去
 
 
+[百度一下你就知道](http://www.baidu.com)
+
+
+```javascript
+    var a = 10;    
+    console.log(a);
+```
+
+```bash
+    git init blog
+```
+
+![展示图片](路径)
+
+
 
 
 
