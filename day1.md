@@ -6,6 +6,7 @@
     * js代码-->机器码/字节码
 2. 移植性
     *
+** node中的js是基于v8引擎的 **
 ###node是一门技术,用的语言就是JavaScript
 
 * 通过nvm来切换node.js版本号
