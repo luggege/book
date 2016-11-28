@@ -7,3 +7,6 @@
 2. 移植性
     *
 ###node是一门技术,用的语言就是JavaScript
+
+* 通过nvm来切换node.js版本号
+
