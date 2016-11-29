@@ -28,5 +28,6 @@
     * [HTML+CSS+JavaScript](htmlcssjavascript.md)
 * [1129自习课程](1129自习课程.md)
     * [CSS的部分兼容写法](css的部分兼容写法.md)
+    * [HTML5的备忘录](html5的备忘录.md)
 * [Ajax请求数据](ajax请求数据.md)
 
