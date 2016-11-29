@@ -31,7 +31,4 @@
     * [HTML5的备忘录](html5的备忘录.md)
     * [js的部分兼容写法](js的部分兼容写法.md)
     * [网页通过W3C的标准](网页通过w3c的标准.md)
-* [Ajax请求数据](ajax请求数据.md)
-* [jQuery](jquery.md)
-    * [jQuery事件操作](jquery事件操作.md)
 
