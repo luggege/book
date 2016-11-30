@@ -38,7 +38,7 @@ npm install -g 包名  全局安装就是安装命令行工具
 ##nrm数据源管理工具(npm install -g nrm)
 * 切换数据源(nrm use taobao)===>.npmrc
 
-###箭头函数
+###箭头函数(不能使用在构造函数中)
 1. var foo=参数=>返回值
 
 2. var foo=(参数1,参数2)=>返回值
