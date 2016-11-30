@@ -8,4 +8,11 @@
 2. CMD===>require.js
 3. common.js===>node.js
 
-npm install -g 包名 全局安装就是命令行工具
+npm install -g 包名  全局安装就是安装命令行工具
+
+###npm docs jquery
+* 通过这个命令打开包相对应的文档
+
+###npm config set prefix 修改全局安装目录(不建议)
+
+###npm list 查看当前目录下安装的所有包
