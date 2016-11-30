@@ -35,6 +35,32 @@ npm install -g 包名  全局安装就是安装命令行工具
 
 ### ^1.11.* 会下中级版本号的最新版 1.12.4
 
+##nrm数据源管理工具(npm install -g nrm)
+* 切换数据源(nrm use taobao)===>.npmrc
+
+###箭头函数
+1. var foo=参数=>返回值
+
+2. var foo=(参数1,参数2)=>返回值
+
+3. var foo=参数=>{return v1 + v2}
+
+4. var foo=()=>{console.log(v1)}
+
+
+#脏检查
+##MVVM
+M: model  V: view  VM: ViewModel
+
+
+
+
+
+
+
+
+
+
 
 
 
