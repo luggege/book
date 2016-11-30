@@ -14,7 +14,7 @@
 ###Node.js特点
 * 轻量,高效
 
-###Node.js最早是运行在linux系统下的
+> Node.js最早是运行在linux系统下的
 
 ###熟悉基本的linux命令
 
