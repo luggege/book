@@ -50,7 +50,9 @@ npm install -g 包名  全局安装就是安装命令行工具
 
 #脏检查
 ##MVVM
-M: model  V: view  VM: ViewModel
+M: model  V: view  VM: ViewModel===>$scope
+
+** 理解脏检查机制 **
 
 
 
