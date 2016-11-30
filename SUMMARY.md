@@ -24,6 +24,7 @@
 * [Node.Js](nodejs.md)
     * [day1](day1.md)
     * [总结](总结.md)
+    * [day2](day2.md)
 * [面试题总结](面试题总结.md)
     * [HTML+CSS+JavaScript](htmlcssjavascript.md)
 * [1129自习课程](1129自习课程.md)
