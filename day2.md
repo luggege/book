@@ -7,3 +7,5 @@
 1. AMD===>sea.js
 2. CMD===>require.js
 3. common.js===>node.js
+
+npm install -g 包名 全局安装就是命令行工具
