@@ -22,7 +22,11 @@ npm install -g 包名  全局安装就是安装命令行工具
 ** 把自己写的包放在npm官网上,才能install下载自己写的包 **
 
 
+###npm i -S jquery@3.*  (npm install --save)
+> 开发环境安装
 
+###npm i -D jquery@3.* (npm install -save-dev)
+> 生产环境安装
 
 
 
