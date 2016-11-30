@@ -60,17 +60,17 @@ CSS ’width’ 指的是标准CSS中所指的width的宽度，
 
  color:red; //所有浏览器都支持
 
- color:red !important; //Firefox、IE7支持
-
- _color:red; //IE6支持
-
- *color:red; //IE6、IE7支持
-
- *+color:red; //IE7支持
-
  color:red \9; //IE6、IE7、IE8支持
 
  color:red \0; //IE8支持
+
+ color:red !important; //Firefox、IE7支持
+
+ *+color:red; //IE7支持
+
+ *color:red; //IE6、IE7支持
+
+ _color:red; //IE6支持
 
 }
 
