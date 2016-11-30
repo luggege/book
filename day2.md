@@ -28,6 +28,9 @@ npm install -g 包名  全局安装就是安装命令行工具
 ###npm i -D jquery@3.* (npm install -save-dev)
 > 生产环境安装
 
+* 多个版本的jquery不会出现在同一个node_modules中
+> 1.7.几的版本名字叫做jQuery
+
 
 
 
