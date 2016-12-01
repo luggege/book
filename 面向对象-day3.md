@@ -78,6 +78,7 @@
 
 >getAttribute获取的是默认的value值
 
+
 >.value获取的是**最新**的value值,必须通过点或者[]的方式获取
 
 
