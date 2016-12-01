@@ -62,10 +62,13 @@ M: model  V: view  VM: ViewModel===>$scope
 ## 1.1 概念
 
 - Node.js与JavaScript的关系?
+> JavaScript是运行在Node.js环境下的
 
 - Node.js基于哪个JavaScript引擎？
+> v8引擎
 
 - Node.js的特点？
+> 轻量,高效
 
 - Node.js只能运行在Windows上吗？
 
