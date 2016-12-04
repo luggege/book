@@ -29,6 +29,7 @@
     * [day4调试,线程进程](day4调试线程进程.md)
 * [面试题总结](面试题总结.md)
     * [HTML+CSS+JavaScript](htmlcssjavascript.md)
+    * [跨域问题](跨域问题.md)
 * [1129自习课程](1129自习课程.md)
     * [CSS的部分兼容写法](css的部分兼容写法.md)
     * [HTML5的备忘录](html5的备忘录.md)
