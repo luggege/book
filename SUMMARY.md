@@ -27,6 +27,7 @@
     * [day2](day2.md)
     * [day3](day3.md)
     * [day4调试,线程进程](day4调试线程进程.md)
+    * [http](http.md)
 * [面试题总结](面试题总结.md)
     * [HTML+CSS+JavaScript](htmlcssjavascript.md)
     * [跨域问题](跨域问题.md)
