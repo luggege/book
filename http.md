@@ -14,4 +14,7 @@
 
 
 ###两种通过命令调用js的方式
-1. 通过创建出来的package.json
+> 原本执行的时候是通过node这个运行环境来直接运行1.js的,而现在可以
+
+1. 通过创建出来的package.json,在scripts对象中添加"test": "node 1.js" ,就可以直接通过node环境来输入命令 npm test就可以运行1.js了;
+2. 在创建出来的package.json中,创建bin对象 "bin":{"hehe": 1.js},在node环境下输入npm link安装完模块(node_modules)之后,在全局变量中直接输入命令 hehe 就可以运行1.js了
