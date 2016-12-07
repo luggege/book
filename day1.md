@@ -117,7 +117,7 @@
 requirejs是优先加载的
 seajs是懒加载的，就是有拖延症，用的时候才加载
 http://www.requirejs.cn/
-## 作业
+## 作业![](/assets/image1.jpg)
 
 
 
