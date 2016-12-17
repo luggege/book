@@ -39,6 +39,7 @@
     * [HTML5的备忘录](html5的备忘录.md)
     * [js的部分兼容写法](js的部分兼容写法.md)
     * [网页通过W3C的标准](网页通过w3c的标准.md)
-* [移动web](移动web.md)
+* [移动App](移动web.md)
     * [day1\_介绍](day1介绍.md)
+    * [day2\_webpack的使用](day2webpack的使用.md)
 
