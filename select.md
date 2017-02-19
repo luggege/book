@@ -13,5 +13,5 @@
     * document.getElementById('type').value;
     * obj.value;   
     
-    location.href=obj.value   
+    location.href=obj.value    //通过value值也可切换相应的option链接的页面
 } `
