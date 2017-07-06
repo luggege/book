@@ -86,8 +86,8 @@ scrip type="text/javascript" src="{资源目录}/RongIMWidget.js"
 > 注意要按照 angular 的规范加在 angular 作用域内。
 
 1. 初始化
- 
-   在自己 js 文件中 angular modle 中引入 SDK
+
+   在自己 js 文件中 angular modle 中引入 SDK  
    `var demo = angular.module("demo", ["RongWebIMWidget"]);`
 
 初始化需要传入的一些参数
@@ -121,7 +121,7 @@ $scope,RongCustomerService
 
 1. 配置参数说明
 
-* position 控制客服显示位置，左侧显示 RongCustomerService.Position.left 、右侧显示 RongCustomerService.Position.right
+2. position 控制客服显示位置，左侧显示 RongCustomerService.Position.left 、右侧显示 RongCustomerService.Position.right
 
 ```
 demo.controller(
