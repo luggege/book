@@ -1,10 +1,8 @@
-
+﻿
 ## 使用小程序首先需https域名
 
 ### 循环
->     <view class="navbar">   
->     <text wx:for="{{navbar}}" data-idx="{{index}}" class="nav-item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>   
->     </view>
+
 
 1. 使用wx.for的循环,如果不加wx.key属性会出现黄色警告,但是不影响代码执行
 2. 使用自定义属性**data-idx="{{index}}"**,js端获取相关属性值:  **e.currentTarget.dataset.idx**
