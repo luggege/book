@@ -3,75 +3,38 @@
 ```
 
 ```
-console
-.log( 
-document
-.body.clientWidth );
+console.log( document.body.clientWidth );
 
-console
-.log( 
-document
-.body.clientHeight );
+console.log( document.body.clientHeight );
 
-console
-.log( $(
-document
-).width() );
+console.log( $(document).width() );
 
-console
-.log( $(
-document
-).height() );
+console.log( $(document).height() );
 
 
 // 文档滚动卷去的部分
-console
-.log( 
-document
-.body.scrollLeft );
+console.log( document.body.scrollLeft );
 
-console
-.log( 
-document
-.body.scrollTop );
+console.log( document.body.scrollTop );
 
 
 // 总长度 - 卷去的 == 可视窗口的高度
-console
-.log( 
-document
-.body.clientHeight - 
-document
-.body.scrollTop );
+console.log( document.body.clientHeight - document.body.scrollTop );
 
 
 // 分辨率
-console
-.log( 
-window
-.screen.width );
+console.log( window.screen.width );
 
-console
-.log( 
-window
-.screen.height );
+console.log( window.screen.height );
 
 
 // 当前窗口的可视区域的宽 高
-console
-.log( $(
-window
-).width() );
+console.log( $(window).width() );
 
-console
-.log( $(
-window
-).height() );
+console.log( $(window).height() );
 
 
-div.style.top : 指对象距离浏览器显示区域顶端的垂直距离  (可读
-&
-可写 带单位)
+div.style.top : 指对象距离浏览器显示区域顶端的垂直距离  (可读&可写 带单位)
 div.offsetTop : 指对象距离顶边距显示区域顶端的垂直距离  (可读 不带单位)
 ```
 
