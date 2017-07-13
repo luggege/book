@@ -1,13 +1,13 @@
 ### border-radius 针对 table 失效 {#border-radius-针对-table-失效}
 
 > 如果table设置了 border-collapse: collapse;\(边框可并\)样式时,border-radius就会无效. 除此之外可以应用到所有元素.
-
+>
 > 解决办法: 外边在套一层div
 
 ### border 针对tr无效 {#border-针对tr无效}
 
 > 原因: td没有边框,把tr设的边框给覆盖掉了
-
+>
 > 解决办法: 给td设border,或给table设border
 
 ### mouseover与mouseout是冒泡的 {#mouseover与mouseout是冒泡的}
@@ -17,33 +17,17 @@
 ## 阻止冒泡行为 {#阻止冒泡行为}
 
 > ```
-> box.click(function(
-> e
-> ){
+> box.click(function(e){
 >     
-> e
->  = windown.event || 
-> e
-> ;
->     
->     
-> if
-> (
-> e
-> &
-> &
-> e
-> .stopPropagation){
+>     e = windown.event || e;
 >         
-> e
-> .stopPropagation();
+>     if(e&&e.stopPropagation){
+>             
+>         e.stopPropagation();
 >     }
-> else
->  {
->         
-> e
-> .cancelBulle = true;
->     }
+>     else{    
+>         e.cancelBulle = true;
+>      }
 > })
 > ```
 
@@ -69,20 +53,20 @@ getElementsByClassName只兼容到IE 9 以上.
 > &lt;!--\[if lt IE 9\]&gt;  
 > &lt;script src="js/html5.js"&gt;&lt;/script&gt;  
 > &lt;!\[endif\]--&gt;
-
+>
 > &lt;!-- 条件引入线上html5文件 --&gt;  
 > &lt;!--\[if lt IE9\]&gt; --&gt;  
 > &lt;script src="[http://cdn.bootcss.com/html5shiv/r29/html5.min.js](http://cdn.bootcss.com/html5shiv/r29/html5.min.js)"&gt;&lt;/script&gt;  
 > &lt;!\[endif\]--&gt;
-
+>
 > &lt;!-- cdnjs --&gt;  
 > &lt;!--\[if lt IE 9\]&gt;  
 > &lt;script src="[https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js](https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js)"&gt;&lt;/script&gt;  
 > &lt;!\[endif\]--&gt;
-
+>
 > 但是如果ie6/7/8 禁用脚本的用户,那么就变成了无样式的"白板"网页,我们该怎么解决呢?  
 > 我们可以参照facebook的做法，即引导用户进入带有noscript标识的 “/?\_fb\_noscript=1”页面，用 html4 标签替换 html5 标签，这要比为了保持兼容性而写大量 hack 的做法更轻便一些。
-
+>
 > &lt;!--\[if lte IE 8\]&gt;  
 > &lt;noscript&gt;  
 > &lt;style&gt;.html5-wrappers{display:none!important;}&lt;/style&gt;  
@@ -93,50 +77,30 @@ getElementsByClassName只兼容到IE 9 以上.
 
 ```
 在IE9以下的浏览器将创建h5标签,,但是要在css中将这些元素均设为**块级元素**,因为h5标签在低版本IE中默认为内联元素
- 
-<
-!--[
-if
- lt IE9]
->
-<
-script
->
+
+<!--[if lt IE9]>
+<script>
 
     (function() {
+        if(!0) 
+        return;
         
-if
- (!
-0
-) 
-return
-;
+        var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
 
-        var e = 
-"abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video"
-.split(', ')
-;
+        var i= e.length;
+        while(i--){
+                document.createElement(e[i])
+            }
+        })()
 
-        var i= e.length
-;
-while
- (i--){
-            document.createElement(e[i])
-        }
-    })()
-
-<
-/script
->
-<
-![endif]--
->
+</script>
+<![endif]-->
 ```
 
 ## IE低版本兼容CSS3属性 {#ie低版本兼容css3属性}
 
 > 解决方案: 使用 ie-css3.htc 文件
-
+>
 > 使用方法: 在要使用C3的元素样式中按以下方法引入: behavior: url\(ie-css3.htc\);
 
 ### 问题和必要的说明 {#问题和必要的说明}
@@ -163,83 +127,41 @@ text-overflow: ellipsis; //文字隐藏后添加省略号
 ## 清除浮动遇到的问题 {#清除浮动遇到的问题}
 
 > overflow: hidden; 只适合子元素没有设置position的元素,,否则超出父盒子高的部分将被截掉
-
+>
 > 解决方法: 使用添加如下类的方法
-
+>
 > ```
 > /*清除浮动*/
-> .clearfix
-> :before
-> , 
-> .clearfix
-> :after
->  {
->
-> content
-> : 
-> ""
-> ;
->
-> display
-> : table;
+> .clearfix:before, .clearfix:after{
+>   content: "";
+>   display: table;
 > }
 >
-> .clearfix
-> :after
->  {
->     
-> clear
-> : both;
+> .clearfix:after{
+>     clear: both;
 > }
 >
-> .clearfix
->  {
->     *
-> zoom
-> : 
-> 1
-> ; 
-> /*IE/7/6*/
->
+> .clearfix{
+>     *zoom: 1; /*IE/7/6*/
 > }
 > ```
-
+>
 > ```
 > /*清除浮动代码*/
-> .clearfix
-> :after
-> {
->     
-> content
-> :
-> ""
-> ;
->     
-> display
-> :
-> block
-> ;
->     
-> clear
-> :
-> both
-> ;
->     
-> visibility
-> :
-> hidden
-> ;
->     
-> height
-> :
-> 0
+> .clearfix:after{   
+>     content:"";
+>        
+>     display:block;
+>         
+>     clear:both;
+>         
+>     visibility:hidden;
+>         
+>     height:0
 > }    
 >
-> .clearfix
-> {
-> zoom
-> :
-> 1
+> .clearfix{
+>     zoom:1
 > }
 > ```
 
