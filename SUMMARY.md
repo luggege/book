@@ -44,4 +44,5 @@
   * [day2\_webpack的使用](day2webpack的使用.md)
 * [经验-sub插件安装及md语法](html.md)
   * [小程序开发](xiao-cheng-xu-kai-fa.md)
+  * [混合打包](hun-he-da-bao.md)
 
