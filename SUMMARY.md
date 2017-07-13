@@ -42,6 +42,6 @@
 * [移动App](移动web.md)
   * [day1\_介绍](day1介绍.md)
   * [day2\_webpack的使用](day2webpack的使用.md)
-* [html](html.md)
-  * [select](select.md)
+* [经验-sublime安装](html.md)
+  * [小程序开发](xiao-cheng-xu-kai-fa.md)
 
