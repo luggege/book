@@ -60,21 +60,7 @@ targetTouches:特定于事件目标的Touch对象的数组。
 
 changeTouches:表示自上次触摸以来发生了什么改变的Touch对象的数组。
 
-#### 每个Touch对象包含下列属性： {#每个touch对象包含下列属性}
+####  {#每个touch对象包含下列属性}
 
-clientX:触摸目标在**视口**中的X坐标。
 
-clientY:触摸目标在**视口**中的Y坐标。
-
-identifier：表示触摸的唯一ID。
-
-pageX：触摸目标在**页面**中的x坐标。
-
-pageY：触摸目标在**页面**中的y坐标。
-
-screenX:触摸目标在**屏幕**中的x坐标。
-
-screenY:触摸目标在**屏幕**中的y坐标。
-
-target:触摸的DOM节点坐标
 
