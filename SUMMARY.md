@@ -1,4 +1,4 @@
-# Summary
+﻿# Summary
 
 * [Introduction](README.md)
 * [canvas](chapter1.md)
@@ -49,6 +49,6 @@
   * [融云客服](rong-yun-ke-fu.md)
   * [融云开发文档](rong-yun-kai-fa-wen-dang.md)
 * [工作总结](gong-zuo-wen-ti-zong-jie.md)
-  * [获取浏览器宽高](gong-zuo-wen-ti-zong-jie/huo-qu-liu-lan-qi-kuan-gao.md)
-  * [开发经验细碎点](gong-zuo-wen-ti-zong-jie/kai-fa-jing-yan-xi-sui-dian.md)
+  * [获取浏览器宽高](huo-qu-liu-lan-qi-kuan-gao.md)
+  * [开发经验细碎点](kai-fa-jing-yan-xi-sui-dian.md)
 
