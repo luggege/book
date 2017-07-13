@@ -45,4 +45,5 @@
 * [经验-sub插件安装及md语法](html.md)
   * [小程序开发](xiao-cheng-xu-kai-fa.md)
   * [混合打包](hun-he-da-bao.md)
+  * [chrome插件](chromecha-jian.md)
 
