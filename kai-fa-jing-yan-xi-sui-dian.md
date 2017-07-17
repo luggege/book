@@ -84,7 +84,7 @@ getElementsByClassName只兼容到IE 9 以上.
     (function() {
         if(!0) 
         return;
-        
+
         var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
 
         var i= e.length;
@@ -123,6 +123,14 @@ display: -webkit-box;
 text-overflow: ellipsis; //文字隐藏后添加省略号  
 -webkit-line-clamp: 3; //控制行数  
 -webkit-box-orient: vertical; //子元素垂直排列
+
+* 限制文字在一行内显示
+
+> overflow: hidden;   //溢出隐藏\(指定宽度\)
+>
+> white-space: nowrap;  //默认在不换行
+>
+> text-overflow: ellipsis; //超出部分显示省略号
 
 ## 清除浮动遇到的问题 {#清除浮动遇到的问题}
 
