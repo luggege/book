@@ -1,4 +1,4 @@
-﻿# Summary
+# Summary
 
 * [Introduction](README.md)
 * [canvas](chapter1.md)
@@ -34,7 +34,7 @@
   * [HTML+CSS+JavaScript](htmlcssjavascript.md)
   * [跨域问题](跨域问题.md)
   * [简历遇到的问题](简历遇到的问题.md)
-* [1129自习课程](1129自习课程.md)
+* [html/css/js](1129自习课程.md)
   * [CSS的部分兼容写法](css的部分兼容写法.md)
   * [HTML5的备忘录](html5的备忘录.md)
   * [js的部分兼容写法](js的部分兼容写法.md)

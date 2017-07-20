@@ -5,20 +5,18 @@
 DOM0就是直接通过 onclick写在html里面的事件, 比如:
 
 ```
-
 <input onclick="alert(1)" />
-
 ```
 
- DOM2是通过addEventListener绑定的事件, 还有IE下的DOM2事件通过attachEvent绑定;
+DOM2是通过addEventListener绑定的事件, 还有IE下的DOM2事件通过attachEvent绑定;
 
 ①添加事件方法
 
-* addEventListener(type,handler,false)方法用于向指定元素添加事件句柄
+* addEventListener\(type,handler,false\)方法用于向指定元素添加事件句柄
 
- 三个参数分别是：
+  三个参数分别是：
 
- * event:必传,
+  * event:必传,
 
 字符串,指定事件名。
 
@@ -26,12 +24,11 @@ DOM0就是直接通过 onclick写在html里面的事件, 比如:
 
 提示: 所有 HTML DOM 事件;
 
- * function:必传。指定要事件触发时执行的函数。 当事件对象会作为第一个参数传入函数。 事件对象的类型取决于特定的事件。例如， "click" 事件属于 MouseEvent(鼠标事件) 对象
+* function:必传。指定要事件触发时执行的函数。 当事件对象会作为第一个参数传入函数。 事件对象的类型取决于特定的事件。例如， "click" 事件属于 MouseEvent\(鼠标事件\) 对象
 
- * useCapture:可选，是否在捕获或冒泡阶段执行 为bool值
+* useCapture:可选，是否在捕获或冒泡阶段执行 为bool值
 
 ```
-
 addHandler：function(element,type,handler){
 
  if(element.addEventListener){//检测是否为DOM2级方法
@@ -49,13 +46,11 @@ addHandler：function(element,type,handler){
  }
 
 }
-
 ```
 
 ②移除之前添加的事件方法
 
 ```
-
 removeHandler：function(element, type, handler){
 
  if (element.removeEventListener){ element.removeEventListener(type, handler, false);
@@ -71,39 +66,33 @@ removeHandler：function(element, type, handler){
  }
 
 }
-
 ```
 
 ③获取事件及事件对象目标
 
- 获取事件对象的兼容性写法
+获取事件对象的兼容性写法
 
 ```
-
 getEvent: function(event){
 
  return event ? event : window.event;
 
 }
-
 ```
 
 获取事件对象目标的兼容性写法
 
 ```
-
 getTarget: function(event){
 
  return event.target || event.srcElement;
 
  }
-
 ```
 
 ④阻止浏览器默认事件的兼容性写法
 
 ```
-
 preventDefault: function(event){
 
  if (event.preventDefault){
@@ -115,13 +104,11 @@ preventDefault: function(event){
  event.returnValue = false;
 
  } }
-
 ```
 
 ⑤阻止事件冒泡的兼容性写法
 
 ```
-
 stopPropagation: function(event){
 
 if (event.stopPropagation){
@@ -133,12 +120,11 @@ if (event.stopPropagation){
  event.cancelBubble = true;
 
  } }
-
 ```
 
 ⑥mouseover和mouseout 事件才包含的获取相关元素的方法
 
-//mouseover和mouseout 事件才包含的获取相关元素的方法getRelatedTarget: function(event){ if (event.relatedTarget){ return event.relatedTarget; } else if (event.toElement){ return event.toElement; } else if (event.fromElement){ return event.fromElement; } else { return null; }}
+//mouseover和mouseout 事件才包含的获取相关元素的方法getRelatedTarget: function\(event\){ if \(event.relatedTarget\){ return event.relatedTarget; } else if \(event.toElement\){ return event.toElement; } else if \(event.fromElement\){ return event.fromElement; } else { return null; }}
 
 ⑦鼠标滚轮判断
 
@@ -146,32 +132,31 @@ if (event.stopPropagation){
 
 1. DOM的button 属性可能有如下3 个值：
 
- * 0 表示主鼠标按钮，
+   * 0 表示主鼠标按钮，
 
- * 1 表示中间的鼠标按钮（鼠标滚轮按钮），
+   * 1 表示中间的鼠标按钮（鼠标滚轮按钮），
 
- * 2 表示次鼠标按钮。
+   * 2 表示次鼠标按钮。
 
 2. 在常规的设置中，主鼠标按钮就是鼠标左键，而次鼠标按钮就是鼠标右键。IE8 及之前版本也提供了button 属性，但这个属性的值与DOM 的button 属性有很大差异.
 
- * 0：表示没有按下按钮。
+   * 0：表示没有按下按钮。
 
- * 1：表示按下了主鼠标按钮。
+   * 1：表示按下了主鼠标按钮。
 
- * 2：表示按下了次鼠标按钮。
+   * 2：表示按下了次鼠标按钮。
 
- * 3：表示同时按下了主、次鼠标按钮。
+   * 3：表示同时按下了主、次鼠标按钮。
 
- * 4：表示按下了中间的鼠标按钮。
+   * 4：表示按下了中间的鼠标按钮。
 
- * 5：表示同时按下了主鼠标按钮和中间的鼠标按钮。
+   * 5：表示同时按下了主鼠标按钮和中间的鼠标按钮。
 
- * 6：表示同时按下了次鼠标按钮和中间的鼠标按钮。
+   * 6：表示同时按下了次鼠标按钮和中间的鼠标按钮。
 
- * 7：表示同时按下了三个鼠标按钮。
+   * 7：表示同时按下了三个鼠标按钮。
 
 ```
-
 getButton: function(event){
 
  if(document.implementation.hasFeature("MouseEvents", "2.0")){
@@ -209,13 +194,11 @@ getButton: function(event){
  }
 
 }
-
 ```
 
 ⑧能够取得鼠标滚轮增量值（delta）的方法
 
 ```
-
 getWheelDelta: function(event){
 
  if (event.wheelDelta){
@@ -225,13 +208,11 @@ getWheelDelta: function(event){
  } else {
 
  return -event.detail * 40;//firefox中的值为+3表示向上滚，-3表示向下滚 }}
-
 ```
 
 ⑨跨浏览器的方式取得字符编码
 
 ```
-
 getCharCode: function(event){
 
  if (typeof event.charCode == "number"){
@@ -245,13 +226,11 @@ getCharCode: function(event){
  }
 
 }
-
 ```
 
 ⑩访问剪贴板中的数据
 
 ```
-
 getClipboardText: function(event){
 
  var clipboardData = (event.clipboardData || window.clipboardData);
@@ -259,13 +238,11 @@ getClipboardText: function(event){
  return clipboardData.getData("text");
 
  }
-
 ```
 
 11.设置剪贴板中的数据
 
 ```
-
 setClipboardText: function(event, value){
 
  if (event.clipboardData){
@@ -279,7 +256,7 @@ return event.clipboardData.setData("text/plain", value);
  }
 
 }
-
 ```
+
 
 
