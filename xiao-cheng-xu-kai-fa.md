@@ -19,6 +19,15 @@
 ### 小程序客户端和手机端预览返回数据一个是object一个是string类型
 > php框架开启了调试功能,电脑端默认转为对象,手机端打印的则是错误页面即string
 
+******
+
+1. 小程序使用scroll-view滑块组件
+
+> 横向滑动加属性: scroll-x="true",默认关闭横向滑动,
+> scroll-view标签设置样式: white-space: nowrap;    //nowrap:强制不换行; pre:滑动到最右侧; normal:默认超出部分换行
+
+*******
+
 
 # 小程序开发之使用百度地图
 
