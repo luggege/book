@@ -34,26 +34,26 @@
 >
 > console.log\(arr.splice\(0, 2, '9', '8', '7'  \)\);  //**\(索引,个数,替换内容\)** \[1, 2\]===&gt; arr=\[1, 2, '9', '8', '7' \];
 >
-> console.log\(arr\);  
-> 3.push    数组尾部添加, 返回个数
+> console.log\(arr\);
 
-3.pop     数组尾部删除,返回取出的那个数
+  
+3.push    数组尾部添加, 返回个数
 
-4.unshift  数组头部添加, 返回个数
+4.pop     数组尾部删除,返回取出的那个数
 
-5.shift     数组头部删除,返回取出的那个数
+5.unshift  数组头部添加, 返回个数
 
-6.indexOf 查索引, 未找到返回-1
+6.shift     数组头部删除,返回取出的那个数
 
-7.lastIndexOf 从后往前查索引,索引值不会变
+7.indexOf 查索引, 未找到返回-1
 
-8.valueOf 返回原数组
+8.lastIndexOf 从后往前查索引,索引值不会变
 
-9.toLocaleString
+9.valueOf 返回原数组
 
-10.toString
+10.toLocaleString
 
-11.isArray 判断是否是数组,是的话返回true
+11.toString
 
-
+12.isArray 判断是否是数组,是的话返回true
 
