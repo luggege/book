@@ -140,5 +140,13 @@
 >
 > console.log\(str.toLowerCase\(\)\); //abcdefg
 
+10. charAt 检索指定索引的字符串
+
+11. charCodeAt 返回Unicode编码
+
+> console.log\(str.charAt\(2\)\) //c 检索指定索引的字符串
+>
+> console.log\(str.charCodeAt\('c'\)\) //97 返回Unicode编码
+
 
 
