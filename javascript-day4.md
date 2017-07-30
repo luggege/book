@@ -120,5 +120,25 @@
 >
 > console.log\(str.substring\(4,2\)\); //**智能调换\(索引值,索引值\)**cd ===&gt; str='abcdefg';
 
+5.trim 去除前后空白
+
+6.replace\(a,b\) 后边的替换前边的
+
+7.concat  字符串连接
+
+> console.log\(str1.trim\(\)\); //ad cd e
+>
+> console.log\(str1.replace\('c','hh'\)\); //  ad hhd e 
+>
+>  console.log\(str1.trim\(\).concat\(str\)\); //ad cd eabcdefg
+
+8.toUpperCase 字符串转大写
+
+9..toLowerCase 字符串转小写
+
+> console.log\(str.toUpperCase\(\)\); //ABCDEFG
+>
+> console.log\(str.toLowerCase\(\)\); //abcdefg
+
 
 
