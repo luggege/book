@@ -50,7 +50,7 @@
 
 9.valueOf 返回原数组
 
-10.toLocaleString
+10.toLocaleString  转为字符串
 
 11.toString
 
@@ -140,9 +140,9 @@
 >
 > console.log\(str.toLowerCase\(\)\); //abcdefg
 
-10. charAt 检索指定索引的字符串
+1. charAt 检索指定索引的字符串
 
-11. charCodeAt 返回Unicode编码
+2. charCodeAt 返回Unicode编码
 
 > console.log\(str.charAt\(2\)\) //c 检索指定索引的字符串
 >
