@@ -100,5 +100,15 @@
 >
 > console.log\(str.slice\(2,5\)\); //**\(索引值,索引值\)**cde ===&gt; str='abcdefg';
 
+3. substr 截取
+
+> console.log\(str.substr\(1\)\); //bcdefg ===&gt; str='abcdefg';
+>
+> console.log\(str.substr\(-2\)\); //fg ===&gt; str='abcdefg'; 负数从后往前截
+>
+> console.log\(str.substr\(1,3\)\); //\(索引值,长度\)bcd ===&gt; str='abcdefg';
+>
+> console.log\(str.substr\(4,2\)\);
+
 
 
