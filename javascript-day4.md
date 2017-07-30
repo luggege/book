@@ -20,7 +20,7 @@
 >
 > console.log\(arr.slice\(2\)\);    //\[3, 4, 5\]===&gt;arr=\[1, 2, 3, 4, 5\]
 >
-> console.log\(arr.slice\(0, 2\)\); //\[1,2\]===&gt;arr=\[1, 2, 3, 4, 5\]
+> console.log\(arr.slice\(0, 2\)\); //**\(索引值,索引值\)**\[1,2\]===&gt;arr=\[1, 2, 3, 4, 5\]
 
 2.splice 删除/替换 **原数组会改变** 返回删除截取出来的数组,原数组为剩下的内容组成的数组
 
@@ -98,7 +98,7 @@
 >
 > console.log\(str.slice\(1\)\);  //bcdefg ===&gt; str='abcdefg';
 >
-> console.log\(str.slice\(0,2\)\); //ab ===&gt; str='abcdefg';
+> console.log\(str.slice\(2,5\)\); //**\(索引值,索引值\)**cde ===&gt; str='abcdefg';
 
 
 
