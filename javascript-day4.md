@@ -154,5 +154,19 @@
 2. n1.toString\(\);
 3. n1 + 'abc'
 
+### 去除字符串前后空白字符的兼容写法
+
+> var str = "  hello world ";
+>
+> if\(!String.prototype.trim\){
+>
+>     String.prototype.trim = funcion\(\){
+>
+>         return this.replace\(/^\s+/,''\).replace\(/\s+$/,''\);
+>
+>     }
+>
+> }
+
 
 
