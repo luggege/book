@@ -128,9 +128,9 @@
 
 > console.log\(str1.trim\(\)\); //ad cd e
 >
-> console.log\(str1.replace\('c','hh'\)\); //  ad hhd e 
+> console.log\(str1.replace\('c','hh'\)\); //  ad hhd e
 >
->  console.log\(str1.trim\(\).concat\(str\)\); //ad cd eabcdefg
+> console.log\(str1.trim\(\).concat\(str\)\); //ad cd eabcdefg
 
 8.toUpperCase 字符串转大写
 
