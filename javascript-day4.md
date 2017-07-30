@@ -114,7 +114,7 @@
 
 > console.log\(str.substring\(1\)\); //bcdefg ===&gt; str='abcdefg';
 >
-> console.log\(str.substring\(-1\)\); //abcdefg ===&gt; str='abcdefg';  **负数的话全部截取**
+> console.log\(str.substring\(-1\)\); //abcdefg ===&gt; str='abcdefg';  **负数的话全部截取**
 >
 > console.log\(str.substring\(1,3\)\); //**\(索引值,索引值\)**bc ===&gt; str='abcdefg';
 >
