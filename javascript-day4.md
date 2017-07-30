@@ -66,9 +66,17 @@
 >
 > console.log\( arr.join\(''\) \); //12345
 >
+> console.log\( arr.join\(' '\) \); //1 2 3 4 5
+>
 > console.log\( arr.join\('\|'\) \);//1\|2\|3\|4\|5
 >
 > console.log\( arr.join\('&'\) \);//1&2&3&4&5
+
+### 字符串方法
+
+1.split  劈成数组
+
+>
 
 
 
