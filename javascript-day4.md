@@ -86,9 +86,9 @@
 >
 > console.log\(str.split\(' '\)\);//\["I", "Love", "You"\]
 >
->  console.log\(str1.split\('\|'\)\);//\["I", "Love", "You"\]
+> console.log\(str1.split\('\|'\)\);//\["I", "Love", "You"\]
 
-2.slice 截取
+2.slice 截取  **原数组不会改变**
 
 > console.log\(str.slice\(\)\);   //abcdefg ===&gt; str='abcdefg';
 >
