@@ -160,11 +160,13 @@
 >
 > if\(!String.prototype.trim\){
 >
->     String.prototype.trim = funcion\(\){
+> ```
+> String.prototype.trim = funcion\(\){
 >
->         return this.replace\(/^\s+/,''\).replace\(/\s+$/,''\);
+>     return this.replace\(/^\s+/,''\).replace\(/\s+$/,''\);
 >
->     }
+> }
+> ```
 >
 > }
 
