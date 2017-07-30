@@ -140,13 +140,19 @@
 >
 > console.log\(str.toLowerCase\(\)\); //abcdefg
 
-1. charAt 检索指定索引的字符串
+10.charAt 检索指定索引的字符串
 
-2. charCodeAt 返回Unicode编码
+11.charCodeAt 返回Unicode编码
 
 > console.log\(str.charAt\(2\)\) //c 检索指定索引的字符串
 >
 > console.log\(str.charCodeAt\('c'\)\) //97 返回Unicode编码
+
+### 数字转换成字符串的三种方法
+
+1. String\(n1\);
+2. n1.toString\(\);
+3. n1 + 'abc'
 
 
 
