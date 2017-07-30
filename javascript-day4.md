@@ -36,7 +36,6 @@
 >
 > console.log\(arr\);
 
-  
 3.push    数组尾部添加, 返回个数
 
 4.pop     数组尾部删除,返回取出的那个数
@@ -56,4 +55,20 @@
 11.toString
 
 12.isArray 判断是否是数组,是的话返回true
+
+13.join 转换成字符串
+
+> var arr = \[1, 2, 3, 4, 5\];
+>
+> console.log\( arr.join\(\) \);   //1,2,3,4,5
+>
+> console.log\( arr.join\(','\) \);//1,2,3,4,5
+>
+> console.log\( arr.join\(''\) \); //12345
+>
+> console.log\( arr.join\('\|'\) \);//1\|2\|3\|4\|5
+>
+> console.log\( arr.join\('&'\) \);//1&2&3&4&5
+
+
 
