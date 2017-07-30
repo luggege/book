@@ -76,7 +76,29 @@
 
 1.split  劈成数组
 
+> var str = "I Love You";
 >
+> var str1 = "I\|Love\|You";
+>
+> console.log\(str.split\(\)\);   //\["I Love You"\]
+>
+> console.log\(str.split\(''\)\); //\["I", " ", "L", "o", "v", "e", " ", "Y", "o", "u"\]
+>
+> console.log\(str.split\(' '\)\);//\["I", "Love", "You"\]
+>
+>  console.log\(str1.split\('\|'\)\);//\["I", "Love", "You"\]
+
+2.slice 截取
+
+> console.log\(str.slice\(\)\);   //abcdefg ===&gt; str='abcdefg';
+>
+> console.log\(str.slice\(''\)\); //abcdefg ===&gt; str='abcdefg';
+>
+> console.log\(str.slice\(-2\)\);  //fg ===&gt; str='abcdefg';
+>
+> console.log\(str.slice\(1\)\);  //bcdefg ===&gt; str='abcdefg';
+>
+> console.log\(str.slice\(0,2\)\); //ab ===&gt; str='abcdefg';
 
 
 
