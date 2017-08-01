@@ -18,6 +18,7 @@
     * [Array](javascript-day4/array.md)
     * [Date](javascript-day4/date.md)
     * [Number](javascript-day4/number.md)
+    * [Boolean](javascript-day4/boolean.md)
   * [继承](继承.md)
   * [面向对象 day2](面向对象.md)
   * [面向对象 day3](面向对象-day3.md)
