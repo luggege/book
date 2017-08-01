@@ -12,6 +12,7 @@
     * [值类型和引用类型的特征](javascript高级/zhi-lei-xing-he-yin-yong-lei-xing-de-te-zheng.md)
     * [对象的动态特性](javascript高级/dui-xiang-de-dong-tai-te-xing.md)
     * [DOM操作复习](javascript高级/domcao-zuo-fu-xi.md)
+    * [异常处理](javascript高级/yi-chang-chu-li.md)
   * [javascript基础](javascript-day4.md)
   * [继承](继承.md)
   * [面向对象 day2](面向对象.md)
