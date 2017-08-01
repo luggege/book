@@ -14,7 +14,7 @@
     * [DOM操作复习](javascript高级/domcao-zuo-fu-xi.md)
     * [异常处理](javascript高级/yi-chang-chu-li.md)
     * [调试工具的使用](javascript高级/diao-shi-gong-ju-de-shi-yong.md)
-  * [javascript基础](javascript-day4.md)
+  * [javascript基础复习](javascript-day4.md)
     * [Array](javascript-day4/array.md)
     * [Date](javascript-day4/date.md)
     * [Number](javascript-day4/number.md)
