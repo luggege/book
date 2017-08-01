@@ -8,6 +8,7 @@
   * [canvas day4](canvas第四天.md)
 * [面向对象](javascript高级和面向对象.md)
   * [JavaScript高级 day1](javascript高级.md)
+    * [值类型和引用类型](javascript高级/zhi-lei-xing-he-yin-yong-lei-xing.md)
   * [javascript基础](javascript-day4.md)
   * [继承](继承.md)
   * [面向对象 day2](面向对象.md)
