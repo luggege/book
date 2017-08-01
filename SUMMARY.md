@@ -30,6 +30,7 @@
   * [面向对象内容总结](mian-xiang-dui-xiang-nei-rong-zong-jie.md)
     * 面向对象概念介绍
     * [面向对象编程举例](mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-bian-cheng-ju-li.md)
+    * [构造函数](mian-xiang-dui-xiang-nei-rong-zong-jie/gou-zao-han-shu.md)
 * [流行框架](流行框架.md)
   * [Git](git.md)
   * [angular](angular.md)
