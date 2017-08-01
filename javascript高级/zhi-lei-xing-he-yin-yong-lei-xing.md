@@ -14,15 +14,13 @@
 
 值类型是存储在栈（stack）中的简单数据，也就是说，它们的值直接存储在变量访问的位置。
 
-`var num = 10;`
-
-`var str = "hello JS";`
-
-`var flag = true;`
-
-`var un = undefined;`
-
-`var nu = null;`
+```js
+var num = 10;
+var str = "hello JS";
+var flag = true;
+var un = undefined;
+var nu = null;
+```
 
 _上面定义的这些值类型的数据在内存中的存储如下_
 
@@ -43,15 +41,15 @@ var arr = [1, 2, 3];
 var p1 = {name:"张三", age:18};
 var p2 = {
     name:"李四",
-    
+
     age:50,
-    
+
     son:{
-    
+
         name:"李小一",
-    
+
         age:18
-    
+
     }
 };
 var p3 = {
