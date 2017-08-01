@@ -36,6 +36,7 @@
     * [使用原型解决构造函数问题](mian-xiang-dui-xiang-nei-rong-zong-jie/shi-yong-yuan-xing-jie-jue-gou-zao-han-shu-wen-ti.md)
     * [原型相关概念](mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-xiang-guan-gai-nian.md)
     * [原型的使用](mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-de-shi-yong.md)
+    * [\_\_proto\_\_](mian-xiang-dui-xiang-nei-rong-zong-jie/proto.md)
 * [流行框架](流行框架.md)
   * [Git](git.md)
   * [angular](angular.md)
