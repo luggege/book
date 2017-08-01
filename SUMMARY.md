@@ -40,6 +40,8 @@
     * [继承的实现方式](mian-xiang-dui-xiang-nei-rong-zong-jie/ji-cheng-de-shi-xian-fang-shi.md)
     * [原型三角绘制](mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-san-jiao-hui-zhi.md)
     * [属性搜索原则](mian-xiang-dui-xiang-nei-rong-zong-jie/shu-xing-sou-suo-yuan-ze.md)
+    * 原型链
+      * [原型链结构](mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian-jie-gou.md)
 * [流行框架](流行框架.md)
   * [Git](git.md)
   * [angular](angular.md)
