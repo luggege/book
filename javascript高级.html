@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>JavaScript高级 day1 · GitBook</title>
+        <title>JavaScript高级知识 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -192,7 +192,7 @@
                 <a href="javascript高级.html">
             
                     
-                    JavaScript高级 day1
+                    JavaScript高级知识
             
                 </a>
             
@@ -272,6 +272,90 @@
             
                     
                     调试工具的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" >
+            
+                <span>
+            
+                    
+                    词法作用域
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.7.1" data-path="javascript高级/ci-fa-zuo-yong-yu.html">
+            
+                <a href="javascript高级/ci-fa-zuo-yong-yu.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7.2" data-path="javascript高级/bian-liang-ming-ti-sheng.html">
+            
+                <a href="javascript高级/bian-liang-ming-ti-sheng.html">
+            
+                    
+                    变量名提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7.3" data-path="javascript高级/zuo-yong-yu-lian.html">
+            
+                <a href="javascript高级/zuo-yong-yu-lian.html">
+            
+                    
+                    作用域链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="javascript高级/bi-bao.html">
+            
+                <a href="javascript高级/bi-bao.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="javascript高级/han-shu-de-si-zhong-diao-yong-mo-shi.html">
+            
+                <a href="javascript高级/han-shu-de-si-zhong-diao-yong-mo-shi.html">
+            
+                    
+                    函数的四种调用模式
             
                 </a>
             
@@ -1327,7 +1411,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >JavaScript高级 day1</a>
+        <a href="." >JavaScript高级知识</a>
     </h1>
 </div>
 
@@ -1356,7 +1440,359 @@
 <ul>
 <li>&#x5316;&#x5F52;&#x601D;&#x60F3;:&#x5316;&#x7E41;&#x4E3A;&#x7B80;,&#x5316;&#x96BE;&#x4E3A;&#x6613;</li>
 </ul>
-<h2 id="javascript&#x57FA;&#x7840;&#x590D;&#x4E60;"></h2>
+<h4 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;: </h4>
+<blockquote>
+<p>1, 2, 3, 4, 5, ..., 100 &#x6C42;&#x548C;</p>
+</blockquote>
+<ol>
+<li><p>&#x9996;&#x5148;&#x5047;&#x5B9A;&#x9012;&#x5F52;&#x51FD;&#x6570;&#x5DF2;&#x7ECF;&#x5199;&#x597D;, &#x5047;&#x8BBE;&#x662F;<code>foo</code>. &#x5373;<code>foo(100)</code>&#x5C31;&#x662F;&#x6C42;<code>1</code>&#x5230;<code>100</code>&#x7684;&#x548C;</p>
+</li>
+<li><p>&#x5BFB;&#x627E;&#x9012;&#x63A8;&#x5173;&#x7CFB;. &#x5C31;&#x662F;<code>n</code>&#x4E0E;<code>n-1</code>, &#x6216;<code>n-2</code>&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;:<code>foo( n ) == n + foo( n - 1 )</code></p>
+</li>
+</ol>
+<pre><code>var
+ res = foo(
+100
+);
+
+var
+ res = foo(
+99
+) + 
+100
+;
+</code></pre><p><strong>&#x5C06;&#x9012;&#x63A8;&#x7ED3;&#x6784;&#x8F6C;&#x6362;&#x4E3A;&#x9012;&#x5F52;&#x4F53;</strong></p>
+<pre><code>function
+foo
+(
+n
+)
+{
+
+return
+ n + foo( n - 
+1
+ );
+}
+</code></pre><p>&#x4E0A;&#x9762;&#x5C31;&#x662F;&#x5229;&#x7528;&#x4E86;&#x5316;&#x5F52;&#x601D;&#x60F3;&#xFF1A;</p>
+<ul>
+<li><p>&#x5C06; &#x6C42; 100 &#x8F6C;&#x6362;&#x4E3A; &#x6C42; 99</p>
+</li>
+<li><p>&#x5C06; &#x6C42; 99 &#x8F6C;&#x6362;&#x4E3A; &#x6C42; 98</p>
+</li>
+<li><p>...</p>
+</li>
+<li><p>&#x5C06;&#x6C42; 2 &#x8F6C;&#x6362;&#x4E3A; &#x6C42; 1</p>
+</li>
+<li><p>&#x6C42; 1 &#x7ED3;&#x679C;&#x5C31;&#x662F; 1</p>
+</li>
+<li><p>&#x5373;: foo( 1 ) &#x662F; 1</p>
+</li>
+</ul>
+<p><strong>&#x5C06;&#x4E34;&#x754C;&#x6761;&#x4EF6;&#x52A0;&#x5230;&#x9012;&#x5F52;&#x4F53;&#x4E2D;(&#x6C42;1&#x7684;&#x7ED3;&#x679C;&#x4E3A;1)</strong></p>
+<pre><code>function
+foo
+(
+ n 
+) 
+{
+
+if
+ ( n == 
+1
+ ) 
+return
+1
+;
+
+return
+ n + foo( n - 
+1
+ );
+}
+</code></pre><h4 id="&#x7EC3;&#x4E60;">&#x7EC3;&#x4E60;: </h4>
+<blockquote>
+<p>&#x6C42; 1, 3, 5, 7, 9, ... &#x7B2C;<code>n</code>&#x9879;&#x7684;&#x7ED3;&#x679C;&#x4E0E;&#x524D;<code>n</code>&#x9879;&#x548C;. &#x5E8F;&#x53F7;&#x4ECE;<code>0</code>&#x5F00;&#x59CB;</p>
+</blockquote>
+<h5 id="&#x5148;&#x770B;&#x6C42;&#x7B2C;n&#x9879;">&#x5148;&#x770B;&#x6C42;&#x7B2C;<code>n</code>&#x9879; </h5>
+<ol>
+<li><p>&#x9996;&#x5148;&#x5047;&#x5B9A;&#x9012;&#x5F52;&#x51FD;&#x6570;&#x5DF2;&#x7ECF;&#x5199;&#x597D;, &#x5047;&#x8BBE;&#x662F;<code>fn</code>. &#x90A3;&#x4E48;&#x7B2C;<code>n</code>&#x9879;&#x5C31;&#x662F;<code>fn(n)</code></p>
+</li>
+<li><p>&#x627E;&#x9012;&#x63A8;&#x5173;&#x7CFB;:<code>fn(n) == f(n-1) + 2</code></p>
+</li>
+<li><p>&#x9012;&#x5F52;&#x4F53;</p>
+</li>
+</ol>
+<pre><code>function
+fn
+(
+n
+) 
+{
+
+return
+ fn(n-
+1
+) + 
+2
+;
+}
+</code></pre><ol>
+<li><p>&#x627E;&#x4E34;&#x754C;&#x6761;&#x4EF6;</p>
+<ul>
+<li><p>&#x6C42; n -&gt; n-1</p>
+</li>
+<li><p>&#x6C42; n-1 -&gt; n-2</p>
+</li>
+<li><p>...</p>
+</li>
+<li><p>&#x6C42; 1 -&gt; 0</p>
+</li>
+<li><p>&#x6C42; &#x7B2C; 0 &#x9879;, &#x5C31;&#x662F; 1</p>
+</li>
+</ul>
+</li>
+<li><p>&#x52A0;&#x5165;&#x4E34;&#x754C;&#x6761;&#x4EF6;</p>
+</li>
+</ol>
+<pre><code>function
+fn
+(
+ n 
+) 
+{
+
+if
+ ( n == 
+0
+ ) 
+return
+1
+;
+
+return
+ fn( n-
+1
+ ) + 
+2
+;
+}
+</code></pre><h5 id="&#x518D;&#x770B;&#x6C42;&#x524D;n&#x9879;&#x548C;">&#x518D;&#x770B;&#x6C42;&#x524D;<code>n</code>&#x9879;&#x548C; </h5>
+<ol>
+<li><p>&#x5047;&#x8BBE;&#x5DF2;&#x5B8C;&#x6210;, sum( n ) &#x5C31;&#x662F;&#x524D; n &#x9879;&#x548C;</p>
+</li>
+<li><p>&#x627E;&#x9012;&#x63A8;&#x5173;&#x7CFB;: &#x524D; n &#x9879;&#x548C; &#x7B49;&#x4E8E; &#x7B2C; n &#x9879; + &#x524D; n-1 &#x9879;&#x7684;&#x548C;</p>
+</li>
+<li><p>&#x9012;&#x5F52;&#x4F53;</p>
+</li>
+</ol>
+<pre><code>function
+sum
+(
+ n 
+) 
+{
+
+return
+ fn( n ) + sum( n - 
+1
+ );
+}
+</code></pre><ol>
+<li><p>&#x627E;&#x4E34;&#x754C;&#x6761;&#x4EF6;</p>
+<ul>
+<li><code>n == 1</code>
+&#x7ED3;&#x679C;&#x4E3A; 1</li>
+</ul>
+</li>
+<li><p>&#x52A0;&#x5165;&#x4E34;&#x754C;&#x6761;&#x4EF6;</p>
+</li>
+</ol>
+<pre><code>function
+sum
+(
+ n 
+) 
+{
+
+if
+ (n == 
+0
+) 
+return
+1
+;
+
+return
+ fn(n) + sum(n - 
+1
+);
+}
+</code></pre><h4 id="&#x7EC3;&#x4E60;">&#x7EC3;&#x4E60; </h4>
+<blockquote>
+<p>2, 4, 6, 8, 10 &#x7B2C; n &#x9879;&#x4E0E; &#x524D; n &#x9879;&#x548C;</p>
+</blockquote>
+<p>&#x89E3;&#x9898;&#x65B9;&#x6CD5;&#x548C;&#x4E0A;&#x4E00;&#x9898;&#x4E00;&#x6837;&#x3002;</p>
+<h4 id="&#x7EC3;&#x4E60;">&#x7EC3;&#x4E60; </h4>
+<blockquote>
+<p>&#x73B0;&#x6709;&#x6570;&#x5217;: 1, 1, 2, 4, 7, 11, 16, &#x2026; &#x6C42; &#x7B2C; n &#x9879;, &#x6C42;&#x524D; n &#x9879;&#x548C;.</p>
+</blockquote>
+<h5 id="&#x6C42;&#x7B2C;n&#x9879;">&#x6C42;&#x7B2C;<code>n</code>&#x9879; </h5>
+<ol>
+<li><p>&#x5047;&#x8BBE;&#x5DF2;&#x7ECF;&#x5F97;&#x5230;&#x7ED3;&#x679C; fn, fn( 10 ) &#x5C31;&#x662F;&#x7B2C; 10 &#x9879;</p>
+</li>
+<li><p>&#x627E;&#x9012;&#x63A8;&#x5173;&#x7CFB;</p>
+<ul>
+<li><p>0, 1 =&gt; fn( 0 ) + 0 = fn( 1 )</p>
+</li>
+<li><p>1, 2 =&gt; fn( 1 ) + 1 = fn( 2 )</p>
+</li>
+<li><p>2, 3 =&gt; fn( 2 ) + 2 = fn( 3 )</p>
+</li>
+<li><p>...</p>
+</li>
+<li><p>n-1, n =&gt; fn( n-1 ) + n - 1 = fn( n )</p>
+</li>
+</ul>
+</li>
+<li><p>&#x9012;&#x5F52;&#x4F53;&#x4E5F;&#x5C31;&#x6E05;&#x695A;&#x4E86;</p>
+</li>
+<li><p>&#x4E34;&#x754C;&#x6761;&#x4EF6;&#x662F; n == 0 =&gt; 1</p>
+</li>
+</ol>
+<pre><code>function
+fn
+(
+ n 
+) 
+{
+
+if
+ ( n == 
+0
+ ) 
+return
+1
+;
+
+return
+ fn( n-
+1
+ ) + n - 
+1
+;
+}
+</code></pre><h5 id="&#x524D;n&#x9879;&#x548C;">&#x524D;<code>n</code>&#x9879;&#x548C; </h5>
+<pre><code>function
+sum
+(
+ n 
+) 
+{
+
+if
+ ( n == 
+0
+ ) 
+return
+1
+;
+
+return
+ sum( n - 
+1
+ ) + fn( n );
+}
+</code></pre><h4 id="&#x7EC3;&#x4E60;">&#x7EC3;&#x4E60; </h4>
+<blockquote>
+<p>Fibonacci &#x6570;&#x5217;: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, &#x2026; &#x6C42;&#x5176;&#x7B2C; n &#x9879;.</p>
+</blockquote>
+<p>&#x9012;&#x63A8;&#x5173;&#x7CFB;:<code>fn(n) == fn(n-1) + fn(n - 2)</code></p>
+<pre><code>function
+fib
+(
+ n 
+) 
+{
+
+if
+ ( n == 
+0
+ || n == 
+1
+ ) 
+return
+1
+;
+
+return
+ fib( n - 
+1
+ ) + fib( n - 
+2
+ );
+}
+</code></pre><h4 id="&#x7EC3;&#x4E60;">&#x7EC3;&#x4E60; </h4>
+<blockquote>
+<p>&#x9636;&#x4E58;&#xFF1A;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x7684;&#x9636;&#x4E58;&#x8868;&#x793A;&#x7684;&#x662F;&#x4ECE; 1 &#x5F00;&#x59CB; &#x7D2F;&#x4E58;&#x5230;&#x8FD9;&#x4E2A;&#x6570;&#x5B57;. &#x4F8B;&#x5982; 3! &#x8868;&#x793A; 1_2_3. 5! &#x5C31;&#x662F; 1_2_3_4_5. &#x89C4;&#x5B9A; 0 &#x6CA1;&#x6709;&#x9636;&#x4E58;, &#x9636;&#x4E58;&#x4ECE;1&#x5F00;&#x59CB;&#x3002;</p>
+</blockquote>
+<p>&#x6C42;n&#x7684;&#x9636;&#x4E58;</p>
+<pre><code>function
+foo
+ (
+ n 
+) 
+{
+
+if
+ ( n == 
+1
+ ) 
+return
+1
+;
+
+return
+ foo( n - 
+1
+ ) * n;
+}
+</code></pre><h4 id="&#x7EC3;&#x4E60;">&#x7EC3;&#x4E60; </h4>
+<blockquote>
+<p>&#x6C42;&#x5E42;</p>
+</blockquote>
+<ul>
+<li><p>&#x6C42;&#x5E42;&#x5C31;&#x662F;&#x6C42; &#x67D0;&#x4E00;&#x4E2A;&#x6570; &#x51E0;&#x6B21;&#x65B9;</p>
+</li>
+<li><p>2*2 2 &#x7684; &#x5E73;&#x65B9;, 2 &#x7684; 2 &#x6B21;&#x65B9;</p>
+</li>
+<li><p>&#x6C42; n &#x7684; m &#x6B21;&#x65B9;</p>
+</li>
+<li><p>&#x6700;&#x7EC8;&#x8981;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x51FD;&#x6570; power( n, m )</p>
+</li>
+<li><p>n &#x7684; m &#x6B21;&#x65B9;&#x5C31;&#x662F; m &#x4E2A; n &#x76F8;&#x4E58; &#x5373; n &#x4E58;&#x4EE5; (m-1) &#x4E2A; n &#x76F8;&#x4E58;</p>
+</li>
+</ul>
+<pre><code>function
+power
+ (
+ n, m 
+) 
+{
+
+if
+ ( m == 
+1
+ ) 
+return
+ n;
+
+return
+ power( n, m - 
+1
+ ) * n;
+}
+</code></pre><h2 id="javascript&#x57FA;&#x7840;&#x590D;&#x4E60;"></h2>
 
                                 
                                 </section>
@@ -1400,7 +1836,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"JavaScript高级 day1","level":"1.3.1","depth":2,"next":{"title":"值类型和引用类型","level":"1.3.1.1","depth":3,"path":"javascript高级/zhi-lei-xing-he-yin-yong-lei-xing.md","ref":"javascript高级/zhi-lei-xing-he-yin-yong-lei-xing.md","articles":[]},"previous":{"title":"面向对象","level":"1.3","depth":1,"path":"javascript高级和面向对象.md","ref":"javascript高级和面向对象.md","articles":[{"title":"JavaScript高级 day1","level":"1.3.1","depth":2,"path":"javascript高级.md","ref":"javascript高级.md","articles":[{"title":"值类型和引用类型","level":"1.3.1.1","depth":3,"path":"javascript高级/zhi-lei-xing-he-yin-yong-lei-xing.md","ref":"javascript高级/zhi-lei-xing-he-yin-yong-lei-xing.md","articles":[]},{"title":"值类型和引用类型的特征","level":"1.3.1.2","depth":3,"path":"javascript高级/zhi-lei-xing-he-yin-yong-lei-xing-de-te-zheng.md","ref":"javascript高级/zhi-lei-xing-he-yin-yong-lei-xing-de-te-zheng.md","articles":[]},{"title":"对象的动态特性","level":"1.3.1.3","depth":3,"path":"javascript高级/dui-xiang-de-dong-tai-te-xing.md","ref":"javascript高级/dui-xiang-de-dong-tai-te-xing.md","articles":[]},{"title":"DOM操作复习","level":"1.3.1.4","depth":3,"path":"javascript高级/domcao-zuo-fu-xi.md","ref":"javascript高级/domcao-zuo-fu-xi.md","articles":[]},{"title":"异常处理","level":"1.3.1.5","depth":3,"path":"javascript高级/yi-chang-chu-li.md","ref":"javascript高级/yi-chang-chu-li.md","articles":[]},{"title":"调试工具的使用","level":"1.3.1.6","depth":3,"path":"javascript高级/diao-shi-gong-ju-de-shi-yong.md","ref":"javascript高级/diao-shi-gong-ju-de-shi-yong.md","articles":[]}]},{"title":"javascript基础复习","level":"1.3.2","depth":2,"path":"javascript-day4.md","ref":"javascript-day4.md","articles":[{"title":"Array","level":"1.3.2.1","depth":3,"path":"javascript-day4/array.md","ref":"javascript-day4/array.md","articles":[]},{"title":"Date","level":"1.3.2.2","depth":3,"path":"javascript-day4/date.md","ref":"javascript-day4/date.md","articles":[]},{"title":"Number","level":"1.3.2.3","depth":3,"path":"javascript-day4/number.md","ref":"javascript-day4/number.md","articles":[]},{"title":"Boolean","level":"1.3.2.4","depth":3,"path":"javascript-day4/boolean.md","ref":"javascript-day4/boolean.md","articles":[]},{"title":"String","level":"1.3.2.5","depth":3,"path":"javascript-day4/string.md","ref":"javascript-day4/string.md","articles":[]},{"title":"Math","level":"1.3.2.6","depth":3,"path":"javascript-day4/math.md","ref":"javascript-day4/math.md","articles":[]}]},{"title":"继承","level":"1.3.3","depth":2,"path":"继承.md","ref":"继承.md","articles":[]},{"title":"面向对象 day2","level":"1.3.4","depth":2,"path":"面向对象.md","ref":"面向对象.md","articles":[]},{"title":"面向对象 day3","level":"1.3.5","depth":2,"path":"面向对象-day3.md","ref":"面向对象-day3.md","articles":[]},{"title":"面向对象第5天","level":"1.3.6","depth":2,"path":"面向对象第5天.md","ref":"面向对象第5天.md","articles":[]},{"title":"面向对象第6天","level":"1.3.7","depth":2,"path":"面向对象第6天.md","ref":"面向对象第6天.md","articles":[]},{"title":"面向对象第7天","level":"1.3.8","depth":2,"path":"面向对象第7天.md","ref":"面向对象第7天.md","articles":[]},{"title":"面向对象内容总结","level":"1.3.9","depth":2,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie.md","articles":[{"title":"面向对象概念介绍","level":"1.3.9.1","depth":3,"ref":"","articles":[]},{"title":"面向对象编程举例","level":"1.3.9.2","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-bian-cheng-ju-li.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-bian-cheng-ju-li.md","articles":[]},{"title":"构造函数","level":"1.3.9.3","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/gou-zao-han-shu.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/gou-zao-han-shu.md","articles":[]},{"title":"面向对象的三大特性","level":"1.3.9.4","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-de-san-da-te-xing.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-de-san-da-te-xing.md","articles":[]},{"title":"传统构造函数存在的问题","level":"1.3.9.5","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/chuan-tong-gou-zao-han-shu-cun-zai-de-wen-ti.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/chuan-tong-gou-zao-han-shu-cun-zai-de-wen-ti.md","articles":[]},{"title":"使用原型解决构造函数问题","level":"1.3.9.6","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/shi-yong-yuan-xing-jie-jue-gou-zao-han-shu-wen-ti.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/shi-yong-yuan-xing-jie-jue-gou-zao-han-shu-wen-ti.md","articles":[]},{"title":"原型相关概念","level":"1.3.9.7","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-xiang-guan-gai-nian.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-xiang-guan-gai-nian.md","articles":[]},{"title":"原型的使用","level":"1.3.9.8","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-de-shi-yong.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-de-shi-yong.md","articles":[]},{"title":"__proto__","level":"1.3.9.9","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/proto.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/proto.md","articles":[]},{"title":"继承的实现方式","level":"1.3.9.10","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/ji-cheng-de-shi-xian-fang-shi.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/ji-cheng-de-shi-xian-fang-shi.md","articles":[]},{"title":"原型三角绘制","level":"1.3.9.11","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-san-jiao-hui-zhi.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-san-jiao-hui-zhi.md","articles":[]},{"title":"属性搜索原则","level":"1.3.9.12","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/shu-xing-sou-suo-yuan-ze.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/shu-xing-sou-suo-yuan-ze.md","articles":[]},{"title":"原型链","level":"1.3.9.13","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian.md","articles":[{"title":"原型链结构","level":"1.3.9.13.1","depth":4,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian-jie-gou.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian-jie-gou.md","articles":[]},{"title":"原型式继承","level":"1.3.9.13.2","depth":4,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-shi-ji-cheng.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-shi-ji-cheng.md","articles":[]}]},{"title":"对象相关的其他知识","level":"1.3.9.14","depth":3,"ref":"","articles":[{"title":"Object.prototype成员介绍","level":"1.3.9.14.1","depth":4,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/objectprototypecheng-yuan-jie-shao.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/objectprototypecheng-yuan-jie-shao.md","articles":[]},{"title":"Function介绍及使用","level":"1.3.9.14.2","depth":4,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/functionjie-shao-ji-shi-yong.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/functionjie-shao-ji-shi-yong.md","articles":[]},{"title":"解决代码太长的问题","level":"1.3.9.14.3","depth":4,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/jie-jue-dai-ma-tai-chang-de-wen-ti.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/jie-jue-dai-ma-tai-chang-de-wen-ti.md","articles":[]},{"title":"静态成员和实例成员","level":"1.3.9.14.4","depth":4,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/jing-tai-cheng-yuan-he-shi-li-cheng-yuan.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/jing-tai-cheng-yuan-he-shi-li-cheng-yuan.md","articles":[]},{"title":"arguments对象","level":"1.3.9.14.5","depth":4,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/argumentsdui-xiang.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/argumentsdui-xiang.md","articles":[]}]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript高级.md","mtime":"2017-08-01T14:31:27.115Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-01T15:09:56.125Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JavaScript高级知识","level":"1.3.1","depth":2,"next":{"title":"值类型和引用类型","level":"1.3.1.1","depth":3,"path":"javascript高级/zhi-lei-xing-he-yin-yong-lei-xing.md","ref":"javascript高级/zhi-lei-xing-he-yin-yong-lei-xing.md","articles":[]},"previous":{"title":"面向对象","level":"1.3","depth":1,"path":"javascript高级和面向对象.md","ref":"javascript高级和面向对象.md","articles":[{"title":"JavaScript高级知识","level":"1.3.1","depth":2,"path":"javascript高级.md","ref":"javascript高级.md","articles":[{"title":"值类型和引用类型","level":"1.3.1.1","depth":3,"path":"javascript高级/zhi-lei-xing-he-yin-yong-lei-xing.md","ref":"javascript高级/zhi-lei-xing-he-yin-yong-lei-xing.md","articles":[]},{"title":"值类型和引用类型的特征","level":"1.3.1.2","depth":3,"path":"javascript高级/zhi-lei-xing-he-yin-yong-lei-xing-de-te-zheng.md","ref":"javascript高级/zhi-lei-xing-he-yin-yong-lei-xing-de-te-zheng.md","articles":[]},{"title":"对象的动态特性","level":"1.3.1.3","depth":3,"path":"javascript高级/dui-xiang-de-dong-tai-te-xing.md","ref":"javascript高级/dui-xiang-de-dong-tai-te-xing.md","articles":[]},{"title":"DOM操作复习","level":"1.3.1.4","depth":3,"path":"javascript高级/domcao-zuo-fu-xi.md","ref":"javascript高级/domcao-zuo-fu-xi.md","articles":[]},{"title":"异常处理","level":"1.3.1.5","depth":3,"path":"javascript高级/yi-chang-chu-li.md","ref":"javascript高级/yi-chang-chu-li.md","articles":[]},{"title":"调试工具的使用","level":"1.3.1.6","depth":3,"path":"javascript高级/diao-shi-gong-ju-de-shi-yong.md","ref":"javascript高级/diao-shi-gong-ju-de-shi-yong.md","articles":[]},{"title":"词法作用域","level":"1.3.1.7","depth":3,"ref":"","articles":[{"title":"词法作用域","level":"1.3.1.7.1","depth":4,"path":"javascript高级/ci-fa-zuo-yong-yu.md","ref":"javascript高级/ci-fa-zuo-yong-yu.md","articles":[]},{"title":"变量名提升","level":"1.3.1.7.2","depth":4,"path":"javascript高级/bian-liang-ming-ti-sheng.md","ref":"javascript高级/bian-liang-ming-ti-sheng.md","articles":[]},{"title":"作用域链","level":"1.3.1.7.3","depth":4,"path":"javascript高级/zuo-yong-yu-lian.md","ref":"javascript高级/zuo-yong-yu-lian.md","articles":[]}]},{"title":"闭包","level":"1.3.1.8","depth":3,"path":"javascript高级/bi-bao.md","ref":"javascript高级/bi-bao.md","articles":[]},{"title":"函数的四种调用模式","level":"1.3.1.9","depth":3,"path":"javascript高级/han-shu-de-si-zhong-diao-yong-mo-shi.md","ref":"javascript高级/han-shu-de-si-zhong-diao-yong-mo-shi.md","articles":[]}]},{"title":"javascript基础复习","level":"1.3.2","depth":2,"path":"javascript-day4.md","ref":"javascript-day4.md","articles":[{"title":"Array","level":"1.3.2.1","depth":3,"path":"javascript-day4/array.md","ref":"javascript-day4/array.md","articles":[]},{"title":"Date","level":"1.3.2.2","depth":3,"path":"javascript-day4/date.md","ref":"javascript-day4/date.md","articles":[]},{"title":"Number","level":"1.3.2.3","depth":3,"path":"javascript-day4/number.md","ref":"javascript-day4/number.md","articles":[]},{"title":"Boolean","level":"1.3.2.4","depth":3,"path":"javascript-day4/boolean.md","ref":"javascript-day4/boolean.md","articles":[]},{"title":"String","level":"1.3.2.5","depth":3,"path":"javascript-day4/string.md","ref":"javascript-day4/string.md","articles":[]},{"title":"Math","level":"1.3.2.6","depth":3,"path":"javascript-day4/math.md","ref":"javascript-day4/math.md","articles":[]}]},{"title":"继承","level":"1.3.3","depth":2,"path":"继承.md","ref":"继承.md","articles":[]},{"title":"面向对象 day2","level":"1.3.4","depth":2,"path":"面向对象.md","ref":"面向对象.md","articles":[]},{"title":"面向对象 day3","level":"1.3.5","depth":2,"path":"面向对象-day3.md","ref":"面向对象-day3.md","articles":[]},{"title":"面向对象第5天","level":"1.3.6","depth":2,"path":"面向对象第5天.md","ref":"面向对象第5天.md","articles":[]},{"title":"面向对象第6天","level":"1.3.7","depth":2,"path":"面向对象第6天.md","ref":"面向对象第6天.md","articles":[]},{"title":"面向对象第7天","level":"1.3.8","depth":2,"path":"面向对象第7天.md","ref":"面向对象第7天.md","articles":[]},{"title":"面向对象内容总结","level":"1.3.9","depth":2,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie.md","articles":[{"title":"面向对象概念介绍","level":"1.3.9.1","depth":3,"ref":"","articles":[]},{"title":"面向对象编程举例","level":"1.3.9.2","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-bian-cheng-ju-li.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-bian-cheng-ju-li.md","articles":[]},{"title":"构造函数","level":"1.3.9.3","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/gou-zao-han-shu.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/gou-zao-han-shu.md","articles":[]},{"title":"面向对象的三大特性","level":"1.3.9.4","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-de-san-da-te-xing.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-de-san-da-te-xing.md","articles":[]},{"title":"传统构造函数存在的问题","level":"1.3.9.5","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/chuan-tong-gou-zao-han-shu-cun-zai-de-wen-ti.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/chuan-tong-gou-zao-han-shu-cun-zai-de-wen-ti.md","articles":[]},{"title":"使用原型解决构造函数问题","level":"1.3.9.6","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/shi-yong-yuan-xing-jie-jue-gou-zao-han-shu-wen-ti.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/shi-yong-yuan-xing-jie-jue-gou-zao-han-shu-wen-ti.md","articles":[]},{"title":"原型相关概念","level":"1.3.9.7","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-xiang-guan-gai-nian.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-xiang-guan-gai-nian.md","articles":[]},{"title":"原型的使用","level":"1.3.9.8","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-de-shi-yong.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-de-shi-yong.md","articles":[]},{"title":"__proto__","level":"1.3.9.9","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/proto.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/proto.md","articles":[]},{"title":"继承的实现方式","level":"1.3.9.10","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/ji-cheng-de-shi-xian-fang-shi.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/ji-cheng-de-shi-xian-fang-shi.md","articles":[]},{"title":"原型三角绘制","level":"1.3.9.11","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-san-jiao-hui-zhi.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-san-jiao-hui-zhi.md","articles":[]},{"title":"属性搜索原则","level":"1.3.9.12","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/shu-xing-sou-suo-yuan-ze.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/shu-xing-sou-suo-yuan-ze.md","articles":[]},{"title":"原型链","level":"1.3.9.13","depth":3,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian.md","articles":[{"title":"原型链结构","level":"1.3.9.13.1","depth":4,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian-jie-gou.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian-jie-gou.md","articles":[]},{"title":"原型式继承","level":"1.3.9.13.2","depth":4,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-shi-ji-cheng.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-shi-ji-cheng.md","articles":[]}]},{"title":"对象相关的其他知识","level":"1.3.9.14","depth":3,"ref":"","articles":[{"title":"Object.prototype成员介绍","level":"1.3.9.14.1","depth":4,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/objectprototypecheng-yuan-jie-shao.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/objectprototypecheng-yuan-jie-shao.md","articles":[]},{"title":"Function介绍及使用","level":"1.3.9.14.2","depth":4,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/functionjie-shao-ji-shi-yong.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/functionjie-shao-ji-shi-yong.md","articles":[]},{"title":"解决代码太长的问题","level":"1.3.9.14.3","depth":4,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/jie-jue-dai-ma-tai-chang-de-wen-ti.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/jie-jue-dai-ma-tai-chang-de-wen-ti.md","articles":[]},{"title":"静态成员和实例成员","level":"1.3.9.14.4","depth":4,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/jing-tai-cheng-yuan-he-shi-li-cheng-yuan.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/jing-tai-cheng-yuan-he-shi-li-cheng-yuan.md","articles":[]},{"title":"arguments对象","level":"1.3.9.14.5","depth":4,"path":"mian-xiang-dui-xiang-nei-rong-zong-jie/argumentsdui-xiang.md","ref":"mian-xiang-dui-xiang-nei-rong-zong-jie/argumentsdui-xiang.md","articles":[]}]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript高级.md","mtime":"2017-08-01T15:22:34.019Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-01T15:25:27.216Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
