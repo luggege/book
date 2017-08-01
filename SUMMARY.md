@@ -43,6 +43,10 @@
     * [原型链](mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian.md)
       * [原型链结构](mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian-jie-gou.md)
       * [原型式继承](mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-shi-ji-cheng.md)
+    * 对象相关的其他知识
+      * [Object.prototype成员介绍](mian-xiang-dui-xiang-nei-rong-zong-jie/objectprototypecheng-yuan-jie-shao.md)
+      * [Function介绍及使用](mian-xiang-dui-xiang-nei-rong-zong-jie/functionjie-shao-ji-shi-yong.md)
+      * [解决代码太长的问题](mian-xiang-dui-xiang-nei-rong-zong-jie/jie-jue-dai-ma-tai-chang-de-wen-ti.md)
 * [流行框架](流行框架.md)
   * [Git](git.md)
   * [angular](angular.md)
