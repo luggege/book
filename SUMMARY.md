@@ -18,6 +18,7 @@
       * [词法作用域](javascript高级/ci-fa-zuo-yong-yu.md)
       * [变量名提升](javascript高级/bian-liang-ming-ti-sheng.md)
       * [作用域链](javascript高级/zuo-yong-yu-lian.md)
+    * [闭包](javascript高级/bi-bao.md)
   * [javascript基础复习](javascript-day4.md)
     * [Array](javascript-day4/array.md)
     * [Date](javascript-day4/date.md)
