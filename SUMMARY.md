@@ -33,6 +33,7 @@
     * [构造函数](mian-xiang-dui-xiang-nei-rong-zong-jie/gou-zao-han-shu.md)
     * [面向对象的三大特性](mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-de-san-da-te-xing.md)
     * [传统构造函数存在的问题](mian-xiang-dui-xiang-nei-rong-zong-jie/chuan-tong-gou-zao-han-shu-cun-zai-de-wen-ti.md)
+    * [使用原型解决构造函数问题](mian-xiang-dui-xiang-nei-rong-zong-jie/shi-yong-yuan-xing-jie-jue-gou-zao-han-shu-wen-ti.md)
 * [流行框架](流行框架.md)
   * [Git](git.md)
   * [angular](angular.md)
