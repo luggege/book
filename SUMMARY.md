@@ -37,6 +37,8 @@
     * [原型相关概念](mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-xiang-guan-gai-nian.md)
     * [原型的使用](mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-de-shi-yong.md)
     * [\_\_proto\_\_](mian-xiang-dui-xiang-nei-rong-zong-jie/proto.md)
+    * [继承的实现方式](mian-xiang-dui-xiang-nei-rong-zong-jie/ji-cheng-de-shi-xian-fang-shi.md)
+    * [原型三角绘制](mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-san-jiao-hui-zhi.md)
 * [流行框架](流行框架.md)
   * [Git](git.md)
   * [angular](angular.md)
