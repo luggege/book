@@ -48,6 +48,7 @@
       * [Function介绍及使用](mian-xiang-dui-xiang-nei-rong-zong-jie/functionjie-shao-ji-shi-yong.md)
       * [解决代码太长的问题](mian-xiang-dui-xiang-nei-rong-zong-jie/jie-jue-dai-ma-tai-chang-de-wen-ti.md)
       * [静态成员和实例成员](mian-xiang-dui-xiang-nei-rong-zong-jie/jing-tai-cheng-yuan-he-shi-li-cheng-yuan.md)
+      * [arguments对象](mian-xiang-dui-xiang-nei-rong-zong-jie/argumentsdui-xiang.md)
 * [流行框架](流行框架.md)
   * [Git](git.md)
   * [angular](angular.md)
