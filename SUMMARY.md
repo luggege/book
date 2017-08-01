@@ -27,6 +27,8 @@
   * [面向对象第5天](面向对象第5天.md)
   * [面向对象第6天](面向对象第6天.md)
   * [面向对象第7天](面向对象第7天.md)
+  * [面向对象内容总结](mian-xiang-dui-xiang-nei-rong-zong-jie.md)
+    * 面向对象概念介绍
 * [流行框架](流行框架.md)
   * [Git](git.md)
   * [angular](angular.md)
