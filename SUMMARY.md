@@ -10,6 +10,7 @@
   * [JavaScript高级 day1](javascript高级.md)
     * [值类型和引用类型](javascript高级/zhi-lei-xing-he-yin-yong-lei-xing.md)
     * [值类型和引用类型的特征](javascript高级/zhi-lei-xing-he-yin-yong-lei-xing-de-te-zheng.md)
+    * [对象的动态特性](javascript高级/dui-xiang-de-dong-tai-te-xing.md)
   * [javascript基础](javascript-day4.md)
   * [继承](继承.md)
   * [面向对象 day2](面向对象.md)
