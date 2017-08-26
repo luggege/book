@@ -85,15 +85,12 @@ son {
 father {
     display: flex;
     jusitify-content: center;
-    align-item: center;
+    align-items: center;
 }
 son {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    
 }
 ```
 
-y
+
 
