@@ -70,13 +70,11 @@ son {
     margin-top: -100px;
 }
 
-//方法二:
+//方法二:  好处: 不需要知道子元素宽高,但是存在兼容性问题
 father {
     position: relative;
 }
 son {
-    width: 200px;
-    height: 200px;
     position: absolute;
     left: 50%;
     top: 50%;
