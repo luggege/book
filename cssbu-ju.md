@@ -35,7 +35,7 @@ left: {
     top: 0;
 }
 right: {
-
+    width: 100%;
 }
 ```
 
