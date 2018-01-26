@@ -92,5 +92,10 @@ son {
 }
 ```
 
+### 多行文字垂直居中
+
+1. 单行文字: 使用 line-height 与 height 同高即可解决
+2. 多行文字: 给父盒子设置: display: table-cell; \(verticle-align: middle;\)作为表格单元格显示即可垂直居中
+
 
 
