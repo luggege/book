@@ -37,11 +37,11 @@
 
 1. cd .. 退出一层克隆远程仓库的gh-pages分支并保存为book\__build文件夹:   _
 
-   `git clone -b gh-pages https://github.com/luggege/book.gitbook_build`
+   `git clone -b gh-pages https://github.com/luggege/book.git book_build`
 
 2. 然后从本地编辑器自动生成的源目录中找到_book文件夹\(保存的html静态文件\),复制其中的静态文件和样式文件\(gitbook\)到   gitbook\_build文件中_
 
-3. 将静态文件push到远程仓库book的gh-pages分钟上: 命令如下:
+3. 将静态文件push到远程仓库book的gh-pages分支上: 命令如下:
 
 > `git add .`
 >
@@ -61,11 +61,9 @@
 
 参考博客:  [`http://www.jianshu.com/p/4731abc562e7`](http://www.jianshu.com/p/4731abc562e7%29\)
 
-
-
 #### 如何查看GitHub上有没有本台电脑的ssh keys
 
-* C:\Documents and Settings\Administrator\.ssh\ 目 录下。有没有id\_rsa和id\_rsa.pub两个文件,有的话已经生成过,复制id\_rsa.pub中的内容到GitHub即可
+* C:\Documents and Settings\Administrator.ssh 目 录下。有没有id\_rsa和id\_rsa.pub两个文件,有的话已经生成过,复制id\_rsa.pub中的内容到GitHub即可
 
 * 没有的话重新生成: git命令行输入 ssh-keygen -t rsa -C "email@email.com" 即可生成.
 
