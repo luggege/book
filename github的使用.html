@@ -7,7 +7,7 @@
         <title>github创建自己的电子书 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -929,9 +929,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="就业指导.html">
+        <li class="chapter active" data-level="1.6" data-path="github的使用.html">
             
-                <a href="就业指导.html">
+                <a href="github的使用.html">
             
                     
                     github创建自己的电子书
@@ -961,7 +961,7 @@
                 <a href="day1.html">
             
                     
-                    node基础及requirejs\/seajs
+                    node基础及requirejs/seajs
             
                 </a>
             
@@ -1458,7 +1458,7 @@
 <p>&#x5177;&#x4F53;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;:</p>
 <ol>
 <li>&#x767B;&#x5F55;GitHub&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x4ED3;&#x5E93;,&#x547D;&#x540D;&#x4E3A;book</li>
-<li>&#x514B;&#x9686;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5230;&#x672C;&#x5730; <code>git clonehttps://github.com/luggege/book.git</code></li>
+<li>&#x514B;&#x9686;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5230;&#x672C;&#x5730; <code>git clone https://github.com/luggege/book.git</code></li>
 <li><p>&#x5C06;&#x5206;&#x652F; push &#x5230;&#x4ED3;&#x5E93;&#xFF1A;<code>git push -u origin gh-pages</code></p>
 </li>
 <li><p>&#x5207;&#x6362;&#x5230;&#x4E3B;&#x5206;&#x652F;:<code>git checkout master</code></p>
@@ -1468,9 +1468,11 @@
 <p><code>http://USERNAME.github.io/book</code></p>
 <ol>
 <li><p>cd .. &#x9000;&#x51FA;&#x4E00;&#x5C42;&#x514B;&#x9686;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x7684;gh-pages&#x5206;&#x652F;&#x5E76;&#x4FDD;&#x5B58;&#x4E3A;book_<em>build&#x6587;&#x4EF6;&#x5939;:   </em></p>
-<p><code>git clone -b gh-pageshttps://github.com/luggege/book.gitbook_build</code></p>
-<p>2.&#x7136;&#x540E;&#x4ECE;&#x672C;&#x5730;&#x7F16;&#x8F91;&#x5668;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x6E90;&#x76EE;&#x5F55;&#x4E2D;&#x627E;&#x5230;<em>book&#x6587;&#x4EF6;&#x5939;(&#x4FDD;&#x5B58;&#x7684;html&#x9759;&#x6001;&#x6587;&#x4EF6;),&#x590D;&#x5236;&#x5176;&#x4E2D;&#x7684;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x548C;&#x6837;&#x5F0F;&#x6587;&#x4EF6;(gitbook)&#x5230;   gitbook_build&#x6587;&#x4EF6;&#x4E2D;</em></p>
-<p>3.&#x5C06;&#x9759;&#x6001;&#x6587;&#x4EF6;push&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;book&#x7684;gh-pages&#x5206;&#x949F;&#x4E0A;: &#x547D;&#x4EE4;&#x5982;&#x4E0B;:</p>
+<p><code>git clone -b gh-pages https://github.com/luggege/book.gitbook_build</code></p>
+</li>
+<li><p>&#x7136;&#x540E;&#x4ECE;&#x672C;&#x5730;&#x7F16;&#x8F91;&#x5668;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x6E90;&#x76EE;&#x5F55;&#x4E2D;&#x627E;&#x5230;<em>book&#x6587;&#x4EF6;&#x5939;(&#x4FDD;&#x5B58;&#x7684;html&#x9759;&#x6001;&#x6587;&#x4EF6;),&#x590D;&#x5236;&#x5176;&#x4E2D;&#x7684;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x548C;&#x6837;&#x5F0F;&#x6587;&#x4EF6;(gitbook)&#x5230;   gitbook_build&#x6587;&#x4EF6;&#x4E2D;</em></p>
+</li>
+<li><p>&#x5C06;&#x9759;&#x6001;&#x6587;&#x4EF6;push&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;book&#x7684;gh-pages&#x5206;&#x949F;&#x4E0A;: &#x547D;&#x4EE4;&#x5982;&#x4E0B;:</p>
 </li>
 </ol>
 <blockquote>
@@ -1484,6 +1486,25 @@
 <p>1.git pull origin master(&#x76F8;&#x5F53;&#x4E8E;git fetch + git merge) &#x62C9;&#x53D6;&#x6307;&#x5B9A;&#x5206;&#x652F;,&#x6CA1;&#x5FC5;&#x8981;clone<br>2.gitbook build (&#x751F;&#x6210;&#x9759;&#x6001;&#x9875;&#x9762;&#x4E4B;&#x540E;&#x653E;&#x5230;book_build&#x4E2D;)<br>3.git add .<br>4.git commit -m &apos;&apos;add file&quot;<br>5.git push</p>
 </blockquote>
 <p>&#x53C2;&#x8003;&#x535A;&#x5BA2;:  <a href="http://www.jianshu.com/p/4731abc562e7%29\" target="_blank"><code>http://www.jianshu.com/p/4731abc562e7</code></a></p>
+<h4 id="&#x5982;&#x4F55;&#x67E5;&#x770B;github&#x4E0A;&#x6709;&#x6CA1;&#x6709;&#x672C;&#x53F0;&#x7535;&#x8111;&#x7684;ssh-keys">&#x5982;&#x4F55;&#x67E5;&#x770B;GitHub&#x4E0A;&#x6709;&#x6CA1;&#x6709;&#x672C;&#x53F0;&#x7535;&#x8111;&#x7684;ssh keys</h4>
+<ul>
+<li><p>C:\Documents and Settings\Administrator.ssh\ &#x76EE; &#x5F55;&#x4E0B;&#x3002;&#x6709;&#x6CA1;&#x6709;id_rsa&#x548C;id_rsa.pub&#x4E24;&#x4E2A;&#x6587;&#x4EF6;,&#x6709;&#x7684;&#x8BDD;&#x5DF2;&#x7ECF;&#x751F;&#x6210;&#x8FC7;,&#x590D;&#x5236;id_rsa.pub&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x5230;GitHub&#x5373;&#x53EF;</p>
+</li>
+<li><p>&#x6CA1;&#x6709;&#x7684;&#x8BDD;&#x91CD;&#x65B0;&#x751F;&#x6210;: git&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165; ssh-keygen -t rsa -C &quot;email@email.com&quot; &#x5373;&#x53EF;&#x751F;&#x6210;.</p>
+</li>
+</ul>
+<h4 id="git&#x547D;&#x4EE4;-&#x5168;&#x5C40;&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x540D;&#x548C;&#x90AE;&#x7BB1;">git&#x547D;&#x4EE4;: &#x5168;&#x5C40;&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x540D;&#x548C;&#x90AE;&#x7BB1;</h4>
+<ul>
+<li>&#x67E5;&#x770B;git&#x914D;&#x7F6E;&#x4FE1;&#x606F;: git config --list</li>
+<li><p>&#x67E5;&#x770B;git&#x7528;&#x6237;&#x540D;: git config user.name</p>
+</li>
+<li><p>&#x67E5;&#x770B;&#x90AE;&#x7BB1;&#x914D;&#x7F6E;: git config user.email</p>
+</li>
+<li><p>&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x7528;&#x6237;&#x540D;: git config --global user.name &quot;lugegel&quot;</p>
+</li>
+<li><p>&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x90AE;&#x7BB1;: git config --global user.email &quot;luwenxiu@legalminer.com&quot;</p>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -1527,7 +1548,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"github创建自己的电子书","level":"1.6","depth":1,"next":{"title":"Node.Js","level":"1.7","depth":1,"path":"nodejs.md","ref":"nodejs.md","articles":[{"title":"node基础及requirejs\\/seajs","level":"1.7.1","depth":2,"path":"day1.md","ref":"day1.md","articles":[]},{"title":"总结","level":"1.7.2","depth":2,"path":"总结.md","ref":"总结.md","articles":[]},{"title":"day2","level":"1.7.3","depth":2,"path":"day2.md","ref":"day2.md","articles":[]},{"title":"day3","level":"1.7.4","depth":2,"path":"day3.md","ref":"day3.md","articles":[]},{"title":"day4调试,线程进程","level":"1.7.5","depth":2,"path":"day4调试线程进程.md","ref":"day4调试线程进程.md","articles":[]},{"title":"http","level":"1.7.6","depth":2,"path":"http.md","ref":"http.md","articles":[]},{"title":"数据库","level":"1.7.7","depth":2,"path":"数据库.md","ref":"数据库.md","articles":[]},{"title":"中间件","level":"1.7.8","depth":2,"path":"中间件.md","ref":"中间件.md","articles":[]}]},"previous":{"title":"屏幕适配","level":"1.5.1","depth":2,"path":"屏幕适配.md","ref":"屏幕适配.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"就业指导.md","mtime":"2017-07-29T13:26:41.211Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-26T12:14:32.599Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"github创建自己的电子书","level":"1.6","depth":1,"next":{"title":"Node.Js","level":"1.7","depth":1,"path":"nodejs.md","ref":"nodejs.md","articles":[{"title":"node基础及requirejs/seajs","level":"1.7.1","depth":2,"path":"day1.md","ref":"day1.md","articles":[]},{"title":"总结","level":"1.7.2","depth":2,"path":"总结.md","ref":"总结.md","articles":[]},{"title":"day2","level":"1.7.3","depth":2,"path":"day2.md","ref":"day2.md","articles":[]},{"title":"day3","level":"1.7.4","depth":2,"path":"day3.md","ref":"day3.md","articles":[]},{"title":"day4调试,线程进程","level":"1.7.5","depth":2,"path":"day4调试线程进程.md","ref":"day4调试线程进程.md","articles":[]},{"title":"http","level":"1.7.6","depth":2,"path":"http.md","ref":"http.md","articles":[]},{"title":"数据库","level":"1.7.7","depth":2,"path":"数据库.md","ref":"数据库.md","articles":[]},{"title":"中间件","level":"1.7.8","depth":2,"path":"中间件.md","ref":"中间件.md","articles":[]}]},"previous":{"title":"屏幕适配","level":"1.5.1","depth":2,"path":"屏幕适配.md","ref":"屏幕适配.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"github的使用.md","mtime":"2018-02-12T03:58:20.799Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-12T07:40:44.524Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
