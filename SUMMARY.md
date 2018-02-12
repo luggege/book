@@ -62,7 +62,7 @@
   * [屏幕适配](屏幕适配.md)
 * [github创建自己的电子书](就业指导.md)
 * [Node.Js](nodejs.md)
-  * [node基础及requirejs\/seajs](day1.md)
+  * [node基础及requirejs/seajs](day1.md)
   * [总结](总结.md)
   * [day2](day2.md)
   * [day3](day3.md)
