@@ -1,4 +1,4 @@
-﻿# Summary
+\# Summary
 
 * [Introduction](README.md)
 * [canvas](chapter1.md)
@@ -93,4 +93,6 @@
   * [获取浏览器宽高](huo-qu-liu-lan-qi-kuan-gao.md)
   * [开发经验细碎点](kai-fa-jing-yan-xi-sui-dian.md)
   * [CSS布局](cssbu-ju.md)
+
+
 
