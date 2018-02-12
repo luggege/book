@@ -1,4 +1,4 @@
-# Summary
+﻿# Summary
 
 * [Introduction](README.md)
 * [canvas](chapter1.md)
@@ -60,7 +60,7 @@
   * [angular](angular.md)
 * [移动Web](移动web.md)
   * [屏幕适配](屏幕适配.md)
-* [github创建自己的电子书](就业指导.md)
+* [github创建自己的电子书](github的使用.md)
 * [Node.Js](nodejs.md)
   * [node基础及requirejs/seajs](day1.md)
   * [总结](总结.md)
