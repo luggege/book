@@ -64,7 +64,6 @@
 >
 > * 如果gitbook build之后生成的页面不能跳转,可使用低版本的gitbook\( gitbook build --gitbook=2.3.2 \)
 >
->   
 > 3.git add .  
 > 4.git commit -m ''add file"  
 > 5.git push
