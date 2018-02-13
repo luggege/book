@@ -56,16 +56,16 @@
 > 1.git pull origin master\(相当于git fetch + git merge\) 拉取指定分支,没必要clone  
 > 2.gitbook build \(生成静态页面之后放到book\_build中\)
 >
->    - 如果报错说明gitbook未安装
+> * 如果报错说明gitbook未安装
 >
->    - 安装gitbook: npm install -g gitbook-cli
+> * 安装gitbook: npm install -g gitbook-cli
 >
->    - 检查是否安装成功: gitbook -V
+> * 检查是否安装成功: gitbook -V
 >
->    - 如果gitbook build之后生成的页面不能跳转,可使用低版本的gitbook\( gitbook build --gitbook=2.3.2 \)  
-> 3.git add .  
-> 4.git commit -m ''add file"  
-> 5.git push
+> * 如果gitbook build之后生成的页面不能跳转,可使用低版本的gitbook\( gitbook build --gitbook=2.3.2 \)  
+>   3.git add .  
+>   4.git commit -m ''add file"  
+>   5.git push
 
 参考博客:  [`http://www.jianshu.com/p/4731abc562e7`](http://www.jianshu.com/p/4731abc562e7%29\)
 
@@ -82,7 +82,7 @@
 
 * 查看邮箱配置: git config user.email
 
-* 全局配置用户名: git config --global user.name "lugegel"
+* 全局配置用户名: git config --global user.name "lugege"
 
 * 全局配置邮箱: git config --global user.email "luwenxiu@legalminer.com"
 
