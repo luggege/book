@@ -62,10 +62,12 @@
 >
 > * 检查是否安装成功: gitbook -V
 >
-> * 如果gitbook build之后生成的页面不能跳转,可使用低版本的gitbook\( gitbook build --gitbook=2.3.2 \)  
->   3.git add .  
->   4.git commit -m ''add file"  
->   5.git push
+> * 如果gitbook build之后生成的页面不能跳转,可使用低版本的gitbook\( gitbook build --gitbook=2.3.2 \)
+>
+>   
+> 3.git add .  
+> 4.git commit -m ''add file"  
+> 5.git push
 
 参考博客:  [`http://www.jianshu.com/p/4731abc562e7`](http://www.jianshu.com/p/4731abc562e7%29\)
 
