@@ -20,7 +20,7 @@
 > 选择`Theme - Default`，再选择Soda Dark 3.sublime-theme \(首选项--用户中查看自己的主题找到对应的配置文件\)  
 > 搜索`sidebar_label`，在`"class": "sidebar_label"`后边加一行：`"font.size": 18`，将字体大小设置为18，保存。
 >
-> 搜索sidebar\_tree，在"row\_padding": \[8, 8\],修改后边的数字
+> 搜索sidebar\_tree，在"row\_padding": \[8, 8\],修改后边的数字，改变行距
 
 # Markdown的常用语法
 
