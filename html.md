@@ -1,8 +1,26 @@
 ### 解决sublime package control 出现There are no packages available for installation
 
 > 在 \([https://packagecontrol.io/installation\#st2\)下载](https://packagecontrol.io/installation#st2%29下载) Package Control.sublime-package 放到Sublime text 安装目录下的Packages 里面
+>
+> 参考博客: \([http://www.tuicool.com/articles/UBnYrq](http://www.tuicool.com/articles/UBnYrq%29%29\)
 
-> 参考博客: \([http://www.tuicool.com/articles/UBnYrq](http://www.tuicool.com/articles/UBnYrq%29\)\)
+
+
+# 修改Sublime Text 3的侧边栏字体大小
+
+1. ### 首先需要确保安装了Package Control
+2. ### 然后安装PackageResourceViewe
+
+> 快捷键`⌘(command)+⇧(shift)+P`打开 Command Palette
+> 输入`Package Control:Install`回车，等待加载package列表
+> 搜索并安装`PackageResourceViewer`包
+
+###   3.最后，使用PackageResourceViewer打开Theme文件进行编辑
+
+> 快捷键`⌘(command)+⇧(shift)+P`打开 Command Palette
+> 输入`PackageResourceViewer: Open Resource`回车，打开包列表
+> 选择`Theme - Default`，再选择Soda Dark 3.sublime-theme \(首选项--用户中查看自己的主题找到对应的配置文件\)
+> 搜索`sidebar_label`，在`"class": "sidebar_label"`后边加一行：`"font.size": 18`，将字体大小设置为18，保存。
 
 
 
@@ -61,10 +79,12 @@ Markdown 标题支持两种形式：
 * Blue
 
 * Red
+
 * Green
 * Blue
 
 * Red
+
 * Green
 * Blue
 
@@ -98,7 +118,7 @@ void
 onCreate
 (Bundle savedInstanceState)
 {
-    
+
 super
 .onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
@@ -110,7 +130,7 @@ super
 > > 二级引用
 > >
 > > > 三级引用
-
+>
 > #### 这是一个四级标题 {#这是一个四级标题}
 >
 > 1. 这是第一行列表项
@@ -130,9 +150,9 @@ _斜体文本_或者_斜体文本_
 
 图片与链接的语法很像，区别在一个 ! 号。二者格式：
 
-图片：![](%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80 "图片文本\(可忽略\)")
+图片：![](图片地址 "图片文本\(可忽略\)")
 
-链接：[链接文本](%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80)链接又分为行内式、参考式和 自动链接：
+链接：[链接文本](链接地址)链接又分为行内式、参考式和 自动链接：
 
 这是行内式链接：[ConnorLin's Blog](http://connorlin.github.io)。
 
@@ -212,7 +232,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 使用\[^\]来定义脚注：
 
-这是一个脚注的例子[1](%E8%BF%99%E9%87%8C%E6%98%AF%E8%84%9A%E6%B3%A8)
+这是一个脚注的例子[1](这里是脚注)
 
 ## 常用弥补Markdown的Html标签 {#常用弥补markdown的html标签}
 
