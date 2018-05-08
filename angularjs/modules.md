@@ -8,11 +8,13 @@
 
 注入方式:
 
-> angular.module\('myApp', \['ui.router', 'oc.lazyLoad'\]\);
+```js
+angular.module('myApp', ['ui.router', 'oc.lazyLoad']);
+```
 
 使用方法
 
-```
+```js
   .state('account', {
         url: '/account',
         templateUrl: '../tpls/account.html',
@@ -25,6 +27,20 @@
             }]
         }
     })
+```
+
+#### $uibModal 模态框使用
+
+依赖文件
+
+> 1. angular.js
+> 2. angular-animate.js
+> 3. ui-bootstrap-tpls.js
+
+注入方式
+
+```js
+angular.module('myApp', ['ngAnimate', 'ui.bootstrap']);
 ```
 
 
