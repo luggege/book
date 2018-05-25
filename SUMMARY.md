@@ -95,4 +95,5 @@
   * [CSS布局](cssbu-ju.md)
 * [angularjs](angularjs.md)
   * [modules](angularjs/modules.md)
+  * [指令的使用](angularjs/zhi-ling-de-shi-yong.md)
 
