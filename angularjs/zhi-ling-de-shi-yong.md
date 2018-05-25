@@ -40,13 +40,5 @@
 
   * select as lable disable when disable for \(key, value\) in object
 
-
-
-**如何解决ng-options遍历渲染的option第一个为空的情况:  **&lt;**option value="" selected hidden&gt;&lt;/option&gt;**
-
-
-
-
-
-
+**如何解决ng-options遍历渲染的option第一个为空的情况:  **&lt;**option value="" selected hidden&gt;&lt;/option&gt;，给ng-model赋初始值即可**
 
