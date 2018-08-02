@@ -1,8 +1,7 @@
-```
-// 文档的宽 高
-```
+## 获取浏览器宽高
 
 ```
+// 文档的宽 高
 console.log( document.body.clientWidth );
 
 console.log( document.body.clientHeight );
@@ -75,4 +74,10 @@ screenX:触摸目标在**屏幕**中的x坐标。
 screenY:触摸目标在**屏幕**中的y坐标。
 
 target:触摸的DOM节点坐标
+
+
+
+## 浏览器navigator属性
+
+
 
