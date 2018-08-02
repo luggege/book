@@ -75,9 +75,39 @@ screenY:触摸目标在**屏幕**中的y坐标。
 
 target:触摸的DOM节点坐标
 
-
-
 ## 浏览器navigator属性
+
+navigator 对象包含有关浏览器的信息。没有应用于 navigator 对象的公开标准，不过所有浏览器都支持该对象。但是其内部一些属性及其返回值在各浏览器并不统一。
+
+* language：返回当前的浏览器语言（来自 Mozilla Developer Center）
+* userLanguage：返回操作系统设定的自然语言（来自 MSDN）
+* browserLanguage：返回当前的浏览器语言（来自 MSDN）
+* systemLanguage：返回当前操作系统的缺省语言（来自 MSDN）
+
+关于 navigator 对象的更多资料，请参见：[MSDN](http://msdn.microsoft.com/en-us/library/ms535867%28VS.85%29.aspx)、[Mozilla Developer Center](https://developer.mozilla.org/en/DOM/window.navigator)。
+
+对于浏览器，Mozilla Developer Center 中的 language 属性与 MSDN 中的 browserLanguage 属性描述很像。
+
+#### 代码中打印出了各浏览器对于这 4 个属性返回值的情况：
+
+|  |
+| :--- |
+
+
+|  | IE6 IE7 IE8 | Firefox Chrome Safari | Opera |
+| :--- | :--- | :--- | :--- |
+| navigator.language | undefined | zh-CN | zh-CN |
+| navigator.userLanguage | zh-cn | undefined | zh-cn |
+| navigator.browserLanguage | zh-cn | undefined | zh-cn |
+| navigator.systemLanguage | zh-cn | undefined | undefined |
+
+#### 解决方案
+
+可以使用下面的代码获取当前浏览器语言：
+
+```
+(navigator.language || navigator.browserLanguage).toLowerCase()
+```
 
 
 
