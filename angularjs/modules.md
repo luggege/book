@@ -43,5 +43,7 @@ angular.module('myApp', ['ui.router', 'oc.lazyLoad']);
 angular.module('myApp', ['ngAnimate', 'ui.bootstrap']);
 ```
 
+#### angular-translate国际化使用
+
 
 
