@@ -97,5 +97,20 @@ son {
 1. 单行文字: 使用 line-height 与 height 同高即可解决
 2. 多行文字: 给父盒子设置: display: table-cell; \(verticle-align: middle;\)作为表格单元格显示即可垂直居中
 
+#### 清除select标签浏览器默认样式
+
+```css
+/*去除下拉箭头*/
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+/*隐藏ie的下拉箭头*/
+select::-ms-expand {
+    display: none;
+}
+```
+
 
 
