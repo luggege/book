@@ -102,6 +102,8 @@ son {
 ```css
 /*去除下拉箭头*/
 select {
+    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+    border: solid 1px #000;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
