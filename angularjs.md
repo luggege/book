@@ -71,7 +71,11 @@ config方法：在模块加载阶段，对模块进行自定义配置
 
 * 区别
 
-config先执行，run后执行，ng启动阶段：config--&gt;run--&gt;compile/link
+1. config先执行，run后执行，ng启动阶段：config--&gt;run--&gt;compile/link
+
+2. 注入服务类型不同
+
+ config里允许注入的是provider和constance（常量），run里允许注入的是provider和constant，还可以是factory, service, value
 
 
 
