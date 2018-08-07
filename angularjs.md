@@ -1,6 +1,6 @@
 ### AngularJs基础用法及流程详解
 
-#### angular.module\(\)参数说明
+#### 1. angular.module\(\)参数说明
 
 * **注册**一个模块
 
@@ -31,11 +31,7 @@ var myApp = angular.module('myApp');
 
 如果应用程序中**不存在**，会抛出异常。
 
-
-
-
-
-#### run方法及config方法
+#### 2. run方法及config方法
 
 ```js
 myApp
