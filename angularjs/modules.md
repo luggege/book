@@ -91,7 +91,8 @@ bower install angular-translate-loader-static-files
 angular.module('myApp',['pascalprecht.translate']);
 ```
 
-#### 
+* 
+
 
 #### 代码高亮插件SyntaxHighlighter
 
