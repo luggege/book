@@ -75,7 +75,7 @@ en.json 文件内容如下:
 {"login":"Login","register":"Register"}
 ```
 
-上面2个json文件对应相同的键 ,我们称之为 **翻译键**.  不同的语言文件中,**相同的翻译键对应相应的翻译值**即可.如 "Login" 对应 "登录"
+上面2个json文件对应相同的键 ,我们称之为 **翻译键**.  不同的语言文件中,**相同的翻译键对应相应的翻译值**即可.如 "Login" 对应 "登录"
 
 * 安装方法
 
@@ -88,7 +88,7 @@ bower install angular-translate-loader-static-files
 * 注入方式
 
 ```js
-angular.module('myApp',['pascalprecht.translate'])
+angular.module('myApp',['pascalprecht.translate']);
 ```
 
 #### 
