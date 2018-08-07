@@ -69,3 +69,9 @@ run方法：最先执行的方法，在angular项目启动时只执行一次，�
 
 config方法：在模块加载阶段，对模块进行自定义配置
 
+* 区别
+
+config先执行，run后执行，ng启动阶段：config--&gt;run--&gt;compile/link
+
+
+
