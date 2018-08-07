@@ -93,7 +93,7 @@
   * [开发经验细碎点](kai-fa-jing-yan-xi-sui-dian.md)
   * [浏览器相关问题](huo-qu-liu-lan-qi-kuan-gao.md)
   * [CSS布局](cssbu-ju.md)
-* [angularjs](angularjs.md)
+* [AngularJs](angularjs.md)
   * [modules](angularjs/modules.md)
   * [指令的使用](angularjs/zhi-ling-de-shi-yong.md)
 
