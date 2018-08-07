@@ -141,13 +141,13 @@ ng-change="switchLang()">
   }
 ```
 
-     。html页面使用内置的translate指令做国际化
+  。html页面使用内置的translate指令做国际化
 
 ```go
 <p class="banner_con" ng-bind="'login' | translate"></p>
 ```
 
-。controller中注入$translate服务直接进行国际化服务
+  。controller中注入$translate服务直接进行国际化服务
 
 ```js
 $translate.instant('app.detail.refreshSuccess');
