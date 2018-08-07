@@ -2,7 +2,7 @@
 
 #### angular.module\(\)参数说明
 
-* 注册一个模块
+* **注册**一个模块
 
 ```JavaScript
 var myApp = angular.module('myApp', [
@@ -21,7 +21,7 @@ var myApp = angular.module('myApp',[]);
 
 angular.module方法有两个参数：模板名称、依赖注入列表（为空则不需要依赖关系）。
 
-* 获取一个模板
+* **获取**一个模板
 
 ```
 var myApp = angular.module('myApp');
@@ -30,6 +30,8 @@ var myApp = angular.module('myApp');
 如果应用程序中已经有了这个模板，那么就返回和这个模板一样配置的模板；
 
 如果应用程序中**不存在**，会抛出异常。
+
+
 
 #### run方法及config方法
 
