@@ -124,7 +124,7 @@ angular.module('myApp',['pascalprecht.translate']);
 ])
 ```
 
-* 使用方法（\*\* \*）
+* 使用方法（**$translate.use\(\)切换语言**）
 
 ```go
 <select name="" id="" ng-model="currentLang" ng-options="lang.id as lang.name for lang in language" 
@@ -141,7 +141,21 @@ ng-change="switchLang()">
   }
 ```
 
-#### 
+1. html页面使用内置的translate指令做国际化
+
+```go
+<p class="banner_con" ng-bind="'login' | translate"></p>
+```
+
+   2.  controller中注入$translate服务直接进行国际化服务
+
+```js
+$translate.instant('app.detail.refreshSuccess');
+```
+
+
+
+
 
 #### 代码高亮插件SyntaxHighlighter
 
