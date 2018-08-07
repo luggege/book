@@ -33,6 +33,8 @@ var myApp = angular.module('myApp');
 
 
 
+
+
 #### run方法及config方法
 
 ```js
