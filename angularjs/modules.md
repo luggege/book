@@ -43,7 +43,47 @@ angular.module('myApp', ['ui.router', 'oc.lazyLoad']);
 angular.module('myApp', ['ngAnimate', 'ui.bootstrap']);
 ```
 
+#### angular-cookies的使用
+
+
+
+#### angular-autocomplete自动完成的使用
+
+#### 
+
 #### angular-translate国际化使用
+
+
+
+
+
+
+
+
+
+#### 代码高亮插件SyntaxHighlighter
+
+
+
+
+
+#### angular-ui-router的使用
+
+
+
+
+
+#### angular-ui-tree的使用
+
+
+
+
+
+#### 
+
+
+
+#### angular-ui-select的使用
 
 
 
