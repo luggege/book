@@ -147,15 +147,11 @@ ng-change="switchLang()">
 <p class="banner_con" ng-bind="'login' | translate"></p>
 ```
 
-   2.  controller中注入$translate服务直接进行国际化服务
+2.  controller中注入$translate服务直接进行国际化服务
 
 ```js
 $translate.instant('app.detail.refreshSuccess');
 ```
-
-
-
-
 
 #### 代码高亮插件SyntaxHighlighter
 
