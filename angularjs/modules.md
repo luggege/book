@@ -65,13 +65,13 @@ angular-translate-loader-static-files是读取本地文件的模块，因为我�
 
 zh-cn.json 文件内容如下:
 
-```
+```js
 {"login":"登录","register":"注册"}
 ```
 
 en.json 文件内容如下:
 
-```
+```js
 {"login":"Login","register":"Register"}
 ```
 
@@ -91,7 +91,43 @@ bower install angular-translate-loader-static-files
 angular.module('myApp',['pascalprecht.translate']);
 ```
 
-* 
+* config 函数用 $translateProvider 服务配置 $translate 服务实现
+
+```js
+.config(['$translateProvider',function($translateProvider){
+
+        // 获取所有cookie, 筛选lang对应的值(缓存中不存在设定语言时,首选浏览器默认语言)
+        var lang = '';
+        var cookieList = document.cookie.split('; ');
+        angular.forEach(cookieList, function (item) {
+            if( item.substring(0,item.indexOf('=')) === 'lang' ){
+                lang = item.substring(item.indexOf('=') + 1);
+            }
+        });
+        // 获取浏览器默认语言
+        var defaultLang = (navigator.language || navigator.browserLanguage).toLowerCase();
+        if( defaultLang === 'zh-cn' || defaultLang === 'zh' ){
+            defaultLang = 'zh-cn';
+        }else if( defaultLang === 'zh-tw' || defaultLang === 'zh-hk' ) {
+            defaultLang = 'zh-hk';
+        }else {
+            defaultLang = 'en';
+        }
+        lang = lang || defaultLang;
+        $translateProvider.preferredLanguage(lang); // 默认已注册的语言
+        $translateProvider.useStaticFilesLoader({   // 选择加载何种本地国际化语言配置文件
+            prefix: '/open/data/',                  // 指定文件前缀 (/open-api/data/en.json)
+            suffix: '.json'                         // 指定文件后缀
+        });
+
+    }
+])
+```
+
+
+
+
+
 
 
 #### 代码高亮插件SyntaxHighlighter
