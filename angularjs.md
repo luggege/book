@@ -45,24 +45,26 @@ myApp
     )
 ```
 
-```JavaScript
+```js
 myApp
     .config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$locationProvider',
-     function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $locationProvider) {
-        $urlRouterProvider.otherwise('/account');
-        $stateProvider
-            // 概览
-            .state('overview', {
-                url: '/overview',
-                templateUrl: '../tpls/overview.html'
-                // resolve: {
-                //     deps: ['$ocLazyLoad', function( $ocLazyLoad ){
-                //         return $ocLazyLoad.load(
-                //             'js/controllers/login.js'
-                //         );
-                //     }]
-                // }
-            })
+         function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $locationProvider) {
+            $urlRouterProvider.otherwise('/account');
+            $stateProvider
+                // 概览
+                .state('overview', {
+                    url: '/overview',
+                    templateUrl: '../tpls/overview.html'
+                    // resolve: {
+                    //     deps: ['$ocLazyLoad', function( $ocLazyLoad ){
+                    //         return $ocLazyLoad.load(
+                    //             'js/controllers/login.js'
+                    //         );
+                    //     }]
+                    // }
+                })
+        }
+    ])
 ```
 
 run方法：最先执行的方法，在angular项目启动时只执行一次，用来定义全局的数据或逻辑
@@ -71,11 +73,11 @@ config方法：在模块加载阶段，对模块进行自定义配置
 
 * 区别
 
-1. config先执行，run后执行，ng启动阶段：config--&gt;run--&gt;compile/link
+* config先执行，run后执行，ng启动阶段：config--&gt;run--&gt;compile/link
 
-2. 注入服务类型不同
+* 注入服务类型不同
 
- config里允许注入的是provider和constance（常量），run里允许注入的是provider和constant，还可以是factory, service, value
+  config里允许注入的是provider和constance（常量），run里允许注入的是provider和constant，还可以是factory, service, value
 
 
 

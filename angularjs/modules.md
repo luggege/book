@@ -124,11 +124,24 @@ angular.module('myApp',['pascalprecht.translate']);
 ])
 ```
 
+* 使用方法（\*\* \*）
 
+```go
+<select name="" id="" ng-model="currentLang" ng-options="lang.id as lang.name for lang in language" 
+ng-change="switchLang()">
+</select>
+```
 
+```js
+  $scope.switchLang = function () {
+    $translate.use($scope.currentLang);               //实现语言的切换
+    $cookies.remove('lang');
+    $cookies.put('lang', $scope.currentLang, {path: '/'});
+    window.location.reload();
+  }
+```
 
-
-
+#### 
 
 #### 代码高亮插件SyntaxHighlighter
 
