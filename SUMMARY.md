@@ -58,6 +58,7 @@
 * [流行框架](流行框架.md)
   * [Git](git.md)
   * [angular](angular.md)
+  * [gulp](gulp.md)
 * [移动Web](移动web.md)
   * [屏幕适配](屏幕适配.md)
 * [github创建自己的电子书](github的使用.md)
