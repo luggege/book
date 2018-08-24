@@ -48,7 +48,7 @@ CSS ’width’ 指的是标准CSS中所指的width的宽度，
 
 #### 部分hack写法总结：
 
-```
+```css
 #box{
 
  color:red; //所有浏览器都支持
@@ -76,14 +76,14 @@ CSS ’width’ 指的是标准CSS中所指的width的宽度，
 
    IE下大家应该知道只要设置
 
-```
+```css
 body{text-align:center;}
 ```
 
 这样就可以居中显示。但是这样的方法在FF不行的。这里就需要给修改成
 
-```
-body:{text-align:center;margin:0px auto;}Margin
+```css
+body:{text-align:center;margin:0px auto;}
 ```
 
 意思就是上下距离为0像素，左右为自动。所以FF就会居中显示。
@@ -97,10 +97,6 @@ body:{text-align:center;margin:0px auto;}Margin
 数值越大越局下，为了防止撑破层，还需要再给一个样式overflow:hidden;\(超出的部分不显示\)
 
 1. 第四招：**给每一个块对象设置三个样式**
-
-```width:\*\*px;height:\*\*px;overflow:hidden;
-
-```
 
 即便高、宽是属性值是自动那么也需要去设置这三个样式。目的就是解决浏览器默认值的问题。
 
@@ -119,6 +115,10 @@ body:{text-align:center;margin:0px auto;}Margin
    **上面的书写顺序一定不能去改变。**
 
    **这样子网页在FF下显示\#333，IE6下显示\#666，IE7下显示\#999;**
+
+
+
+
 
 #### -moz代表firefox浏览器私有属性
 
