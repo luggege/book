@@ -4,7 +4,7 @@
 
 DOM0就是直接通过 onclick写在html里面的事件, 比如:
 
-```
+```markdown
 <input onclick="alert(1)" />
 ```
 
@@ -28,98 +28,100 @@ DOM2是通过addEventListener绑定的事件, 还有IE下的DOM2事件通过atta
 
 * useCapture:可选，是否在捕获或冒泡阶段执行 为bool值
 
-```
+```js
 addHandler：function(element,type,handler){
 
- if(element.addEventListener){//检测是否为DOM2级方法
+   if(element.addEventListener){//检测是否为DOM2级方法
+  
+     element.addEventListener(type, handler, false);
+  
+   }else if (element.attachEvent){//检测是否为IE级方法
+  
+     element.attachEvent("on" + type, handler);
+  
+   } else {//检测是否为DOM0级方法
+  
+       element["on" + type] = handler;
 
- element.addEventListener(type, handler, false);
-
- }else if (element.attachEvent){//检测是否为IE级方法
-
- element.attachEvent("on" + type, handler);
-
- } else {//检测是否为DOM0级方法
-
- element["on" + type] = handler;
-
- }
+   }
 
 }
 ```
 
 ②移除之前添加的事件方法
 
-```
+```js
 removeHandler：function(element, type, handler){
 
- if (element.removeEventListener){ element.removeEventListener(type, handler, false);
+  if (element.removeEventListener){ 
+  
+     element.removeEventListener(type, handler, false);
+ 
+  } else if (element.detachEvent){
+ 
+     element.detachEvent("on" + type, handler);
+ 
+  } else {
+ 
+     element["on" + type] = null;
+ 
+  }
 
- } else if (element.detachEvent){
-
- element.detachEvent("on" + type, handler);
-
- } else {
-
- element["on" + type] = null;
-
- }
-
-}
+} 
 ```
 
 ③获取事件及事件对象目标
 
 获取事件对象的兼容性写法
 
-```
+```js
 getEvent: function(event){
 
- return event ? event : window.event;
+  return event ? event : window.event;
 
 }
 ```
 
 获取事件对象目标的兼容性写法
 
-```
+```js
 getTarget: function(event){
 
- return event.target || event.srcElement;
+  return event.target || event.srcElement;
 
- }
+}
 ```
 
 ④阻止浏览器默认事件的兼容性写法
 
-```
+```js
 preventDefault: function(event){
 
  if (event.preventDefault){
 
- event.preventDefault();
+     event.preventDefault();
 
  } else {
 
- event.returnValue = false;
+   event.returnValue = false;
 
- } }
+}}
 ```
 
 ⑤阻止事件冒泡的兼容性写法
 
-```
+```js
 stopPropagation: function(event){
 
 if (event.stopPropagation){
 
- event.stopPropagation();
+  event.stopPropagation();
 
  } else {
 
- event.cancelBubble = true;
+  event.cancelBubble = true;
 
- } }
+}}
 ```
 
 ⑥mouseover和mouseout 事件才包含的获取相关元素的方法
@@ -156,104 +158,107 @@ if (event.stopPropagation){
 
    * 7：表示同时按下了三个鼠标按钮。
 
-```
+```js
 getButton: function(event){
 
- if(document.implementation.hasFeature("MouseEvents", "2.0")){
-
- return event.button;
-
- } else {
-
- switch(event.button){
-
- case 0:
-
- case 1:
-
- case 3:
-
- case 5:
-
- case 7:
-
- return 0;
-
- case 2:
-
- case 6:
-
- return 2;
-
- case 4:
-
- return 1;
-
- }
-
- }
+  if(document.implementation.hasFeature("MouseEvents", "2.0")){
+ 
+     return event.button;
+ 
+  } else {
+ 
+     switch(event.button){
+    
+        case 0:
+       
+        case 1:
+       
+        case 3:
+       
+        case 5:
+       
+        case 7:
+       
+        return 0;
+       
+        case 2:
+       
+        case 6:
+       
+        return 2;
+       
+        case 4:
+       
+        return 1;
+    
+     }
+     
+  }
 
 }
 ```
 
 ⑧能够取得鼠标滚轮增量值（delta）的方法
 
-```
+```js
 getWheelDelta: function(event){
 
- if (event.wheelDelta){
+     if (event.wheelDelta){
 
- return (client.engine.opera && client.engine.opera < 9.5 ? - event.wheelDelta : event.wheelDelta);
-
- } else {
-
- return -event.detail * 40;//firefox中的值为+3表示向上滚，-3表示向下滚 }}
+         return (client.engine.opera && client.engine.opera < 9.5 ? - event.wheelDelta : event.wheelDelta);
+    
+     } else {
+    
+         return -event.detail * 40;//firefox中的值为+3表示向上滚，-3表示向下滚 
+     })
+     
+ }}
 ```
 
 ⑨跨浏览器的方式取得字符编码
 
-```
+```js
 getCharCode: function(event){
 
- if (typeof event.charCode == "number"){
-
- return event.charCode;
-
- } else {
-
- return event.keyCode;
-
- }
+    if (typeof event.charCode == "number"){
+   
+         return event.charCode;
+   
+    } else {
+   
+         return event.keyCode;
+   
+    }
 
 }
 ```
 
 ⑩访问剪贴板中的数据
 
-```
+```js
 getClipboardText: function(event){
 
- var clipboardData = (event.clipboardData || window.clipboardData);
+    var clipboardData = (event.clipboardData || window.clipboardData);
+   
+    return clipboardData.getData("text");
 
- return clipboardData.getData("text");
-
- }
+}
 ```
 
 11.设置剪贴板中的数据
 
-```
+```js
 setClipboardText: function(event, value){
 
- if (event.clipboardData){
-
-return event.clipboardData.setData("text/plain", value);
-
- } else if (window.clipboardData){
-
- return window.clipboardData.setData("text", value);
-
- }
+    if (event.clipboardData){
+   
+        return event.clipboardData.setData("text/plain", value);
+   
+    } else if (window.clipboardData){
+   
+        return window.clipboardData.setData("text", value);
+   
+    }
 
 }
 ```
