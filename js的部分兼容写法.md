@@ -258,9 +258,9 @@ return event.clipboardData.setData("text/plain", value);
 }
 ```
 
-12.获取滚动位置的兼容写法
+#### 12.获取滚动位置的兼容写法
 
-```
+```js
     //获取滚动位置的兼容写法
     function scroll() {
         if (window.pageXOffset !== undefined) {
@@ -281,8 +281,6 @@ return event.clipboardData.setData("text/plain", value);
         }
     }
 ```
-
-
 
 
 
