@@ -4,7 +4,7 @@
 
 * **注册**一个模块
 
-```JavaScript
+```js
 var myApp = angular.module('myApp', [
         'ui.router',
         'oc.lazyLoad',
@@ -23,7 +23,7 @@ angular.module方法有两个参数：模板名称、依赖注入列表（为空
 
 * **获取**一个模板
 
-```
+```js
 var myApp = angular.module('myApp');
 ```
 
