@@ -16,39 +16,14 @@ gulp 和 grunt 非常类似，但相比于 grunt 的频繁 IO 操作，gulp 的�
 
 ![](/assets/import.png)
 
-3.项目根目录新建gulpfile.js文件\(默认配置文件\)
+3.项目根目录新建gulpfile.js文件（默认配置文件）
 
-4,
+4.gulpfile.js文件中写需要处理的内容
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* require引入需要的模块到gulp
+* .task\(\)方法定义任务名称（终端执行gulp, 默认执行default任务）
+* .src\(\)引入要处理的文件（返回的是node stream的一个实例，调用**node的api——pipe\(\)**方法返回的也是node stream的一个实例，从而实现管道传输串联的写法。）
+* .dest\(\)方法将处理完的文件流重新写入新的位置，如果该目录不存在则会自动创建
 
 
 
