@@ -6,11 +6,13 @@ gulp 和 grunt 非常类似，但相比于 grunt 的频繁 IO 操作，gulp 的�
 
 ##### 使用步骤:
 
-1.全局安装
+1.全局安装gulp
 
-> gulp npm install gulp -g
+> npm install gulp -g
 
-2.
+2.本地项目添加开发依赖
+
+> npm install --save-dec gulp
 
 3.
 
