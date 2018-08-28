@@ -10,7 +10,7 @@ gulp 和 grunt 非常类似，但相比于 grunt 的频繁 IO 操作，gulp 的�
 
 > npm install gulp -g
 
-2.本地项目添加开发依赖（本地安装gulp: 防止gulp版本控制问题，防止全局没装gulp，不能使用gulp的**api**：**.task\(\)/.src\(\)/.dest\(\)/.watch\(\)**）
+2.本地项目添加开发依赖（本地安装gulp: 防止gulp版本控制问题，防止全局没装gulp，不能使用gulp的api：.task\(\)/.src\(\)/.dest\(\)/.watch\(\)）
 
 > npm install --save-dev gulp
 
@@ -20,7 +20,7 @@ gulp 和 grunt 非常类似，但相比于 grunt 的频繁 IO 操作，gulp 的�
 
 4.gulpfile.js文件中写需要处理的内容
 
-* require引入需要的模块到gulp
+* require引入需要的模块到gulp，同时npm install 安装此模块到本地项目中
 * **.task\(\)**方法**定义任务**名称（终端执行gulp, 默认执行default任务）
 * **.src\(\)引入**要处理的**文件**（返回的是node stream的一个实例，调用**node的api——pipe\(\)**方法返回的也是node stream的一个实例，从而实现管道传输串联的写法。）
 * **.dest\(\)**方法将处理完的文件流重新**写入新的位置**，如果该目录不存在则会自动创建
