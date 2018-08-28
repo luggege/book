@@ -12,7 +12,7 @@ gulp 和 grunt 非常类似，但相比于 grunt 的频繁 IO 操作，gulp 的�
 
 2.本地项目添加开发依赖
 
-> npm install --save-dec gulp
+> npm install --save-dev gulp
 
 3.
 
