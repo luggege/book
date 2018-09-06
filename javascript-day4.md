@@ -12,29 +12,24 @@
 
 1. slice 截取    **原数组不会改变　一个参数索引包左不包右**
 
-> var arr = \[1, 2, 3, 4, 5\];
->
-> console.log\(arr.slice\(0\)\);  //\[1, 2, 3, 4, 5\] ===&gt;arr=\[1, 2, 3, 4, 5\]
->
-> console.log\(arr.slice\(-1\)\); //\[5\]===&gt;arr=\[1, 2, 3, 4, 5\]
->
-> console.log\(arr.slice\(2\)\);    //\[3, 4, 5\]===&gt;arr=\[1, 2, 3, 4, 5\]
->
-> console.log\(arr.slice\(0, 2\)\); //**\(索引值,索引值\)**\[1,2\]===&gt;arr=\[1, 2, 3, 4, 5\]
+```js
+var arr = [1, 2, 3, 4, 5];
+console.log(arr.slice(0));  //[1, 2, 3, 4, 5] ===>arr=[1, 2, 3, 4, 5]
+console.log(arr.slice(-1)); //[5]===>arr=[1, 2, 3, 4, 5]
+console.log(arr.slice(2));    //[3, 4, 5]===>arr=[1, 2, 3, 4, 5]
+console.log(arr.slice(0, 2)); //(索引值,索引值)[1,2]===>arr=[1, 2, 3, 4, 5]
+```
 
 2.splice 删除/替换 **原数组会改变** 返回删除截取出来的数组,原数组为剩下的内容组成的数组
 
-> var arr = \[1, 2, 3, 4, 5\];
->
-> console.log\(arr.splice\(0\)\);  //\(**索引位置往后截\)** \[1, 2, 3, 4, 5\] ===&gt; arr=\[\];所以可用来**清空数组**
->
-> console.log\(arr.splice\(2\)\);  // \[3, 4, 5\] ===&gt; arr=\[1,2\];
->
-> console.log\(arr.splice\(0, 3\)\);  //**\(索引,个数\)** \[1, 2, 3\] ===&gt; arr=\[4,5\];
->
-> console.log\(arr.splice\(0, 2, '9', '8', '7'  \)\);  //**\(索引,个数,替换内容\)** \[1, 2\]===&gt; arr=\["9", "8", "7", 3, 4, 5\];
->
-> console.log\(arr\);
+```js
+var arr = [1, 2, 3, 4, 5];
+console.log(arr.splice(0));  //(索引位置往后截) [1, 2, 3, 4, 5] ===> arr=[];所以可用来清空数组
+console.log(arr.splice(2));  // [3, 4, 5] ===> arr=[1,2];
+console.log(arr.splice(0, 3));  //(索引,个数) [1, 2, 3] ===> arr=[4,5];
+console.log(arr.splice(0, 2, '9', '8', '7'  ));  //(索引,个数,替换内容) [1, 2]===> arr=["9", "8", "7", 3, 4, 5];
+console.log(arr);
+```
 
 3.push    数组尾部添加, 返回个数
 
