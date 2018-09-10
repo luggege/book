@@ -67,9 +67,9 @@ console.log(arr);
 >
 > console.log\( arr.join\('&'\) \);//1&2&3&4&5
 
-1. sort 排序
+14.sort 排序
 
-2. reverse 数组反转
+15.reverse 数组反转
 
 ### 字符串方法
 
