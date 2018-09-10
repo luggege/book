@@ -71,6 +71,26 @@ console.log(arr);
 
 15.reverse 数组反转
 
+16.concat / Array.prototype.push.apply\(arr1,arr2\) 数组合并
+
+> concat: arr1.concat\(b\) 1. 将后一个数组合并到前一个数组, 作为新数组返回, **原数组不会改变**;  2. 合并时的长度无限制
+>
+> Array.prototype.push.apply\(arr1,arr2\); 1. 数组合并后返回新数组的个数, **arr1改变, arr2不变;  **2. 合并时长度一般不超过十万
+
+```js
+var a = [1,2,3];
+var b = [4,5];
+Array.prototype.push.apply(a,b)   // 5 
+console.log(a);                   // [1, 2, 3, 4, 5]
+console.log(b);                   // [4, 5]
+
+b.concat(a)                       // [4, 5, 1, 2, 3, 4, 5]
+console.log(b);                   // [4, 5]
+console.log(a);                   // [1, 2, 3, 4, 5]
+```
+
+### ![](/assets/console.png)
+
 ### 字符串方法
 
 1.split  劈成数组
