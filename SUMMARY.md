@@ -14,7 +14,7 @@
     * [DOM操作复习](javascript高级/domcao-zuo-fu-xi.md)
     * [异常处理](javascript高级/yi-chang-chu-li.md)
     * [调试工具的使用](javascript高级/diao-shi-gong-ju-de-shi-yong.md)
-    * 词法作用域
+    * [词法作用域](javascript高级/ci-fa-zuo-yong-yu.md)
       * [词法作用域](javascript高级/ci-fa-zuo-yong-yu.md)
       * [变量名提升](javascript高级/bian-liang-ming-ti-sheng.md)
       * [作用域链](javascript高级/zuo-yong-yu-lian.md)
@@ -34,8 +34,6 @@
   * [面向对象第6天](面向对象第6天.md)
   * [面向对象第7天](面向对象第7天.md)
   * [面向对象内容总结](mian-xiang-dui-xiang-nei-rong-zong-jie.md)
-    * 面向对象概念介绍
-    * [面向对象编程举例](mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-bian-cheng-ju-li.md)
     * [构造函数](mian-xiang-dui-xiang-nei-rong-zong-jie/gou-zao-han-shu.md)
     * [面向对象的三大特性](mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-de-san-da-te-xing.md)
     * [传统构造函数存在的问题](mian-xiang-dui-xiang-nei-rong-zong-jie/chuan-tong-gou-zao-han-shu-cun-zai-de-wen-ti.md)
@@ -49,7 +47,7 @@
     * [原型链](mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian.md)
       * [原型链结构](mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian-jie-gou.md)
       * [原型式继承](mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-shi-ji-cheng.md)
-    * 对象相关的其他知识
+    * [对象相关的其他知识](mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi.md)
       * [Object.prototype成员介绍](mian-xiang-dui-xiang-nei-rong-zong-jie/objectprototypecheng-yuan-jie-shao.md)
       * [Function介绍及使用](mian-xiang-dui-xiang-nei-rong-zong-jie/functionjie-shao-ji-shi-yong.md)
       * [解决代码太长的问题](mian-xiang-dui-xiang-nei-rong-zong-jie/jie-jue-dai-ma-tai-chang-de-wen-ti.md)
