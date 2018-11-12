@@ -13,7 +13,6 @@
     * [对象的动态特性](javascript高级/dui-xiang-de-dong-tai-te-xing.md)
     * [DOM操作复习](javascript高级/domcao-zuo-fu-xi.md)
     * [异常处理](javascript高级/yi-chang-chu-li.md)
-    * [调试工具的使用](javascript高级/diao-shi-gong-ju-de-shi-yong.md)
     * [词法作用域](javascript高级/ci-fa-zuo-yong-yu.md)
       * [词法作用域](javascript高级/ci-fa-zuo-yong-yu.md)
       * [变量名提升](javascript高级/bian-liang-ming-ti-sheng.md)
