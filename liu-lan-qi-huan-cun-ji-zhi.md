@@ -21,18 +21,17 @@
 
 #### 存储API
 
-1. setItem\(\):          localstorage.setItem\('a', 1\);
-2. getItem\(\):          localstorage.getItem\('a'\);
-3. removeItem\(\):   localstorage.removeItem\('a'\);
-4. 非IE8中,使用delete操作
-5. clear:                  localstorage.clear\(\);  清空全部
-6. ```js
+1. ```js
    1. setItem():          localstorage.setItem('a', 1);
    2. getItem():          localstorage.getItem('a');
    3. removeItem():       localstorage.removeItem('a');
    4. 非IE8中,使用delete操作
    5. clear():            localstorage.clear();  清空全部
-   6. 
+   6. 枚举
+   for(var i = 0; i < localStorage.length; i++){
+       var name = localStorage.key(i);
+       var value = localStorage.getItem(name);
+   }
    ```
 
 ## cookie
