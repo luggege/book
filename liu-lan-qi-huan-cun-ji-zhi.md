@@ -4,7 +4,7 @@
 
 ### localstorage&sessionStorage的区别: 有效期和作用域
 
-#### localstorage: 
+#### localstorage:
 
 1. 数据存储**永久性**永不过期: 除非刻意删除或者设置过期时间
 
@@ -12,7 +12,7 @@
 
 3. 作用域受**浏览器**供应商限制: 不同浏览器不可共享
 
-#### sessionStorage: 
+#### sessionStorage:
 
 1. 有效期随窗口**标签页的关闭**而消失: sessionStorage存储的数据即被删除
 2. 作用域限定在文档源
@@ -26,13 +26,13 @@
 3. removeItem\(\):   localstorage.removeItem\('a'\);
 4. 非IE8中,使用delete操作
 5. clear:                  localstorage.clear\(\);  清空全部
-6. ```
+6. ```js
    1. setItem():          localstorage.setItem('a', 1);
    2. getItem():          localstorage.getItem('a');
-   3. removeItem():   localstorage.removeItem('a');
+   3. removeItem():       localstorage.removeItem('a');
    4. 非IE8中,使用delete操作
-   5. clear:                  localstorage.clear();  清空全部
-
+   5. clear():            localstorage.clear();  清空全部
+   6. 
    ```
 
 ## cookie
