@@ -19,7 +19,7 @@
 3. 不同浏览器不可共享sessionStorage数据
 4. 同一浏览器不同窗口，无法共享：每次通过复制地址新打开的标签页即使同源都会重新初始化一个session，故无法共享。但是通过a链接或者window.open打开的新标签页之间共享sessionStorage
 
-#### 存储API
+#### 存储API  
 
 1. ```js
    1. setItem():          localstorage.setItem('a', 1);
