@@ -34,7 +34,7 @@
    }
    ```
 
-## cookie  
+## cookie
 
 ## IE User Data
 
