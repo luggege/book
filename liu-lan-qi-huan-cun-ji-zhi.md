@@ -36,6 +36,10 @@
 
 ## cookie
 
+> 用户担心cookie的不安全性，可能会将浏览器的cookie禁用，可以通过navigator.cookieEnabled这个属性检测\(true：cookie启用，flase：禁用\)。
+>
+> 每个cookie的**有效期**和**作用域**都需要通过**字符串**的形式读写document对象的cookie属性
+
 ## IE User Data
 
 > IE8以前,web存储的替代方案
