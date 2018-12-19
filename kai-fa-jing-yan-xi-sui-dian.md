@@ -116,6 +116,10 @@ getElementsByClassName只兼容到IE 9 以上.
 2. box-shadow
 3. text-shadow
 
+### IE中button的type属性默认值: button，其他浏览器默认type：submit
+
+> IE10及以下input回车时，浏览器默认会执行页面中的第一个button的click事件，如要避免可将button标签改为input且type设为button类型，或者页面顶端写一个空的button标签且用父盒子包裹，父盒子宽高设为0将其隐藏（不推荐）
+
 ## 利用C3限制div内文字字数 {#利用c3限制div内文字字数}
 
 overflow: hidden;  
