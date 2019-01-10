@@ -28,3 +28,9 @@ npm install -g vue-cli    //安装的是vue-cli2.X版本，想要更换版本，
 
 
 
+### 疑问
+
+1. 什么情况需要挂载到vue实例上?
+
+
+
