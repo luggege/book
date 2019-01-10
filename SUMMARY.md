@@ -95,4 +95,6 @@
   * [modules](angularjs/modules.md)
   * [指令的使用](angularjs/zhi-ling-de-shi-yong.md)
   * [数字动画](angularjs/shu-zi-dong-hua.md)
+* [Vue](vue.md)
+  * [vue的安装及使用](vue/vuede-an-zhuang-ji-shi-yong.md)
 
