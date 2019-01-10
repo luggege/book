@@ -21,10 +21,12 @@ npm install -g vue-cli    //安装的是vue-cli2.X版本，想要更换版本，
 
 ```
 1. import Vue from 'vue'  //引入vue框架
-2. 
+2. import Element from 'element-ui'  //引入element-ui插件
+3. Vue.use(Element)       //使用element-ui插件，需在new Vue()启动应用之前完成
+4. new Vue({})            //创建vue实例
 ```
 
-1. import Vue from 'vue'      //引入vue框架
-2. 
+
+
 
 
