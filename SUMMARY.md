@@ -97,4 +97,6 @@
   * [数字动画](angularjs/shu-zi-dong-hua.md)
 * [Vue](vue.md)
   * [vue的安装及使用](vue/vuede-an-zhuang-ji-shi-yong.md)
+* [es6](es6.md)
+  * [assign](es6/assign.md)
 
