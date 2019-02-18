@@ -29,9 +29,9 @@
    var str = 'abc';
    var bool = true
    var num = 10;
-   Object.assign(str) // String {"abc"}
-   Object.assign(bool) // Boolean {true}
-   Object.assign(num) // Number {10}
+   Object.assign(str) // String {"abc"}
+   Object.assign(bool) // Boolean {true}
+   Object.assign(num) // Number {10}
    Object.assign({}, str, bool, num); // {0: "a", 1: "b", 2: "c"}
 
    // 6.1 如果源对象的属性的值是对象, 那么目标对象得到的是这个对象的引用
