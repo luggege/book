@@ -86,6 +86,7 @@
   * [融云客服](rong-yun-ke-fu.md)
   * [融云开发文档](rong-yun-kai-fa-wen-dang.md)
   * [网络协议](wang-luo-xie-yi.md)
+  * [Promise](promise.md)
 * [工作总结](gong-zuo-wen-ti-zong-jie.md)
   * [选项卡](select.md)
   * [开发经验细碎点](kai-fa-jing-yan-xi-sui-dian.md)
