@@ -4,19 +4,17 @@ es一种技术，解决异步回调
 
 ### 为什么要使用Promise
 
-
-
 ### 如何使用Promise
 
-fn\(\).then\(\);
+`fn().then();`
 
-new Promise\(function\(resolve, reject\){
+```
+  new Promise(function(resolve, reject){
+      resolve('aaa');
+  })
+```
 
-      resolve\('aaa'\);
-
-}\)
-
-### Promise原理是怎么实现的	
+### Promise原理是怎么实现的
 
 
 
