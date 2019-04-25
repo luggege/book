@@ -75,8 +75,6 @@ screenY:触摸目标在**屏幕**中的y坐标。
 
 target:触摸的DOM节点坐标
 
-
-
 ## 浏览器navigator属性
 
 navigator 对象包含有关浏览器的信息。没有应用于 navigator 对象的公开标准，不过所有浏览器都支持该对象。但是其内部一些属性及其返回值在各浏览器并不统一。
@@ -111,11 +109,24 @@ navigator 对象包含有关浏览器的信息。没有应用于 navigator 对�
 (navigator.language || navigator.browserLanguage).toLowerCase()
 ```
 
+```js
+    // 判断浏览器类型及版本
+    function getBrowserInfo(){
+        var Sys = {};
+        var userAgent = navigator.userAgent.toLowerCase();
+        var reg =/(msie|firefox|chrome|opera|version).*?([\d.]+)/;
+        var m = userAgent.match(reg);
+        
+        Sys.browser = m[1].replace(/version/, "'safari");
+        Sys.version = m[2];
+        return Sys;
+    }
 
+    //获取当前的浏览器信息
+    var system = getBrowserInfo();
+```
 
 ## 浏览器Cookie、LocalStorage、SessionStorage的比较
-
-
 
 
 
