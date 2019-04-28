@@ -33,7 +33,7 @@ angular.module('myApp', ['ui.router', 'oc.lazyLoad']);
 
 * 依赖文件
 
-> 1. angular.js
+> 1. angular.js  
 > 2. angular-animate.js
 > 3. ui-bootstrap-tpls.js
 
