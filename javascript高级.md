@@ -129,7 +129,7 @@ return
 
 2. 加入临界条件
 
-```
+```js
 function
 fn
 (
