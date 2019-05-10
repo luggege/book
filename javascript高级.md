@@ -16,18 +16,10 @@
 
 2. 寻找递推关系. 就是`n`与`n-1`, 或`n-2`之间的关系:`foo( n ) == n + foo( n - 1 )`
 
-```
-var
- res = foo(
-100
-);
+```js
+var res = foo(100);
 
-var
- res = foo(
-99
-) + 
-100
-;
+var res = foo(99) + 100;
 ```
 
 **将递推结构转换为递归体**
@@ -36,7 +28,6 @@ var
 function foo(n){
    return f(n-1) + n;
 };
-
 ```
 
 上面就是利用了化归思想：
