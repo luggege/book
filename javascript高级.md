@@ -64,14 +64,14 @@ return
 **将临界条件加到递归体中\(求1的结果为1\)**
 
 ```js
-function f(n){
-	if(n === 1){
-		return 1;
-	}else {
-		return f(n-1) + n;
-	}
+function foo(n){
+    if(n === 1){
+        return 1;
+    }else {
+        return f(n-1) + n;
+    }
 };
-f(100);
+foo(100);
 ```
 
 #### 练习: {#练习}
