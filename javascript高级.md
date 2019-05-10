@@ -32,19 +32,11 @@ var
 
 **将递推结构转换为递归体**
 
-```
-function
-foo
-(
-n
-)
-{
+```js
+function foo(n){
+   return f(n-1) + n;
+};
 
-return
- n + foo( n - 
-1
- );
-}
 ```
 
 上面就是利用了化归思想：
