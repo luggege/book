@@ -194,26 +194,11 @@ function fib( n ) {
 
 求n的阶乘
 
-```
-function
-foo
- (
- n 
-) 
-{
-
-if
- ( n == 
-1
- ) 
-return
-1
-;
-
-return
- foo( n - 
-1
- ) * n;
+```js
+function foo ( n ) {
+    if ( n == 1 ) 
+    return 1;
+    return foo( n - 1 ) * n;
 }
 ```
 
