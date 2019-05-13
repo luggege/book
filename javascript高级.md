@@ -216,25 +216,11 @@ function foo ( n ) {
 
 * n 的 m 次方就是 m 个 n 相乘 即 n 乘以 \(m-1\) 个 n 相乘
 
-```
-function
-power
- (
- n, m 
-) 
-{
-
-if
- ( m == 
-1
- ) 
-return
- n;
-
-return
- power( n, m - 
-1
- ) * n;
+```js
+function power ( n, m ) {
+    if ( m == 1 ) 
+    return n;
+    return power( n, m - 1 ) * n;
 }
 ```
 
