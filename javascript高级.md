@@ -26,7 +26,7 @@ var res = foo(99) + 100;
 
 ```js
 function foo(n){
-   return f(n-1) + n;
+   return foo(n-1) + n;
 };
 ```
 
@@ -50,9 +50,8 @@ function foo(n){
 function foo(n){
     if(n === 1){
         return 1;
-    }else {
-        return f(n-1) + n;
     }
+    return foo(n-1) + n;
 };
 foo(100);
 ```
