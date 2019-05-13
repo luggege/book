@@ -68,20 +68,9 @@ foo(100);
 
 3. 递归体
 
-```
-function
-fn
-(
-n
-) 
-{
-
-return
- fn(n-
-1
-) + 
-2
-;
+```js
+function fn(n) {
+    return fn(n-1) + 2;
 }
 ```
 
@@ -100,27 +89,11 @@ return
 2. 加入临界条件
 
 ```js
-function
-fn
-(
- n 
-) 
-{
-
-if
- ( n == 
-0
- ) 
-return
-1
-;
-
-return
- fn( n-
-1
- ) + 
-2
-;
+function fn(n) {
+  if( n == 0 ) {
+    return 1;
+  }
+  return fn( n-1 ) + 2;
 }
 ```
 
