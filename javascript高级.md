@@ -105,48 +105,24 @@ function fn(n) {
 
 3. 递归体
 
-```
-function
-sum
-(
- n 
-) 
-{
-
-return
- fn( n ) + sum( n - 
-1
- );
+```js
+function sum( n ) {
+  return fn( n ) + sum( n - 1 );
 }
 ```
 
 1. 找临界条件
 
-   * `n == 1`
-     结果为 1
+   * `n == 1 `结果为 1
 
 2. 加入临界条件
 
-```
-function
-sum
-(
- n 
-) 
-{
-
-if
- (n == 
-0
-) 
-return
-1
-;
-
-return
- fn(n) + sum(n - 
-1
-);
+```js
+function sum( n ) {
+  if (n == 0) {
+    return 1;
+  }
+  return fn(n) + sum(n - 1);
 }
 ```
 
