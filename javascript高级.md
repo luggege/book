@@ -156,36 +156,21 @@ function sum( n ) {
 
 4. 临界条件是 n == 0 =&gt; 1
 
-```py
+```js
 function fn( n ) {
-  if( n == 0 ) 
-  return 1;
-  return fn( n-1 ) + n - 1;
+    if( n == 0 ) 
+    return 1;
+    return fn( n-1 ) + n - 1;
 }
 ```
 
 ##### 前`n`项和 {#前n项和}
 
-```
-function
-sum
-(
- n 
-) 
-{
-
-if
- ( n == 
-0
- ) 
-return
-1
-;
-
-return
- sum( n - 
-1
- ) + fn( n );
+```js
+function sum( n ) {
+    if ( n == 0 ) 
+    return 1;
+    return sum( n - 1 ) + fn( n );
 }
 ```
 
