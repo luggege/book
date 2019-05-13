@@ -113,7 +113,7 @@ function sum( n ) {
 
 1. 找临界条件
 
-   * `n == 1 `结果为 1
+   * `n == 1`结果为 1
 
 2. 加入临界条件
 
@@ -156,28 +156,11 @@ function sum( n ) {
 
 4. 临界条件是 n == 0 =&gt; 1
 
-```
-function
-fn
-(
- n 
-) 
-{
-
-if
- ( n == 
-0
- ) 
-return
-1
-;
-
-return
- fn( n-
-1
- ) + n - 
-1
-;
+```py
+function fn( n ) {
+  if( n == 0 ) 
+  return 1;
+  return fn( n-1 ) + n - 1;
 }
 ```
 
