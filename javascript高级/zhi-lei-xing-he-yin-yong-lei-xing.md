@@ -2,6 +2,8 @@
 
 ### 1.值类型\(基本数据类型\)
 
+* String
+
 * Number
 
 * Boolean
@@ -9,8 +11,6 @@
 * Undefined
 
 * Null
-
-* String
 
 值类型是存储在栈（stack）中的简单数据，也就是说，它们的值直接存储在变量访问的位置。
 
