@@ -26,7 +26,7 @@
 >         e.stopPropagation();
 >     }
 >     else{    
->         e.cancelBulle = true;
+>         e.cancelBubble = true;
 >      }
 > })
 > ```
