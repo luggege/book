@@ -18,6 +18,7 @@
       * [作用域链](javascript高级/zuo-yong-yu-lian.md)
     * [闭包](javascript高级/bi-bao.md)
     * [函数的四种调用模式](javascript高级/han-shu-de-si-zhong-diao-yong-mo-shi.md)
+    * [事件](javascript高级/shi-jian.md)
   * [javascript基础复习](javascript-day4.md)
     * [Array](javascript-day4/array.md)
     * [Date](javascript-day4/date.md)
