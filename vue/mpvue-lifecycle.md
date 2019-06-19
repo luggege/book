@@ -10,7 +10,7 @@
   },
   created(){
     console.log('``````````````created数据观测data和事件event配置完成```````````');
-    console.log(this.$el);  //undefined
+    console.log(this.$el);   //undefined
     console.log(this.$data);
     console.log(this.message);
     console.log('``````````````created数据观测data和事件event配置完成```````````');
