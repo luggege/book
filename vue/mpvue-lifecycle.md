@@ -3,14 +3,14 @@
 ```js
   beforeCreate(){
     console.log('``````````````beforeCreate数据观测data和事件event配置之前```````````');
-    console.log(this.$el);
-    console.log(this.$data);
-    console.log(this.message);
+    console.log(this.$el);    //undefined
+    console.log(this.$data);  //undefined 
+    console.log(this.message);//undefined
     console.log('``````````````beforeCreate数据观测data和事件event配置之前```````````');
   },
   created(){
     console.log('``````````````created数据观测data和事件event配置完成```````````');
-    console.log(this.$el);
+    console.log(this.$el);  //undefined
     console.log(this.$data);
     console.log(this.message);
     console.log('``````````````created数据观测data和事件event配置完成```````````');
@@ -60,5 +60,5 @@
   }
 ```
 
-
+![](/assets/lifecycle.jpg)
 
