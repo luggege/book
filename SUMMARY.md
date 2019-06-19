@@ -99,6 +99,7 @@
   * [数字动画](angularjs/shu-zi-dong-hua.md)
 * [Vue](vue.md)
   * [vue的安装及使用](vue/vuede-an-zhuang-ji-shi-yong.md)
+  * [mpvue lifecycle](vue/mpvue-lifecycle.md)
 * [es6](es6.md)
   * [Object.assign\(\)](es6/assign.md)
   * [Object.key\(\)](es6/objectkey.md)
