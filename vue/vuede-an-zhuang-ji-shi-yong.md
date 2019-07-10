@@ -6,7 +6,7 @@ npm install vue
 
 #### 使用脚手架构建空项目
 
-```
+```js
 npm install -g @vue/cli   //安装vue-cli3.0 版本(vue-cli 安装的是vue-cli2.X版本，想要更换版本，需卸载之前版本)
 vue create myApp          //创建项目
 ```
