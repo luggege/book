@@ -32,29 +32,12 @@
 
 初始化需要传入的一些参数
 
-```
-demo.controller(
-"main"
-, [
-"$scope"
-, 
-"RongCustomerService"
-, 
-function
-(
-$scope,RongCustomerService
-) 
-{
+```js
+demo.controller("main", ["$scope", "RongCustomerService", function($scope,RongCustomerService) {
   RongCustomerService.init({
-    appkey:
-"bmdehs6pdw0ss"
-,
-    token:
-"****"
-,
-    customerServiceId:
-"****"
-,
+    appkey: "bmdehs6pdw0ss",
+    token: "****",
+    customerServiceId: "****",
   });
 }]);
 ```
@@ -63,29 +46,12 @@ $scope,RongCustomerService
 
 2. position 控制客服显示位置，左侧显示 RongCustomerService.Position.left 、右侧显示 RongCustomerService.Position.right
 
-```
-demo.controller(
-"main"
-, [
-"$scope"
-, 
-"RongCustomerService"
-, 
-function
-(
-$scope,RongCustomerService
-) 
-{
+```js
+demo.controller("main", ["$scope", "RongCustomerService", function($scope,RongCustomerService) {
   RongCustomerService.init({
-    appkey:
-"bmdehs6pdw0ss"
-,
-    token:
-"****"
-,
-    customerServiceId:
-"****"
-,
+    appkey: "bmdehs6pdw0ss",
+    token: "****",
+    customerServiceId: "****",
     position:RongCustomerService.Position.left,
   });
 }]);
