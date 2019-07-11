@@ -4,90 +4,30 @@
 
 1. 引入 SDK 从官方下载插件包\(项目源码 dist 目录\)放在自己项目目录中，在页面中引入以下资源：
 
-```
-<
-!-- 依赖资源 --
->
-<
-script src="/vendor/jquery-2.2.2.js"
->
-<
-/script
->
-<
-script src="/vendor/angular-1.4.8.js"
->
-<
-/script
->
-<
-script src="/vendor/plupload.full.min-2.1.1.js"
->
-<
-/script
->
-<
-script src="/vendor/qiniu-1.0.17.js"
->
-<
-/script
->
-<
-link rel="stylesheet" type="text/css" href="/vendor/jqueryrebox/jquery-rebox-0.1.0.css"/
->
-<
-script src="/vendor/jqueryrebox/jquery-rebox-0.1.0.js"
->
-<
-/script
->
-<
-script src="//cdn.ronghub.com/RongIMLib-2.2.5.min.js"
->
-<
-/script
->
-<
-script src="//cdn.ronghub.com/RongEmoji-2.2.5.min.js"
->
-<
-/script
->
-<
-script src="//cdn.ronghub.com/Libamr-2.2.5.min.js"
->
-<
-/script
->
-<
-script src="//cdn.ronghub.com/RongIMVoice-2.2.5.min.js"
->
-<
-/script
->
-<
-!-- 依赖资源 end --
->
-<
-!-- widget --
->
-<
-link rel="stylesheet" type="text/css" href="{资源目录}/css/RongIMWidget.css"/
->
-<
-scrip type="text/javascript" src="{资源目录}/RongIMWidget.js"
->
-<
-/script
->
+```js
+<!-- 依赖资源 -->
+<script src="/vendor/jquery-2.2.2.js"></script>
+<script src="/vendor/angular-1.4.8.js"></script>
+<script src="/vendor/plupload.full.min-2.1.1.js"></script>
+<script src="/vendor/qiniu-1.0.17.js"></script>
+<link rel="stylesheet" type="text/css" href="/vendor/jqueryrebox/jquery-rebox-0.1.0.css"/>
+<script src="/vendor/jqueryrebox/jquery-rebox-0.1.0.js"></script>
+<script src="//cdn.ronghub.com/RongIMLib-2.2.5.min.js"></script>
+<script src="//cdn.ronghub.com/RongEmoji-2.2.5.min.js"></script>
+<script src="//cdn.ronghub.com/Libamr-2.2.5.min.js"></script>
+<script src="//cdn.ronghub.com/RongIMVoice-2.2.5.min.js"></script>
+<!-- 依赖资源 end -->
+<!-- widget -->
+<link rel="stylesheet" type="text/css" href="{资源目录}/css/RongIMWidget.css"/>
+<script type="text/javascript" src="{资源目录}/RongIMWidget.js"></script>
 ```
 
 > 在页面 body 中加入`<rong-widget></rong-widget>`标签  
 > 注意要按照 angular 的规范加在 angular 作用域内。
 
 1. 初始化
- 
-   在自己 js 文件中 angular modle 中引入 SDK
+
+   在自己 js 文件中 angular modle 中引入 SDK  
    `var demo = angular.module("demo", ["RongWebIMWidget"]);`
 
 初始化需要传入的一些参数
@@ -121,7 +61,7 @@ $scope,RongCustomerService
 
 1. 配置参数说明
 
-* position 控制客服显示位置，左侧显示 RongCustomerService.Position.left 、右侧显示 RongCustomerService.Position.right
+2. position 控制客服显示位置，左侧显示 RongCustomerService.Position.left 、右侧显示 RongCustomerService.Position.right
 
 ```
 demo.controller(
