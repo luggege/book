@@ -59,39 +59,23 @@ demo.controller("main", ["$scope", "RongCustomerService", function($scope,RongCu
 
 * displayMinButton \[ boolean \] 最小化时是否显示最小化按钮。默认为 true
 
-```
+```js
 RongCustomerService.init({
-  appkey:
-"bmdehs6pdw0ss"
-,
-  token:
-"****"
-,
-  customerServiceId:
-"****"
-,
-  displayMinButton:
-false
-
+  appkey: "bmdehs6pdw0ss",
+  token: "****",
+  customerServiceId: "****",
+  displayMinButton: false
 });
 ```
 
 * reminder 设置打开客服会话的按钮文字。
 
-```
+```js
 RongCustomerService.init({
-  appkey:
-"bmdehs6pdw0ss"
-,
-  token:
-"****"
-,
-  customerServiceId:
-"****"
-,
-  reminder:
-"在线咨询"
-
+  appkey: "bmdehs6pdw0ss",
+  token: "****",
+  customerServiceId: "****",
+  reminder:"在线咨询"
 });
 ```
 
