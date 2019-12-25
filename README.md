@@ -1,6 +1,6 @@
-# 笔记
+# Introduction
 
-this flie is luwenxiu's note book ............. 
+This flie is luwenxiu's note book .............
 
-![](/assets/学习任务规划.png)
+![](.gitbook/assets/xue-xi-ren-wu-gui-hua.png)
 
