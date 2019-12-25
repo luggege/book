@@ -23,10 +23,9 @@ function
 (
 )
 {})();
-
 ```
 
-`this`在函数模式中的含义：_**`this`在函数中表示全局对象，在浏览器中是window对象**_
+`this`在函数模式中的含义：`this`_**在函数中表示全局对象，在浏览器中是window对象**_
 
 ## 方法模式 {#方法模式}
 
@@ -38,7 +37,7 @@ f
 (
 ) 
 {
-    
+
 this
 .method = 
 function
@@ -56,7 +55,6 @@ function
 ) 
 {}
 }
-
 ```
 
 `this`在方法模式调用中的含义:_**表示函数所依附的这个对象**_
@@ -73,17 +71,17 @@ Person
 (
 )
 {
-    
+
 this
 .name = 
 "zhangsan"
 ;
-    
+
 this
 .age = 
 19
 ;
-    
+
 this
 .sayHello = 
 function
@@ -97,7 +95,6 @@ var
  p = 
 new
  Person();
-
 ```
 
 构造函数中发`this`与方法中一样, 表示对象, 但是构造函数中的对象是刚刚创建出来的对象
@@ -118,23 +115,14 @@ new
 
 #### 工厂方法 {#工厂方法}
 
-```
+```js
 // 工厂就是用来生产的, 因此如果函数创建对象并返回, 就称该函数为工厂函数
-function
-createPerson
-(
- name, age, gender 
-) 
-{
-    
-var
- o = {};
+function createPerson(name, age, gender) {
+    var o = {};
     o.name = name;
     o.age = age;
     o.gender = gender;
-    
-return
- o;
+    return o;
 }
 
 // document.createElement()
@@ -149,13 +137,13 @@ Person
 name, age, gender
 )
 {
-    
+
 this
 .name = name;
-    
+
 this
 .age = age;
-    
+
 this
 .gender = gender;
 }
@@ -171,7 +159,6 @@ new
 , 
 "男"
 );
-
 ```
 
 #### 寄生式创建对象 {#寄生式创建对象}
@@ -183,13 +170,13 @@ Person
 name, age, gender
 )
 {
-    
+
 var
  o = {};
     o.name = name;
     o.age = age;
     o.gender = gender;
-    
+
 return
  o;
 }
@@ -205,7 +192,6 @@ new
 , 
 "male"
 );
-
 ```
 
 #### 混合式创建 {#混合式创建}
@@ -267,7 +253,7 @@ foo
 ) 
 {
 
- 
+
 console
 .log( 
 this
@@ -280,7 +266,6 @@ this
 foo.apply( obj );
 
 foo.call( obj );
-
 ```
 
 _**第一个参数的使用规则:**_
@@ -290,7 +275,6 @@ _**第一个参数的使用规则:**_
 2. 如果不传入参数, 或传入 null. undefiend 等, 那么相当于 this 默认为 window
 
 ```
-
 foo();
 
 foo.apply();
@@ -302,7 +286,6 @@ null
 foo.call( 
 undefined
  );
-
 ```
 
 1. 如果传入的是基本类型, 那么 this 就是基本类型对应的包装类型的引用
@@ -325,7 +308,7 @@ foo
 ) 
 {
 
- 
+
 console
 .log( num );
 
@@ -344,7 +327,6 @@ null
 foo( 
 123
  );
-
 ```
 
 ### 上下文调用模式的应用 {#上下文调用模式的应用}
@@ -382,7 +364,6 @@ var
 
 var
  newArr = arr.concat( a );
-
 ```
 
 由于`a`是伪数组, 只是长得像数组. 所以上面的代码不能成功，不能使用concat方法。
@@ -399,7 +380,6 @@ foo.apply( obj, 伪数组 );
 ```
 //将伪数组 a 作为 apply 的第二个参数
 var newArr = Array.prototype.concat.apply( [], a )
-
 ```
 
 处理数组转换, 实际上就是将元素一个一个的取出来构成一个新数组, 凡是涉及到该操作的方法理论上都可以。
@@ -468,7 +448,7 @@ var
 ; i 
 <
  arr.length; i++ ) {
-    
+
 if
  ( arr[ i ] 
 >
@@ -476,7 +456,6 @@ if
         ...
     }
 }
-
 ```
 
 在 js 中的`Math`对象中提供了很多数学函数`Math.max( 1,2,3 )`
@@ -503,7 +482,6 @@ Math
 .max.apply( 
 null
 , arr );
-
 ```
 
 #### 3.借用构造函数继承 {#3借用构造函数继承}
@@ -515,13 +493,13 @@ Person
  name, age, gender 
 ) 
 {
-    
+
 this
 .name = name;
-    
+
 this
 .age = age;
-    
+
 this
 .gender = gender;
 }
@@ -538,7 +516,7 @@ Student
     Person.call( 
 this
 , name, age, gender );
-    
+
 this
 .course = course;
 }
