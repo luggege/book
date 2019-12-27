@@ -7,7 +7,7 @@
   * [canvas day3](canvas第3天.md)
   * [canvas day4](canvas第四天.md)
 * [JavaScript](javascript高级和面向对象.md)
-  * [JavaScript高级知识](javascript高级.md)
+  * [JavaScript高级知识](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/README.md)
     * [值类型和引用类型](javascript高级/zhi-lei-xing-he-yin-yong-lei-xing.md)
     * [对象的动态特性](javascript高级/dui-xiang-de-dong-tai-te-xing.md)
     * [DOM操作复习](javascript高级/domcao-zuo-fu-xi.md)
