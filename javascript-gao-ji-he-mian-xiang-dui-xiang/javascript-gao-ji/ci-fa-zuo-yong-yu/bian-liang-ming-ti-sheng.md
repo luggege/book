@@ -257,6 +257,35 @@ func = function(){
 }
 ```
 
+一般开发中倾向于使用函数表达式的方式，因为js文件互相引入，可能存在函数名重复的情况，如果使用函数声明的方式后边的函数会覆盖前边函数。如果使用函数表达式就不会。
+
+```javascript
+//函数表达式
+var fn = function(){
+	console.log(111111);
+}
+fn()
+var fn = function(){
+	console.log(2222);
+}
+fn()
+VM264:2 111111
+VM264:6 2222
+
+
+//函数声明
+function fn(){
+	console.log(111111);
+}
+fn()
+function fn(){
+	console.log(2222);
+}
+fn()
+VM276:6 2222
+VM276:6 2222
+```
+
 ## 条件式函数声明 <a id="&#x6761;&#x4EF6;&#x5F0F;&#x51FD;&#x6570;&#x58F0;&#x660E;"></a>
 
 ```javascript
