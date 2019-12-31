@@ -1,6 +1,6 @@
-#### mpvue的生命周期
+# mpvue lifecycle
 
-```js
+```javascript
   beforeCreate(){
     console.log('``````````````beforeCreate数据观测data和事件event配置之前```````````');
     console.log(this.$el);    //undefined
@@ -60,5 +60,5 @@
   }
 ```
 
-![](/assets/lifecycle.jpg)
+![](../.gitbook/assets/lifecycle.jpg)
 

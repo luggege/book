@@ -1,4 +1,4 @@
-### oclazyLoay 按需加载
+# modules
 
 * 依赖文件:
 
@@ -8,13 +8,13 @@
 
 * 注入方式:
 
-```js
+```javascript
 angular.module('myApp', ['ui.router', 'oc.lazyLoad']);
 ```
 
 * 使用方法
 
-```js
+```javascript
   .state('account', {
         url: '/account',
         templateUrl: '../tpls/account.html',
@@ -29,7 +29,7 @@ angular.module('myApp', ['ui.router', 'oc.lazyLoad']);
     })
 ```
 
-#### $uibModal 模态框使用
+## $uibModal 模态框使用
 
 * 依赖文件
 
@@ -39,17 +39,15 @@ angular.module('myApp', ['ui.router', 'oc.lazyLoad']);
 
 * 注入方式
 
-```js
+```javascript
 angular.module('myApp', ['ngAnimate', 'ui.bootstrap']);
 ```
 
-#### angular-cookies的使用
+## angular-cookies的使用
 
-#### angular-autocomplete自动完成的使用
+## angular-autocomplete自动完成的使用
 
-#### 
-
-#### angular-translate国际化使用
+## angular-translate国际化使用
 
 angularjs作为前后端拆分的解决方案之一，当然离不开前端框架处理国际化的问题，angularjs官方出了一个模块--angular-translate来解决多语言国际化的问题。
 
@@ -65,17 +63,17 @@ angular-translate-loader-static-files是读取本地文件的模块，因为我�
 
 zh-cn.json 文件内容如下:
 
-```js
+```javascript
 {"login":"登录","register":"注册"}
 ```
 
 en.json 文件内容如下:
 
-```js
+```javascript
 {"login":"Login","register":"Register"}
 ```
 
-上面2个json文件对应相同的键 ,我们称之为 **翻译键**.  不同的语言文件中,**相同的翻译键对应相应的翻译值**即可.如 "Login" 对应 "登录"
+上面2个json文件对应相同的键 ,我们称之为 **翻译键**. 不同的语言文件中,**相同的翻译键对应相应的翻译值**即可.如 "Login" 对应 "登录"
 
 * 安装方法
 
@@ -87,13 +85,13 @@ bower install angular-translate-loader-static-files
 
 * 注入方式
 
-```js
+```javascript
 angular.module('myApp',['pascalprecht.translate']);
 ```
 
 * config 函数用 $translateProvider 服务配置 $translate 服务实现
 
-```js
+```javascript
 .config(['$translateProvider',function($translateProvider){
 
         // 获取所有cookie, 筛选lang对应的值(缓存中不存在设定语言时,首选浏览器默认语言)
@@ -132,7 +130,7 @@ ng-change="switchLang()">
 </select>
 ```
 
-```js
+```javascript
   $scope.switchLang = function () {
     $translate.use($scope.currentLang);               //实现语言的切换
     $cookies.remove('lang');
@@ -149,19 +147,15 @@ ng-change="switchLang()">
 
 > controller中注入$translate服务直接进行国际化服务\(也可以封装成服务进行公用\)
 
-```js
+```javascript
 $translate.instant('app.detail.refreshSuccess');
 ```
 
-#### 代码高亮插件SyntaxHighlighter
+## 代码高亮插件SyntaxHighlighter
 
-#### angular-ui-router的使用
+## angular-ui-router的使用
 
-#### angular-ui-tree的使用
+## angular-ui-tree的使用
 
-#### 
-
-#### angular-ui-select的使用
-
-
+## angular-ui-select的使用
 

@@ -1,10 +1,12 @@
-### Vuex概念
+# vuex
+
+## Vuex概念
 
 > 是一个专为Vue.js应用程序开发的**状态管理模式**
 
-#### 状态管理模式
+### 状态管理模式
 
-```js
+```javascript
 new Vue({
     // state
     data() {
@@ -36,24 +38,24 @@ new Vue({
 
 因此，把组件的共享状态抽取出来，以一个全局单例模式管理
 
-![](/assets/state.png)
+![](../.gitbook/assets/state.png)
 
-### Vuex安装及使用
+## Vuex安装及使用
 
-```js
+```javascript
 <script src="/path/to/vue.js"></script>
 <script src="/path/to/vuex.js"></script>
 ```
 
 或者
 
-```js
+```javascript
 // 命令行执行
 npm install vue 
 npm install vuex
 ```
 
-```js
+```javascript
 // 项目中引入、安装
 import Vue from 'vue'
 import Vuex from 'vuex'
@@ -76,6 +78,4 @@ console.log(store.state.count)   // 1
 store.commit('change')
 console.log(store.state.count)   // 2
 ```
-
-
 

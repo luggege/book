@@ -1,6 +1,8 @@
-### assign：Object.assign\(target, source\)方法用于将源对象的所有可枚举属性复制到目标对象
+# Object.assign\(\)
 
-1. ```js
+## assign：Object.assign\(target, source\)方法用于将源对象的所有可枚举属性复制到目标对象
+
+1. ```javascript
    // 1. 源对象属性复制到目标对象
    var target = {a: 1};
    var source = {b: 2};
@@ -46,12 +48,10 @@
    Object.assign(obj1, obj2); // a: {b: "hello"}
    ```
 
-### assign用途:
+## assign用途:
 
 1. 添加属性
 2. 添加方法
 3. 克隆对象
 4. 合并对象
-
-
 

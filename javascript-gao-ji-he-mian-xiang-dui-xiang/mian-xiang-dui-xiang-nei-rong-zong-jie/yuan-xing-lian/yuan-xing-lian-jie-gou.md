@@ -1,0 +1,62 @@
+# 原型链结构
+
+凡是对象就有原型, 原型又是对象, 因此凡是给定义一个对象, 那么就可以找到他的原型, 原型还有原型. 那么如此下去, 就构成一个对象的序列. 称该结构为原型链.
+
+使用构造函数创建出对象, 并且没有利用赋值的方式修改原型, 就说该对象保留默认的原型链.
+
+默认原型链结构是什么样子呢?
+
+```text
+function
+Person
+(
+) 
+{
+}
+
+
+var
+ p = 
+new
+ Person();
+
+// p 具有默认的原型链
+```
+
+默认的原型链结构就是:
+
+当前对象 -&gt; 构造函数.prototype -&gt; Object.prototype -&gt; null
+
+在实现继承的时候, 有时会利用替换原型链结构的方式实现原型继承, 那么原型链结构就会发生改变
+
+```text
+function
+ItcastCollection
+ (
+) 
+{
+}
+ItcastCollection.prototype = [];
+
+var
+ arr = 
+new
+ ItcastCollection();
+
+// arr -
+>
+ [] -
+>
+ Array.prototype -
+>
+ Object.prototype -
+>
+ null
+// var arr = new Array();
+```
+
+## 练习： <a id="&#x7EC3;&#x4E60;&#xFF1A;"></a>
+
+> 1. 描述出`{}`的原型链结构
+> 2. 描述出`[]`的原型链结构
+

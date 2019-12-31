@@ -1,8 +1,8 @@
-#### 扩展运算符
+# 扩展运算符
 
 > 扩展运算符... 将数组转为用逗号分隔的参数序列。
 
-```js
+```javascript
 console.log(0, ...[1, 2, 3], 4)            // 0 1 2 3 4
 
 console.log(...[])                         // undefined
@@ -11,9 +11,9 @@ console.log(...[])                         // undefined
 console.log((...[3]))                      // Uncaught SyntaxError: Unexpected number
 ```
 
-##### 替代函数的 apply 方法
+## 替代函数的 apply 方法
 
-```js
+```javascript
 function fn(x, y, z) {
     console.log(x, y, z)
 }
@@ -28,6 +28,4 @@ var arr2 = [4, 5, 6];
 Array.prototype.push.apply(arr1, arr2)
 arr1 .push(...arr2)
 ```
-
-
 
