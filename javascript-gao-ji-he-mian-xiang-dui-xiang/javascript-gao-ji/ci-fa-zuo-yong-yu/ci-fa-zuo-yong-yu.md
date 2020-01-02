@@ -8,22 +8,15 @@
 
 JavaScript中没有块级作用域
 
-```text
+```javascript
 {
-
-var
- num = 
-123
-;
+    var num = 123;
     {
-
-console
-.log( num );
+        console.log( num );
     }
 }
 
-console
-.log( num );
+console.log( num );
 ```
 
 上面这段代码在JavaScript中是不会报错的，但是在其他的编程语言中（C\#、C、JAVA）会报错。
@@ -47,23 +40,12 @@ console
 
 ### 例子1： <a id="&#x4F8B;&#x5B50;1&#xFF1A;"></a>
 
-```text
-var
- num = 
-123
-;
+```javascript
+var num = 123;
 
 
-function
-foo
-(
-) 
-{
-
-
-console
-.log( num );
-
+function foo() {
+    console.log( num );
 }
 
 foo();
@@ -71,50 +53,26 @@ foo();
 
 ### 例子2： <a id="&#x4F8B;&#x5B50;2&#xFF1A;"></a>
 
-```text
-if
- ( 
-false
- ) {
-
-var
- num = 
-123
-;
+```javascript
+if ( false ) {
+    var num = 123;
 }
 
-console
-.log( num ); 
+console.log( num ); 
 // undefiend
 ```
 
 ### 例子3： <a id="&#x4F8B;&#x5B50;3&#xFF1A;"></a>
 
-```text
-var
- num = 
-123
-;
+```javascript
+var num = 123;
 
-function
-foo
-(
-) 
-{
-
-var
- num = 
-456
-;
-
-function
-func
-(
-) 
-{
-
-console
-.log( num );
+function foo() {
+    
+    var num = 456;
+    
+    function func() {
+        console.log( num );
     }
 
     func();
@@ -125,40 +83,19 @@ foo();
 
 ### 练习： <a id="&#x7EC3;&#x4E60;&#xFF1A;"></a>
 
-```text
-var
- num1 = 
-123
-;
+```javascript
+var num1 = 123;
 
-function
-foo1
-(
-) 
-{
+function foo1() {
 
-var
- num1 = 
-456
-;
+var num1 = 456;
 
-function
-foo2
-(
-) 
-{
-        num1 = 
-789
-;
+function foo2() {
+        num1 = 789;
 
-function
-foo3
- (
-) 
-{
+function foo3 () {
 
-console
-.log( num1 );
+console.log( num1 );
         }
         foo3();
     }
@@ -166,8 +103,7 @@ console
 }
 foo1();
 
-console
-.log( num1 );
+console.log( num1 );
 ```
 
 ### 面试题 <a id="&#x9762;&#x8BD5;&#x9898;"></a>
