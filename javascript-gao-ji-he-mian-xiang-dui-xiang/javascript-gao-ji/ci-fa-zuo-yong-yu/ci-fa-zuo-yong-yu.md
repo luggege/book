@@ -88,14 +88,14 @@ var num1 = 123;
 
 function foo1() {
 
-var num1 = 456;
-
-function foo2() {
+    var num1 = 456;
+    
+    function foo2() {
         num1 = 789;
-
-function foo3 () {
-
-console.log( num1 );
+        
+        function foo3 () {
+        
+        console.log( num1 );
         }
         foo3();
     }
