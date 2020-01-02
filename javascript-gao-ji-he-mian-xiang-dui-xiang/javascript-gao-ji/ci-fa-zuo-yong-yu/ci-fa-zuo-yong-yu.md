@@ -95,7 +95,7 @@ function foo1() {
         
         function foo3 () {
         
-        console.log( num1 );
+            console.log( num1 );
         }
         foo3();
     }
@@ -108,33 +108,17 @@ console.log( num1 );
 
 ### 面试题 <a id="&#x9762;&#x8BD5;&#x9898;"></a>
 
-```text
-var
- num = 
-123
-;
+```javascript
+var num = 123;
 
-function
-func1
-(
-)
-{
-
-console
-.log(num);
+function func1(){
+    console.log(num);
 }
 
 
-function
-func2
-(
-)
-{
+function func2(){
 
-var
- num = 
-456
-;
+    var num = 456;
     func1();
 }
 ```
