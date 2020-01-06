@@ -30,5 +30,7 @@ console.log(Object.keys(str))
 //  ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
 ```
 
+#### Object.values\(\)
 
+同Object.keys\(\)方法相反，取得是value值组成的数组，实例如上。
 
