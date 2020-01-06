@@ -20,6 +20,7 @@
     * [函数的四种调用模式](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/han-shu-de-si-zhong-diao-yong-mo-shi.md)
     * [事件](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shi-jian.md)
   * [javascript基础复习](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/README.md)
+    * [Object](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/object.md)
     * [Array](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/array.md)
     * [Date](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/date.md)
     * [Number](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/number.md)
