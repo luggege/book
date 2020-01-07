@@ -32,5 +32,5 @@ console.log(Object.keys(str))
 
 #### Object.values\(\)
 
-同Object.keys\(\)方法相反，取得是value值组成的数组，实例如上。
+同Object.keys\(\)方法相反，取的是value值组成的数组，实例如上。
 
