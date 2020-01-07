@@ -2,7 +2,7 @@
 
 ### Object.keys\(\)
 
-Object.keys\(\)方法返回一个所有可枚举属性组成的数组，同for in循环遍历返回的排序一致。
+Object.keys\(\)方法返回一个所有可枚举属性组成的数组，同for in循环遍历具有相同的排列顺序。
 
 ```javascript
 var obj  = {
