@@ -15,7 +15,7 @@ var obj  = {
 }
 obj.b = "ddd"
 console.log(Object.keys(obj))
-//  ["1", "2", "3", "c", "a", "d", "b"]
+// ["1", "2", "3", "c", "a", "d", "b"]
 console.log(Object.values(obj))
 // ["bbb", "aaa", "ccc", 333, 111, 222, "ddd"]
 
