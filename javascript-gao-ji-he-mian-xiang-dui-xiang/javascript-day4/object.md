@@ -1,6 +1,6 @@
 # Object
 
-#### Object.keys\(\)
+### Object.keys\(\)
 
 Object.keys\(\)方法返回一个所有可枚举属性组成的数组，同for in循环遍历返回的排序一致。
 
@@ -30,7 +30,7 @@ console.log(Object.keys(str))
 //  ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
 ```
 
-#### Object.values\(\)
+### Object.values\(\)
 
 同Object.keys\(\)方法相反，取的是value值组成的数组，实例如上。
 
