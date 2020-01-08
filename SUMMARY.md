@@ -8,6 +8,7 @@
   * [canvas day4](chapter1/canvas-di-si-tian.md)
 * [JavaScript](javascript-gao-ji-he-mian-xiang-dui-xiang/README.md)
   * [JavaScript高级知识](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/README.md)
+    * [for in、for of、forEach的区别](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/for-infor-offoreach-de-qu-bie.md)
     * [值类型和引用类型](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/zhi-lei-xing-he-yin-yong-lei-xing.md)
     * [对象的动态特性](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/dui-xiang-de-dong-tai-te-xing.md)
     * [DOM操作复习](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/domcao-zuo-fu-xi.md)
