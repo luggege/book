@@ -39,18 +39,22 @@ for(let item of obj){
 
 
 2、Array
-var arr = [0, null, 1, undefined, 2, 3];
+var arr = [0, , null, 1, undefined, 2, 3];
 
 for(var item in arr){
   console.log('in`````', item)
-  // ["0", "1", "2", "3", "4", "5"]
+  // ["0", "2", "3", "4", "5", "6"]
 }
 
 for(var item of arr){
    console.log('of`````', item)
-  // [0, null, 1, undefined, 2, 3]
+  // [0, undefined, null, 1, undefined, 2, 3]  
 }
 
+arr.forEach(element => {
+  console.log('forEach```````', element)
+  // [0, null, 1, undefined, 2, 3] 
+});
 
 3、String
 var str = 'aaabbbccc'
