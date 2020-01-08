@@ -2,11 +2,9 @@
 
 ### for in 
 
-#### 只遍历可循环属性
-
-#### 循环的输出顺序问题
-
-先遍历整数属性（按照升序），其他属性按照创建顺序遍历
+1. 只遍历可循环属性
+2. 循环的输出顺序问题：先遍历**整数**属性（按照**升序**），其他属性按照创建顺序遍历
+3. 对于数组中的属性（如：test： testing），只有for-in循环才能打印出这种键值对
 
 ```javascript
 1、Object
@@ -98,9 +96,12 @@ for(let item of str){
 
 ### for of
 
-1. for in（但key值发生变化）、forEach遇数组空值跳过，但是，for of不会跳过，默认为undefined
-2. 
+1. for-of不会跳过，默认为undefined。
+2. for-in、forEach遇数组空项会跳过，for-in循环遇数组空项key值发生变化
+
 ### forEach
+
+1. 不能使用break，continue跳出循环，不同于for-in、for-of
 
 
 
