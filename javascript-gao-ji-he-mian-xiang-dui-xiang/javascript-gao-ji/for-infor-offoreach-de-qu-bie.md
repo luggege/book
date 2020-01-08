@@ -37,6 +37,7 @@ for(let item of obj){
 }
 //Uncaught TypeError: obj[Symbol.iterator] is not a function
 
+
 2、Array
 var arr = [0, null, 1, undefined, 2, 3];
 
@@ -49,6 +50,7 @@ for(var item of arr){
    console.log('of`````', item)
   // [0, null, 1, undefined, 2, 3]
 }
+
 
 3、String
 var str = 'aaabbbccc'
