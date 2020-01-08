@@ -39,11 +39,21 @@ for(let item of obj){
 
 
 2、Array
-var arr = [0, , null, 1, undefined, 2, 3];
+var arr = [0, , null, 1, undefined, 2, 3]
+
+arr.test = 'testing'
 
 for(var item in arr){
-  console.log('in`````', item)
-  // ["0", "2", "3", "4", "5", "6"]
+  console.log('in`````', item, arr[item])
+  // ["0", "2", "3", "4", "5", "6", "test"]
+   
+  // 0 0
+  // 2 null
+  // 3 1
+  // 4 undefined
+  // 5 2
+  // 6 3
+  // test testing
 }
 
 for(var item of arr){
@@ -54,7 +64,7 @@ for(var item of arr){
 arr.forEach(element => {
   console.log('forEach```````', element)
   // [0, null, 1, undefined, 2, 3] 
-});
+})
 
 3、String
 var str = 'aaabbbccc'
@@ -88,6 +98,8 @@ for(let item of str){
 
 ### for of
 
+1. for in（但key值发生变化）、forEach遇数组空值跳过，但是，for of不会跳过，默认为undefined
+2. 
 ### forEach
 
 
