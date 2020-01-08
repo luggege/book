@@ -17,7 +17,7 @@
 
 ```javascript
 1、Object
-var obj  = {
+var obj = {
   2: 'aaa',
   c: 333,
   1: 'bbb',
