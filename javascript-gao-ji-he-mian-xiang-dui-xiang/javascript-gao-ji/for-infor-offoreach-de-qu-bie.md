@@ -6,6 +6,15 @@
 2. 循环的输出顺序问题：先遍历**整数**属性（按照**升序**），其他属性按照创建顺序遍历
 3. 对于数组中的属性（如：test： testing），只有for-in循环才能打印出这种键值对
 
+### for of
+
+1. for-of不会跳过，默认为undefined。
+2. for-in、forEach遇数组空项会跳过，for-in循环遇数组空项key值发生变化
+
+### forEach
+
+1. 不能使用break，continue跳出循环，不同于for-in、for-of
+
 ```javascript
 1、Object
 var obj  = {
@@ -93,15 +102,4 @@ for(let item of str){
 // of````` c
 // of````` c
 ```
-
-### for of
-
-1. for-of不会跳过，默认为undefined。
-2. for-in、forEach遇数组空项会跳过，for-in循环遇数组空项key值发生变化
-
-### forEach
-
-1. 不能使用break，continue跳出循环，不同于for-in、for-of
-
-
 
