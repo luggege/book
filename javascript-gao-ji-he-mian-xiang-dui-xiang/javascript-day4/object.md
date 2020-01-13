@@ -1,8 +1,8 @@
 # Object
 
-#### Object.keys\(\)
+### Object.keys\(\)
 
-Object.keys\(\)方法返回一个所有可枚举属性组成的数组，同for in循环遍历返回的排序一致。
+Object.keys\(\)方法返回一个所有可枚举属性组成的数组，同for in循环遍历具有相同的排列顺序。
 
 ```javascript
 var obj  = {
@@ -15,7 +15,7 @@ var obj  = {
 }
 obj.b = "ddd"
 console.log(Object.keys(obj))
-//  ["1", "2", "3", "c", "a", "d", "b"]
+// ["1", "2", "3", "c", "a", "d", "b"]
 console.log(Object.values(obj))
 // ["bbb", "aaa", "ccc", 333, 111, 222, "ddd"]
 
@@ -30,7 +30,7 @@ console.log(Object.keys(str))
 //  ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
 ```
 
-#### Object.values\(\)
+### Object.values\(\)
 
-同Object.keys\(\)方法相反，取得是value值组成的数组，实例如上。
+同Object.keys\(\)方法相反，取的是value值组成的数组，实例如上。
 

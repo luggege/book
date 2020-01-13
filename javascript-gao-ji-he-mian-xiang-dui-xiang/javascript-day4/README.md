@@ -15,25 +15,26 @@
 
 ### 数组方法
 
-1. slice 截取    **原数组不会改变　一个参数索引包左不包右**
+1. slice**\(索引, 索引\)** 截取:    **原数组不会改变　一个参数索引包左不包右**
 
 ```javascript
 var arr = [1, 2, 3, 4, 5];
-console.log(arr.slice(0));  //[1, 2, 3, 4, 5] ===>arr=[1, 2, 3, 4, 5]
-console.log(arr.slice(-1)); //[5]===>arr=[1, 2, 3, 4, 5]
-console.log(arr.slice(2));    //[3, 4, 5]===>arr=[1, 2, 3, 4, 5]
-console.log(arr.slice(0, 2)); //(索引值,索引值)[1,2]===>arr=[1, 2, 3, 4, 5]
+arr.slice();      //[1, 2, 3, 4, 5] ==> arr=[1, 2, 3, 4, 5]
+arr.slice(0);     //[1, 2, 3, 4, 5] ==> arr=[1, 2, 3, 4, 5]
+arr.slice(-1);    //[5] ==> arr=[1, 2, 3, 4, 5]
+arr.slice(2);     //[3, 4, 5] ==> arr=[1, 2, 3, 4, 5]
+arr.slice(0, 2);  //[1,2] ==> arr=[1, 2, 3, 4, 5]
 ```
 
-2.splice 删除/替换 **原数组会改变** 返回删除截取出来的数组,原数组为剩下的内容组成的数组
+2. splice**\(索引, 个数, 替换内容\)** 删除/替换:   **原数组会改变** 返回删除截取出来的数组,原数组为**剩下的内容组成的数组**
 
 ```javascript
 var arr = [1, 2, 3, 4, 5];
-console.log(arr.splice(0));  //(索引位置往后截) [1, 2, 3, 4, 5] ===> arr=[];所以可用来清空数组
-console.log(arr.splice(2));  // [3, 4, 5] ===> arr=[1,2];
-console.log(arr.splice(0, 3));  //(索引,个数) [1, 2, 3] ===> arr=[4,5];
-console.log(arr.splice(0, 2, '9', '8', '7'  ));  //(索引,个数,替换内容) [1, 2]===> arr=["9", "8", "7", 3, 4, 5];
-console.log(arr);
+arr.splice();                      // [] ==> arr=[1, 2, 3, 4, 5];
+arr.splice(0);                     // [1, 2, 3, 4, 5] ==> arr=[];所以可用来清空数组
+arr.splice(2);                     // [3, 4, 5] ==> arr=[1,2];
+arr.splice(0, 3);                  // [1, 2, 3] ==> arr=[4,5];
+arr.splice(0, 2, '9', '8', '7');   // [1, 2] ==> arr=["9", "8", "7", 3, 4, 5];
 ```
 
 3.push 数组尾部添加, 返回个数
@@ -78,9 +79,17 @@ console.log(arr);
 
 16.concat / Array.prototype.push.apply\(arr1,arr2\) 数组合并
 
-> concat: arr1.concat\(b\) 1. 将后一个数组合并到前一个数组, 作为新数组返回, **原数组不会改变**; 2. 合并时的长度无限制
+> concat: arr1.concat\(b\) ：
 >
-> Array.prototype.push.apply\(arr1,arr2\); 1. 数组合并后返回新数组的个数, **arr1改变, arr2不变;** 2. 合并时长度一般不超过十万
+> 1. 将后一个数组合并到前一个数组, 作为新数组返回, **原数组不会改变**; 
+>
+> 2. 合并时的长度无限制
+>
+> Array.prototype.push.apply\(arr1,arr2\)：
+>
+> 1. 数组合并后返回新数组的个数, **arr1改变, arr2不变;**
+>
+>  ****2. 合并时长度一般不超过十万
 
 ```javascript
 var a = [1,2,3];
@@ -94,7 +103,7 @@ console.log(b);                   // [4, 5]
 console.log(a);                   // [1, 2, 3, 4, 5]
 ```
 
-### ![](../../.gitbook/assets/console.png)
+![](../../.gitbook/assets/console%20%282%29.png)
 
 ### 字符串方法
 
@@ -112,7 +121,17 @@ console.log(a);                   // [1, 2, 3, 4, 5]
 >
 > console.log\(str1.split\('\|'\)\);//\["I", "Love", "You"\]
 
-2.slice 截取 **原数组不会改变**
+2.**slice\(索引, 索引\)** 截取： **原字符串不会改变**
+
+```javascript
+var str = "abcdefg"
+str.slice();        // abcdefg ==> str='abcdefg';
+str.slice('');      // abcdefg ==> str='abcdefg';
+str.slice(0);       // abcdefg ==> str='abcdefg';
+str.slice(-2);      // fg ==> str='abcdefg';
+str.slice(1);       // bcdefg ==> str='abcdefg';
+str.slice(2,5);     // cde ==> str='abcdefg';
+```
 
 > console.log\(str.slice\(\)\); //abcdefg ===&gt; str='abcdefg';
 >
