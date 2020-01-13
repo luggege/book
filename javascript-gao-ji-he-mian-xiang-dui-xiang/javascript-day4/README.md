@@ -32,8 +32,9 @@ arr.slice(0, 2);  //[1,2] ==> arr=[1, 2, 3, 4, 5]
 var arr = [1, 2, 3, 4, 5];
 arr.splice();                      // [] ==> arr=[1, 2, 3, 4, 5];
 arr.splice(0);                     // [1, 2, 3, 4, 5] ==> arr=[];所以可用来清空数组
-arr.splice(2);                     // [3, 4, 5] ==> arr=[1,2];
-arr.splice(0, 3);                  // [1, 2, 3] ==> arr=[4,5];
+arr.splice(-1);                    // [5] ==> arr=[1, 2, 3, 4];
+arr.splice(2);                     // [3, 4, 5] ==> arr=[1, 2];
+arr.splice(0, 3);                  // [1, 2, 3] ==> arr=[4, 5];
 arr.splice(0, 2, '9', '8', '7');   // [1, 2] ==> arr=["9", "8", "7", 3, 4, 5];
 ```
 
@@ -121,7 +122,7 @@ console.log(a);                   // [1, 2, 3, 4, 5]
 >
 > console.log\(str1.split\('\|'\)\);//\["I", "Love", "You"\]
 
-2.**slice\(索引, 索引\)** 截取： **原字符串不会改变**
+2.**slice\(索引, 索引\)** ： 截取 **原字符串不会改变**
 
 ```javascript
 var str = "abcdefg"
@@ -133,35 +134,25 @@ str.slice(1);       // bcdefg ==> str='abcdefg';
 str.slice(2,5);     // cde ==> str='abcdefg';
 ```
 
-> console.log\(str.slice\(\)\); //abcdefg ===&gt; str='abcdefg';
->
-> console.log\(str.slice\(''\)\); //abcdefg ===&gt; str='abcdefg';
->
-> console.log\(str.slice\(-2\)\); //fg ===&gt; str='abcdefg';
->
-> console.log\(str.slice\(1\)\); //bcdefg ===&gt; str='abcdefg';
->
-> console.log\(str.slice\(2,5\)\); //**\(索引值,索引值\)**cde ===&gt; str='abcdefg';
+3.**substring\(索引, 索引\)**：  截取
 
-3.substr 截取
+```javascript
+ var str = "abcdefg"
+ str.substring(0);   // abcdefg ==> str='abcdefg';
+ str.substring(-1);  // abcdefg ==> str='abcdefg'; 负数的话全部截取
+ str.substring(1,3); // bc ==> str='abcdefg';
+ str.substring(4,2); // (智能调换索引值) cd ==> str='abcdefg';
+```
 
-> console.log\(str.substr\(1\)\); //bcdefg ===&gt; str='abcdefg';
->
-> console.log\(str.substr\(-2\)\); //fg ===&gt; str='abcdefg'; **负数从后往前截**
->
-> console.log\(str.substr\(1,3\)\); //**\(索引值,长度\)**bcd ===&gt; str='abcdefg';
->
-> console.log\(str.substr\(4,2\)\);//**\(索引值,长度\)**ef ===&gt; str='abcdefg';
+4.**substr\(索引, 长度\)**：  ****截取
 
-4.substring 截取
-
-> console.log\(str.substring\(1\)\); //bcdefg ===&gt; str='abcdefg';
->
-> console.log\(str.substring\(-1\)\); //abcdefg ===&gt; str='abcdefg'; **负数的话全部截取**
->
-> console.log\(str.substring\(1,3\)\); //**\(索引值,索引值\)**bc ===&gt; str='abcdefg';
->
-> console.log\(str.substring\(4,2\)\); //**智能调换\(索引值,索引值\)**cd ===&gt; str='abcdefg';
+```javascript
+var str = "abcdefg"
+str.substr(0);      // abcdefg ==> str='abcdefg';
+str.substr(-2);     // fg ==> str='abcdefg';       负数从后往前截
+str.substr(1,3);    // bcd ==> str='abcdefg';
+str.substr(4,2);    // ef ==> str='abcdefg';
+```
 
 5.trim 去除前后空白
 
