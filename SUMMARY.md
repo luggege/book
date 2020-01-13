@@ -19,6 +19,7 @@
     * [闭包](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/bi-bao.md)
     * [函数的四种调用模式](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/han-shu-de-si-zhong-diao-yong-mo-shi.md)
     * [事件](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shi-jian.md)
+    * [深拷贝浅拷贝](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shen-kao-bei-qian-kao-bei.md)
     * [for in、for of、forEach的区别](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/for-infor-offoreach-de-qu-bie.md)
   * [javascript基础复习](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/README.md)
     * [Object](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/object.md)
