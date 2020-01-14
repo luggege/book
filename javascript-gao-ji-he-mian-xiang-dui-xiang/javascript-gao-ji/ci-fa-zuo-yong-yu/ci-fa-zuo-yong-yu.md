@@ -88,14 +88,14 @@ var num1 = 123;
 
 function foo1() {
 
-    var num1 = 456;
-    
-    function foo2() {
+var num1 = 456;
+
+function foo2() {
         num1 = 789;
-        
-        function foo3 () {
-        
-            console.log( num1 );
+
+function foo3 () {
+
+console.log( num1 );
         }
         foo3();
     }
@@ -108,17 +108,33 @@ console.log( num1 );
 
 ### 面试题 <a id="&#x9762;&#x8BD5;&#x9898;"></a>
 
-```javascript
-var num = 123;
+```text
+var
+ num = 
+123
+;
 
-function func1(){
-    console.log(num);
+function
+func1
+(
+)
+{
+
+console
+.log(num);
 }
 
 
-function func2(){
+function
+func2
+(
+)
+{
 
-    var num = 456;
+var
+ num = 
+456
+;
     func1();
 }
 ```

@@ -5,8 +5,10 @@
 > 新对象（数组）引用旧对象（数组），改变旧对象（数组）的值，如果新对象（数组）的值也跟着改变，即浅拷贝。如果不影响，即深拷贝
 
 ```javascript
+    
+    // 1. 数组
+    // 适用于深拷贝一层数组且值为基本类型的方法有：遍历属性、slice、concat、Object.assign
     var arr = [1, 2, 3, 4, 5]
-
     // var arr = [
     //     {number: 111},
     //     {number: 222},
@@ -23,8 +25,7 @@
 
     var arr1 = copy(arr)
 
-    var arr2 = arr.slice()
-    // var arr2 = arr.slice(0)
+    var arr2 = arr.slice()  //arr.slice(0)
 
     var arr3 = arr.concat()
 
@@ -42,7 +43,7 @@
     
     
 
-
+    // 2. 对象
     var obj = {
         a: 1,
         1: 'aaa',
