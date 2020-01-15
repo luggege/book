@@ -77,7 +77,7 @@
             for(key in obj){
                 if(obj.hasOwnProperty(key)){
                     if(obj[key] && typeof obj[key] === 'object'){
-                        // deepCopy(obj[key])
+                        newObj[key] = deepCopy(obj[key])
                     }else {
                         newObj[key] = obj[key]
                     }
@@ -98,7 +98,7 @@
 
     let obj = {
         a: {
-            a: 1
+            aaa: 1
         },
         1: 'aaa',
         b: 2,
@@ -106,10 +106,10 @@
     }
 
     let obj1 = deepCopy(obj)
-    obj1.a = 111
+    obj.a.aaa = 111
 
     console.log(obj, obj1)  
-    // {1: "aaa", 2: "bbb", a: 1, b: 2}  
-    // {1: "aaa", 2: "bbb", a: 111, b: 2} 
+    // {1: "aaa", 2: "bbb", a: {aaa: 111}, b: 2}  
+    // {1: "aaa", 2: "bbb", a: {aaa: 1}, b: 2} 
 ```
 
