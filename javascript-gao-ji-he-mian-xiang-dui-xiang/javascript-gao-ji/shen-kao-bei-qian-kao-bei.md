@@ -68,5 +68,48 @@
     console.log('obj````````', obj)            // {1: "aaa", 2: "bbb", a: 1, b: 2, c: "333"}
     console.log('obj1````````', obj1)          // {1: "aaa", 2: "bbb", a: 1, b: 2}             
     console.log('obj2````````', obj2)          // {1: "aaa", 2: "bbb", a: 1, b: 2}
+    
+    
+    // 递归复制所有层级属性
+    function deepCopy(obj){
+        let newObj = Array.isArray(obj) ? [] : {}
+        if(obj && typeof obj === 'object'){
+            for(key in obj){
+                if(obj.hasOwnProperty(key)){
+                    if(obj[key] && typeof obj[key] === 'object'){
+                        // deepCopy(obj[key])
+                    }else {
+                        newObj[key] = obj[key]
+                    }
+                }
+            }
+        }
+        return newObj   
+    }
+
+    let arr = [1, 2, 3, 4, 5]
+    let arr1 = deepCopy(arr)
+
+    arr[0] = 100
+
+    console.log(arr, arr1)  
+    // [100, 2, 3, 4, 5]   
+    // [1, 2, 3, 4, 5]
+
+    let obj = {
+        a: {
+            a: 1
+        },
+        1: 'aaa',
+        b: 2,
+        2: 'bbb'
+    }
+
+    let obj1 = deepCopy(obj)
+    obj1.a = 111
+
+    console.log(obj, obj1)  
+    // {1: "aaa", 2: "bbb", a: 1, b: 2}  
+    // {1: "aaa", 2: "bbb", a: 111, b: 2} 
 ```
 
