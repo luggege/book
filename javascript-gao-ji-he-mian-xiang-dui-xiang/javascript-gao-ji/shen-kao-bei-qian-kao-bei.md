@@ -69,9 +69,10 @@
     console.log('obj2````````', obj2)          // {1: "aaa", 2: "bbb", a: 1, b: 2}
     
     
-    // 所有
+    // 所有层级
+    // 1. JSON.parse + JSON.stringify(obj)
     
-    // 递归复制所有层级属性
+    // 2. 递归复制所有层级属性
     function deepCopy(obj){
         let newObj = Array.isArray(obj) ? [] : {}
         if(obj && typeof obj === 'object'){
@@ -114,7 +115,7 @@
     // {1: "aaa", 2: "bbb", a: {aaa: 1}, b: 2} 
     
     
-    // jquery的extend方法(不适用与IE11及以下)
+    // 3. jquery的extend方法(不适用与IE11及以下)
     var obj1 = $.extend(true, {}, obj);
     obj.a.aaa = 111;
 
