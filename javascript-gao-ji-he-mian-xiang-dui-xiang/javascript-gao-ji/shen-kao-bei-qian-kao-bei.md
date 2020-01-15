@@ -5,7 +5,6 @@
 > 新对象（数组）引用旧对象（数组），改变旧对象（数组）的值，如果新对象（数组）的值也跟着改变，即浅拷贝。如果不影响，即深拷贝
 
 ```javascript
-    
     // 1. 数组
     // 适用于深拷贝一层数组且值为基本类型的方法有：遍历属性、slice、concat、Object.assign
     var arr = [1, 2, 3, 4, 5]
@@ -43,7 +42,7 @@
     
     
 
-    // 2. 对象
+    // 2. 对象(一层)
     var obj = {
         a: 1,
         1: 'aaa',
@@ -69,6 +68,8 @@
     console.log('obj1````````', obj1)          // {1: "aaa", 2: "bbb", a: 1, b: 2}             
     console.log('obj2````````', obj2)          // {1: "aaa", 2: "bbb", a: 1, b: 2}
     
+    
+    // 所有
     
     // 递归复制所有层级属性
     function deepCopy(obj){
@@ -109,6 +110,15 @@
     obj.a.aaa = 111
 
     console.log(obj, obj1)  
+    // {1: "aaa", 2: "bbb", a: {aaa: 111}, b: 2}  
+    // {1: "aaa", 2: "bbb", a: {aaa: 1}, b: 2} 
+    
+    
+    // jquery的extend方法(不适用与IE11及以下)
+    var obj1 = $.extend(true, {}, obj);
+    obj.a.aaa = 111;
+
+    console.log(obj, obj1);
     // {1: "aaa", 2: "bbb", a: {aaa: 111}, b: 2}  
     // {1: "aaa", 2: "bbb", a: {aaa: 1}, b: 2} 
 ```
