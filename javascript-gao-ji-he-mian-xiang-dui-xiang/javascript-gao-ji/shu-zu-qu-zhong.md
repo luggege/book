@@ -12,8 +12,6 @@ for(var i = 0; i < arr.length; i++){
 }
 
 temp   // [1, undefined, 2, null, 3, 4]
-
-
 ```
 
  
