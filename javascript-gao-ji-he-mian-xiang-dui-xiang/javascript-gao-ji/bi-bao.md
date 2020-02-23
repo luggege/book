@@ -17,31 +17,19 @@
 
 我们观察下面的函数`foo`，在`foo`内部有一个变量`num`，能否在函数外部访问到这个变量`num`呢？
 
-```text
-function
-foo
- (
-) 
-{
+```javascript
+function foo () {
 
-var
- num = 
-123
-;
-
-return
- num;
+  var num = 123;
+  
+  return num;
 }
 
 
-var
- res = foo();
+var res = foo();
 
-console
-.log( res ); 
-// =
->
- 123
+console.log( res ); 
+// => 123
 ```
 
 分析：
