@@ -1,3 +1,5 @@
+# Vue
+
 eslint\`\`\`\`\`\`\`
 
 webpack
@@ -6,9 +8,9 @@ babel
 
 用户状态管理
 
-### 目录结构
+## 目录结构
 
-```js
+```javascript
 │  .browserslistrc                  // browser-loader 配置<br/>
 │  .eslintrc.js                     // eslint-loader 配置<br/>
 │  .gitignore                       // git 忽略项<br/>
@@ -50,6 +52,4 @@ babel
 └─test                              // 打包后的测试环境目录，只需部署这个目录到测试环境<br/>
 └─tests                             // 单元测试<br/>
 ```
-
-
 

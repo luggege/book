@@ -91,13 +91,13 @@ a = 1;
 fn()
 
 function fn(){
-	console.log(1111)
+    console.log(1111)
 }
 
 fn()
 
 function fn(){
-	console.log(22222)
+    console.log(22222)
 }
 ```
 
@@ -112,11 +112,11 @@ function fn(){
 
 ```javascript
 function fn(){
-	console.log(1111)
+    console.log(1111)
 }
 
 function fn(){
-	console.log(22222)
+    console.log(22222)
 }
 
 fn();
@@ -262,11 +262,11 @@ func = function(){
 ```javascript
 //函数表达式
 var fn = function(){
-	console.log(111111);
+    console.log(111111);
 }
 fn()
 var fn = function(){
-	console.log(2222);
+    console.log(2222);
 }
 fn()
 VM264:2 111111
@@ -275,11 +275,11 @@ VM264:6 2222
 
 //函数声明
 function fn(){
-	console.log(111111);
+    console.log(111111);
 }
 fn()
 function fn(){
-	console.log(2222);
+    console.log(2222);
 }
 fn()
 VM276:6 2222

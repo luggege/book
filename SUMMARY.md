@@ -103,6 +103,7 @@
   * [指令的使用](angularjs/zhi-ling-de-shi-yong.md)
   * [数字动画](angularjs/shu-zi-dong-hua.md)
 * [Vue](vue/README.md)
+  * [lifecycle](vue/lifecycle.md)
   * [MVC和MVVM的区别](vue/mvc-he-mvvm-de-qu-bie.md)
   * [vue的安装及使用](vue/vuede-an-zhuang-ji-shi-yong.md)
   * [mpvue lifecycle](vue/mpvue-lifecycle.md)

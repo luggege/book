@@ -10,39 +10,22 @@
 
 **例如：**
 
-```text
-function
-f1
-(
-) 
-{
+```javascript
+function f1() {
 
-function
-f2
-(
-) 
-{
-    }
+  function f2() {    
+  
+  }
 }
 
 
-var
- num = 
-456
-;
+var num = 456;
 
-function
-f3
-(
-) 
-{
+function f3() {
 
-function
-f4
-(
-) 
-{    
-    }
+  function f4() {    
+
+  }
 }
 ```
 
