@@ -1,4 +1,4 @@
-# Table of contents
+# Summary
 
 * [Introduction](README.md)
 * [canvas](chapter1/README.md)
@@ -108,6 +108,7 @@
   * [vue的安装及使用](vue/vuede-an-zhuang-ji-shi-yong.md)
   * [mpvue lifecycle](vue/mpvue-lifecycle.md)
   * [vuex](vue/vuex.md)
+  * [组件通信](vue/zu-jian-tong-xin.md)
   * [遇到的问题](vue/vueyu-dao-de-wen-ti.md)
 * [ES6](es6/README.md)
   * [Promise](es6/promise.md)
