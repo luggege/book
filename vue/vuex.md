@@ -1,6 +1,4 @@
-# vuex
-
-## Vuex概念
+# Vuex
 
 > 是一个专为Vue.js应用程序开发的**状态管理模式**
 
@@ -38,7 +36,7 @@ new Vue({
 
 因此，把组件的共享状态抽取出来，以一个全局单例模式管理
 
-![](../.gitbook/assets/state.png)
+![](/assets/屏幕快照 2020-02-25 下午11.03.18.png)
 
 ## Vuex安装及使用
 
@@ -65,17 +63,36 @@ Vue.use(Vuex)
 // 使用
 const store = new Vuex.Store({
     state: {
-        count: 1
+        count: 1,
+        token: '',
     },
     mutations: {
         change(state) {
             state.count++
-        }
+        },
+        SET_TOKEN: (state, token) => {
+          state.token = token
+        },
+    },
+    actions: {
+        commit('SET_TOKEN', response.data.token)
+
     }
 })
 
 console.log(store.state.count)   // 1
 store.commit('change')
 console.log(store.state.count)   // 2
+
+
+store.dispatch('GetUserInfo')
 ```
+
+* state：存放共享数据
+* mutation：定义方法修改state的值
+* actions：通过dispatch分发actions，通过commit异步处理数据
+* getters：类似于vue的计算属性，用来过滤一些数据
+* modules：分模块管理
+
+
 
