@@ -19,17 +19,11 @@
 
 ```javascript
 function foo () {
-
   var num = 123;
-  
   return num;
 }
-
-
 var res = foo();
-
-console.log( res ); 
-// => 123
+console.log( res ); // => 123
 ```
 
 分析：
@@ -44,43 +38,18 @@ console.log( res );
 
 但是如果反过来，下级作用域可以直接访问上级作用域中的数据。那么如果在函数`foo`内定义一个函数，那么在这个内部函数中是可以直接访问`foo`中的`num`的。
 
-```text
-function
-foo
-(
-) 
-{
-
-var
- num = 
-Math
-.random();    
-
-function
-func
-(
-) 
-{
-
-return
- num;    
-    }
-
-return
- func;
+```javascript
+function foo() {
+  var num = Math.random();    
+  function func() {
+    return num;    
+  }
+  return func;
 }
-
-
-
-var
- f = foo();
-
+var f = foo();
 // f可以直接访问num，而且多次访问，访问的也是同一个，并不会返回新的num
-var
- res1 = f();
-
-var
- res2 = f();
+var res1 = f();
+var res2 = f();
 ```
 
 ## 如何获得超过一个数据 <a id="&#x5982;&#x4F55;&#x83B7;&#x5F97;&#x8D85;&#x8FC7;&#x4E00;&#x4E2A;&#x6570;&#x636E;"></a>

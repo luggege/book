@@ -7,8 +7,8 @@
 ```javascript
 // let声明的变量只在代码块中有效
 {
-let i = 1;
-var j = 2;
+    let i = 1;
+    var j = 2;
 }
 console.log(i)  // 报错
 console.log(j)  // 2
@@ -30,13 +30,23 @@ for(var i = 0; i < 10; i++){
     }
 }
 a[5]()    //10
-
+// 循环生成10个子块级作用域
 for(let i = 0; i < 10; i++){
     a[i] = function(){
         console.log(i)
     }
 }
 a[7]()    // 7
+// 或者使用闭包
+var array  = []
+for(var i = 0; i < 10; i++){
+    (function(i){
+        array[i] = function(){
+        console.log(i)
+    }
+    })(i)
+}
+array[7]()  // 7
 
 // 父作用域与子作用域相互独立
 for(let i = 0; i < 3; i++){
@@ -135,4 +145,6 @@ fn()        //不报错
 ```
 
 ## const
+
+
 

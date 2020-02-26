@@ -246,3 +246,5 @@ let jsonData = {
 let {name, value, data: num} = jsonData         // name value num => 'zhangsan' "OK" [1, 2]
 ```
 
+
+

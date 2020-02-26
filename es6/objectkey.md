@@ -29,6 +29,8 @@ Object.values(null);   // VM11854:1 Uncaught TypeError: Cannot convert undefined
 ## Object.entries\(\)：返回一个数组，参数是一个\*对象\*所有可遍历属性的\*键值对\*数组
 
 ```javascript
-Object.entries({'a': 1, 'b': 2, 'c': 3}); // (3) [["a", 1], ["b", 2], (2) ["c", 3]]
+Object.entries({'a': 1, 'b': 2, 'c': 3}); // (3) [["a", 1], ["b", 2], ["c", 3]]
 ```
+
+
 
