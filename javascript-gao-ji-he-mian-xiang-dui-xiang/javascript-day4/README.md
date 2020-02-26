@@ -9,7 +9,7 @@
 
 * 可当做构造函数,其原型是空函数,其原型的原型是Object.prototype\(空对象\).
 
-   **在当前对象中,调用当前对象的其他方法,需要使用this** 
+  **在当前对象中,调用当前对象的其他方法,需要使用this**
 
 ## 数组和字符串相关API
 
@@ -26,7 +26,7 @@ arr.slice(2);     //[3, 4, 5] ==> arr=[1, 2, 3, 4, 5]
 arr.slice(0, 2);  //[1,2] ==> arr=[1, 2, 3, 4, 5]
 ```
 
-2. splice**\(索引, 个数, 替换内容\)** 删除/替换:   **原数组会改变** 返回删除截取出来的数组,原数组为**剩下的内容组成的数组**
+1. splice**\(索引, 个数, 替换内容\)** 删除/替换:   **原数组会改变** 返回删除截取出来的数组,原数组为**剩下的内容组成的数组**
 
 ```javascript
 var arr = [1, 2, 3, 4, 5];
@@ -57,7 +57,7 @@ arr.splice(0, 2, '9', '8', '7');   // [1, 2] ==> arr=["9", "8", "7", 3, 4, 5];
 11.toString: 同Array.join\(\)方法
 
 ```javascript
-var aaa = [1, 2, 3, 4, 5]
+var aaa = [1, 2, 3, 4, 5]
 aaa.toString()
 "1,2,3,4,5"
 ```
@@ -85,7 +85,7 @@ arr.join('&')           // 1&2&3&4&5
 
 > concat: arr1.concat\(b\) ：
 >
-> 1. 将后一个数组合并到前一个数组, 作为新数组返回, **原数组不会改变**; 
+> 1. 将后一个数组合并到前一个数组, 作为新数组返回, **原数组不会改变**;
 >
 > 2. 合并时的长度无限制
 >
@@ -108,7 +108,7 @@ console.log(a);                   // [1, 2, 3, 4, 5]
 console.log(b);                   // [4, 5]
 ```
 
-![](../../.gitbook/assets/console%20%282%29.png)
+![](../../.gitbook/assets/console %282%29.png)
 
 ### 字符串方法
 
@@ -124,7 +124,7 @@ var str1 = "I|Love|You";
 str1.split()           // ["I|Love|You"]
 str1.split('')         // ["I", "|", "L", "o", "v", "e", "|", "Y", "o", "u"]
 str1.split(' ')        // ["I|Love|You"]
-str1.split('|')        // ["I", "Love", "You"]
+str1.split('|')        // ["I", "Love", "You"]
 ```
 
 2.slice**\(索引, 索引\)** ： 截取 **原字符串不会改变**
@@ -149,7 +149,7 @@ str.slice(2,5);     // cde ==> str='abcdefg';
  str.substring(4,2); // (智能调换索引值) cd ==> str='abcdefg';
 ```
 
-4.**substr\(索引, 长度\)**：  ****截取
+4.**substr\(索引, 长度\)**：  _\*\*_截取
 
 ```javascript
 var str = "abcdefg"
@@ -184,7 +184,6 @@ str.substr(4,2);    // ef ==> str='abcdefg';
 
 'abcdef'.charCodeAt()       // 97
 'abcdef'.charCodeAt(2)      // 99
-
 ```
 
 ### 数字转换成字符串的三种方法
@@ -203,4 +202,6 @@ if(!String.prototype.trim){
     }
 }
 ```
+
+
 
