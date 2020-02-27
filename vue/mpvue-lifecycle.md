@@ -60,5 +60,5 @@
   }
 ```
 
-![](../.gitbook/assets/lifecycle.jpg)
+![](/assets/lifecycle.jpg)
 

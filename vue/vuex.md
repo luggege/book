@@ -4,7 +4,7 @@
 
 ### 状态管理模式
 
-```javascript
+```js
 new Vue({
     // state
     data() {

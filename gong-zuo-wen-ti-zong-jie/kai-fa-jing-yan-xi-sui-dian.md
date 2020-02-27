@@ -51,21 +51,24 @@ getElementsByClassName只兼容到IE 9 以上.
 
 ## 如何解决IE8以下兼容html5标签 <a id="&#x5982;&#x4F55;&#x89E3;&#x51B3;ie8&#x4EE5;&#x4E0B;&#x517C;&#x5BB9;html5&#x6807;&#x7B7E;"></a>
 
-> &lt;!-- 条件引入html5.js --&gt;  
-> &lt;!--\[if lt IE 9\]&gt;  
-> &lt;script src="js/html5.js"&gt;&lt;/script&gt;  
-> &lt;!\[endif\]--&gt;
->
-> &lt;!-- 条件引入线上html5文件 --&gt;  
-> &lt;!--\[if lt IE9\]&gt; --&gt;  
-> &lt;script src="[http://cdn.bootcss.com/html5shiv/r29/html5.min.js](http://cdn.bootcss.com/html5shiv/r29/html5.min.js)"&gt;&lt;/script&gt;  
-> &lt;!\[endif\]--&gt;
->
-> &lt;!-- cdnjs --&gt;  
-> &lt;!--\[if lt IE 9\]&gt;  
-> &lt;script src="[https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js](https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js)"&gt;&lt;/script&gt;  
-> &lt;!\[endif\]--&gt;
->
+
+
+```javascript
+<!-- 条件引入html5.js -->
+<!--\[if lt IE 9\]>
+<script src="js/html5.js"></script>
+<!\[endif\]-->
+<!-- 条件引入线上html5文件 -->
+<!--\[if lt IE9\]> -->
+<script src="[http://cdn.bootcss.com/html5shiv/r29/html5.min.js](http://cdn.bootcss.com/html5shiv/r29/html5.min.js)"></script>
+<!\[endif\]-->
+<!-- cdnjs -->
+<!--\[if lt IE 9\]>
+<script src="[https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js](https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js)"></script>  
+<!\[endif\]-->
+
+```
+
 > 但是如果ie6/7/8 禁用脚本的用户,那么就变成了无样式的"白板"网页,我们该怎么解决呢?  
 > 我们可以参照facebook的做法，即引导用户进入带有noscript标识的 “/?\_fb\_noscript=1”页面，用 html4 标签替换 html5 标签，这要比为了保持兼容性而写大量 hack 的做法更轻便一些。
 >
@@ -77,7 +80,7 @@ getElementsByClassName只兼容到IE 9 以上.
 > &lt;/noscript&gt;  
 > &lt;!\[endif\]--&gt;
 
-```text
+```javascript
 在IE9以下的浏览器将创建h5标签,,但是要在css中将这些元素均设为**块级元素**,因为h5标签在低版本IE中默认为内联元素
 
 <!--[if lt IE9]>

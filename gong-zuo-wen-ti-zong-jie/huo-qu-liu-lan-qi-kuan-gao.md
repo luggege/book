@@ -1,47 +1,37 @@
-# 浏览器相关问题
+#  浏览器相关问题
 
 ## 获取浏览器宽高
 
-```text
+```javascript
 // 文档的宽 高
 console.log( document.body.clientWidth );
-
 console.log( document.body.clientHeight );
 
 console.log( $(document).width() );
-
 console.log( $(document).height() );
-
 
 // 文档滚动卷去的部分
 console.log( document.body.scrollLeft );
-
 console.log( document.body.scrollTop );
-
 
 // 总长度 - 卷去的 == 可视窗口的高度
 console.log( document.body.clientHeight - document.body.scrollTop );
 
-
 // 分辨率
 console.log( window.screen.width );
-
 console.log( window.screen.height );
-
 
 // 当前窗口的可视区域的宽 高
 console.log( $(window).width() );
-
 console.log( $(window).height() );
-
 
 div.style.top : 指对象距离浏览器显示区域顶端的垂直距离  (可读&可写 带单位)
 div.offsetTop : 指对象距离顶边距显示区域顶端的垂直距离  (可读 不带单位)
 ```
 
-### 页面位置 <a id="&#x9875;&#x9762;&#x4F4D;&#x7F6E;"></a>
+### 页面位置 
 
-### touch事件的属性 <a id="touch&#x4E8B;&#x4EF6;&#x7684;&#x5C5E;&#x6027;"></a>
+### touch事件的属性 
 
 touchstart:当手指触摸屏幕时触发；即使已经有一个手指放在了屏幕上也会触发。
 
@@ -107,7 +97,7 @@ navigator 对象包含有关浏览器的信息。没有应用于 navigator 对�
 
 可以使用下面的代码获取当前浏览器语言：
 
-```text
+```javascript
 (navigator.language || navigator.browserLanguage).toLowerCase()
 ```
 
