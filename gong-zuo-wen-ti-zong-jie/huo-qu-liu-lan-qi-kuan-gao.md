@@ -20,7 +20,6 @@ console.log( document.body.scrollHeight - document.body.scrollTop );
 console.log( document.body.clientWidth );
 console.log( document.body.clientHeight || document.documentElement.clientHeight );
 
-
 // 分辨率
 console.log( window.screen.width );
 console.log( window.screen.height );
@@ -148,6 +147,4 @@ navigator 对象包含有关浏览器的信息。没有应用于 navigator 对�
     //获取当前的浏览器信息
     var system = getBrowserInfo();
 ```
-
-## 浏览器Cookie、LocalStorage、SessionStorage的比较
 

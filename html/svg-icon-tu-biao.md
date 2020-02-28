@@ -18,9 +18,7 @@
 
 > 种类/数量多，有几百个公司的开源库，还支持自定义创建图表库，能满足所有需求。
 
-## iconfont使用方法
-
-![](../.gitbook/assets/iconfont.png)
+## iconfont使用方法![](/assets/iconfont.png)
 
 * unicode
 
@@ -129,4 +127,6 @@ const requireAll = requireContext => requireContext.keys().map(requireContext)
 const req = require.context('./svg', false, /\.svg$/)
 requireAll(req)
 ```
+
+
 

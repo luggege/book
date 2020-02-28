@@ -18,7 +18,7 @@ function fn(){
 
 ## JavaScript 预解析 <a id="javascript-&#x9884;&#x89E3;&#x6790;"></a>
 
-JavaScript引擎在对JavaScript代码进行解释执行之前，会对JavaScript代码进行**预解析**，在预解析阶段，会将以关键字**`var`**和**`function`**开头的语句块提前进行处理。
+JavaScript引擎在对JavaScript代码进行解释执行之前，会对JavaScript代码进行**预解析**，在预解析阶段，会将以关键字  **var** 和** function **开头的语句块提前进行处理。
 
 _关键问题是怎么处理呢？_
 

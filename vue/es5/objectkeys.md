@@ -1,4 +1,4 @@
-# Object.key\(\)
+# Object.keys\(\)
 
 ## Object.keys\(\)：返回一个数组，参数是一个\*对象\*所有可遍历属性的\*键名\*
 
