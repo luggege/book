@@ -8,5 +8,5 @@ This flie is luwenxiu's note book ................
 
 新版Gitbook电子书预览地址：[https://luggege.gitbook.io/book/](https://luggege.gitbook.io/book/)
 
-![](https://github.com/luggege/book/tree/8b07e4f4975cbf2e0651328d8c975f28d65feccd/.gitbook/assets/xue-xi-ren-wu-gui-hua.png)
+![](/assets/学习任务规划.png)
 
