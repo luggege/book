@@ -4,18 +4,22 @@
 
 ```javascript
 // 文档的宽 高
-console.log( document.body.clientWidth );
-console.log( document.body.clientHeight );
+console.log( document.body.scrollWidth );
+console.log( document.body.scrollHeight || document.documentElement.scrollHeight );
 
 console.log( $(document).width() );
 console.log( $(document).height() );
 
 // 文档滚动卷去的部分
 console.log( document.body.scrollLeft );
-console.log( document.body.scrollTop );
+console.log( document.body.scrollTop || document.documentElement.scrollTop );
 
 // 总长度 - 卷去的 == 可视窗口的高度
-console.log( document.body.clientHeight - document.body.scrollTop );
+console.log( document.body.scrollHeight - document.body.scrollTop );
+
+console.log( document.body.clientWidth );
+console.log( document.body.clientHeight || document.documentElement.clientHeight );
+
 
 // 分辨率
 console.log( window.screen.width );
@@ -27,6 +31,33 @@ console.log( $(window).height() );
 
 div.style.top : 指对象距离浏览器显示区域顶端的垂直距离  (可读&可写 带单位)
 div.offsetTop : 指对象距离顶边距显示区域顶端的垂直距离  (可读 不带单位)
+
+
+// 滑动到底部加载更多
+window.onscroll= function(){
+    //文档内容实际高度（包括超出视窗的溢出部分）
+    var scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+    //滚动条滚动距离
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+    //窗口可视范围高度
+    var clientHeight = window.innerHeight || Math.min(document.documentElement.clientHeight,document.body.clientHeight);
+    
+    if(clientHeight + scrollTop >= scrollHeight){
+        console.log("===加载更多内容……===");
+    }
+}
+
+$(window).on("resize scroll",function(){           
+    var windowHeight = $(window).height();//当前窗口的高度             
+    var scrollTop = $(window).scrollTop();//当前滚动条从上往下滚动的距离            
+    var docHeight = $(document).height(); //当前文档的高度 
+    console.log(scrollTop, windowHeight, docHeight);
+    //当 滚动条距底部的距离 + 滚动条滚动的距离 >= 文档的高度 - 窗口的高度  
+    //换句话说：（滚动条滚动的距离 + 窗口的高度 = 文档的高度）  这个是基本的公式  
+    if (scrollTop + windowHeight >= docHeight) { 
+        console.log("===加载更多数据===");
+    }
+});
 ```
 
 ### 页面位置 
