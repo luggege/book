@@ -40,11 +40,9 @@ console.log( num );    // 123
 
 ```javascript
 var num = 123;
-
 function foo() {
     console.log( num );
 }
-
 foo();  // 123
 ```
 
@@ -54,7 +52,6 @@ foo();  // 123
 if ( false ) {
     var num = 123;
 }
-
 console.log( num );  // undefiend
 ```
 
@@ -62,18 +59,13 @@ console.log( num );  // undefiend
 
 ```javascript
 var num = 123;
-
 function foo() {
-
     var num = 456;
-
     function func() {
         console.log( num );
     }
-
     func();
 }
-
 foo();   // 456
 ```
 

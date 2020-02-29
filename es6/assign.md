@@ -1,6 +1,6 @@
 # Object.assign\(\)
 
-### assign：Object.assign\(target, source\)方法用于将源对象的所有可枚举属性复制到目标对象
+### assign：Object.assign\(target, source\)方法用于将源对象自身的所有可枚举属性复制到目标对象
 
 1. ```javascript
    // 1. 源对象属性复制到目标对象
@@ -54,4 +54,6 @@
 2. 添加方法
 3. 克隆对象
 4. 合并对象
+
+
 

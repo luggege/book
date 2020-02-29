@@ -1,10 +1,41 @@
 # Object.keys\(\)
 
-## Object.keys\(\)：返回一个数组，参数是一个\*对象\*所有可遍历属性的\*键名\*
+## Object.keys\(\)：返回一个数组，参数是一个\*对象\*自身所有可枚举属性的\*键名\*
 
-```javascript
-Object.keys({'a': 1, 'b': 2, 'c': 3});   // ["a", "b", "c"]
-Object.keys(["a", "b", "c"]);   // ["0", "1", "2"]
+```js
+var obj  = {
+  2: 'aaa',
+  c: 333,
+  1: 'bbb',
+  a: 111,
+  3: 'ccc',
+  d: 222
+}
+obj.b = "ddd"
+
+1. 对象
+console.log(Object.keys(obj))
+// ["1", "2", "3", "c", "a", "d", "b"]
+console.log(Object.values(obj))
+// ["bbb", "aaa", "ccc", 333, 111, 222, "ddd"]
+
+2. 数组
+var arr = [0, null, 1, undefined, 2, 3];
+console.log(Object.keys(arr))
+//  ["0", "1", "2", "3", "4", "5"]
+
+3. 字符串
+var str = 'aaabbbccc'
+console.log(Object.keys(str))
+//  ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
+
+4. 数值、布尔值（其包装对象都不会为实例添加非继承的属性，所以返回空数组）
+Object.keys(666);  // []
+Object.keys(true); // []
+
+5. undefined、null（由于不会转为对象，所以报错）
+Object.keys(undefined);
+Object.keys(null);   // VM11854:1 Uncaught TypeError: Cannot convert undefined or null to object
 ```
 
 ## Object.values\(\)：返回一个数组，参数是一个\*对象\*所有可遍历属性的\*键值\*

@@ -208,26 +208,21 @@ alert(msg);
 
 ```javascript
 <script>
-
-func(); 
-// 输出 AA2;
-function func(){
-    console.log('AA1');
-}
-
-
-function func(){
-    console.log('AA2');
-}
-
+    func(); 
+    // 输出 AA2;
+    function func(){
+        console.log('AA1');
+    }
+    
+    function func(){
+        console.log('AA2');
+    }
 </script>
 
 <script>
-
-function func(){
-    console.log('AA3');
-}
-
+    function func(){
+        console.log('AA3');
+    }
 </script>
 ```
 
