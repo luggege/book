@@ -121,5 +121,6 @@
   * [扩展运算符](es6/kuo-zhan-yun-suan-fu.md)
   * [变量的解构赋值](es6/bian-liang-de-jie-gou-fu-zhi.md)
   * [let 和 const 命令](es6/let-he-const-ming-ling.md)
+  * [Symbol](es6/symbol.md)
 * [HTTP协议](httpxie-yi.md)
 
