@@ -1,48 +1,23 @@
 # 构造函数
 
-```text
-function
-Person
-(
-name, age
-)
-{
-
-this
-.name = name;
-
-this
-.age = age;
+```javascript
+function Person(name, age){
+  this.name = name;
+  this.age = age;
 }
 ```
 
-```text
+```javascript
 //断点调试，进行类型查看
-var
- p1 = 
-new
- Person();
+var p1 = new Person();
 
-var
- p2 = 
-new
-Object
-();
+var p2 = new Object();
 
-var
- p3 = 
-new
-Date
-();
+var p3 = new Date();
 
-var
- p4 = 
-new
-RegExp
-();
+var p4 = new RegExp();
 
-var
- p5 = {};
+var p5 = {};
 ```
 
 ## 1.构造函数是干什么用的？ <a id="1&#x6784;&#x9020;&#x51FD;&#x6570;&#x662F;&#x5E72;&#x4EC0;&#x4E48;&#x7528;&#x7684;&#xFF1F;"></a>
@@ -51,11 +26,8 @@ var
 
 ## 2. 对象的创建过程 <a id="2-&#x5BF9;&#x8C61;&#x7684;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;"></a>
 
-```text
-var
- p = 
-new
- Person();
+```javascript
+var p = new Person();
 ```
 
 以上面这个p对象创建为例：

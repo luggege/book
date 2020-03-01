@@ -97,6 +97,7 @@
   * [浏览器相关问题](gong-zuo-wen-ti-zong-jie/huo-qu-liu-lan-qi-kuan-gao.md)
   * [CSS布局](gong-zuo-wen-ti-zong-jie/cssbu-ju.md)
   * [百度UEditor编辑器](gong-zuo-wen-ti-zong-jie/bai-du-ueditor-bian-ji-qi.md)
+  * [前端优化](gong-zuo-wen-ti-zong-jie/qian-duan-you-hua.md)
 * [AngularJs](angularjs/README.md)
   * [modules](angularjs/modules.md)
   * [指令的使用](angularjs/zhi-ling-de-shi-yong.md)
