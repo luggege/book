@@ -1,0 +1,28 @@
+### 判断数据类型
+
+1. typeof：Array、Date、Error都为Object
+2. instanceof：`[] instanceof Array`构造函数的原型是不是在给定对象的原型链上
+3. Array.prototype.isPrototpeOf\(obj\)：Array是否在obj的原型链上
+4. constroctor：`new Number(123).constructor`
+5. Object.prototype.toString.call\(\)：根据内部的this返回一个类似于这样的字符串'\[object constructorName\]'\(这个实例的构造函数的名\)
+
+6. Array.isArray\(\)
+
+**封装一个获取变量准确类型的函数**
+
+```js
+function gettype(obj) {
+  var type = typeof obj;
+
+  if (type !== 'object') {
+    return type;
+  }
+  //如果不是object类型的数据，直接用typeof就能判断出来
+
+  //如果是object类型数据，准确判断类型必须使用Object.prototype.toString.call(obj)的方式才能判断
+  return Object.prototype.toString.call(obj).replace(/^\[object (\S+)\]$/, '$1');
+}
+```
+
+
+

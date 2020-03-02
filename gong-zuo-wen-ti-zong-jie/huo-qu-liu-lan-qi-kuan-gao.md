@@ -1,4 +1,4 @@
-#  浏览器相关问题
+# 浏览器相关问题
 
 ## 获取浏览器宽高
 
@@ -30,7 +30,9 @@ console.log( $(window).height() );
 
 div.style.top : 指对象距离浏览器显示区域顶端的垂直距离  (可读&可写 带单位)
 div.offsetTop : 指对象距离顶边距显示区域顶端的垂直距离  (可读 不带单位)
+```
 
+```js
 
 // 滑动到底部加载更多
 window.onscroll= function(){
@@ -42,26 +44,26 @@ window.onscroll= function(){
     var clientHeight = window.innerHeight || Math.min(document.documentElement.clientHeight,document.body.clientHeight);
     
     if(clientHeight + scrollTop >= scrollHeight){
-        console.log("===加载更多内容……===");
+    console.log("===加载更多内容……===");
     }
 }
 
-$(window).on("resize scroll",function(){           
-    var windowHeight = $(window).height();//当前窗口的高度             
-    var scrollTop = $(window).scrollTop();//当前滚动条从上往下滚动的距离            
-    var docHeight = $(document).height(); //当前文档的高度 
+$(window).on("resize scroll",function(){
+    var windowHeight = $(window).height();//当前窗口的高度
+    var scrollTop = $(window).scrollTop();//当前滚动条从上往下滚动的距离
+    var docHeight = $(document).height(); //当前文档的高度
     console.log(scrollTop, windowHeight, docHeight);
-    //当 滚动条距底部的距离 + 滚动条滚动的距离 >= 文档的高度 - 窗口的高度  
-    //换句话说：（滚动条滚动的距离 + 窗口的高度 = 文档的高度）  这个是基本的公式  
-    if (scrollTop + windowHeight >= docHeight) { 
-        console.log("===加载更多数据===");
+    //当 滚动条距底部的距离 + 滚动条滚动的距离 >= 文档的高度 - 窗口的高度
+    //换句话说：（滚动条滚动的距离 + 窗口的高度 = 文档的高度） 这个是基本的公式
+    if (scrollTop + windowHeight >= docHeight) {
+    console.log("===加载更多数据===");
     }
 });
 ```
 
-### 页面位置 
+### 页面位置
 
-### touch事件的属性 
+### touch事件的属性
 
 touchstart:当手指触摸屏幕时触发；即使已经有一个手指放在了屏幕上也会触发。
 
@@ -71,7 +73,7 @@ touchend:当手指从屏幕上移开时触发。
 
 touchcancel:当系统停止跟踪触摸时触发。关于此事件的确切触发事件，文档中没有明确说明。
 
-#### 以上事件的event对象上面都存在如下属性： <a id="&#x4EE5;&#x4E0A;&#x4E8B;&#x4EF6;&#x7684;event&#x5BF9;&#x8C61;&#x4E0A;&#x9762;&#x90FD;&#x5B58;&#x5728;&#x5982;&#x4E0B;&#x5C5E;&#x6027;"></a>
+#### 以上事件的event对象上面都存在如下属性：
 
 touches:表示当前跟踪的触摸操作的Touch对象的数组。
 
@@ -79,7 +81,7 @@ targetTouches:特定于事件目标的Touch对象的数组。
 
 changeTouches:表示自上次触摸以来发生了什么改变的Touch对象的数组。
 
-#### 每个Touch对象包含下列属性： <a id="&#x6BCF;&#x4E2A;touch&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x4E0B;&#x5217;&#x5C5E;&#x6027;"></a>
+#### 每个Touch对象包含下列属性：
 
 clientX:触摸目标在**视口**中的X坐标。
 
@@ -147,4 +149,6 @@ navigator 对象包含有关浏览器的信息。没有应用于 navigator 对�
     //获取当前的浏览器信息
     var system = getBrowserInfo();
 ```
+
+
 

@@ -37,49 +37,29 @@ var arr = [1, 2, 3];
 var p1 = {name:"张三", age:18};
 var p2 = {
     name:"李四",
-
     age:50,
-
     son:{
-
         name:"李小一",
-
         age:18
-
     }
 };
 var p3 = {
-name:"王五",
-
-age:50,
-
-children:[
-
-    {
-
-        name:"王小一",
-
-        age:20
-
-    },
-
-    {
-
-        name:"王小二",
-
-        age:15
-
-    },
-
-    {
-
-        name:"王小三",
-
-        age:12
-
-    }
-
-]
+    name:"王五",
+    age:50,
+    children:[
+        {
+            name:"王小一",
+            age:20
+        },
+        {
+            name:"王小二",
+            age:15
+        },
+        {
+            name:"王小三",
+            age:12
+        }
+    ]
 }
 ```
 

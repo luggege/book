@@ -110,3 +110,5 @@
 2. addEventListener \*IE9+以上支持, this--&gt;target,调用的时候,系统会默认的传一个event进去,当触发事件的时候就会获取到目标事件的一些信息
 3. attachEvent \*IE6~10支持,this--&gt;window,事件对象只能通过window.event获取
 
+
+
