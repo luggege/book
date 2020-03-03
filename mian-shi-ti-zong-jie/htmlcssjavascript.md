@@ -268,12 +268,8 @@ padding-bottom\)和外边距的top/bottom\(margin-top/margin-bottom\)都**不可
 
 > opacity作用于元素，以及元素内的所有内容的透明度，
 
-&gt;
-
 > rgba\(\)只作用于元素的颜色或其背景色。
-
-&gt;
-
+>
 > **（设置rgba透明的元素的子元素不会继承透明效果！）**
 
 ## 第三天
@@ -286,29 +282,25 @@ padding-bottom\)和外边距的top/bottom\(margin-top/margin-bottom\)都**不可
 
 > 可以用于消除inline-block元素间的换行符空格间隙问题。
 
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "[http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;](http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">)
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "\[[http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;](http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">)\)
 
-CSS letter-spacing 属性示例  
-  
- .ls3px  
-  
- {  
-  
- letter-spacing: 3px;  
-  
- }  
-  
-  
-  
- .lsn3px  
-  
- {  
-  
- letter-spacing: -3px;  
-  
- }  
-  
- 
+CSS letter-spacing 属性示例
+
+.ls3px
+
+{
+
+letter-spacing: 3px;
+
+}
+
+.lsn3px
+
+{
+
+letter-spacing: -3px;
+
+}
 
 梦之都 [CSS教程](http://www.dreamdu.com/css/),[**letter-spacing**](http://www.dreamdu.com/css/property_letter-spacing/)示例,All i have to do, is learn CSS.\(仔细看是字母之间的距离,不是空格本身的宽度,参考[word-spacing](http://www.dreamdu.com/css/property_word-spacing/)属性示例.\)
 
@@ -348,8 +340,6 @@ CSS letter-spacing 属性示例
 * 区别
 
 > a: 使用CSS display:none属性后，HTML元素（对象）的宽度、高度等各种属性值都将**“丢失”**
-
-&gt;
 
 > b: 而使用visibility:hidden属性后，HTML元素（对象）仅仅是在视觉上看不见（完全透明），而它所占据的空间位置仍然存在。
 
@@ -430,4 +420,6 @@ CSS letter-spacing 属性示例
 &gt;
 
 * 解决这个BUG，只需在相应的块状元素的CSS属性中加入“display:inline;”。
+
+
 

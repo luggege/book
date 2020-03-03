@@ -4,15 +4,17 @@
 2. 子组件通过**$emit\('事件名', ‘参数’\)**往父组件传值，父组件通过$on\('事件名', '运行fn'\)
 
 ```js
-父组件
-<delete-dialog :visible.sync="deleteDialogVisible" title="我是title···" @commitDelete="commitDelete" />
+// 父组件
+<delete-dialog :visible.sync="deleteDialogVisible" title="我是title···" @commitDelete="commitDelete(arguments)" />
 
 commitDelete(data) {
-    console.log("成功删除了·····", data); // 成功删除了····· 哈哈哈
+    console.log("成功删除了·····", data); // 成功删除了····· Arguments(2) [false, true, callee: (...), Symbol(Symbol.iterator): ƒ]
+    console.log(data[0]);  // hello
+    console.log(data[1]);  // world
 }
 
 
-子组件
+// 子组件
 <template>
   <div>
     <el-dialog
@@ -22,7 +24,7 @@ commitDelete(data) {
       @close="closeDialog">
       <p class="ac font16">{{}}</p>
       <span slot="footer">
-        <el-button class="button white bg-deepblue" @click="$emit('commitDelete', '哈哈哈')">确定</el-button>
+        <el-button class="button white bg-deepblue" @click="$emit('commitDelete', 'hello', 'world')">确定</el-button>
         <el-button class="button bg-white border cancel" @click="closeDialog">取消</el-button>
       </span>
     </el-dialog>

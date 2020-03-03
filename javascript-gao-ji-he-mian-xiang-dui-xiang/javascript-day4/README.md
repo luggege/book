@@ -149,7 +149,7 @@ str.slice(2,5);     // cde ==> str='abcdefg';
  str.substring(4,2); // (智能调换索引值) cd ==> str='abcdefg';
 ```
 
-4.**substr\(索引, 长度\)**：  _\*\*_截取
+4.**substr\(索引, 长度\)**：  截取
 
 ```javascript
 var str = "abcdefg"
