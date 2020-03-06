@@ -3,10 +3,8 @@
 1. typeof：Array、Date、Error都为Object
 2. instanceof：`[] instanceof Array`**构造函数的原型**是不是在给定对象的原型链上
 3. Object.prototype.isPrototpeOf\(\[\]\)：Object.prototype是否在\[\]的**原型链**上
-4. constroctor：`new Number(123).constructor`
-5. Object.prototype.toString.call\(\)：根据内部的this返回一个类似于这样的字符串'\[object constructorName\]'\(这个实例的构造函数的名\)
-
-6. Array.isArray\(\)
+4. Object.prototype.toString.call\(\)：根据内部的this返回一个类似于这样的字符串'\[object constructorName\]'\(这个实例的构造函数的名\)
+5. Array.isArray\(\)
 
 **封装一个获取变量准确类型的函数**
 
