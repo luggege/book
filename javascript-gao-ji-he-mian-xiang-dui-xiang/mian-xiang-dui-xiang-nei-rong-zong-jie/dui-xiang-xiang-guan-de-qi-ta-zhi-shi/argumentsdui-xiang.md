@@ -12,62 +12,32 @@ JavaScript中的函数并没有规定必须如何传参：
 
 在代码设计中, 如果需要函数带有任意个参数的时候, 一般就不带任何参数, 所有的参数利用`arguments`对象来获取. 一般的函数定义语法, 可以写成:
 
-```text
-function
-foo
- (
-/* ... */
-) 
-{
-}
+```javascript
+function foo (/* ... */) {}
 ```
 
-## 练习: <a id="&#x7EC3;&#x4E60;"></a>
+## 练习:
 
 > 利用 Function 创建一个函数, 要求允许函数调用时传入任意个数参数, 并且函数返回这些数字中最大的数字.
 
-```text
-function
-foo
- (
-) 
-{
-
-// 所有的参数都在 arguments 中. 将其当做数组使用
-// 问题已转换成在有一个数组中求最大值
-var
- args = 
-arguments
-;
-
-var
- max = args[ 
-0
- ];
-
-for
- ( 
-var
- i = 
-1
-; i 
-<
- args.length; i++ ) {
-
-if
- ( max 
-<
- args[ i ] ) {
-            max = args[ i ];
+```javascript
+function foo () {
+    // 所有的参数都在 arguments 中. 将其当做数组使用
+    // 问题已转换成在有一个数组中求最大值
+    var args = arguments;
+    var max = args[ 0 ];
+    for ( var i = 1; i < args.length; i++ ) {
+        if ( max < args[ i ] ) {
+                max = args[ i ];
         }
     }
-
-return
- max;
+    return max;
 }
 ```
 
-## 练习: <a id="&#x7EC3;&#x4E60;"></a>
+## 练习:
 
 > 利用 Function 写一个函数, 要求传入任意个数字 求和
+
+
 

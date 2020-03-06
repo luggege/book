@@ -6,22 +6,11 @@
 
 默认原型链结构是什么样子呢?
 
-```text
-function
-Person
-(
-) 
-{
-}
-
-
-var
- p = 
-new
- Person();
-
+```javascript
+function Person() {}
+var p = new Person();
 // p 具有默认的原型链
-```
+``` 
 
 默认的原型链结构就是:
 
@@ -29,34 +18,15 @@ new
 
 在实现继承的时候, 有时会利用替换原型链结构的方式实现原型继承, 那么原型链结构就会发生改变
 
-```text
-function
-ItcastCollection
- (
-) 
-{
-}
+```javascript
+function ItcastCollection () {}
 ItcastCollection.prototype = [];
-
-var
- arr = 
-new
- ItcastCollection();
-
-// arr -
->
- [] -
->
- Array.prototype -
->
- Object.prototype -
->
- null
+var arr = new ItcastCollection();
+// arr -> [] -> Array.prototype -> Object.prototype -> null
 // var arr = new Array();
 ```
 
-## 练习： <a id="&#x7EC3;&#x4E60;&#xFF1A;"></a>
-
+## 练习： 
 > 1. 描述出`{}`的原型链结构
 > 2. 描述出`[]`的原型链结构
 
