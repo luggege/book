@@ -27,7 +27,7 @@
 
 **具体操作步骤:**
 
-```javascript
+```js
 1. 登录GitHub创建一个新仓库,命名为book
 2. 克隆远程仓库到本地 git clone https://github.com/luggege/book.git
 3. 将分支 push 到仓库：git push -u origin gh-pages
@@ -44,7 +44,7 @@
 
 之后，每次修改之后，都可以将生成的静态文件 copy 到 book\_build 目录，再 push 到远程仓库 book 的 gh-pages 分支。
 
-```javascript
+```js
 1.git pull origin master(相当于git fetch + git merge) 拉取指定分支,没必要clone
 2.gitbook build (生成静态页面之后放到book_build中)
 3.如果报错说明gitbook未安装
@@ -63,11 +63,13 @@
 
 ### git命令: 全局设置用户名和邮箱
 
-```javascript
+```js
 1.查看git配置信息: git config --list
 2.查看git用户名: git config user.name
 3.查看邮箱配置: git config user.email
 4.全局配置用户名: git config --global user.name "lugege"
 5.全局配置邮箱: git config --global user.email "luwenxiu@legalminer.com"
 ```
+
+
 
