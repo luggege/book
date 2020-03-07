@@ -2,7 +2,7 @@
 
 JavaScript面向对象的特性
 
-## 1. 封装性 <a id="1-&#x5C01;&#x88C5;&#x6027;"></a>
+## 1. 封装性 
 
 对象是将数据与功能组合到一起, 即封装
 
@@ -12,58 +12,43 @@ JavaScript面向对象的特性
 2. 对象就是将属性与方法封装起来
 3. 方法是将过程封装起来
 
-## 2. 继承性 <a id="2-&#x7EE7;&#x627F;&#x6027;"></a>
+## 2. 继承性
 
 所谓继承就是自己没有, 别人有,拿过来为自己所用, 并成为自己的东西
 
-### 2.1. 传统继承基于模板 <a id="21-&#x4F20;&#x7EDF;&#x7EE7;&#x627F;&#x57FA;&#x4E8E;&#x6A21;&#x677F;"></a>
-
+### 2.1. 传统继承基于模板 
 子类可以使用从父类继承的属性和方法。
 
-```text
+```javascript
 class Person {
- string name;
- int age;
+    string name;
+    int age;
 }
 
-class Student : Person {
-}
+class Student : Person {}
 var stu = new Student();
 stu.name
 ```
 
 即：让某个类型的对象获得另一个类型的对象的属性的方法
 
-### 2.2. js 继承基于对象 <a id="22-js-&#x7EE7;&#x627F;&#x57FA;&#x4E8E;&#x5BF9;&#x8C61;"></a>
-
+### 2.2. js 继承基于对象 
 在JavaScript中，继承就是当前对象可以使用其他对象的方法和属性。
 
 js继承实现举例：混入（mix）
 
-```text
-function
-mix
- (
- o1, o2 
-) 
-{
-
-for
- ( 
-var
- k 
-in
- o2 ) {
+```javascript
+function mix ( o1, o2 ) {
+    for ( var k in o2 ) {
         o1[ k ] = o2[ k ];
     }
 }
 ```
-
-## 3. 多态性（基于强类型）只做了解 <a id="3-&#x591A;&#x6001;&#x6027;&#xFF08;&#x57FA;&#x4E8E;&#x5F3A;&#x7C7B;&#x578B;&#xFF09;&#x53EA;&#x505A;&#x4E86;&#x89E3;"></a>
+## 3. 多态性（基于强类型）只做了解 
 
 把不同的子类对象都当作父类来看，可以屏蔽不同子类对象之间的差异，写出通用的代码，做出通用的编程，以适应需求的不断变化。
 
-```text
+```javascript
 动物 animal = new 子类(); // 子类：麻雀、狗、猫、猪、狐狸...
 动物 animal = new 狗();
 animal.叫();
