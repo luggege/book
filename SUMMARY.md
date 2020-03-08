@@ -48,6 +48,7 @@
     * [继承的实现方式](javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/ji-cheng-de-shi-xian-fang-shi.md)
   * [DOM操作复习](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/domcao-zuo-fu-xi.md)
   * [jQuery API](javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-day3.md)
+  * [call && apply](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/call-andand-apply.md)
   * [数组去重](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu-qu-zhong.md)
   * [几种遍历方式](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/for-infor-offoreach-de-qu-bie.md)
   * [深拷贝浅拷贝](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shen-kao-bei-qian-kao-bei.md)

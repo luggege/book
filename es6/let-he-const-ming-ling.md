@@ -65,7 +65,7 @@ console.log(bar)      // 报错
 let bar = 2
 ```
 
-* 暂时性死区（在代码块内，let声明变量之前，该变量不可用）
+* 暂时性死区（在代码块内，let声明变量之前，该变量不可用，不会受外部的影响）
 
 ```javascript
 // 报错
@@ -106,8 +106,7 @@ bar()
 
 // 不报错
 var x = x;
-
-// 报错
+// 报错（变量未声明就使用）
 let x = x;
 ```
 
@@ -144,7 +143,45 @@ function fn(arg){
 fn()        //不报错
 ```
 
-## const
+## const\(指变量指向的内存地址的值不可修改，如果定义复合类型只是指针不可修改，不能保证对象结构改变\)
+
+* const声明常量，值不可修改
+
+```js
+const aaa = 111
+aaa = 222
+// Uncaught TypeError: Assignment to constant variable
+```
+
+* 声明时必须立即初始化，否则报错
+
+```js
+const bbb
+bbb = 111
+// Uncaught SyntaxError: Missing initializer in const declaration
+```
+
+* 和let一样，存在块级作用域，未声明前不可用
+
+```js
+if(true){
+    const eee = 666
+}
+console.log(eee)
+// Uncaught ReferenceError: eee is not defined
+
+console.log(ddd)
+const ddd = 100
+// Uncaught ReferenceError: Cannot access 'ddd' before initialization
+```
+
+* 和let一样，不可重复声明
+
+```js
+let bar = 100
+const bar = 200
+// VM1276:2 Uncaught SyntaxError: Identifier 'bar' has already been declared
+```
 
 
 
