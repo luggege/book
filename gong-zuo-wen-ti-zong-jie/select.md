@@ -1,6 +1,6 @@
 # 选项卡
 
-```rust
+```js
 <select name="" id="type" onchange="change(this)">    
     <option value="0" selected="selected">极速赛车</option>
     <option value="1">极速赛车1</option>
@@ -11,7 +11,7 @@
 
 > 通过给select绑定onchange事件就可获取到当前选取的option的value值
 
-```javascript
+```js
 function change(obj){
     obj.options[obj.selectedIndex].value;
     document.getElementById('type').value;
@@ -19,4 +19,6 @@ function change(obj){
     location.href=obj.value                //通过value值也可切换相应的option链接的页面
 }
 ```
+
+
 
