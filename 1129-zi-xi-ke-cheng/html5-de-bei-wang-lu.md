@@ -2,29 +2,28 @@
 
 #### HTML5是现在前端开发人员必备技能。
 
-> HTML本来不会活过21世纪的。网页规范的制定者W3C组织，早在1998年就已经对HTML撒手不管了。W3C把未来都寄托在**XHTML**这个更具现代特色的后续规范上，XHTML被视为HTML的严肃整洁版，但XHTML举步维艰。当XHTML举步维艰的时候，有那么一群人\(来自欧朋\(OPera\)\/火狐\(fireFox\)\/苹果\(safari\)的一些具有开发者自行组建了WHATWG\(Web Hypertext Application Technology Working Group超文本应用技术工作组\)\)开始寻找新的解决方案，这就奠定了HTML5的的前身。
+> HTML本来不会活过21世纪的。网页规范的制定者W3C组织，早在1998年就已经对HTML撒手不管了。W3C把未来都寄托在**XHTML**这个更具现代特色的后续规范上，XHTML被视为HTML的严肃整洁版，但XHTML举步维艰。当XHTML举步维艰的时候，有那么一群人\(来自欧朋\(OPera\)/火狐\(fireFox\)/苹果\(safari\)的一些具有开发者自行组建了WHATWG\(Web Hypertext Application Technology Working Group超文本应用技术工作组\)\)开始寻找新的解决方案，这就奠定了HTML5的的前身。
 
 **HTML5诞生于2004年**
 
 **HTML5的规范正式公布于2014年**
 
-### OK 我们开始吧
-
 ## 首先是HTML5的结构
 
 * 文档类型声明
 
-  ```text
+  ```js
   <!DOCTYPE HTML> //相比于html4除去了约束和版本号
   ```
 
 * 字符编码
 
-  ```text
+  ```js
   <meta charset="utf-8">//声明字符集的编码
   ```
 
 * HTML5的语法规则相比较HTML4更加松散
+
 * 总结：
 
   * 如何区分HTML和HTML5？
@@ -129,7 +128,7 @@ gt ：就是Greater than的简写，也就是大于的意思。
 
 * 新的表单
 
-**input 类型 -email邮箱类型** 
+**input 类型 -email邮箱类型**
 
 ```text
  <lable>
@@ -149,7 +148,7 @@ gt ：就是Greater than的简写，也就是大于的意思。
  </lable>;
 ```
 
- **input 类型 -search 搜索框**
+**input 类型 -search 搜索框**
 
 ```text
  <lable>
@@ -159,7 +158,7 @@ gt ：就是Greater than的简写，也就是大于的意思。
  </lable>t;
 ```
 
- **input 类型 - number\(value,max,min,step\(数字的间隔\)\)**
+**input 类型 - number\(value,max,min,step\(数字的间隔\)\)**
 
 ```text
  <lable>
@@ -169,7 +168,7 @@ gt ：就是Greater than的简写，也就是大于的意思。
  </lable>
 ```
 
- **input 类型 -range\(value,max,min,step\)滑块**
+**input 类型 -range\(value,max,min,step\)滑块**
 
 ```text
  <lable>
@@ -199,4 +198,6 @@ gt ：就是Greater than的简写，也就是大于的意思。
 * 离线应用
 * 地理定位
 * 酷炫狂拽屌炸天的CSS特效
+
+
 

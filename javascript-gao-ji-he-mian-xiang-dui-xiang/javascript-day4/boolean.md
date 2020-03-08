@@ -1,6 +1,6 @@
 # Boolean
 
-## Boolean 对象方法 <a id="boolean-&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;"></a>
+## Boolean 对象方法 
 
 | 方法 | 描述 |
 | :--- | :--- |

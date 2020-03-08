@@ -1,12 +1,14 @@
 # MVC和MVVM的区别
 
-**MVC的定义：**即model-view-controller（模型-视图-控制器）
+### **MVC的定义：**即model-view-controller（模型-视图-控制器）
 
 1. Model（模型）：是应用程序中用于处理应用程序数据逻辑的部分。通常模型对象负责在数据库中存取数据。 
 2. View（视图）：是应用程序中处理数据显示的部分。通常视图是依据模型数据创建的。（就是看到界面一切东西） 
 3. Controller（控制器）：是应用程序中处理用户交互的部分。通常控制器负责从视图读取数据，控制用户输入，并向模型发送数据。（Controller是MVC中的数据和视图的协调者，也就是在Controller里面把Model的数据赋值给View来显示） 总之就是view操作会触发controller去改变model，然后model再去改变视图，这么以来，三个部分代码都分开来写，逻辑就会清晰很多。
 
-**MVVM定义：**即Model-View-ViewModel
+**脏检查：**Angular内部的$watch会实时检查\(观察者模式,深度优先遍历\)$scope的值,当$scope的值发生变化时,就会触动$scope.$digest来将变化的值更新到视图中.手动设置.....也可将变化的值更新到视图中
+
+### **MVVM定义：**即Model-View-ViewModel
 
 1. Model 代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑
 2. View 代表UI视图，负责数据的展示 
@@ -24,6 +26,4 @@ mvvm的设计原理是基于mvc的，所以说mvvm不算是一种创新，是一
 ### VM的原理
 
 首先利用defineProperty的get、set来定义获取属性，然后调用Ovserve方法，启用观察者模式，当数据发生变化时，会通知watcher重新计算，通过compile模版指令更新视图
-
-
 

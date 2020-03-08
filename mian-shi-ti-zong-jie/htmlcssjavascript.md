@@ -1,6 +1,4 @@
-# HTML+CSS+JavaScript
-
-## 第一天
+# HTML+CSS
 
 ## 一. 网页浏览器及浏览器内核
 
@@ -146,8 +144,6 @@
 
 **在质量相同的情况下，WebP格式图像的体积要比JPEG格式图像小40%**
 
-## 第二天
-
 ## 十一. 微格式以及在前端构建中应该考虑微格式
 
 > **Microformat**，是一种**对Web网页进行语义注解的方法**，这种方法依托于标准的Web页面写作技术，例如，XHTML，这样引入语义信息对浏览器等所有现存的Web技术冲击最小。采用Microformat的Web页面，在XHTML文档中给一些标签（Tag）增加一些属性（attribute），这些属性对信息的语义结构进行注解，处理XHTML文档的软件，例如，浏览器等，如果不认识这些属性可以跳过，并不造成任何不良影响。
@@ -267,12 +263,10 @@ padding-bottom\)和外边距的top/bottom\(margin-top/margin-bottom\)都**不可
 * 不同点:
 
 > opacity作用于元素，以及元素内的所有内容的透明度，
-
+>
 > rgba\(\)只作用于元素的颜色或其背景色。
 >
 > **（设置rgba透明的元素的子元素不会继承透明效果！）**
-
-## 第三天
 
 ## 二十一. css中可以让文字在垂直和水平方向上重叠的两个属性是什么？
 
@@ -282,7 +276,7 @@ padding-bottom\)和外边距的top/bottom\(margin-top/margin-bottom\)都**不可
 
 > 可以用于消除inline-block元素间的换行符空格间隙问题。
 
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "\[[http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;](http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">)\)
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "\[\[\[[http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\](http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29\)\)
 
 CSS letter-spacing 属性示例
 
@@ -340,7 +334,7 @@ letter-spacing: -3px;
 * 区别
 
 > a: 使用CSS display:none属性后，HTML元素（对象）的宽度、高度等各种属性值都将**“丢失”**
-
+>
 > b: 而使用visibility:hidden属性后，HTML元素（对象）仅仅是在视觉上看不见（完全透明），而它所占据的空间位置仍然存在。
 
 ## 二十五. CSS中link和@import的区别是：

@@ -2,15 +2,19 @@
 
 1. 万维网联盟（外语缩写：W3C）标准不是某**一个标准**，而是一系列标准的**集合**。网页主要由三部分组成：
 
-* **结构\(Structure\)**
-* **表现（Presentation）**
-* **行为（Behavior）**
+2. **结构\(Structure\)**
 
-1. 对应的标准也分三方面：
+3. **表现（Presentation）**
 
-* **结构化标准语言主要包括XHTML和XML**，
-* **表现标准语言主要包括CSS**，
-* **行为标准主要包括对象模型（如W3C DOM）、ECMAScript等**。
+4. **行为（Behavior）**
+
+5. 对应的标准也分三方面：
+
+6. **结构化标准语言主要包括XHTML和XML**，
+
+7. **表现标准语言主要包括CSS**，
+
+8. **行为标准主要包括对象模型（如W3C DOM）、ECMAScript等**。
 
 这些标准大部分由W3C起草和发布，也有一些是其他标准组织制订的标准，比如ECMA（European Computer Manufacturers Association）的ECMAScript标准。
 
@@ -19,7 +23,7 @@
 1. 图片的alt=""属性必须每张图片都加上,而且对齐属性用CSS来定义。不加不能通过XHTML1.0验证。
 2. 每个文档必须加上DTD声明
 
-```text
+```
 <!DOCTYPE html PUBLIC "-//W3C//DTDXHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 ```
 
@@ -29,7 +33,7 @@
 2. 标签的链接属性加上JAVASCRIPT事件时必须为\#空链,不能为javascript:;或javascript:void\(null\);
 3. 同一个页面当中，同名的ID会产生冲突。所以以ID定义样式的必须改成类引用。
 
-```text
+```js
 <div id="a1">111</div> <div id="a1">222</div>
 ```
 
@@ -38,27 +42,12 @@
 1. 不可以省略双引号或者单引号
 2. 标签之间不可错位嵌套。
 
-```text
+```js
 <div class="CaseDetaListSS">
-
-
-
 原文链接：
-
-
-
 <a href='/html/cases/cases_61.html'>
-
-
-
 官方网站
-
-
-
 </div>
-
-
-
 </a>
 ```
 
@@ -70,11 +59,8 @@
 4. 标签必须配对完成,单标签必须以/关闭
 5. JS和CSS外部引入文件必须加上类型定义:
 
-```text
+```js
 <script type="text/javascript"></script>
-
-
-
 <style type='text/css'></style>
 ```
 
@@ -83,7 +69,7 @@
 
 \| 显示结果 \| 说明 \| Entity Name \| Entity Number \|
 
-\| --- \| ------------- \|:-------------:\| -----:\|
+\| --- \| ------------- \|: -------------: \| -----: \| 
 
 \| \| 空格 \| `&nbsp;` \| `&#160;` \|
 

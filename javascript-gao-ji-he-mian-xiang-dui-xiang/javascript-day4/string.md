@@ -1,12 +1,12 @@
 # String
 
-## String 对象属性 <a id="string-&#x5BF9;&#x8C61;&#x5C5E;&#x6027;"></a>
+## String 对象属性 
 
 | 属性 | 描述 |
 | :--- | :--- |
 | length | 字符串的长度 |
 
-## String对象方法 <a id="string&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;"></a>
+## String对象方法 
 
 | 方法 | 描述 |
 | :--- | :--- |

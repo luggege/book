@@ -4,7 +4,7 @@
 
 DOM0就是直接通过 onclick写在html里面的事件, 比如:
 
-```text
+```js
 <input onclick="alert(1)" />
 ```
 
@@ -83,7 +83,7 @@ getEvent: function(event){
 
 获取事件对象目标的兼容性写法
 
-```javascript
+```js
 getTarget: function(event){
 
   return event.target || event.srcElement;
@@ -93,7 +93,7 @@ getTarget: function(event){
 
 ④阻止浏览器默认事件的兼容性写法
 
-```javascript
+```js
 preventDefault: function(event){
 
  if (event.preventDefault){
@@ -109,7 +109,7 @@ preventDefault: function(event){
 
 ⑤阻止事件冒泡的兼容性写法
 
-```javascript
+```js
 stopPropagation: function(event){
 
 if (event.stopPropagation){
@@ -273,4 +273,6 @@ setClipboardText: function(event, value){
         }
     }
 ```
+
+
 

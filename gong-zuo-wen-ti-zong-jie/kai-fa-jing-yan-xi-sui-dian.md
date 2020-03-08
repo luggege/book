@@ -1,24 +1,24 @@
 # 开发经验细碎点
 
-### border-radius 针对 table 失效 <a id="border-radius-&#x9488;&#x5BF9;-table-&#x5931;&#x6548;"></a>
+### border-radius 针对 table 失效
 
 > 如果table设置了 border-collapse: collapse;\(边框可并\)样式时,border-radius就会无效. 除此之外可以应用到所有元素.
 >
 > 解决办法: 外边在套一层div
 
-### border 针对tr无效 <a id="border-&#x9488;&#x5BF9;tr&#x65E0;&#x6548;"></a>
+### border 针对tr无效
 
 > 原因: td没有边框,把tr设的边框给覆盖掉了
 >
 > 解决办法: 给td设border,或给table设border
 
-### mouseover与mouseout是冒泡的 <a id="mouseover&#x4E0E;mouseout&#x662F;&#x5192;&#x6CE1;&#x7684;"></a>
+### mouseover与mouseout是冒泡的
 
-### mouseenter与mouseleave是不冒泡的 <a id="mouseenter&#x4E0E;mouseleave&#x662F;&#x4E0D;&#x5192;&#x6CE1;&#x7684;"></a>
+### mouseenter与mouseleave是不冒泡的
 
-## 阻止冒泡行为 <a id="&#x963B;&#x6B62;&#x5192;&#x6CE1;&#x884C;&#x4E3A;"></a>
+## 阻止冒泡行为
 
-> ```text
+> ```js
 > box.click(function(e){
 >     
 >     e = windown.event || e;
@@ -33,7 +33,7 @@
 > })
 > ```
 
-## 获取dom元素 <a id="&#x83B7;&#x53D6;dom&#x5143;&#x7D20;"></a>
+## 获取dom元素
 
 getElementById和getElementsByTagName 可以兼容到IE 5.5, 适用于IE 6 以上.
 
@@ -41,19 +41,17 @@ document.querySelector和document.querySelectorAll可以兼容IE 8
 
 getElementsByClassName只兼容到IE 9 以上.
 
-### 使用如下meta标签使IE浏览器使用谷歌浏览器内核或最高版本的IE <a id="&#x4F7F;&#x7528;&#x5982;&#x4E0B;meta&#x6807;&#x7B7E;&#x4F7F;ie&#x6D4F;&#x89C8;&#x5668;&#x4F7F;&#x7528;&#x8C37;&#x6B4C;&#x6D4F;&#x89C8;&#x5668;&#x5185;&#x6838;&#x6216;&#x6700;&#x9AD8;&#x7248;&#x672C;&#x7684;ie"></a>
+### 使用如下meta标签使IE浏览器使用谷歌浏览器内核或最高版本的IE
 
 > &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
 
-## 使用媒体查询引入不同的CSS文件\(兼容不同屏幕\) <a id="&#x4F7F;&#x7528;&#x5A92;&#x4F53;&#x67E5;&#x8BE2;&#x5F15;&#x5165;&#x4E0D;&#x540C;&#x7684;css&#x6587;&#x4EF6;&#x517C;&#x5BB9;&#x4E0D;&#x540C;&#x5C4F;&#x5E55;"></a>
+## 使用媒体查询引入不同的CSS文件\(兼容不同屏幕\)
 
 > &lt;link rel="stylesheet" type="text/css" media="screen and \(min-width: 479px\) and \(max-width: 639px\)" href="css/pic480.css"&gt;
 
-## 如何解决IE8以下兼容html5标签 <a id="&#x5982;&#x4F55;&#x89E3;&#x51B3;ie8&#x4EE5;&#x4E0B;&#x517C;&#x5BB9;html5&#x6807;&#x7B7E;"></a>
+## 如何解决IE8以下兼容html5标签
 
-
-
-```javascript
+```js
 <!-- 条件引入html5.js -->
 <!--\[if lt IE 9\]>
 <script src="js/html5.js"></script>
@@ -66,7 +64,6 @@ getElementsByClassName只兼容到IE 9 以上.
 <!--\[if lt IE 9\]>
 <script src="[https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js](https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js)"></script>  
 <!\[endif\]-->
-
 ```
 
 > 但是如果ie6/7/8 禁用脚本的用户,那么就变成了无样式的"白板"网页,我们该怎么解决呢?  
@@ -80,7 +77,7 @@ getElementsByClassName只兼容到IE 9 以上.
 > &lt;/noscript&gt;  
 > &lt;!\[endif\]--&gt;
 
-```javascript
+```js
 在IE9以下的浏览器将创建h5标签,,但是要在css中将这些元素均设为**块级元素**,因为h5标签在低版本IE中默认为内联元素
 
 <!--[if lt IE9]>
@@ -102,20 +99,20 @@ getElementsByClassName只兼容到IE 9 以上.
 <![endif]-->
 ```
 
-## IE低版本兼容CSS3属性 <a id="ie&#x4F4E;&#x7248;&#x672C;&#x517C;&#x5BB9;css3&#x5C5E;&#x6027;"></a>
+## IE低版本兼容CSS3属性
 
 > 解决方案: 使用 ie-css3.htc 文件
 >
 > 使用方法: 在要使用C3的元素样式中按以下方法引入: behavior: url\(ie-css3.htc\);
 
-### 问题和必要的说明 <a id="&#x95EE;&#x9898;&#x548C;&#x5FC5;&#x8981;&#x7684;&#x8BF4;&#x660E;"></a>
+### 问题和必要的说明
 
 > 毕竟不是浏览器自带的属性, 方法有一定局限性,注意事项如下:
 
 1. 当前元素一定要有定位属性，像是position:relative或是position:absolute属性。
 2. z-index值一定要比周围元素的要高，否则……只能说抱歉了~~
 
-### 所支持的样式 <a id="&#x6240;&#x652F;&#x6301;&#x7684;&#x6837;&#x5F0F;"></a>
+### 所支持的样式
 
 1. border-radius
 2. box-shadow
@@ -125,7 +122,7 @@ getElementsByClassName只兼容到IE 9 以上.
 
 > IE10及以下input回车时，浏览器默认会执行页面中的第一个button的click事件，如要避免可将button标签改为input且type设为button类型，或者页面顶端写一个空的button标签且用父盒子包裹，父盒子宽高设为0将其隐藏。
 
-## 利用C3限制div内文字字数 <a id="&#x5229;&#x7528;c3&#x9650;&#x5236;div&#x5185;&#x6587;&#x5B57;&#x5B57;&#x6570;"></a>
+## 利用C3限制div内文字字数
 
 overflow: hidden;  
 display: -webkit-box;  
@@ -141,13 +138,13 @@ text-overflow: ellipsis; //文字隐藏后添加省略号
 >
 > text-overflow: ellipsis; //超出部分显示省略号
 
-## 清除浮动遇到的问题 <a id="&#x6E05;&#x9664;&#x6D6E;&#x52A8;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;"></a>
+## 清除浮动遇到的问题
 
 > overflow: hidden; 只适合子元素没有设置position的元素,,否则超出父盒子高的部分将被截掉
 >
 > 解决方法: 使用添加如下类的方法
 >
-> ```text
+> ```js
 > /*清除浮动*/
 > .clearfix:before, .clearfix:after{
 >   content: "";
@@ -163,17 +160,13 @@ text-overflow: ellipsis; //文字隐藏后添加省略号
 > }
 > ```
 >
-> ```text
+> ```js
 > /*清除浮动代码*/
 > .clearfix:after{   
->     content:"";
->        
+>     content:"";       
 >     display:block;
->         
 >     clear:both;
->         
 >     visibility:hidden;
->         
 >     height:0
 > }    
 >
@@ -181,4 +174,6 @@ text-overflow: ellipsis; //文字隐藏后添加省略号
 >     zoom:1
 > }
 > ```
+
+
 

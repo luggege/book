@@ -1,7 +1,6 @@
 # Number
 
-## Number 对象属性 <a id="number&#x5BF9;&#x8C61;"></a>
-
+## Number 对象属性 
 | 属性 | 描述 |
 | :--- | :--- |
 | MAX\_VALUE | 可表示的最大的数。                     1.7976931348623157e+308 |
@@ -10,7 +9,7 @@
 | NEGATIVE\_INFINITY | 负无穷大，溢出时返回该值。相当于-Infinity       -Infinity |
 | POSITIVE\_INFINITY | 正无穷大，溢出时返回该值。相当于Infinity        Infinity |
 
-## Number 对象方法 <a id="number-&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;"></a>
+## Number 对象方法 
 
 | 方法 | 描述 |
 | :--- | :--- |
