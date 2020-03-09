@@ -12,8 +12,9 @@ commitDelete(data) {
     console.log(data[0]);  // hello
     console.log(data[1]);  // world
 }
+```
 
-
+```js
 // 子组件
 <template>
   <div>
