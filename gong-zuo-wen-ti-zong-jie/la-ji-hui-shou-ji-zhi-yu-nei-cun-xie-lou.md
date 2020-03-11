@@ -41,11 +41,11 @@ var replaceThing = function(){
         if(originalThing){
             console.log('Hi');
         }
-        theThing = {
-            longStr: new Array(1000000).join('*'),
-            someMethod: function(){
-                console.log(someMessage)
-            }
+    }
+    theThing = {
+        longStr: new Array(1000000).join('*'),
+        someMethod: function(){
+            console.log(someMessage)
         }
     }
 }

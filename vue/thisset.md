@@ -1,3 +1,5 @@
+### 添加响应式属性
+
 ```js
 var vm = new Vue({
   data: {

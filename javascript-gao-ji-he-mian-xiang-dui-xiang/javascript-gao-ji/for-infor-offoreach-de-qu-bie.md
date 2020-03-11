@@ -1,20 +1,20 @@
 # for in、for of、forEach的区别
 
-### for in  **只遍历对象自身的和继承的可枚举属性**
+### for in：**只遍历对象自身的和继承的可枚举属性**
 
 1. 只遍历可循环属性，跳过空值  
 2. 循环的输出顺序问题：先遍历**整数**属性（按照**升序**），其他属性按照创建顺序遍历
 3. 对于数组中的属性（如：test： testing），只有for-in循环才能打印出这种键值对
 
-### for of
+### for of：只遍历自身的可枚举属性
 
 1. for-of不会跳过空值，默认为undefined。
 2. for-in、forEach遇数组空项会跳过，for-in循环遇数组空项key值发生变化
 3. 对于数组中的属性（如：test： testing），不能遍历出
 
-### forEach
+### forEach：只遍历自身的可枚举属性
 
-1. 不能使用break，continue跳出循环，不同于for-in、for-of
+1. 会跳过空值，不能使用break，continue跳出循环，不同于for-in、for-of
 
 ```javascript
 1、Object
