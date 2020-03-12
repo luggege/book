@@ -19,15 +19,14 @@ es一种技术，解决异步回调，解决回调地狱
 `fn().then();`
 
 ```js
-new Promise(
-  function (resolve, reject) {
+new Promise(function (resolve, reject) {
     // 一段耗时的异步操作
-    resolve('成功') // 数据处理完成
+    resolve('成功')   // 数据处理完成
     // reject('失败') // 数据处理出错
   }
 ).then(
   (res) => {console.log(res)},  // 成功
-  (err) => {console.log(err)} // 失败
+  (err) => {console.log(err)}   // 失败
 )
 ```
 
