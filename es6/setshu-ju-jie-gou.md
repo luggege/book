@@ -1,4 +1,4 @@
-> Set本身是一个构造函数，用来生成Set数据结构。类似于数组，但是成员是唯一的，没有重复
+> 一种新的数据结构，Set本身是一个构造函数，用来生成Set数据结构。类似于数组，但是成员是唯一的，没有重复
 
 ```js
 1. 使用add为Set添加属性
@@ -72,6 +72,48 @@ set.values()
 set.forEach((item, value) => console.log(item, value))
 // 111 111
 // 222 222
+```
+
+### 使用
+
+* 并集
+
+```js
+let a = new Set([1, 2, 3])
+let b = new Set([2, 3, 4])
+
+let c = new Set([...a], [...b])
+// Set(4) {1, 2, 3, 4}
+```
+
+* 交集
+
+```js
+let d = new Set([...a].filter(x => b.has(x)))
+// Set(2) {2, 3}
+```
+
+* 差集
+
+```js
+let e = new Set([...a].filter(x => !b.has(x)))
+// Set(1) {1}
+```
+
+### 改变原有set结构
+
+* ...扩展运算符
+
+```js
+a = new Set([...a].map(x => x * 2))
+// Set(3) {2, 4, 6}
+```
+
+* Array.from
+
+```js
+a = new Set(Array.from(a, x => x * 10))
+// Set(3) {20, 40, 60}
 ```
 
 

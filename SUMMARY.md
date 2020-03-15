@@ -55,7 +55,6 @@
   * [深拷贝浅拷贝](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shen-kao-bei-qian-kao-bei.md)
   * [判断数据类型](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/pan-duan-shu-ju-lei-xing.md)
   * [浏览器缓存机制](javascript-gao-ji-he-mian-xiang-dui-xiang/liu-lan-qi-huan-cun-ji-zhi.md)
-  * 冒泡排序
 * [流行框架](liu-hang-kuang-jia/README.md)
   * [Git](liu-hang-kuang-jia/git.md)
   * [angular](liu-hang-kuang-jia/angular.md)
@@ -110,7 +109,6 @@
   * [自定义指令](vue/zi-ding-yi-zhi-ling.md)
   * [自定义过滤器](vue/zi-ding-yi-guo-lv-qi.md)
   * [Vuex](vue/vuex.md)
-  * this.$set
 * [ES5](vue/es5.md)
   * [Object.keys\(\)](vue/es5/objectkeys.md)
   * [Object.defineProperty\(\)](vue/es5/objectdefineproperty.md)

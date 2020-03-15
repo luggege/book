@@ -29,6 +29,7 @@ var obj = {
 
 obj.b = "ddd"
 
+1-1
 for(let i in obj){
   console.log('in````````', i, obj[i])
 }
@@ -40,6 +41,7 @@ for(let i in obj){
 // in```````` d 222
 // in```````` b ddd
 
+1-2
 for(let item of obj){
   console.log('of````````', item)
 }
@@ -51,6 +53,7 @@ var arr = [0, , null, 1, undefined, 2, 3]
 
 arr.test = 'testing'
 
+2-1
 for(var item in arr){
   console.log('in`````', item, arr[item])
   // ["0", "2", "3", "4", "5", "6", "test"]
@@ -64,11 +67,13 @@ for(var item in arr){
   // test testing
 }
 
+2-2
 for(var item of arr){
    console.log('of`````', item)
   // [0, undefined, null, 1, undefined, 2, 3]  
 }
 
+2-3
 arr.forEach(element => {
   console.log('forEach```````', element)
   // [0, null, 1, undefined, 2, 3] 
@@ -77,6 +82,7 @@ arr.forEach(element => {
 3、String
 var str = 'aaabbbccc'
 
+3-1
 for(let item in str){
   console.log('in`````', item)
 }
@@ -90,6 +96,7 @@ for(let item in str){
 // in````` 7
 // in````` 8
 
+3-2
 for(let item of str){
   console.log('of`````', item)
 }

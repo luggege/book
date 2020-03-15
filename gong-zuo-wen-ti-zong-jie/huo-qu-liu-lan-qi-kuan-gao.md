@@ -33,7 +33,6 @@ div.offsetTop : 指对象距离顶边距显示区域顶端的垂直距离  (可�
 ```
 
 ```js
-
 // 滑动到底部加载更多
 window.onscroll= function(){
     //文档内容实际高度（包括超出视窗的溢出部分）
@@ -42,9 +41,9 @@ window.onscroll= function(){
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
     //窗口可视范围高度
     var clientHeight = window.innerHeight || Math.min(document.documentElement.clientHeight,document.body.clientHeight);
-    
+
     if(clientHeight + scrollTop >= scrollHeight){
-    console.log("===加载更多内容……===");
+        console.log("===加载更多内容……===");
     }
 }
 
@@ -56,7 +55,7 @@ $(window).on("resize scroll",function(){
     //当 滚动条距底部的距离 + 滚动条滚动的距离 >= 文档的高度 - 窗口的高度
     //换句话说：（滚动条滚动的距离 + 窗口的高度 = 文档的高度） 这个是基本的公式
     if (scrollTop + windowHeight >= docHeight) {
-    console.log("===加载更多数据===");
+        console.log("===加载更多数据===");
     }
 });
 ```

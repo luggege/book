@@ -19,6 +19,9 @@ Object.defineProperty(obj, "a", {
 
 ### 两个描述符共有的必选项：enumerable/configurable
 
+* enumerable： 是否可枚举
+* configurable： 是否可修改
+
 ```js
 //configurable: true
 1. 是否可删除

@@ -31,7 +31,7 @@ setInteval(function(){
 }, 1000)
 ```
 
-* 闭包
+* 闭包\(并不是一定会引起内存泄漏，只有在外部**引用**了才会引起内存泄漏\)
 
 ```js
 var theThing = null;
@@ -52,7 +52,7 @@ var replaceThing = function(){
 setInteval(replaceThing, 1000);
 ```
 
-* 缓存
+* 滥用缓存
 
 > 缓存内容无法被回收
 
