@@ -11,7 +11,7 @@
   created(){
     console.log('``````````````created数据观测data和事件event配置完成```````````');
     console.log(this.$el);   //undefined
-    console.log(this.$data);
+    console.log(this.$data); // 有值
     console.log(this.message);
     console.log('``````````````created数据观测data和事件event配置完成```````````');
   },

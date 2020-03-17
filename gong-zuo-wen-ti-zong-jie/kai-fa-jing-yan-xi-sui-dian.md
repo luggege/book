@@ -12,27 +12,6 @@
 >
 > 解决办法: 给td设border,或给table设border
 
-### mouseover与mouseout是冒泡的
-
-### mouseenter与mouseleave是不冒泡的
-
-## 阻止冒泡行为
-
-> ```js
-> box.click(function(e){
->     
->     e = windown.event || e;
->         
->     if(e&&e.stopPropagation){
->             
->         e.stopPropagation();
->     }
->     else{    
->         e.cancelBubble = true;
->      }
-> })
-> ```
-
 ## 获取dom元素
 
 getElementById和getElementsByTagName 可以兼容到IE 5.5, 适用于IE 6 以上.
@@ -51,19 +30,19 @@ getElementsByClassName只兼容到IE 9 以上.
 
 ## 如何解决IE8以下兼容html5标签
 
-```js
+```
 <!-- 条件引入html5.js -->
-<!--\[if lt IE 9\]>
+<!--[if lt IE 9]>
 <script src="js/html5.js"></script>
-<!\[endif\]-->
+<![endif]-->
 <!-- 条件引入线上html5文件 -->
-<!--\[if lt IE9\]> -->
+<!--[if lt IE9]> -->
 <script src="[http://cdn.bootcss.com/html5shiv/r29/html5.min.js](http://cdn.bootcss.com/html5shiv/r29/html5.min.js)"></script>
-<!\[endif\]-->
+<![endif]-->
 <!-- cdnjs -->
-<!--\[if lt IE 9\]>
+<!--[if lt IE 9]>
 <script src="[https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js](https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js)"></script>  
-<!\[endif\]-->
+<![endif]-->
 ```
 
 > 但是如果ie6/7/8 禁用脚本的用户,那么就变成了无样式的"白板"网页,我们该怎么解决呢?  

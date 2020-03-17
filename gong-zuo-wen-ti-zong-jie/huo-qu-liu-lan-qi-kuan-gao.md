@@ -133,20 +133,20 @@ navigator 对象包含有关浏览器的信息。没有应用于 navigator 对�
 ```
 
 ```javascript
-    // 判断浏览器类型及版本
-    function getBrowserInfo(){
-        var Sys = {};
-        var userAgent = navigator.userAgent.toLowerCase();
-        var reg =/(msie|firefox|chrome|opera|version).*?([\d.]+)/;
-        var m = userAgent.match(reg);
+// 判断浏览器类型及版本
+function getBrowserInfo(){
+    var Sys = {};
+    var userAgent = navigator.userAgent.toLowerCase();
+    var reg =/(msie|firefox|chrome|opera|version).*?([\d.]+)/;
+    var m = userAgent.match(reg);
 
-        Sys.browser = m[1].replace(/version/, "'safari");
-        Sys.version = m[2];
-        return Sys;
-    }
+    Sys.browser = m[1].replace(/version/, "'safari");
+    Sys.version = m[2];
+    return Sys;
+}
 
-    //获取当前的浏览器信息
-    var system = getBrowserInfo();
+//获取当前的浏览器信息
+var system = getBrowserInfo();
 ```
 
 

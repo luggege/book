@@ -41,13 +41,35 @@ document.getElementById('div4').addEventListener("click",function(){alert("4");}
 </script>
 ```
 
-### 阻止冒泡
+### mouseover与mouseout是冒泡的
+
+### mouseenter与mouseleave是不冒泡的
+
+### 阻止冒泡行为
 
 ```js
-e.stopPropagation();
+box.click(function(e){
+    e = windown.event || e;
+    if(e&&e.stopPropagation){     
+        e.stopPropagation();
+    }
+    else{    
+        e.cancelBubble = true;
+    }
+})
+```
 
-// ie
-e.cancelBubble = true;
+### 阻止默认行为
+
+```js
+function stopDefaultEvent(){
+    if(windowm.event){   // IE
+        window.event.returnValue = true
+    }else {
+        event.preventDefault()
+    }
+    return false
+}
 ```
 
 

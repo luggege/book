@@ -1,6 +1,6 @@
 # 函数的四种调用模式
 
-## 函数模式 
+## 函数模式
 
 **特征:**就是一个简单的函数调用，函数名前面没有任何的引导内容
 
@@ -14,7 +14,7 @@ func();
 
 `this`在函数模式中的含义：`this`_**在函数中表示全局对象，在浏览器中是window对象**_
 
-## 方法模式 
+## 方法模式
 
 **特征:**方法一定是依附于一个对象, 将函数赋值给对象的一个属性, 那么就成为了方法.
 
@@ -30,14 +30,13 @@ var o = {
 
 `this`在方法模式调用中的含义:_**表示函数所依附的这个对象**_
 
-## 构造器调用模式 
+## 构造器调用模式
 
 由于构造函数只是给 this 添加成员. 没有做其他事情. 而方法也可以完成这个操作, 就 this 而言, 构造函数与方法没有本质区别.
 
 **特征:**使用 new 关键字, 来引导构造函数.
 
 ```javascript
-
 function Person(){
     this.name = "zhangsan";
     this.age =  19;
@@ -48,7 +47,7 @@ var p = new Person();
 
 构造函数中发`this`与方法中一样, 表示对象, 但是构造函数中的对象是刚刚创建出来的对象
 
-### 关于构造函数中`return`关键字的补充说明 
+### 关于构造函数中`return`关键字的补充说明
 
 * 构造函数中不需要`return`, 就会默认的`return this`
 * 如果手动的添加`return`, 就相当于 return this
@@ -56,9 +55,9 @@ var p = new Person();
 * 如果手动添加`return null`; 或`return undefiend`, 无效
 * 如果手动添加`return 对象类型`; 那么原来创建的`this`就会被丢掉, 返回的是`return`后面的对象
 
-### 创建对象的模式 
+### 创建对象的模式
 
-#### 工厂方法 
+#### 工厂方法
 
 ```javascript
 // 工厂就是用来生产的, 因此如果函数创建对象并返回, 就称该函数为工厂函数
@@ -72,10 +71,9 @@ function createPerson(name, age, gender) {
 // document.createElement()
 ```
 
-#### 构造方法 
+#### 构造方法
 
 ```javascript
-
 function Person(name, age, gender){
     this.name = name;
     this.age = age;
@@ -84,27 +82,26 @@ function Person(name, age, gender){
 var p = new Person("zhangsan", 19, "男");
 ```
 
-#### 寄生式创建对象 
+#### 寄生式创建对象
 
 ```javascript
-
 function Person(name, age, gender){
     var o = {};
         o.name = name;
         o.age = age;
         o.gender = gender;
-    
+
     return o;
 }
 
 var p = new Person("Jack", 18, "male");
 ```
 
-#### 混合式创建 
+#### 混合式创建
 
 混合式继承就是讲所有的属性放在构造方法里面，然后讲所有的方法放在原型里面，使用构造方法和原型配合起来创建对象。
 
-## 上下文调用模式 
+## 上下文调用模式
 
 上下文\(Context\)，就是函数调用所处的环境。
 
@@ -112,10 +109,9 @@ var p = new Person("Jack", 18, "male");
 
 在其他三种调用模式中，函数/方法在调用的时候，this的值都是指定好了的，我们没办法自己进行设置，如果尝试去给`this`赋值，会报错。
 
-### 上下文调用的语法 
+### 上下文调用的语法
 
 ```javascript
-
 //第一种， apply
 函数名.apply(对象, [参数]);
 
@@ -137,14 +133,13 @@ _**补充说明**_
 2. 如果是函数调用`foo()`, 那么有点像`foo.apply( window )`.
 3. 如果是方法调用`o.method()`, 那么有点像`o.method.apply( o )`.
 
-### 参数问题 
+### 参数问题
 
 `call`和`apply`在没有后面的参数的情况下\(函数无参数, 方法无参数\) 是完全一样的.
 
 如下：
 
 ```javascript
-
 function foo() {
     console.log( this );
 }
@@ -158,7 +153,6 @@ _**第一个参数的使用规则:**_
 2. 如果不传入参数, 或传入 null. undefiend 等, 那么相当于 this 默认为 window
 
 ```javascript
-
 foo();
 foo.apply();
 foo.apply( null );
@@ -175,7 +169,6 @@ _**第二个参数的使用规则**_
 在使用上下文调用的时候, 原函数\(方法\)可能会带有参数, 那么这个参数在上下文调用中使用第二个\( 第 n 个 \)参数来表示
 
 ```javascript
-
 function foo( num ) {
     console.log( num );
 }
@@ -184,16 +177,15 @@ foo.apply( null, [ 123 ] );
 foo( 123 );
 ```
 
-### 上下文调用模式的应用 
+### 上下文调用模式的应用
 
 上下文调用只是能修改`this`, 但是使用的最多的地方上是函数借用.
 
-#### 1. 将伪数组转换为数组 
+#### 1. 将伪数组转换为数组
 
 传统的做法：
 
 ```javascript
-
 var a = {};
 a[ 0 ] = 'a';
 a[ 1 ] = 'b';
@@ -219,7 +211,6 @@ foo.apply( obj, 伪数组 );
 利用`apply`方法，可以写出以下
 
 ```javascript
-
 //将伪数组 a 作为 apply 的第二个参数
 var newArr = Array.prototype.concat.apply( [], a )
 ```
@@ -229,7 +220,6 @@ var newArr = Array.prototype.concat.apply( [], a )
 **push方法**
 
 ```javascript
-
 //用法:
 
 arr.push( 1 ); 
@@ -255,11 +245,11 @@ arr.push.apply( arr, a );
 // 利用 apply 可以展开伪数组的特性, 这里就相当于 arr.push( a[0], a[1] )
 ```
 
-#### 2. 求数组中的最大值 
+#### 2. 求数组中的最大值
 
 传统的做法
 
-```javascript 
+```javascript
 var max = arr[ 0 ];
 for ( var i = 1; i < arr.length; i++ ) {
     if ( arr[ i ] > max ) {
@@ -273,15 +263,13 @@ for ( var i = 1; i < arr.length; i++ ) {
 还是利用 apply 可以展开数组的特性
 
 ```javascript
-
 var arr = [ 123456,12345,1234,345345,234,5 ];
 Math.max.apply( null, arr );
 ```
 
-#### 3.借用构造函数继承 
+#### 3.借用构造函数继承
 
 ```javascript
-
 function Person ( name, age, gender ) {
     this.name = name;
     this.age = age;
@@ -295,4 +283,6 @@ function Student ( name, age, gender, course ) {
     this.course = course;
 }
 ```
+
+
 
