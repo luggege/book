@@ -210,29 +210,20 @@
 * 针对不同的浏览器写不同的CSS code的过程，就是CSS hack。
 * 示例如下：
 
+  ```css
   .test{
-
-  width:300px;
-
-  height:300px;
-
-  background-color:blue; /_firefox_/
-
-  background-color:red\9; /_all ie_/
-
-  background-color:yellow; /_ie8_/
-
-  background-color:pink; /_ie7_/
-
-  background-color:orange; /_ie6_/
-
+      width:300px;
+      height:300px;
+      background-color:blue; /firefox/
+      background-color:red\9; /all ie/
+      background-color:yellow; /ie8/
+      background-color:pink; /ie7/
+      background-color:orange; /ie6/
   }
-
-  :root \#test {
-
-  background-color:purple\9;
-
-  } /_ie9_/
+  :root #test {
+      background-color:purple\9;
+  } /ie9/
+  ```
 
 ## 十九. 9. 行内元素和块级元素的具体区别/行内元素的padding和margin可设置吗？
 
@@ -276,25 +267,18 @@ padding-bottom\)和外边距的top/bottom\(margin-top/margin-bottom\)都**不可
 
 > 可以用于消除inline-block元素间的换行符空格间隙问题。
 
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "\[\[\[[http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\](http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29\)\)
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "\[\[\[\[\[[http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\)\](http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29%29\)\)
 
 CSS letter-spacing 属性示例
 
-.ls3px
-
-{
-
-letter-spacing: 3px;
-
+```css
+.ls3px{
+    letter-spacing: 3px;
 }
-
-.lsn3px
-
-{
-
-letter-spacing: -3px;
-
+.lsn3px{
+    letter-spacing: -3px;
 }
+```
 
 梦之都 [CSS教程](http://www.dreamdu.com/css/),[**letter-spacing**](http://www.dreamdu.com/css/property_letter-spacing/)示例,All i have to do, is learn CSS.\(仔细看是字母之间的距离,不是空格本身的宽度,参考[word-spacing](http://www.dreamdu.com/css/property_word-spacing/)属性示例.\)
 
@@ -378,17 +362,11 @@ letter-spacing: -3px;
 * 1. HTML 和 XHTML 的区别简单来说，XHTML 可以认为是 XML 版本的 HTML，为符合 XML 要求，XHTML 语法上要求更严谨些。
 
 > 以下是 XHTML 相对 HTML 的几大区别：
-
-&gt;
-
+>
 > XHTML 要求正确嵌套
-
-&gt;
-
+>
 > XHTML 所有元素必须关闭
-
-&gt;
-
+>
 > XHTML 区分大小写
 >
 > XHTML 属性值要用双引号
@@ -402,16 +380,10 @@ letter-spacing: -3px;
 * 满足下面这三个条件时，就会出现这个BUG：
 
 > 1、要为块状元素；
-
-&gt;
-
+>
 > 2、要左侧浮动；
-
-&gt;
-
+>
 > 3、要有左外边距（margin-left）。
-
-&gt;
 
 * 解决这个BUG，只需在相应的块状元素的CSS属性中加入“display:inline;”。
 

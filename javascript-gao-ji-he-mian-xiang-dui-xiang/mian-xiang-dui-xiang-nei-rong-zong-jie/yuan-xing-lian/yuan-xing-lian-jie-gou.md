@@ -10,7 +10,7 @@
 function Person() {}
 var p = new Person();
 // p 具有默认的原型链
-``` 
+```
 
 默认的原型链结构就是:
 
@@ -26,7 +26,10 @@ var arr = new ItcastCollection();
 // var arr = new Array();
 ```
 
-## 练习： 
+## 练习：
+
 > 1. 描述出`{}`的原型链结构
 > 2. 描述出`[]`的原型链结构
+
+
 
