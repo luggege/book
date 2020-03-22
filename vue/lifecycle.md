@@ -21,7 +21,7 @@ new Vue({
   },
   beforeMount: function() {
     console.group('------beforeMount挂载前状态------');
-    console.log("%c%s", "color:red","el     : " + this.$el); //已被初始化
+    console.log("%c%s", "color:red","el     : " + this.$el); //undefined
     console.log(this.$el);
     console.log("%c%s", "color:red","data   : " + this.$data); //已被初始化  
     console.log("%c%s", "color:red","message: " + this.message); //已被初始化  
@@ -73,6 +73,4 @@ new Vue({
 > 钩子函数是Windows处理消息机制的一部分，通过设置钩子，应用程序可以在**系统级对所有消息、事件进行过滤**，可以访问在正常情况下无法访问到的消息，钩子的**本质是一段用以处理系统消息的程序 **
 
 ![](/assets/vue lifecycle.png)
-
-
 
