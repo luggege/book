@@ -43,6 +43,7 @@
       * [JavaScript预解析](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/ci-fa-zuo-yong-yu/javascript-yu-jie-xi.md)
     * [闭包](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/bi-bao.md)
     * [事件](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shi-jian.md)
+    * [微任务、宏任务](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/wei-ren-wu-3001-hong-ren-wu.md)
     * [函数的四种调用模式](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/han-shu-de-si-zhong-diao-yong-mo-shi.md)
     * [继承](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/ji-cheng.md)
     * [继承的实现方式](javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/ji-cheng-de-shi-xian-fang-shi.md)
