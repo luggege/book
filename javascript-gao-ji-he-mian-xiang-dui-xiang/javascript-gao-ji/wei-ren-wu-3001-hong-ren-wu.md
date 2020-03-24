@@ -44,5 +44,33 @@ new Promise((resolve,reject) => {
 * EventLoop检查到微任务队列不为空，执行微任务，打印3
 * 到此微任务队列为空，宏任务队列为空，结束
 
+### async/await
+
+> async/await本质是基于promise的一些封装
+
+```js
+// 宏任务
+setTimeout(_ => console.log(4))
+
+async function main() {
+  // 同步
+  console.log(1)
+  await Promise.resolve()
+  // 微任务
+  console.log(3)
+}
+
+main()
+
+console.log(2)
+
+// 1 2 3 4
+```
+
+分析：
+
+* async和await之间的代码同步执行，相当于new Promise传入的参数
+* await之后的代码相当于.then传入的回调
+
 
 
