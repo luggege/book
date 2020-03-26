@@ -117,6 +117,7 @@
   * [Object.defineProperty\(\)](vue/es5/objectdefineproperty.md)
   * [Object.getOwnPropertyDescriptor\(\)](vue/es5/objectgetownpropertydescriptor.md)
 * [ES6](es6/README.md)
+  * [箭头函数](es6/jian-tou-han-shu.md)
   * [Promise](es6/promise.md)
   * [Object.assign\(\)](es6/assign.md)
   * [扩展运算符](es6/kuo-zhan-yun-suan-fu.md)

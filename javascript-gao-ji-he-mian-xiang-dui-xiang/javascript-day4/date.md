@@ -1,6 +1,7 @@
 # Date
 
-## Data 对象方法 
+## Data 对象方法
+
 | 方法 | 描述 |
 | :--- | :--- |
 | Date\(\) | 返回当日的日期和时间 |
@@ -10,7 +11,7 @@
 | getFullYear\(\) | 从 Date 对象以四位数字返回年份。 |
 | getYear\(\) | 请使用 getFullYear\(\) 方法代替。 |
 | getHours\(\) | 返回 Date 对象的小时 \(0 ~ 23\)。 |
-| getMinute s\(\) | 返回 Date 对象的分钟 \(0 ~ 59\)。 |
+| getMinutes\(\) | 返回 Date 对象的分钟 \(0 ~ 59\)。 |
 | getSeconds\(\) | 返回 Date 对象的秒数 \(0 ~ 59\)。 |
 | getMilliseconds\(\) | 返回 Date 对象的毫秒 \(0 ~ 999\)。 |
 | getTime\(\) | 返回 1970 年 1 月 1 日至今的毫秒数。 |
@@ -27,4 +28,6 @@
 | toString\(\) | 把 Date 对象转换为字符串。 |
 | toTimeString\(\) | 把 Date 对象的时间部分转换为字符串。 |
 | toDateString\(\) | 把 Date 对象的日期部分转换 为字符串。 |
+
+
 
