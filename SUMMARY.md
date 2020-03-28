@@ -111,7 +111,6 @@
   * [自定义指令](vue/zi-ding-yi-zhi-ling.md)
   * [自定义过滤器](vue/zi-ding-yi-guo-lv-qi.md)
   * [Vuex](vue/vuex.md)
-  * 父子组件生命周期执行顺序
 * [ES5](vue/es5.md)
   * [Object.keys\(\)](vue/es5/objectkeys.md)
   * [Object.defineProperty\(\)](vue/es5/objectdefineproperty.md)
