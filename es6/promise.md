@@ -127,5 +127,71 @@ const p = Promise.all([p1, p2, p3, p6])
 // Uncaught (in promise) p6失败
 ```
 
+注意：
+
+如果作为参数的Promise实例，自己定义了catch方法，被rejected之后，就不会触发Promise.all\(\)的catch方法，因为Promise实例的catch方法会返回一个新的promise，会继续调用then方法
+
+```js
+const p1 = new Promise((resolve, reject) => {
+    resolve('hello')
+})
+.then(result => result)
+.catch(e => e)
+
+const p2 = new Promise((resolve, reject) => {
+    throw new Error('error')
+})
+.then(result => result)
+.catch(e => e)
+
+Promise.all([p1, p2])
+.then(result => console.log(result))
+.catch(e => console.log(e))
+// ["hello", Error: error]
+```
+
+如果p2没有catch方法，就会调用Promise.all\(\)的catch方法
+
+```js
+const p5 = new Promise((resolve, reject) => {
+    resolve('hello')
+})
+.then(result => result)
+.catch(e => e)
+
+const p6 = new Promise((resolve, reject) => {
+    throw new Error('error')
+})
+.then(result => {
+    return result
+})
+
+Promise.all([p5, p6])
+.then(result => console.log(result))
+.catch(e => console.log(e))
+// Error: error
+```
+
+### race\(\)
+
+> 将多个Promise实例包装成一个新的Promise实例返回，用法同all\(\)，作用：将作为参数的Promise实例率先改变状态的值返回
+
+```js
+const promise1 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('p1'), 3000)
+})
+const promise2 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('p2'), 1000)
+})
+const promise3 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('p3'), 2000)
+})
+Promise.race([promise1, promise2, promise3])
+.then(result => console.log(result))
+.catch(error => console.log(error))
+Promise {<pending>}
+// p2
+```
+
 
 
