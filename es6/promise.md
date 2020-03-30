@@ -2,7 +2,7 @@
 
 ## 什么是Promise
 
-es一种技术，解决异步回调，解决回调地狱
+es一种技术，解决**异步回调**，解决**回调地狱**
 
 ## 为什么要使用Promise
 
@@ -33,6 +33,39 @@ new Promise(function (resolve, reject) {
 ```
 
 ## Promise原理是怎么实现的
+
+```js
+function Promise(executor){
+    let that = this;
+    that.status = 'pending';
+    that.resolveValue = undefined;
+    that.rejectValue = undefined;
+    function resolve(value){
+        if(that.status === 'pending'){
+            that.status = 'resolved';
+            that.resolveValue = value;
+        }
+    }
+    function reject(value){
+        if(that.status = 'pending'){
+            that.status = 'rejected';
+            that.rejectValue = value;
+        }
+    }
+    // executor执行器
+    executor(resolve, reject);
+}
+
+Promise.prototype.then = function(onFufiled, onRejected){
+    let that = this;
+    if(that.status === 'resolved'){
+        onFufiled(that.resolveValue);
+    }
+    if(that.status === 'rejected'){
+        onRejected(that.rejectValue);
+    }
+}
+```
 
 ### then\(\)
 
@@ -189,8 +222,69 @@ const promise3 = new Promise((resolve, reject) => {
 Promise.race([promise1, promise2, promise3])
 .then(result => console.log(result))
 .catch(error => console.log(error))
-Promise {<pending>}
+Promise {<pending>}
 // p2
+```
+
+### allSettled\(\)
+
+> 用法同上，接受一组Promise实例，作用：等所有Promise实例状态都改变（不管成功还是失败），才会执行allSettled方法
+
+### any\(\)
+
+> 将多个promise实例，包装成一个promise实例
+
+p的状态由p1、p2、p3决定
+
+* p1、p2、p3有一个成功，p就成功
+
+* p1、p2、p3都失败，p才失败
+
+### resolve\(\)
+
+> 将现有对象转为Promise对象，相当于Promise实例的resolve
+
+```js
+Promise.resolve('foo')
+.then(result => console.log(result))
+// foo
+
+//等同于
+new Promise(resolve => resolve('foo'))
+.then(result => console.log(result))
+// foo
+```
+
+### reject\(\)
+
+> 相当于执行Promise实例的reject
+
+```js
+Promise.reject('error')
+.catch(error => console.log(error))
+// error
+
+// 相当于
+new Promise((resolve, reject) => {
+    reject('error')
+})
+.then(null, error => console.log(error))
+// error
+```
+
+## 应用
+
+* 图片加载：加载完成调用resolve方法，改变Promise状态
+
+```js
+const imgLoad = (path) => {
+    return new Promise((resolve, reject) => {
+        const img = new Image()
+        img.onload = resolve
+        img.onerror = reject
+        img.src = path
+    })
+}
 ```
 
 
