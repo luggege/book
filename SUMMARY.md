@@ -95,6 +95,7 @@
   * [CSS布局](gong-zuo-wen-ti-zong-jie/cssbu-ju.md)
   * [前端优化](gong-zuo-wen-ti-zong-jie/qian-duan-you-hua.md)
   * [垃圾回收机制与内存泄漏](gong-zuo-wen-ti-zong-jie/la-ji-hui-shou-ji-zhi-yu-nei-cun-xie-lou.md)
+  * [contentType](gong-zuo-wen-ti-zong-jie/contenttype.md)
 * [AngularJs](angularjs/README.md)
   * [modules](angularjs/modules.md)
   * [指令的使用](angularjs/zhi-ling-de-shi-yong.md)
