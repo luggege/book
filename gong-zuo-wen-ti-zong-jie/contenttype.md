@@ -16,9 +16,8 @@
 
   * multipart/form-data
 
-  > 用于文件上传提交数据
+  > 用于文件上传提交文件
 * ### dataType：收到服务器的格式
-
 * * json
   * html
   * xml

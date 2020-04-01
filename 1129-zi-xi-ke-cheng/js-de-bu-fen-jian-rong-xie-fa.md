@@ -71,7 +71,7 @@ removeHandler：function(element, type, handler){
 
 ③获取事件及事件对象目标
 
-获取事件对象的兼容性写法
+获取**事件对象**的兼容性写法
 
 ```javascript
 getEvent: function(event){
@@ -81,7 +81,7 @@ getEvent: function(event){
 }
 ```
 
-获取事件对象目标的兼容性写法
+获取**事件对象目标**的兼容性写法
 
 ```js
 getTarget: function(event){
@@ -95,6 +95,8 @@ getTarget: function(event){
 
 ```js
 preventDefault: function(event){
+    // IE: window.event
+    var event = event || window.event
 
  if (event.preventDefault){
 
@@ -102,8 +104,10 @@ preventDefault: function(event){
 
  } else {
 
-   event.returnValue = false;
-
+    event.returnValue = false;
+    // 或者
+    return false;   // 原生js的return false阻止默认事件，jquery的既阻止默认事件又阻止冒泡
+    
 }}
 ```
 
