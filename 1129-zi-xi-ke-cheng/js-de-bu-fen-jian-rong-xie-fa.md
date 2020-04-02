@@ -75,7 +75,7 @@ removeHandler：function(element, type, handler){
 
 ```javascript
 getEvent: function(event){
-
+  // IE: window.event
   return event ? event : window.event;
 
 }
@@ -107,7 +107,7 @@ preventDefault: function(event){
     event.returnValue = false;
     // 或者
     return false;   // 原生js的return false阻止默认事件，jquery的既阻止默认事件又阻止冒泡
-    
+
 }}
 ```
 
