@@ -61,5 +61,33 @@ window.onscroll = throttle(scrollTop, 3000)
 
 节流：大量重复操作，休息时间内永远不会执行函数，只有到了才会执行函数
 
+### 防抖在vue中的应用
+
+1. 新建debounce.js文件
+2. 引入防抖函数
+3. 调用
+
+```js
+export default function debounce(fn, delay){
+    var timer = null
+    var delay = delay || 200
+    return function(){
+        console.log('timer: ', timer);
+        if(timer !== null){
+            clearTimeout(timer)
+        }
+        timer = setTimeout(fn,delay) 
+    }
+}
+```
+
+```js
+import debounce from '@/utils/debounce'
+
+login: debounce(() => {
+    console.log(Math.random())
+}, 1000),
+```
+
 
 
