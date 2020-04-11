@@ -48,7 +48,7 @@ Object.defineProperty(obj, 'a', {
 
 > 其实并没有getter/setter这样的属性，只是两个概念，与之对应的是两个访问描述符
 
-#### 当设置/获取某个属性时，提供getter/setter方法
+##### 当设置/获取某个属性时，提供getter/setter方法
 
 ```js
 1. 当设置getter/setter方法时，不允许value和writable出现
