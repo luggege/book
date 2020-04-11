@@ -1,5 +1,10 @@
 ### Object.getOwnPropertyDescriptor\(obj, prop\) 返回指定对象所有自身（非继承性）属性的描述对象
 
+返回值是一个对象
+
+* 如果是数据描述符，这个对象的属性包含：value、writable、enumerable、configurable
+* 如果是访问描述符，这个对象的属性包含：enumerable、configurable、get、set
+
 ```js
 Object.getOwnPropertyDescriptor(obj, 'a')
 // {value: 111, writable: false, enumerable: false, configurable: false}
