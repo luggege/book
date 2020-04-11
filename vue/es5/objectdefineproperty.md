@@ -1,4 +1,4 @@
-### Object.defineProperty\(obj, prop, descriptor\)定义对象属性
+### Object.defineProperty\(obj, prop, descriptor\)：定义对象属性
 
 **作用：**
 
@@ -11,16 +11,16 @@
 let obj = {};
 Object.defineProperty(obj, "a", {
     value: 111,        // 属性值
-    writable: false,   // 是否可重写值, 默认false
+    writable: false,   // 是否可重写值, 默认false(如果为true，非严格模式忽略；严格模式抛出错误)
     enumerable: false, // 是否可枚举, 默认false
     configurable: false// 是否可修改以上配置, 默认false
 });
 ```
 
-### 两个描述符共有的必选项：enumerable/configurable
+##### 两个描述符共有的必选项：enumerable/configurable
 
-* enumerable： 是否可枚举
-* configurable： 是否可修改
+* enumerable： 是否可枚举（能否通过for-in遍历到属性）
+* configurable： 是否可修改（能否通过delete删除属性；）
 
 ```js
 //configurable: true
@@ -64,7 +64,8 @@ Object.defineProperty(obj, 'f', {
         return value = newValue
     }
 })
-// Uncaught TypeError: Invalid property descriptor. Cannot both specify accessors and a value or writable attribute, #<Object>
+// Uncaught TypeError: Invalid property descriptor. 
+//Cannot both specify accessors and a value or writable attribute, #<Object>
 ```
 
 ```js
@@ -82,6 +83,35 @@ Object.defineProperty(obj, 'x', {
 obj.x      // aaa
 obj.x = 111
 obj.x      // 111
+```
+
+### Object.defineProperties\(obj, {prop1: descriptor, prop2: descriptor}\)：定义多个属性
+
+```js
+var book = {}
+Object.defineProperties(book, {
+    _year: {
+        value: 2020,
+        writable: true
+    },
+    edition: {
+        value: 1,
+        writable: true
+    },
+    year: {
+        get: function(){
+            return this._year
+        },
+        set: function(newValue){
+            if(newValue > 2019){
+                this._year = newValue
+                this.edition += newValue - 2019
+            }
+        }
+    }
+})
+
+// {_year: 2020, edition: 1, year: 2020}
 ```
 
 
