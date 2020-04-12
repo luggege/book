@@ -1,5 +1,7 @@
 ### Object.create\(proto\[, propertiesObject\]\): 创建一个新对象
 
+> 兼容：IE9+、Firefox4+、Safari5+、Opera12+、Chrome
+
 * proto：必填，新创建对象的原型对象
 
 ```js
