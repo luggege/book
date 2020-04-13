@@ -62,6 +62,7 @@
   * [gulp](liu-hang-kuang-jia/gulp.md)
 * [移动Web](yi-dong-web/README.md)
   * [屏幕适配](yi-dong-web/ping-mu-shi-pei.md)
+  * [IOS兼容问题](yi-dong-web/iosjian-rong-wen-ti.md)
 * [github创建自己的电子书](github-de-shi-yong.md)
 * [Node.Js](nodejs/README.md)
   * [node基础及requirejs/seajs](nodejs/day1.md)
