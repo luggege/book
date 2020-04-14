@@ -1,6 +1,4 @@
-# 继承
-
-## 继承
+### 继承
 
 > 定义：自己没有的属性和方法,拿过别人有的来用,就叫继承
 >
@@ -265,7 +263,7 @@ anotherPerson.skill.push('sleep')
 var yetAnotherPerson = Object.create(person)
 yetAnotherPerson.name = 'rose'
 yetAnotherPerson.skill.push('play')
-console.log(person.skill)    // ["eat", "drink", "sleep", "play"]
+console.log(person.skill)    // ["eat", "drink", "sleep", "play"]
 ```
 
 ### 寄生式继承
