@@ -220,7 +220,7 @@ SubType.prototype.isPrototypeOf(instance1)   // true
 
 1. 实例可共享且通过向超类型构造函数传参使得相互独立
 
-缺**点：**
+**缺点：**
 
 1. 会调用两次超类型构造函数
 
@@ -267,6 +267,39 @@ console.log(person.skill)    // ["eat", "drink", "sleep", "play"]
 ```
 
 ### 寄生式继承
+
+```js
+function object(o){
+    var F = function(){}
+    F.prototype = o
+    return new F()
+}
+
+function createAnother(o){
+    var clone = object(o)
+    clone.sayHi = function(){
+        alert('Hi')
+    }
+    return clone
+}
+
+var person = {
+    name: 'jack',
+    age: 18
+}
+
+var anotherPerson = createAnother(person)
+
+anotherPerson.sayHi()  // Hi
+```
+
+**优点：**
+
+原型式继承的基础上新增一些函数或方法
+
+**缺点：**
+
+重复创建方法，无法达到函数复用降低效率
 
 ### 寄生组合式继承
 
