@@ -303,9 +303,52 @@ anotherPerson.sayHi()  // Hi
 
 ### 寄生组合式继承
 
+```js
+function superType(name){
+    this.name = name
+    this.colors = ['red', 'blue', 'gray']
+}
 
+superType.prototype.sayName = function(){
+    console.log(this.name)
+}
 
+function subType(name, age){
+    superType.call(this, name)
+    this.age = age
+}
 
+function object(obj){
+    function F(){}
+    F.prototype = obj
+    return new F()
+}
 
+function inheritPrototype(subType, superType){
+    var prototype = object(superType.prototype)
+    prototype.constructor = subType
+    subType.prototype = prototype
+}
 
+inheritPrototype(subType, superType)
+
+var instance1 = new subType('xiaohong', 18)
+
+console.log(instance1)
+// subType {name: "xiaohong", colors: Array(3), age: 18}
+//   name: "xiaohong"
+//   colors: (3) ["red", "blue", "gray"]
+//   age: 18
+//   __proto__: superType
+//       constructor: ƒ subType(name, age)
+//       __proto__:
+//           sayName: ƒ ()
+//           constructor: ƒ superType(name)
+//           __proto__: Object
+// }
+```
+
+**优点：**
+
+只调用一次superType构造函数，避免了在subType的prototype上创建不必要的属性和方法
 
