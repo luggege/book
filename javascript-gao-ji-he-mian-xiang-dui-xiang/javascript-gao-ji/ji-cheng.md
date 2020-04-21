@@ -352,3 +352,81 @@ console.log(instance1)
 
 只调用一次superType构造函数，避免了在subType的prototype上创建不必要的属性和方法
 
+### 面试题
+
+已知如下类Animal，要求设计一个Cat类继承自Animal，并实现如下功能：
+
+```js
+Animal:
+function Animal(){
+    this.name = "Animal";
+    this.showName = function(){
+        console.log(this.name);
+    }
+}
+
+Cat:
+function Cat(){
+
+    this.name = "Cat";
+
+    this.showName1 = function(){
+        console.log(this.name); 
+    }
+
+    this.showName2 = function(){
+        console.log(this.name); 
+    } 
+
+    this.showName3 = function(){
+        console.log(this.__super.name + "=>" + this.name); 
+    }
+}
+```
+
+代码运行：
+
+// 请完善Cat部分相关代码，得到如下结果：
+
+```js
+var cat = new Cat();
+console.log(cat instanceof Animal); // 得到：true
+cat.showName1();     // 得到："Cat" (需要读到Cat中的name属性) 
+cat.showName2();    //  得到：”Animal" (需要读到Animal中的name属性) 
+cat.showName3();    //得到：”Animal" => "Cat" (需要同时读到Cat中的name和Animal中的name)
+```
+
+```js
+function Animal(){
+    this.name = 'Animal'
+    this.showName = function(){
+        console.log(this.name)
+    }
+}
+
+function Cat(){
+    this.name = 'Cat'
+    this.__super = Cat.prototype
+    this.showName1 = function(){
+        console.log(this.name)
+    }
+    this.showName2 = function(){
+        console.log(this.name)
+    }
+    this.showName3 = function(){
+        console.log(this.__super.name + '=>' + this.name)
+    }
+}
+
+Cat.prototype = new Animal()
+
+var cat = new Cat()
+
+cat instanceof Animal  // true
+cat.showName1()        // Cat
+cat.showName2.call(Cat.prototype)        // Animal
+cat.showName3()        // Animal=>Cat
+```
+
+
+
