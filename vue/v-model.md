@@ -13,7 +13,7 @@ v-model：语法糖
  <p>input的值为：{{value}}</p>
 ```
 
-* radio、checkbox：使用checked属性和change事件
+* radio、checkbox：使用checked属性和change事件 。 
 * * radio
 
 ```js
