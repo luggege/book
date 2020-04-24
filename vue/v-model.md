@@ -36,7 +36,7 @@ export default {
 </script>
 ```
 
-* * 单个复选框，绑定到布尔值
+* * 单个复选框，绑定到布尔值   
 
 ```js
 <input type="checkbox" id="checkbox1" name="person" v-model="bool">
