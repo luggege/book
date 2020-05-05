@@ -22,5 +22,21 @@ function gettype(obj) {
 }
 ```
 
+#### 为什么要用Object原型上的toString方法
+
+> Number、Boolean、String、Array、Function...每一个内置类都改写了Object原型上的toString方法，故表现形式不一，所以通过call改变this指向，统一使用Object原型的toString方法来判断类型
+
+```js
+[1, 2, 3].toString()    // "1,2,3"
+
+Array.prototype.hasOwnProperty('toString') // true
+
+delete Array.prototype.toString            
+
+Array.prototype.hasOwnProperty('toString') // false
+
+[1, 2, 3].toString()                       // "[object Array]"
+```
+
 
 

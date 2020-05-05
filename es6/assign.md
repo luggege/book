@@ -14,7 +14,7 @@
    var source2 = {c: 4, d: 5};
    Object.assign(target, source1, source2) // {a: 1, b: 2, c: 4, d: 5}
 
-   // 3. 只有一个参数, 直接返回改参数
+   // 3. 只有一个参数, 直接返回该参数
    var target = {a: 1};
    Object.assign(target) // {a: 1}
 
@@ -36,7 +36,7 @@
    Object.assign(num) // Number {10}
    Object.assign({}, str, bool, num); // {0: "a", 1: "b", 2: "c"}
 
-   // 6.1 如果源对象的属性的值是对象, 那么目标对象得到的是这个对象的引用
+   // 6.1 如果源对象的属性的值是对象, 那么目标对象得到的是这个对象的引用----（浅拷贝）
    var obj1 = {a: {b: 1}}
    var obj2 = Object.assign({}, obj1);
    obj1.a.b  // 1

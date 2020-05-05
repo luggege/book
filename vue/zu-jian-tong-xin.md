@@ -25,7 +25,9 @@ commitDelete(data) {
       @close="closeDialog">
       <p class="ac font16">{{}}</p>
       <span slot="footer">
-        <el-button class="button white bg-deepblue" @click="$emit('commitDelete', 'hello', 'world')">确定</el-button>
+        <el-button class="button white bg-deepblue" @click="$emit('commitDelete', 'hello', 'world')">
+          确定
+        </el-button>
         <el-button class="button bg-white border cancel" @click="closeDialog">取消</el-button>
       </span>
     </el-dialog>

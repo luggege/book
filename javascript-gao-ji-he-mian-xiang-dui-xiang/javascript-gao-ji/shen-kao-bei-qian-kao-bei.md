@@ -6,7 +6,7 @@
 
 ```javascript
 // 1. 数组
-// 适用于深拷贝一层数组且值为基本类型的方法有：遍历属性、slice、concat、Object.assign
+// 适用于深拷贝一层数组且值为基本类型的方法有：遍历属性、slice、concat、Object.assign（属性的值为对象则为浅拷贝）
 var arr = [1, 2, 3, 4, 5]
 // var arr = [
 //     {number: 111},
