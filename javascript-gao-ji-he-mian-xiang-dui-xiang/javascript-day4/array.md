@@ -35,7 +35,24 @@
 
 #### 伪数组
 
-> 有length属性 && 有length-1为下标的属性或length=0;
+> 1. 伪数组是个**对象**
+> 2. 有**length**属性 ，且为number类型
+> 3. 有**length-1为下标**的属性（其余下标不指定默认为undefined）或length=0
+
+**伪数组转为标准数组的方法**
+
+1. ES6的Array.from方法
+2. Array.prototype.slice.call\(\)
+3. \[\].slice.call\(\)
+
+```js
+Array.from({1: "a", length: 2})                    // [undefined, "a"]
+
+Array.prototype.slice.apply({1: "a", length: 2})   // [empty, "a"]
+
+[].slice.call({1: "a", length: 2})                 // [empty, "a"]
+
+```
 
 
 
