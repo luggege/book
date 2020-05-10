@@ -2,7 +2,9 @@
 
 ### 概述
 
-> Symbol是ES6中提出的第七种JavaScript数据类型，目的是为了解决对象中同名属性冲突的问题。
+> Symbol是ES6中提出的**第七种JavaScript数据类型**，目的是为了解决对象中**同名属性冲突**的问题。
+>
+> Symbol值通过Symbol函数生成
 
 ```js
 1. typeof 类型是 symbol
@@ -94,11 +96,11 @@ obj[a]     // VM64118:1 Uncaught ReferenceError: a is not defined
 ```js
 1. 所有Symbol键名的数组
 Object.getOwnPropertySymbols(obj)
-(3) [Symbol(foo), Symbol(abc), Symbol(foo)]
+(3) [Symbol(foo), Symbol(abc), Symbol(foo)]
 
 2. 返回所有常规及Symbol键名的数组
 Reflect.ownKeys(obj)
-(4) ["a", Symbol(foo), Symbol(abc), Symbol(foo)]
+(4) ["a", Symbol(foo), Symbol(abc), Symbol(foo)]
 ```
 
 
