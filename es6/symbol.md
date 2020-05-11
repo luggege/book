@@ -64,7 +64,7 @@ sym4.description         // "abc"
 ```js
 var obj = {}
 
-可用以下三种方式添加属性
+// 可用以下三种方式添加属性
 1. obj = {
     [sym2]: "World"
 }
@@ -75,7 +75,7 @@ var obj = {}
 
 // {Symbol(foo): "World", Symbol(abc): "Hello", Symbol(foo): "haha"}
 
-获取属性方式(不能用点属性方法获取)
+// 获取属性方式(不能用点属性方法获取)
 1. obj[sym4]      // "Hello"
 
 2. obj['sym4']    // undefined
@@ -86,9 +86,9 @@ var obj = {}
 obj.a = 111
 // {a: 111, Symbol(foo): "World", Symbol(abc): "Hello", Symbol(foo): "haha"}
 
-obj.a      // 111
-obj["a"]   // 111
-obj[a]     // VM64118:1 Uncaught ReferenceError: a is not defined
+1. obj.a      // 111
+2. obj["a"]   // 111
+3. obj[a]     // VM64118:1 Uncaught ReferenceError: a is not defined
 ```
 
 ### 属性名的遍历
