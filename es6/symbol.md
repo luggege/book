@@ -4,7 +4,7 @@
 
 > Symbol是ES6中提出的**第七种JavaScript数据类型**，目的是为了解决对象中**同名属性冲突**的问题。
 >
-> Symbol值通过Symbol函数生成
+> Symbol值通过**Symbol函数**生成
 
 ```js
 1. typeof 类型是 symbol

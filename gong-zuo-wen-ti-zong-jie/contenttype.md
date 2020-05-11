@@ -1,6 +1,7 @@
 ## contentType
 
-* ### contentType：设置传给服务器的格式
+### contentType：设置传给服务器的格式
+
 * * application/x-www-form-urlencoded
 
   > jquery的ajax默认的格式，key1=value1&key2=value2。不能传复杂的json对象
@@ -17,7 +18,9 @@
   * multipart/form-data
 
   > 用于文件上传提交文件
-* ### dataType：收到服务器的格式
+
+### dataType：收到服务器的格式
+
 * * json
   * html
   * xml
