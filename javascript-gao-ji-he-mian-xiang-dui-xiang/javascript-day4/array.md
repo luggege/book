@@ -46,12 +46,13 @@
 3. \[\].slice.call\(\)
 
 ```js
-Array.from({1: "a", length: 2})                    // [undefined, "a"]
+1. Array.from({1: "a", length: 2})                    // [undefined, "a"]
 
-Array.prototype.slice.apply({1: "a", length: 2})   // [empty, "a"]
+2. Array.prototype.slice.apply({1: "a", length: 2})   // [empty, "a"]
 
-[].slice.call({1: "a", length: 2})                 // [empty, "a"]
+3. [].slice.call({1: "a", length: 2})                 // [empty, "a"]
 
+[].slice.call({1: "a", length: 2})[0] === Array.from({1: "a", length: 2})[0]      // true
 ```
 
 
