@@ -1,6 +1,6 @@
 ### Map
 
-> 传统的JavaScript只能用字符串当作对象的键，ES6提供了一种Map结构可用**对象当作键- **
+> 传统的JavaScript只能用字符串当作对象的键，ES6提供了一种Map结构可用**对象当作键**
 
 * Map构造函数接受**数组**作为**参数**
 
@@ -29,7 +29,7 @@ items.forEach(([key, value]) => map.set(key, value))
 // Map(2) {"name" => "Jack", "age" => "18"}
 ```
 
-方法：
+#### 方法
 
 ```js
 1. set
@@ -227,6 +227,4 @@ const wm1 = new WeakMap([
 #### 用途
 
 WeakMap典型的应用场合就是DOM节点作为键名，DOM节点删除，该状态自动消失，不存在内存泄漏的风险
-
-
 
