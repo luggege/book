@@ -188,5 +188,45 @@ const map1 = [...map].filter(([key, value]) => key === 'name')
 // [["name", "Jack"]]
 ```
 
+### WeakMap
+
+> 类似于Map结构，用于生成键值对的集合
+
+```js
+const wm = new WeakMap()
+const key = {foo: 1}
+wm.set(key, 2)
+wm.get(key)
+// 2
+```
+
+* 可传数组作为参数，但只能以对象作为键名，不能以基本数据类型和Symbol类型作为键名，否则报错
+
+```js
+const wm1 = new WeakMap([
+    [{foo: 1}, 2],
+    [[4,5,6], 3],
+    [undefined, 5]
+])
+
+// Uncaught TypeError: Invalid value used as weak map key
+```
+
+#### 区别
+
+1. 只能以对象作为键名
+2. WeakMap的健名指向的对象，不计入垃圾回收机制
+
+#### 方法
+
+1. set
+2. get
+3. has
+4. delete
+
+#### 用途
+
+WeakMap典型的应用场合就是DOM节点作为键名，DOM节点删除，该状态自动消失，不存在内存泄漏的风险
+
 
 
