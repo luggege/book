@@ -128,5 +128,6 @@
   * [Symbol](es6/symbol.md)
   * [Array.from\(\)](es6/arrayfrom.md)
   * [Set数据结构](es6/setshu-ju-jie-gou.md)
+  * [Map数据结构](es6/mapshu-ju-jie-gou.md)
 * [HTTP协议](httpxie-yi.md)
 
