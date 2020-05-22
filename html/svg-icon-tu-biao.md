@@ -72,7 +72,7 @@
 >
 > 缺点：兼容性差 支持IE9+，及现代浏览器。浏览器渲染svg的性能一般，不如png。
 
-```javascript
+```js
 1. 引用项目下载下来的iconfont.js文件
 <script src="iconfont.js"></script>
 
