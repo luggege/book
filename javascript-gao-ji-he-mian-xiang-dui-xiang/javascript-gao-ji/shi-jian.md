@@ -32,12 +32,13 @@ Netscape Communicator的事件流是事件**捕获流**。
     </div>
 </div>
 <script>
-
+// addEventListener 默认false冒泡事件
 document.getElementById('div1').addEventListener("click",function(){alert("1");},false);
-document.getElementById('div4').addEventListener("click",function(){alert("4-2");},true);
+document.getElementById('div4').addEventListener("click",function(){alert("4-2");},false);
 document.getElementById('div2').addEventListener("click",function(){alert("2");},true);
 document.getElementById('div3').addEventListener("click",function(){alert("3");},false);
-document.getElementById('div4').addEventListener("click",function(){alert("4");},false);
+document.getElementById('div4').addEventListener("click",function(){alert("4");},true);
+// 2 4-2 4 3 1
 </script>
 ```
 
