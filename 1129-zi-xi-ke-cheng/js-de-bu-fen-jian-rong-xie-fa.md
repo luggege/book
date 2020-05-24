@@ -12,20 +12,18 @@ DOM2是通过addEventListener绑定的事件, 还有IE下的DOM2事件通过atta
 
 ①添加事件方法
 
-* addEventListener\(type,handler,false\)方法用于向指定元素添加事件句柄
+addEventListener\(type,handler,false\)方法用于向指定元素添加事件句柄
 
-  三个参数分别是：
+三个参数分别是：
 
-  * event:必传,
-
-字符串,指定事件名。
+* event:必传,字符串,指定事件名。
 
 注意: 不要使用 "on" 前缀。 例如，使用 "click" ,而不是使用 "onclick"。
 
 提示: 所有 HTML DOM 事件;
 
 * function:必传。指定要事件触发时执行的函数。 当事件对象会作为第一个参数传入函数。 事件对象的类型取决于特定的事件。例如， "click" 事件属于 MouseEvent\(鼠标事件\) 对象
-* useCapture:可选，是否在捕获或冒泡阶段执行 为bool值
+* useCapture:可选，是否在捕获或冒泡阶段执行，为bool值，默认false：冒泡
 
 ```javascript
 addHandler：function(element,type,handler){
