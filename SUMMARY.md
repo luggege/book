@@ -15,6 +15,7 @@
     * [Boolean](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/boolean.md)
     * [String](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/string.md)
     * [Math](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/math.md)
+    * [隐式类型转换](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/yin-shi-lei-xing-zhuan-huan.md)
   * [JavaScript高级知识](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/README.md)
     * [对象的动态特性](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/dui-xiang-de-dong-tai-te-xing.md)
     * [异常处理](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/yi-chang-chu-li.md)
