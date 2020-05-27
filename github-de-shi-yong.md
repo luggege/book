@@ -71,5 +71,5 @@
 5.全局配置邮箱: git config --global user.email "luwenxiu@legalminer.com"
 ```
 
-本地电脑多个账号，无法在github查看提交记录，修改本地全局邮箱
+本地电脑多个账号，多个用户身份提交代码，需要配置多个SSH Key
 
