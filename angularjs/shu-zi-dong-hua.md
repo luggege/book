@@ -13,8 +13,12 @@
 > });
 > ```
 >
-> ```markup
-> <i id="myElementId" count-up start-val="0" end-val="30" scroll-spy-event="elementFirstScrolledIntoView" scroll-spy></i>
+> ```js
+> <i id="myElementId" count-up start-val="0" end-val="30" scroll-spy-event="elementFirstScrolledIntoView" scroll-spy>
+> </i>
 > ```
 
-1. 
+
+
+
+
