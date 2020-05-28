@@ -68,6 +68,17 @@ arr.join('&')           // 1&2&3&4&5
 
 14.sort 排序
 
+```js
+[0, 13, 2, 22, 25, 27, 29, 40, 50, 64].sort()
+// [0, 13, 2, 22, 25, 27, 29, 40, 50, 64]
+
+[0, 13, 2, 22, 25, 27, 29, 40, 50, 64].sort(function(a, b){return a-b})
+// [0, 2, 13, 22, 25, 27, 29, 40, 50, 64]
+
+[0, 13, 2, 22, 25, 27, 29, 40, 50, 64].sort(function(a, b){return b-a})
+// [64, 50, 40, 29, 27, 25, 22, 13, 2, 0]
+```
+
 15.reverse 数组反转
 
 16.concat / Array.prototype.push.apply\(arr1,arr2\) 数组合并
@@ -128,7 +139,7 @@ str.slice(1);       // bcdefg ==> str='abcdefg';
 str.slice(2,5);     // cde ==> str='abcdefg';
 ```
 
-3.substring**\(索引, 索引\)**：  截取
+3.substring**\(索引, 索引\)**：  截取 **原字符串不会改变**
 
 ```javascript
  var str = "abcdefg"
@@ -138,7 +149,7 @@ str.slice(2,5);     // cde ==> str='abcdefg';
  str.substring(4,2); // (智能调换索引值) cd ==> str='abcdefg';
 ```
 
-4.**substr\(索引, 长度\)**：  截取
+4.**substr\(索引, 长度\)**：  截取 **原字符串不会改变**
 
 ```javascript
 var str = "abcdefg"
