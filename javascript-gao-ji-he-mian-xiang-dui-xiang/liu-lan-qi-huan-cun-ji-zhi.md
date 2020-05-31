@@ -37,6 +37,8 @@
 > 用户担心cookie的不安全性，可能会将浏览器的cookie禁用，可以通过navigator.cookieEnabled这个属性检测\(true：cookie启用，flase：禁用\)。
 >
 > 每个cookie的**有效期**和**作用域**都需要通过**字符串**的形式读写document对象的cookie属性来指定
+>
+> 每个domain最多20条cookie，每条cookie长度不能超过4KB，否则会被截掉
 
 1. **有效期**很短暂，随**浏览器关闭而删除**cookie文件。但与sessionStorage不同的是：cookie的有效期是整个**浏览器进程**而不是单个窗口
 2. **作用域**是通过**文档源**和**文档路径**来确定的，默认情况下，cookie和创建他的web页面有关，并对该页面及其该页面**同目录**或者**子目录**的其他页面可见（[http://www.baidu.com/catalog/index.html创建的cookie，在http://www.baidu.com/catalog/test.html和http://www.baidu.com/catalog/test/index.html是可见的）](http://www.baidu.com/catalog/index.html创建的cookie,在http://www.baidu.com/catalog/test.html和http://www.baidu.com/catalog/test/index.html是可见的）)
