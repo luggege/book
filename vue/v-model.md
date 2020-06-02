@@ -1,11 +1,10 @@
-v-model：语法糖
+### v-model：语法糖
 
-* text、textarea：使用value属性和input事件
+* text、textarea：使用 **value **属性和 **input **事件
 
 ```js
  // <input type="text" v-model="value">
 
- <====>
  <input type="text" v-bind:value="value" v-on:input="value = $event.target.value">
 
  <input type="textarea" v-bind:value="value" v-on:input="value = $event.target.value">
@@ -13,13 +12,13 @@ v-model：语法糖
  <p>input的值为：{{value}}</p>
 ```
 
-* radio、checkbox：使用checked属性和change事件
-* * radio
+* radio、checkbox：使用 **checked **属性和 **change **事件
+* * radio：绑定到选中的值
 
 ```js
-<input type="radio" name="person" value="男" v-model="checked">
-<input type="radio" name="person" value="女" v-model="checked">
-<====>
+// <input type="radio" name="person" value="男" v-model="checked">
+// <input type="radio" name="person" value="女" v-model="checked">
+
 <input type="radio" name="person" value="男" v-bind:checked="true" v-on:change="checked = $event.target.value">
 <input type="radio" name="person" value="女" v-bind:checked="true" v-on:change="checked = $event.target.value">
 
@@ -36,16 +35,16 @@ export default {
 </script>
 ```
 
-* * 单个复选框，绑定到布尔值
+* * 单个复选框，绑定到**布尔值**
 
 ```js
 <input type="checkbox" id="checkbox1" name="person" v-model="bool">
 <label for="checkbox1">男</label>
 
-<div>输入的input值为：{{bool}}</div>  // true/false
+<div>输入的input值为：{{bool}}</div>  // true / false
 ```
 
-* * 多个复选框，绑定到选中的数组
+* * 多个复选框，绑定到选中的**数组**
 
 ```js
 <input type="checkbox" id="checkbox1" name="person" value="男" v-model="names">
