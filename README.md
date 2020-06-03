@@ -1,6 +1,6 @@
 # Introduction
 
-This flie is luwenxiu's note book  ....................
+This flie is luwenxiu's note book  .................
 
 旧版Gitbook仓库地址：[https://git.gitbook.com/luggege/book.git](https://git.gitbook.com/luggege/book.git)
 
