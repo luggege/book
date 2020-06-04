@@ -54,6 +54,17 @@ export default {
 <label for="checkbox2">女</label>
 
 <div>输入的input值为：{{names}}</div>  // [ "男", "女" ]
+
+
+<script>
+export default {
+    data(){
+        return {
+            value: [],
+        }
+    }
+}
+</script>
 ```
 
 * slect
