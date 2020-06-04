@@ -19,8 +19,8 @@
 // <input type="radio" name="person" value="男" v-model="checked">
 // <input type="radio" name="person" value="女" v-model="checked">
 
-<input type="radio" name="person" value="男" v-bind:checked="true" v-on:change="checked = $event.target.value">
-<input type="radio" name="person" value="女" v-bind:checked="true" v-on:change="checked = $event.target.value">
+<input type="radio" name="person" value="男" v-on:change="$event.target.checked ? value = $event.target.value : ''">
+<input type="radio" name="person" value="女" v-on:change="$event.target.checked ? value = $event.target.value : ''">
 
 <div>输入的input值为：{{checked}}</div>  // 选中的value值
 
@@ -38,20 +38,35 @@ export default {
 * * 单个复选框，绑定到**布尔值**
 
 ```js
-<input type="checkbox" id="checkbox1" name="person" v-model="bool">
-<label for="checkbox1">男</label>
+// <input type="checkbox" id="checkbox1" name="person" v-model="bool">
+// <label for="checkbox1">男</label>
+
+<input type="checkbox" v-bind:checked="bool" v-on:change="bool= $event.target.checked">
 
 <div>输入的input值为：{{bool}}</div>  // true / false
+
+<script>
+export default {
+    data(){
+        return {
+            bool: false,
+        }
+    }
+}
+</script>
 ```
 
 * * 多个复选框，绑定到选中的**数组**
 
 ```js
-<input type="checkbox" id="checkbox1" name="person" value="男" v-model="names">
-<label for="checkbox1">男</label>
+// <input type="checkbox" id="checkbox1" name="person" value="男" v-model="names">
+// <label for="checkbox1">男</label>
 
-<input type="checkbox" id="checkbox2" name="person" value="女" v-model="names">
-<label for="checkbox2">女</label>
+// <input type="checkbox" id="checkbox2" name="person" value="女" v-model="names">
+// <label for="checkbox2">女</label>
+
+<input type="checkbox" value="男" v-on:change="$event.target.checked ? names.push($event.target.value) : names.splice(names.indexOf($event.target.value), 1)">
+<input type="checkbox" value="女" v-on:change="$event.target.checked ? names.push($event.target.value) : names.splice(names.indexOf($event.target.value), 1)">
 
 <div>输入的input值为：{{names}}</div>  // [ "男", "女" ]
 
@@ -60,24 +75,31 @@ export default {
 export default {
     data(){
         return {
-            value: [],
+            names: [],
         }
     }
 }
 </script>
 ```
 
-* slect
+* slect：利用 **change **事件，绑定到选中的值
 
 ```js
-<select v-model="value" multiple>
-    <option value="">请选择</option>
+<!-- <select name="" id="" v-model="value">
     <option value="A">A</option>
     <option value="B">B</option>
     <option value="C">C</option>
+    <option value="D">D</option>
+  </select> -->
+
+<select name="" id="" v-on:change="value = $event.target.value">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
 </select>
 
-value: '', // []
+value: '', // A
 ```
 
 
