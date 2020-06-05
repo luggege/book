@@ -82,7 +82,7 @@ export default {
 </script>
 ```
 
-* slect：利用 **change **事件，绑定到选中的值
+* slect：利用 **change **事件，单选时：绑定到选中的值，多选时：绑定到选中的数组
 
 ```js
 // <select name="" id="" v-model="value">
@@ -101,6 +101,12 @@ export default {
 
 value: '', // A
 ```
+
+### 修饰符
+
+* lazy：将 **input **转为 **change**
+* number：转为数字
+* trim：去除空白字符
 
 
 
