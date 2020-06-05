@@ -85,12 +85,12 @@ export default {
 * slect：利用 **change **事件，绑定到选中的值
 
 ```js
-<!-- <select name="" id="" v-model="value">
-    <option value="A">A</option>
-    <option value="B">B</option>
-    <option value="C">C</option>
-    <option value="D">D</option>
-  </select> -->
+// <select name="" id="" v-model="value">
+//     <option value="A">A</option>
+//     <option value="B">B</option>
+//     <option value="C">C</option>
+//     <option value="D">D</option>
+// </select>
 
 <select name="" id="" v-on:change="value = $event.target.value">
     <option value="A">A</option>
