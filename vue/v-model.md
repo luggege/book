@@ -108,5 +108,7 @@ value: '', // A
 * number：转为数字
 * trim：去除空白字符
 
+### 自定义组件的v-model
+
 
 
