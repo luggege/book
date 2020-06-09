@@ -110,5 +110,7 @@ value: '', // A
 
 ### 自定义组件的v-model
 
+v-model
+
 
 
