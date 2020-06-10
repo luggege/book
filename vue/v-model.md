@@ -110,7 +110,27 @@ value: '', // A
 
 ### 自定义组件的v-model
 
-v-model
+```js
+// <custom v-model='something'></custom>
 
+<custom :value="something" @input="value => { something = value }"></custom>
+
+// 子组件中
+this.$emit('input', '子组件的新值')
+```
+
+#### .sync修饰符
+> v-model 双向数据绑定，子组件和父组件中没有明显的改动来源，所以推荐用update:prop的模式触发事件取而代之
+
+```js
+// 子组件
+this.$emit('update:loginVue', '子组件的新值')
+
+// 父组件
+<custom v-bind:loginVue="loginVue" v-on:update:loginVue="loginVue = $event"></custom>
+
+// .sync修饰符，即为这种模式的缩写
+<custom v-bind:loginVue.sync="loginVue"></custom>
+```
 
 
