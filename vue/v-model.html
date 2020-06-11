@@ -2133,14 +2133,37 @@ export default {
 
 value: &apos;&apos;, // A
 </code></pre>
-<h3 id="&#x4FEE;&#x9970;&#x7B26;">&#x4FEE;&#x9970;&#x7B26;</h3>
+<h4 id="&#x4FEE;&#x9970;&#x7B26;">&#x4FEE;&#x9970;&#x7B26;</h4>
 <ul>
 <li>lazy&#xFF1A;&#x5C06; <strong>input </strong>&#x8F6C;&#x4E3A; <strong>change</strong></li>
 <li>number&#xFF1A;&#x8F6C;&#x4E3A;&#x6570;&#x5B57;</li>
 <li>trim&#xFF1A;&#x53BB;&#x9664;&#x7A7A;&#x767D;&#x5B57;&#x7B26;</li>
 </ul>
 <h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;v-model">&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;v-model</h3>
-<p>v-model</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x7236;&#x7EC4;&#x4EF6;</span>
+&lt;heatmapChart v-model=<span class="hljs-string">&quot;newValue&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">heatmapChart</span>&gt;</span></span>
+
+<span class="hljs-comment">// &#x5B50;&#x7EC4;&#x4EF6;</span>
+<span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">&apos;input&apos;</span>, <span class="hljs-string">&apos;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&apos;</span>)
+</code></pre>
+<h3 id="sync&#x4FEE;&#x9970;&#x7B26;">.sync&#x4FEE;&#x9970;&#x7B26;</h3>
+<blockquote>
+<p>v-model &#x5B9E;&#x73B0;&#x7684;&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#xFF0C;&#x7236;&#x5B50;&#x7EC4;&#x4EF6;&#x6CA1;&#x6709;&#x660E;&#x663E;&#x7684;&#x6539;&#x52A8;&#x6765;&#x6E90;&#x3002;&#x6545;&#x63D0;&#x51FA;.sync&#x4FEE;&#x9970;&#x7B26;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x7236;&#x7EC4;&#x4EF6;</span>
+&lt;heatmapChart v-bind:value=<span class="hljs-string">&quot;newValue&quot;</span> v-on:update:value=<span class="hljs-string">&quot;newValue = $event&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">heatmapChart</span>&gt;</span></span>
+
+<span class="hljs-comment">// &#x5B50;&#x7EC4;&#x4EF6;</span>
+props: {
+    value: <span class="hljs-string">&apos;&apos;</span>
+}
+
+<span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">&apos;update:value&apos;</span>, <span class="hljs-string">&apos;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&apos;</span>)
+</code></pre>
+<p>&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x7B80;&#x5199;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x7236;&#x7EC4;&#x4EF6;</span>
+&lt;heatmapChart v-bind:value.sync=<span class="hljs-string">&quot;newValue&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">heatmapChart</span>&gt;</span></span>
+</code></pre>
 
                                 
                                 </section>
@@ -2184,7 +2207,7 @@ value: &apos;&apos;, // A
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"v-model","level":"1.13.6","depth":2,"next":{"title":"this.$set","level":"1.13.7","depth":2,"path":"vue/thisset.md","ref":"vue/thisset.md","articles":[]},"previous":{"title":"mpvue lifecycle","level":"1.13.5","depth":2,"path":"vue/mpvue-lifecycle.md","ref":"vue/mpvue-lifecycle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/v-model.md","mtime":"2020-06-11T00:58:35.031Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-11T03:56:11.705Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"v-model","level":"1.13.6","depth":2,"next":{"title":"this.$set","level":"1.13.7","depth":2,"path":"vue/thisset.md","ref":"vue/thisset.md","articles":[]},"previous":{"title":"mpvue lifecycle","level":"1.13.5","depth":2,"path":"vue/mpvue-lifecycle.md","ref":"vue/mpvue-lifecycle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/v-model.md","mtime":"2020-06-11T09:41:23.428Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-11T09:42:48.789Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -102,7 +102,7 @@ export default {
 value: '', // A
 ```
 
-### 修饰符
+#### 修饰符
 
 * lazy：将 **input **转为 **change**
 * number：转为数字
@@ -110,7 +110,36 @@ value: '', // A
 
 ### 自定义组件的v-model
 
-v-model
+```js
+// 父组件
+<heatmapChart v-model="newValue"></heatmapChart>
+
+// 子组件
+this.$emit('input', '我是子组件')
+```
+
+### .sync修饰符
+
+> v-model 实现的双向数据绑定，父子组件没有明显的改动来源。故提出.sync修饰符
+
+```js
+// 父组件
+<heatmapChart v-bind:value="newValue" v-on:update:value="newValue = $event"></heatmapChart>
+
+// 子组件
+props: {
+    value: ''
+}
+
+this.$emit('update:value', '我是子组件')
+```
+
+提供了一种简写
+
+```js
+// 父组件
+<heatmapChart v-bind:value.sync="newValue"></heatmapChart>
+```
 
 
 
