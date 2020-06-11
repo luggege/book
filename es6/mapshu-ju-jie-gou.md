@@ -92,7 +92,7 @@ map.size
 
 5. keys
 map.keys()
-// MapIterator {{…}, "name", "age"}
+// MapIterator {…}, "name", "age"}
 
 6. values
 map.values()
@@ -100,7 +100,7 @@ map.values()
 
 7. entries
 map.entries()
-// MapIterator {{…} => "content", "name" => "Jack", "age" => "18"}
+// MapIterator {…} => "content", "name" => "Jack", "age" => "18"}
 
 8. forEach
 map.forEach((value, key) => console.log(key,value))
