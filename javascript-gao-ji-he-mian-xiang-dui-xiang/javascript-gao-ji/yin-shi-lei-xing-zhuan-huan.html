@@ -1,0 +1,2062 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>隐式类型转换 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="./" />
+    
+    
+    <link rel="prev" href="../javascript-day4/math.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../chapter1/">
+            
+                <a href="../../chapter1/">
+            
+                    
+                    canvas
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../chapter1/canvas-day1.html">
+            
+                <a href="../../chapter1/canvas-day1.html">
+            
+                    
+                    canvas day1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../chapter1/canvas-di-er-tian.html">
+            
+                <a href="../../chapter1/canvas-di-er-tian.html">
+            
+                    
+                    canvas day2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../chapter1/canvas-di-3-tian.html">
+            
+                <a href="../../chapter1/canvas-di-3-tian.html">
+            
+                    
+                    canvas day3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../chapter1/canvas-di-si-tian.html">
+            
+                <a href="../../chapter1/canvas-di-si-tian.html">
+            
+                    
+                    canvas day4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../javascript-day4/">
+            
+                <a href="../javascript-day4/">
+            
+                    
+                    javascript基础复习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="zhi-lei-xing-he-yin-yong-lei-xing.html">
+            
+                <a href="zhi-lei-xing-he-yin-yong-lei-xing.html">
+            
+                    
+                    值类型和引用类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../javascript-day4/array.html">
+            
+                <a href="../javascript-day4/array.html">
+            
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../javascript-day4/date.html">
+            
+                <a href="../javascript-day4/date.html">
+            
+                    
+                    Date
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../javascript-day4/number.html">
+            
+                <a href="../javascript-day4/number.html">
+            
+                    
+                    Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../javascript-day4/boolean.html">
+            
+                <a href="../javascript-day4/boolean.html">
+            
+                    
+                    Boolean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../javascript-day4/string.html">
+            
+                <a href="../javascript-day4/string.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../javascript-day4/math.html">
+            
+                <a href="../javascript-day4/math.html">
+            
+                    
+                    Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.8" data-path="yin-shi-lei-xing-zhuan-huan.html">
+            
+                <a href="yin-shi-lei-xing-zhuan-huan.html">
+            
+                    
+                    隐式类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    JavaScript高级知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="dui-xiang-de-dong-tai-te-xing.html">
+            
+                <a href="dui-xiang-de-dong-tai-te-xing.html">
+            
+                    
+                    对象的动态特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="yi-chang-chu-li.html">
+            
+                <a href="yi-chang-chu-li.html">
+            
+                    
+                    异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="ci-fa-zuo-yong-yu/">
+            
+                <a href="ci-fa-zuo-yong-yu/">
+            
+                    
+                    作用域
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.3.1" data-path="ci-fa-zuo-yong-yu/zuo-yong-yu-lian.html">
+            
+                <a href="ci-fa-zuo-yong-yu/zuo-yong-yu-lian.html">
+            
+                    
+                    作用域链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3.2" data-path="ci-fa-zuo-yong-yu/ci-fa-zuo-yong-yu.html">
+            
+                <a href="ci-fa-zuo-yong-yu/ci-fa-zuo-yong-yu.html">
+            
+                    
+                    词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3.3" data-path="ci-fa-zuo-yong-yu/javascript-yu-jie-xi.html">
+            
+                <a href="ci-fa-zuo-yong-yu/javascript-yu-jie-xi.html">
+            
+                    
+                    JavaScript预解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian/">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian/">
+            
+                    
+                    原型链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.4.1" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian/yuan-xing-lian-jie-gou.html">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian/yuan-xing-lian-jie-gou.html">
+            
+                    
+                    原型链结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4.2" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/proto.html">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/proto.html">
+            
+                    
+                    __proto__
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4.3" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/objectprototypecheng-yuan-jie-shao.html">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/objectprototypecheng-yuan-jie-shao.html">
+            
+                    
+                    Object.prototype成员介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4.4" data-path="ji-cheng.html">
+            
+                <a href="ji-cheng.html">
+            
+                    
+                    继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/">
+            
+                    
+                    面向对象内容总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.5.1" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/gou-zao-han-shu.html">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/gou-zao-han-shu.html">
+            
+                    
+                    构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5.2" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-de-san-da-te-xing.html">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-de-san-da-te-xing.html">
+            
+                    
+                    面向对象的三大特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5.3" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/chuan-tong-gou-zao-han-shu-cun-zai-de-wen-ti.html">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/chuan-tong-gou-zao-han-shu-cun-zai-de-wen-ti.html">
+            
+                    
+                    传统构造函数存在的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5.4" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/shi-yong-yuan-xing-jie-jue-gou-zao-han-shu-wen-ti.html">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/shi-yong-yuan-xing-jie-jue-gou-zao-han-shu-wen-ti.html">
+            
+                    
+                    使用原型解决构造函数问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5.5" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-xiang-guan-gai-nian.html">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-xiang-guan-gai-nian.html">
+            
+                    
+                    原型相关概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5.6" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-de-shi-yong.html">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-de-shi-yong.html">
+            
+                    
+                    原型的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5.7" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-san-jiao-hui-zhi.html">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-san-jiao-hui-zhi.html">
+            
+                    
+                    原型三角绘制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/">
+            
+                    
+                    对象相关的其他知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.6.1" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/functionjie-shao-ji-shi-yong.html">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/functionjie-shao-ji-shi-yong.html">
+            
+                    
+                    Function介绍及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6.2" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/jie-jue-dai-ma-tai-chang-de-wen-ti.html">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/jie-jue-dai-ma-tai-chang-de-wen-ti.html">
+            
+                    
+                    解决代码太长的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6.3" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/jing-tai-cheng-yuan-he-shi-li-cheng-yuan.html">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/jing-tai-cheng-yuan-he-shi-li-cheng-yuan.html">
+            
+                    
+                    静态成员和实例成员
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6.4" data-path="../mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/argumentsdui-xiang.html">
+            
+                <a href="../mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/argumentsdui-xiang.html">
+            
+                    
+                    arguments对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../javascript-day4/eval.html">
+            
+                <a href="../javascript-day4/eval.html">
+            
+                    
+                    eval
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="bi-bao.html">
+            
+                <a href="bi-bao.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="shi-jian.html">
+            
+                <a href="shi-jian.html">
+            
+                    
+                    事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="han-shu-de-si-zhong-diao-yong-mo-shi.html">
+            
+                <a href="han-shu-de-si-zhong-diao-yong-mo-shi.html">
+            
+                    
+                    函数的四种调用模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.11" data-path="call-andand-apply.html">
+            
+                <a href="call-andand-apply.html">
+            
+                    
+                    call && apply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.12" data-path="wei-ren-wu-3001-hong-ren-wu.html">
+            
+                <a href="wei-ren-wu-3001-hong-ren-wu.html">
+            
+                    
+                    微任务、宏任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.13" data-path="fang-dou-yu-jie-liu.html">
+            
+                <a href="fang-dou-yu-jie-liu.html">
+            
+                    
+                    防抖与节流
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="domcao-zuo-fu-xi.html">
+            
+                <a href="domcao-zuo-fu-xi.html">
+            
+                    
+                    DOM操作复习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../mian-xiang-dui-xiang-day3.html">
+            
+                <a href="../mian-xiang-dui-xiang-day3.html">
+            
+                    
+                    jQuery API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../javascript-day4/mao-pao-pai-xu.html">
+            
+                <a href="../javascript-day4/mao-pao-pai-xu.html">
+            
+                    
+                    冒泡排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="shu-zu-qu-zhong.html">
+            
+                <a href="shu-zu-qu-zhong.html">
+            
+                    
+                    数组去重
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="for-infor-offoreach-de-qu-bie.html">
+            
+                <a href="for-infor-offoreach-de-qu-bie.html">
+            
+                    
+                    几种遍历方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="shen-kao-bei-qian-kao-bei.html">
+            
+                <a href="shen-kao-bei-qian-kao-bei.html">
+            
+                    
+                    深拷贝浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="pan-duan-shu-ju-lei-xing.html">
+            
+                <a href="pan-duan-shu-ju-lei-xing.html">
+            
+                    
+                    判断数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../liu-lan-qi-huan-cun-ji-zhi.html">
+            
+                <a href="../liu-lan-qi-huan-cun-ji-zhi.html">
+            
+                    
+                    浏览器缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../liu-hang-kuang-jia/">
+            
+                <a href="../../liu-hang-kuang-jia/">
+            
+                    
+                    流行框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../liu-hang-kuang-jia/git.html">
+            
+                <a href="../../liu-hang-kuang-jia/git.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../liu-hang-kuang-jia/angular.html">
+            
+                <a href="../../liu-hang-kuang-jia/angular.html">
+            
+                    
+                    angular
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../liu-hang-kuang-jia/gulp.html">
+            
+                <a href="../../liu-hang-kuang-jia/gulp.html">
+            
+                    
+                    gulp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../yi-dong-web/">
+            
+                <a href="../../yi-dong-web/">
+            
+                    
+                    移动Web
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../yi-dong-web/ping-mu-shi-pei.html">
+            
+                <a href="../../yi-dong-web/ping-mu-shi-pei.html">
+            
+                    
+                    屏幕适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../yi-dong-web/iosjian-rong-wen-ti.html">
+            
+                <a href="../../yi-dong-web/iosjian-rong-wen-ti.html">
+            
+                    
+                    IOS兼容问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../github-de-shi-yong.html">
+            
+                <a href="../../github-de-shi-yong.html">
+            
+                    
+                    github创建自己的电子书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../nodejs/">
+            
+                <a href="../../nodejs/">
+            
+                    
+                    Node.Js
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../nodejs/day1.html">
+            
+                <a href="../../nodejs/day1.html">
+            
+                    
+                    node基础及requirejs/seajs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../nodejs/zong-jie.html">
+            
+                <a href="../../nodejs/zong-jie.html">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../nodejs/day2.html">
+            
+                <a href="../../nodejs/day2.html">
+            
+                    
+                    day2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../nodejs/day3.html">
+            
+                <a href="../../nodejs/day3.html">
+            
+                    
+                    day3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../nodejs/day4-tiao-shi-xian-cheng-jin-cheng.html">
+            
+                <a href="../../nodejs/day4-tiao-shi-xian-cheng-jin-cheng.html">
+            
+                    
+                    day4调试,线程进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../nodejs/http.html">
+            
+                <a href="../../nodejs/http.html">
+            
+                    
+                    http
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../../nodejs/shu-ju-ku.html">
+            
+                <a href="../../nodejs/shu-ju-ku.html">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../../nodejs/zhong-jian-jian.html">
+            
+                <a href="../../nodejs/zhong-jian-jian.html">
+            
+                    
+                    中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../mian-shi-ti-zong-jie/">
+            
+                <a href="../../mian-shi-ti-zong-jie/">
+            
+                    
+                    面试题总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../mian-shi-ti-zong-jie/htmlcssjavascript.html">
+            
+                <a href="../../mian-shi-ti-zong-jie/htmlcssjavascript.html">
+            
+                    
+                    HTML+CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../mian-shi-ti-zong-jie/kua-yu-wen-ti.html">
+            
+                <a href="../../mian-shi-ti-zong-jie/kua-yu-wen-ti.html">
+            
+                    
+                    跨域问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../1129-zi-xi-ke-cheng/">
+            
+                <a href="../../1129-zi-xi-ke-cheng/">
+            
+                    
+                    html/css/js
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../1129-zi-xi-ke-cheng/css-de-bu-fen-jian-rong-xie-fa.html">
+            
+                <a href="../../1129-zi-xi-ke-cheng/css-de-bu-fen-jian-rong-xie-fa.html">
+            
+                    
+                    CSS的部分兼容写法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../1129-zi-xi-ke-cheng/html5-de-bei-wang-lu.html">
+            
+                <a href="../../1129-zi-xi-ke-cheng/html5-de-bei-wang-lu.html">
+            
+                    
+                    HTML5的备忘录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../1129-zi-xi-ke-cheng/js-de-bu-fen-jian-rong-xie-fa.html">
+            
+                <a href="../../1129-zi-xi-ke-cheng/js-de-bu-fen-jian-rong-xie-fa.html">
+            
+                    
+                    js的部分兼容写法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../1129-zi-xi-ke-cheng/wang-ye-tong-guo-w3c-de-biao-zhun.html">
+            
+                <a href="../../1129-zi-xi-ke-cheng/wang-ye-tong-guo-w3c-de-biao-zhun.html">
+            
+                    
+                    网页通过W3C的标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../html/">
+            
+                <a href="../../html/">
+            
+                    
+                    扩展技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../html/xiao-cheng-xu-kai-fa.html">
+            
+                <a href="../../html/xiao-cheng-xu-kai-fa.html">
+            
+                    
+                    小程序开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../html/hun-he-da-bao.html">
+            
+                <a href="../../html/hun-he-da-bao.html">
+            
+                    
+                    混合打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../../html/chromecha-jian.html">
+            
+                <a href="../../html/chromecha-jian.html">
+            
+                    
+                    chrome插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../../html/rong-yun-ke-fu.html">
+            
+                <a href="../../html/rong-yun-ke-fu.html">
+            
+                    
+                    融云客服
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../../html/rong-yun-kai-fa-wen-dang.html">
+            
+                <a href="../../html/rong-yun-kai-fa-wen-dang.html">
+            
+                    
+                    融云开发文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../../html/svg-icon-tu-biao.html">
+            
+                <a href="../../html/svg-icon-tu-biao.html">
+            
+                    
+                    svg-sprite
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../gong-zuo-wen-ti-zong-jie/">
+            
+                <a href="../../gong-zuo-wen-ti-zong-jie/">
+            
+                    
+                    工作总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../gong-zuo-wen-ti-zong-jie/select.html">
+            
+                <a href="../../gong-zuo-wen-ti-zong-jie/select.html">
+            
+                    
+                    选项卡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../../gong-zuo-wen-ti-zong-jie/kai-fa-jing-yan-xi-sui-dian.html">
+            
+                <a href="../../gong-zuo-wen-ti-zong-jie/kai-fa-jing-yan-xi-sui-dian.html">
+            
+                    
+                    开发经验细碎点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../../gong-zuo-wen-ti-zong-jie/huo-qu-liu-lan-qi-kuan-gao.html">
+            
+                <a href="../../gong-zuo-wen-ti-zong-jie/huo-qu-liu-lan-qi-kuan-gao.html">
+            
+                    
+                    浏览器相关问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../../gong-zuo-wen-ti-zong-jie/bai-du-ueditor-bian-ji-qi.html">
+            
+                <a href="../../gong-zuo-wen-ti-zong-jie/bai-du-ueditor-bian-ji-qi.html">
+            
+                    
+                    百度UEditor编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../../gong-zuo-wen-ti-zong-jie/cssbu-ju.html">
+            
+                <a href="../../gong-zuo-wen-ti-zong-jie/cssbu-ju.html">
+            
+                    
+                    CSS布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../../gong-zuo-wen-ti-zong-jie/qian-duan-you-hua.html">
+            
+                <a href="../../gong-zuo-wen-ti-zong-jie/qian-duan-you-hua.html">
+            
+                    
+                    前端优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../../gong-zuo-wen-ti-zong-jie/la-ji-hui-shou-ji-zhi-yu-nei-cun-xie-lou.html">
+            
+                <a href="../../gong-zuo-wen-ti-zong-jie/la-ji-hui-shou-ji-zhi-yu-nei-cun-xie-lou.html">
+            
+                    
+                    垃圾回收机制与内存泄漏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../../gong-zuo-wen-ti-zong-jie/contenttype.html">
+            
+                <a href="../../gong-zuo-wen-ti-zong-jie/contenttype.html">
+            
+                    
+                    contentType
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../angularjs/">
+            
+                <a href="../../angularjs/">
+            
+                    
+                    AngularJs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../angularjs/modules.html">
+            
+                <a href="../../angularjs/modules.html">
+            
+                    
+                    modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../angularjs/zhi-ling-de-shi-yong.html">
+            
+                <a href="../../angularjs/zhi-ling-de-shi-yong.html">
+            
+                    
+                    指令的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../../angularjs/shu-zi-dong-hua.html">
+            
+                <a href="../../angularjs/shu-zi-dong-hua.html">
+            
+                    
+                    数字动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../vue/">
+            
+                <a href="../../vue/">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../vue/mvc-he-mvvm-de-qu-bie.html">
+            
+                <a href="../../vue/mvc-he-mvvm-de-qu-bie.html">
+            
+                    
+                    MVC和MVVM的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../../vue/vuede-an-zhuang-ji-shi-yong.html">
+            
+                <a href="../../vue/vuede-an-zhuang-ji-shi-yong.html">
+            
+                    
+                    vue的安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../../vue/lifecycle.html">
+            
+                <a href="../../vue/lifecycle.html">
+            
+                    
+                    lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../../vue/fu-zi-zu-jian-sheng-ming-zhou-qi-zhi-xing-shun-xu.html">
+            
+                <a href="../../vue/fu-zi-zu-jian-sheng-ming-zhou-qi-zhi-xing-shun-xu.html">
+            
+                    
+                    父子组件生命周期执行顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../../vue/mpvue-lifecycle.html">
+            
+                <a href="../../vue/mpvue-lifecycle.html">
+            
+                    
+                    mpvue lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../../vue/v-model.html">
+            
+                <a href="../../vue/v-model.html">
+            
+                    
+                    v-model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../../vue/thisset.html">
+            
+                <a href="../../vue/thisset.html">
+            
+                    
+                    this.$set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="../../vue/zu-jian-tong-xin.html">
+            
+                <a href="../../vue/zu-jian-tong-xin.html">
+            
+                    
+                    组件通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" data-path="../../vue/computedyu-watch-de-qu-bie.html">
+            
+                <a href="../../vue/computedyu-watch-de-qu-bie.html">
+            
+                    
+                    computed与watch的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.10" data-path="../../vue/zi-ding-yi-zhi-ling.html">
+            
+                <a href="../../vue/zi-ding-yi-zhi-ling.html">
+            
+                    
+                    自定义指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.11" data-path="../../vue/vuex.html">
+            
+                <a href="../../vue/vuex.html">
+            
+                    
+                    Vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.12" data-path="../../vue/vue-router.html">
+            
+                <a href="../../vue/vue-router.html">
+            
+                    
+                    Vue Router
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../vue/es5.html">
+            
+                <a href="../../vue/es5.html">
+            
+                    
+                    ES5
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../../vue/es5/objectkeys.html">
+            
+                <a href="../../vue/es5/objectkeys.html">
+            
+                    
+                    Object.keys()/Object.values()/Object.entries()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../../vue/es5/objectdefineproperty.html">
+            
+                <a href="../../vue/es5/objectdefineproperty.html">
+            
+                    
+                    Object.defineProperty()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../../vue/es5/objectgetownpropertydescriptor.html">
+            
+                <a href="../../vue/es5/objectgetownpropertydescriptor.html">
+            
+                    
+                    Object.getOwnPropertyDescriptor()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../../vue/es5/objectcreate.html">
+            
+                <a href="../../vue/es5/objectcreate.html">
+            
+                    
+                    Object.create()
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../es6/">
+            
+                <a href="../../es6/">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../../es6/jian-tou-han-shu.html">
+            
+                <a href="../../es6/jian-tou-han-shu.html">
+            
+                    
+                    箭头函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../../es6/promise.html">
+            
+                <a href="../../es6/promise.html">
+            
+                    
+                    Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../../es6/assign.html">
+            
+                <a href="../../es6/assign.html">
+            
+                    
+                    Object.assign()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../../es6/kuo-zhan-yun-suan-fu.html">
+            
+                <a href="../../es6/kuo-zhan-yun-suan-fu.html">
+            
+                    
+                    扩展运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../../es6/bian-liang-de-jie-gou-fu-zhi.html">
+            
+                <a href="../../es6/bian-liang-de-jie-gou-fu-zhi.html">
+            
+                    
+                    变量的解构赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../../es6/let-he-const-ming-ling.html">
+            
+                <a href="../../es6/let-he-const-ming-ling.html">
+            
+                    
+                    let 和 const 命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../../es6/symbol.html">
+            
+                <a href="../../es6/symbol.html">
+            
+                    
+                    Symbol
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../../es6/arrayfrom.html">
+            
+                <a href="../../es6/arrayfrom.html">
+            
+                    
+                    Array.from()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.9" data-path="../../es6/setshu-ju-jie-gou.html">
+            
+                <a href="../../es6/setshu-ju-jie-gou.html">
+            
+                    
+                    Set数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.10" data-path="../../es6/mapshu-ju-jie-gou.html">
+            
+                <a href="../../es6/mapshu-ju-jie-gou.html">
+            
+                    
+                    Map数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../../httpxie-yi.html">
+            
+                <a href="../../httpxie-yi.html">
+            
+                    
+                    HTTP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >隐式类型转换</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;">&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;</h3>
+<pre><code class="lang-js"><span class="hljs-number">1.</span> &#x5B57;&#x7B26;&#x4E32;&#x901A;&#x8FC7;<span class="hljs-built_in">Number</span>&#x8F6C;&#x4E3A;&#x6570;&#x5B57;&#xFF0C;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;
+<span class="hljs-number">2</span> == <span class="hljs-string">&apos;2&apos;</span>    <span class="hljs-comment">// true</span>
+
+<span class="hljs-number">2.</span> &#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x8F6C;&#x4E3A;&#x6570;&#x503C;
+<span class="hljs-number">0</span> == <span class="hljs-literal">false</span>  <span class="hljs-comment">// true</span>
+<span class="hljs-string">&apos;&apos;</span> == <span class="hljs-literal">false</span> <span class="hljs-comment">// true  </span>
+<span class="hljs-string">&apos;0&apos;</span> == <span class="hljs-literal">false</span><span class="hljs-comment">// true</span>
+<span class="hljs-string">&apos;&apos;</span> == <span class="hljs-string">&apos;0&apos;</span>   <span class="hljs-comment">// false</span>
+
+<span class="hljs-number">3.</span> <span class="hljs-literal">null</span> <span class="hljs-literal">undefined</span> &#x4E0D;&#x8FDB;&#x884C;&#x8F6C;&#x6362;
+<span class="hljs-literal">null</span> == <span class="hljs-literal">undefined</span> <span class="hljs-comment">// true</span>
+
+<span class="hljs-number">4.</span> <span class="hljs-literal">NaN</span>
+<span class="hljs-literal">NaN</span> == <span class="hljs-literal">NaN</span>  <span class="hljs-comment">// false</span>
+
+<span class="hljs-number">5.</span> <span class="hljs-built_in">Object</span>&#x8F6C;&#x4E3A;<span class="hljs-built_in">Number</span>&#x6216;<span class="hljs-built_in">String</span>&#xFF0C;&#x53D6;&#x51B3;&#x4E8E;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x6BD4;&#x91CF;&#x7684;&#x503C;
+[] == <span class="hljs-number">0</span>     <span class="hljs-comment">// false</span>
+[] == <span class="hljs-literal">true</span>  <span class="hljs-comment">// false</span>
+[] == ![]   <span class="hljs-comment">// true</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../javascript-day4/math.html" class="navigation navigation-prev " aria-label="Previous page: Math">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="./" class="navigation navigation-next " aria-label="Next page: JavaScript高级知识">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"隐式类型转换","level":"1.3.1.8","depth":3,"next":{"title":"JavaScript高级知识","level":"1.3.2","depth":2,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/README.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/README.md","articles":[{"title":"对象的动态特性","level":"1.3.2.1","depth":3,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/dui-xiang-de-dong-tai-te-xing.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/dui-xiang-de-dong-tai-te-xing.md","articles":[]},{"title":"异常处理","level":"1.3.2.2","depth":3,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/yi-chang-chu-li.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/yi-chang-chu-li.md","articles":[]},{"title":"作用域","level":"1.3.2.3","depth":3,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/ci-fa-zuo-yong-yu/README.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/ci-fa-zuo-yong-yu/README.md","articles":[{"title":"作用域链","level":"1.3.2.3.1","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/ci-fa-zuo-yong-yu/zuo-yong-yu-lian.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/ci-fa-zuo-yong-yu/zuo-yong-yu-lian.md","articles":[]},{"title":"词法作用域","level":"1.3.2.3.2","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/ci-fa-zuo-yong-yu/ci-fa-zuo-yong-yu.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/ci-fa-zuo-yong-yu/ci-fa-zuo-yong-yu.md","articles":[]},{"title":"JavaScript预解析","level":"1.3.2.3.3","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/ci-fa-zuo-yong-yu/javascript-yu-jie-xi.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/ci-fa-zuo-yong-yu/javascript-yu-jie-xi.md","articles":[]}]},{"title":"原型链","level":"1.3.2.4","depth":3,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian/README.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian/README.md","articles":[{"title":"原型链结构","level":"1.3.2.4.1","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian/yuan-xing-lian-jie-gou.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-lian/yuan-xing-lian-jie-gou.md","articles":[]},{"title":"__proto__","level":"1.3.2.4.2","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/proto.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/proto.md","articles":[]},{"title":"Object.prototype成员介绍","level":"1.3.2.4.3","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/objectprototypecheng-yuan-jie-shao.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/objectprototypecheng-yuan-jie-shao.md","articles":[]},{"title":"继承","level":"1.3.2.4.4","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/ji-cheng.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/ji-cheng.md","articles":[]}]},{"title":"面向对象内容总结","level":"1.3.2.5","depth":3,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/README.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/README.md","articles":[{"title":"构造函数","level":"1.3.2.5.1","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/gou-zao-han-shu.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/gou-zao-han-shu.md","articles":[]},{"title":"面向对象的三大特性","level":"1.3.2.5.2","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-de-san-da-te-xing.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-de-san-da-te-xing.md","articles":[]},{"title":"传统构造函数存在的问题","level":"1.3.2.5.3","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/chuan-tong-gou-zao-han-shu-cun-zai-de-wen-ti.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/chuan-tong-gou-zao-han-shu-cun-zai-de-wen-ti.md","articles":[]},{"title":"使用原型解决构造函数问题","level":"1.3.2.5.4","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/shi-yong-yuan-xing-jie-jue-gou-zao-han-shu-wen-ti.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/shi-yong-yuan-xing-jie-jue-gou-zao-han-shu-wen-ti.md","articles":[]},{"title":"原型相关概念","level":"1.3.2.5.5","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-xiang-guan-gai-nian.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-xiang-guan-gai-nian.md","articles":[]},{"title":"原型的使用","level":"1.3.2.5.6","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-de-shi-yong.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-de-shi-yong.md","articles":[]},{"title":"原型三角绘制","level":"1.3.2.5.7","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-san-jiao-hui-zhi.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/yuan-xing-san-jiao-hui-zhi.md","articles":[]}]},{"title":"对象相关的其他知识","level":"1.3.2.6","depth":3,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/README.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/README.md","articles":[{"title":"Function介绍及使用","level":"1.3.2.6.1","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/functionjie-shao-ji-shi-yong.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/functionjie-shao-ji-shi-yong.md","articles":[]},{"title":"解决代码太长的问题","level":"1.3.2.6.2","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/jie-jue-dai-ma-tai-chang-de-wen-ti.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/jie-jue-dai-ma-tai-chang-de-wen-ti.md","articles":[]},{"title":"静态成员和实例成员","level":"1.3.2.6.3","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/jing-tai-cheng-yuan-he-shi-li-cheng-yuan.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/jing-tai-cheng-yuan-he-shi-li-cheng-yuan.md","articles":[]},{"title":"arguments对象","level":"1.3.2.6.4","depth":4,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/argumentsdui-xiang.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/argumentsdui-xiang.md","articles":[]}]},{"title":"eval","level":"1.3.2.7","depth":3,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/eval.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/eval.md","articles":[]},{"title":"闭包","level":"1.3.2.8","depth":3,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/bi-bao.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/bi-bao.md","articles":[]},{"title":"事件","level":"1.3.2.9","depth":3,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shi-jian.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shi-jian.md","articles":[]},{"title":"函数的四种调用模式","level":"1.3.2.10","depth":3,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/han-shu-de-si-zhong-diao-yong-mo-shi.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/han-shu-de-si-zhong-diao-yong-mo-shi.md","articles":[]},{"title":"call && apply","level":"1.3.2.11","depth":3,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/call-andand-apply.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/call-andand-apply.md","articles":[]},{"title":"微任务、宏任务","level":"1.3.2.12","depth":3,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/wei-ren-wu-3001-hong-ren-wu.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/wei-ren-wu-3001-hong-ren-wu.md","articles":[]},{"title":"防抖与节流","level":"1.3.2.13","depth":3,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/fang-dou-yu-jie-liu.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/fang-dou-yu-jie-liu.md","articles":[]}]},"previous":{"title":"Math","level":"1.3.1.7","depth":3,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/math.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/math.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/yin-shi-lei-xing-zhuan-huan.md","mtime":"2020-05-27T08:06:02.044Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-11T02:40:22.568Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
