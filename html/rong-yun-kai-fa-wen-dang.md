@@ -335,3 +335,5 @@ WebIMWidget.setUserInfoProvider(function(targetId,obj){
   });
 ```
 
+
+
