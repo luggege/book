@@ -53,5 +53,23 @@ this.$router.push({
 this.$route.params.id
 ```
 
+* 路由props
+
+```js
+// 传参：
+<router-link :to="{name:'industryDocument', params:{id: tradeType,key: industryType}}"></router-link>
+
+// 路由配置（将路由的props设置为true，组件内通过props接收params参数，query接收不到）
+{
+    path: 'industryDocument/:id/:key',
+    name: 'industryDocument',
+    props: true,
+    component: () => import('@/views/industryFocus/industryDocument')
+}
+
+// 接受参数：
+props: ['id', 'key'],
+```
+
 
 
