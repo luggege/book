@@ -23,7 +23,7 @@ commitDelete(data) {
       custom-class="small_dialog"
       center
       @close="closeDialog">
-      <p class="ac font16">{{}}</p>
+      <p class="ac font16"></p>
       <span slot="footer">
         <el-button class="button white bg-deepblue" @click="$emit('commitDelete', 'hello', 'world')">
           确定
