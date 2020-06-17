@@ -14,7 +14,7 @@
    var source2 = {c: 4, d: 5};
    Object.assign(target, source1, source2) // {a: 1, b: 2, c: 4, d: 5}
 
-   // 3. 只有一个参数, 直接返回该参数
+   // 3. 只有一个参数, 直接返回该参数（浅拷贝）
    var target = {a: 1};
    Object.assign(target) // {a: 1}
 

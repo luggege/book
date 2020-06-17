@@ -6,7 +6,7 @@
 
 ```javascript
 // 1. 数组
-// 适用于深拷贝一层数组且值为基本类型的方法有：遍历属性、slice、concat、Object.assign（属性的值为对象则为浅拷贝）
+// 适用于深拷贝一层数组且值为基本类型的方法有：遍历属性、slice、concat、Object.assign（只有一个参数则为浅拷贝）
 var arr = [1, 2, 3, 4, 5]
 // var arr = [
 //     {number: 111},
@@ -71,7 +71,7 @@ console.log('obj2````````', obj2)          // {1: "aaa", 2: "bbb", a: 1, b: 2}
 
 ```js
 // 所有层级
-// 1. JSON.parse + JSON.stringify(obj)
+// 1. JSON.parse() + JSON.stringify(obj)
 
 // 2. 递归复制所有层级属性
 function deepCopy(obj){
