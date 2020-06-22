@@ -33,7 +33,7 @@ items.forEach(([key, value]) => map.set(key, value))
 #### 方法
 
 ```js
-1. set
+1. set()
 map.set({p: 'Hello World'}, 'content')
 // Map(3) {"name" => "Jack", "age" => "18", {…} => "content"}
 // [[Entries]]
@@ -79,11 +79,11 @@ m1.set('true', 666)
 m1.get(true)
 // 555
 
-2. get
+2. get()
 map.get('name')
 // "Jack"
 
-3. has
+3. has()
 map.has('age')
 // true
 
@@ -91,19 +91,26 @@ map.has('age')
 map.size
 // 3
 
-5. keys
+5. delete()
+map.delete('name')
+// true
+
+6. clear()
+map.clear()
+
+7. keys()
 map.keys()
 // MapIterator {…}, "name", "age"}
 
-6. values
+8. values()
 map.values()
 // MapIterator {"content", "Jack", "18"}
 
-7. entries
+9. entries()
 map.entries()
 // MapIterator {…} => "content", "name" => "Jack", "age" => "18"}
 
-8. forEach
+10. forEach()
 map.forEach((value, key) => console.log(key,value))
 // {p: "Hello World"} "content"
 // name Jack
@@ -119,7 +126,7 @@ for(let [key, value] of map3){
     console.log(key, value)
 }
 
-8.1 利用forEach的第二个参数来绑定this，将回调函数的this指向第二个参数
+10.1 利用forEach的第二个参数来绑定this，将回调函数的this指向第二个参数
 let reporter1 = {
   report: function(key, value) {
     console.log("Key: %s, Value: %s", key, value);
@@ -132,13 +139,6 @@ map3.forEach(function(value, key, map) {
 // Key: Object, Value: content
 // Key: name, Value: Jack
 // Key: age, Value: 18
-
-9. delete
-map.delete('name')
-// true
-
-10. clear
-map.clear()
 ```
 
 * 任何具有iterator接口、且每个成员都是双元素的数组的数据结构，都可以作为Map构造函数的参数，即Set和Map都可以作为参数用来生成新的Map
