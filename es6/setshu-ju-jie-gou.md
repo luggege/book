@@ -42,35 +42,35 @@ set.size // 9
 #### 属性和方法
 
 ```js
-1.add
+1.add()
 
 2.size
 
-3.has
+3.has()
 set.has(3)          // true
 
-4.delete
+4.delete()
 set.delete(NaN)    // true
 
-5.clear            
+5.clear()            
 set.clear()        // undefined
 set                // Set(0) {}
 
-6.keys
+6.keys()
 set.keys()
 // SetIterator {111, 222}
 [...set.keys()]
 // [111, 222]
 
-7.values
+7.values()
 set.values()
 // SetIterator {111, 222}
 
-8.entries
+8.entries()
 [...set.entries()]
 // [[111, 111], [222, 222]]
 
-9.forEach
+9.forEach()
 set.forEach((item, value) => console.log(item, value))
 // 111 111
 // 222 222
