@@ -10,7 +10,8 @@ let map = new Map([['name', 'Jack'], ['age', '18']])
  // Map(1) {"name" => "Jack", "age" => "18"}
  // [[Entries]]
  //   0: {"name" => "Jack"}
- //   size: 1
+ //   1: {"age" => 18}
+ //   size: 2 
  // __proto__: Map
 ```
 
