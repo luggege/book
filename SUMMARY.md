@@ -133,6 +133,7 @@
   * [变量的解构赋值](es6/bian-liang-de-jie-gou-fu-zhi.md)
   * [let 和 const 命令](es6/let-he-const-ming-ling.md)
   * [Symbol](es6/symbol.md)
+  * [async](es6/async.md)
   * [Array.from\(\)](es6/arrayfrom.md)
   * [Set数据结构](es6/setshu-ju-jie-gou.md)
   * [Map数据结构](es6/mapshu-ju-jie-gou.md)
