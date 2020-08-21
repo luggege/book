@@ -130,13 +130,13 @@ ng-change="switchLang()">
 </select>
 ```
 
-```javascript
-  $scope.switchLang = function () {
+```js
+$scope.switchLang = function () {
     $translate.use($scope.currentLang);               //实现语言的切换
     $cookies.remove('lang');
     $cookies.put('lang', $scope.currentLang, {path: '/'});
     window.location.reload();
-  }
+}
 ```
 
 > html页面使用内置的translate指令做国际化
