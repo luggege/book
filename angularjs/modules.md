@@ -15,18 +15,18 @@ angular.module('myApp', ['ui.router', 'oc.lazyLoad']);
 * 使用方法
 
 ```javascript
-  .state('account', {
-        url: '/account',
-        templateUrl: '../tpls/account.html',
-        resolve: {
-            deps: ['$ocLazyLoad', function( $ocLazyLoad ){
-                return $ocLazyLoad.load([
-                    '../css/account.css',
-                    '../js/controllers/account.js'
-                ]);
-            }]
-        }
-    })
+.state('account', {
+    url: '/account',
+    templateUrl: '../tpls/account.html',
+    resolve: {
+        deps: ['$ocLazyLoad', function( $ocLazyLoad ){
+            return $ocLazyLoad.load([
+                '../css/account.css',
+                '../js/controllers/account.js'
+            ]);
+        }]
+    }
+})
 ```
 
 ## $uibModal 模态框使用
