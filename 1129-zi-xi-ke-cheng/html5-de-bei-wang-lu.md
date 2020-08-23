@@ -1,6 +1,4 @@
-# HTML5的备忘录
-
-#### HTML5是现在前端开发人员必备技能。
+# HTML5是现在前端开发人员必备技能。
 
 > HTML本来不会活过21世纪的。网页规范的制定者W3C组织，早在1998年就已经对HTML撒手不管了。W3C把未来都寄托在**XHTML**这个更具现代特色的后续规范上，XHTML被视为HTML的严肃整洁版，但XHTML举步维艰。当XHTML举步维艰的时候，有那么一群人\(来自欧朋\(OPera\)/火狐\(fireFox\)/苹果\(safari\)的一些具有开发者自行组建了WHATWG\(Web Hypertext Application Technology Working Group超文本应用技术工作组\)\)开始寻找新的解决方案，这就奠定了HTML5的的前身。
 

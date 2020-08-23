@@ -30,7 +30,7 @@ getElementsByClassName只兼容到IE 9 以上.
 
 ## 如何解决IE8以下兼容html5标签
 
-```
+```js
 <!-- 条件引入html5.js -->
 <!--[if lt IE 9]>
 <script src="js/html5.js"></script>
