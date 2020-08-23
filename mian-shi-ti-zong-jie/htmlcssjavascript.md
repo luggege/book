@@ -1,6 +1,4 @@
-# HTML+CSS
-
-## 一. 网页浏览器及浏览器内核
+### 1. 网页浏览器及浏览器内核
 
 * IE：trident
 * Firefox：gecko
@@ -8,12 +6,21 @@
 * Opera：before-presto；now-Blink\(developed with Google\)
 * Chrome：Blink\(base on Webkit\)
 
-## 二. &lt;!Doctype html/xhtml&gt;
+### 2. &lt;!Doctype html/xhtml&gt;
 
 * &lt;!Doctype html/xhtml&gt;声明位于文档中的最前面的位置,标签前.
+
 * **告知浏览器文档使用的是html/xhtml规范的**
 
-## 三. div+css的布局与table布局比较
+### 3. 盒模型
+
+CSS的盒子模型有两种：IE盒子模型、标准的W3C盒子模型
+
+盒模型：内容、内边距、外边距（一般不计入盒子实际宽度）、边框
+
+![](/assets/boxModel.png)
+
+### 4. div+css的布局与table布局比较
 
 * 1.div+css的布局:页面加载速度更快,结构化清晰,页面显示简洁
 * 2.表现与结构相分离
@@ -23,33 +30,31 @@
 
 就是通过一定的方法在网站内外发布文章、交换连接等，最终达到某个关键词在搜索引擎上获得好的排名。
 
-## img的alt与title异同/em与strong异同
+### 5. img的alt与title异同、em与strong异同
 
-* 1. alt:图片**加载失败**时，显示在网页上的替代文字
-* 1. title:鼠标放上面时显示的文字
-* 1. strong:粗体强调标签，强调，表示内容的重要性
-* 1. em:斜体强调标签，更强烈强调，表示内容的强调点
+* alt:图片**加载失败**时，显示在网页上的替代文字
+* title:鼠标放上面时显示的文字
+* strong:粗体强调标签，强调，表示内容的重要性
+* em:斜体强调标签，更强烈强调，表示内容的强调点
 
-## 五. 渐进增强/优雅降级
+### 6. 渐进增强/优雅降级
 
-* 1. **渐进增强** progressive enhancement：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。**\(由基本到强大\)\(从低到高\)**
-* 1. **优雅降级** graceful degradation：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。**\(由完整到精简\)\(从高到底\)**
+* **渐进增强** progressive enhancement：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。**\(由基本到强大\)\(从低到高\)**
+* **优雅降级** graceful degradation：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。**\(由完整到精简\)\(从高到底\)**
 
 > 区别：
-
-&gt;
-
+>
 > 1.优雅降级是从复杂的现状开始，并试图减少用户体验的供给，而渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要。
 >
 > 2.降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带。
 
-## 六. 利用多个域名来存储网站资源
+### 7. 利用多个域名来存储网站资源
 
-* 1. CDN\(服务器\)缓存更方便
-* 1. 突破浏览器并发限制
-* 1. 节约cookie带宽
-* 1. 节约主域名数,优化页面响应速度
-* 1. 防止不必要的安全问题
+* CDN\(服务器\)缓存更方便
+* 突破浏览器并发限制
+* 节约cookie带宽
+* 节约主域名数,优化页面响应速度
+* 防止不必要的安全问题
 
 > Cookie:浏览网页时网站服务器放在客户端的txt文件.存储一些访问这个网站有关的东西;当下次访问时,Cookie会记住上次访问的状态会设置,让服务器针对性的发送页面相关内容.
 >
@@ -58,13 +63,13 @@
 > 1. 所访问网站的域名\(domain name\)/访问开始的时间/访问者的IP地址--客户端信息
 > 2. 访问者关于这个网站的设置
 
-## 七. 对网页标准和标准制定机构重要性的理解
+### 8. 对网页标准和标准制定机构重要性的理解
 
-* 1. 网页标准和标准制定机构都是为了能让web发展的更‘健康’，
-* 1. 开发者遵循统一的标准，降低开发难度，开发成本，SEO也会更好做，
-* 1. 不会因为滥用代码导致各种BUG、安全问题，最终提高网站易用性。
+* 网页标准和标准制定机构都是为了能让web发展的更‘健康’，
+* 开发者遵循统一的标准，降低开发难度，开发成本，SEO也会更好做，
+* 不会因为滥用代码导致各种BUG、安全问题，最终提高网站易用性。
 
-## 八. cookies，sessionStorage和localStorage的区别
+### 9. cookies，sessionStorage和localStorage的区别
 
 * 共同点：都是保存在浏览器端，且同源的。
 * 区别：
@@ -73,91 +78,49 @@
 >
 > 2.cookie数据还有路径（path）的概念，**可以限制cookie只属于某个路径下**。cookie还需要指定作用域，不可以跨域调用。
 >
-> 3.**存储大小限制也不同**:
-
-&gt;
-
-> **cookie数据不能超过4k**，同时因为每次http请求都会携带cookie\(如会话标识\)。
-
-&gt;
-
-> **sessionStorage和localStorage** 虽然也有存储大小的限制，但比cookie大得多，**可以达到5M或更大。**
+> 3.**存储大小限制也不同：cookie数据不能超过4k**，同时因为每次http请求都会携带cookie\(如会话标识\)。**sessionStorage和localStorage** 虽然也有存储大小的限制，但比cookie大得多，**可以达到5M或更大。**
 >
-> 4.**数据有效期不同**，
-
-&gt;
-
-> sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；
-
-&gt;
-
-> localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；
-
-&gt;
-
-> cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。
+> 4.**数据有效期不同**，sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭
 >
-> **5.作用域不同**，
-
-&gt;
-
-> sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；
-
-&gt;
-
-> localStorage 在所有同源窗口中都是共享的；
-
-&gt;
-
-> cookie也是在所有同源窗口中都是共享的。
+> **5.作用域不同**，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。
 
 * 插入内容:
 * Web Storage 支持事件通知机制，可以将数据更新的通知发送给监听者。Web Storage 的 api 接口使用更方便。为了在本地“存储”数据而生。
 
-## 九. src与href的区别
+### 10. src与href的区别
 
 > src用于替换当前元素，href用于在当前文档和引用资源之间确立联系。
 
-* 1. src简介
+* src简介
 
-> source的缩写，**指向外部资源的位置**，指向的内容将会嵌入到文档中当前标签所在位置；在请求src资源时会将其指向的资源下载并应用到文档内，例如js脚本，img图片和frame等元素。
+> source的缩写，**指向外部资源的位置**，指向的内容将会嵌入到文档中当前标签所在位置；在请求src资源时会将其指向的资源下载并应用到文档内，例如js脚本，img图片和frame等元素。**当浏览器解析到该元素时，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕**，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。这也是为什么将js脚本放在底部而不是头部。
 
-&gt;
+* href简介
 
-> **当浏览器解析到该元素时，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕**，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。这也是为什么将js脚本放在底部而不是头部。
+> Hypertext Reference的缩写，**指向网络资源所在位置**，建立和当前元素（锚点）或当前文档（链接）之间的链接，如果我们在文档中添加，那么浏览器会识别该文档为css文件，就**会并行下载资源并且不会停止对当前文档的处理**。这也是为什么建议使用link方式来加载css，而不是使用@import方式。
 
-* 1. href简介
-
-> Hypertext Reference的缩写，**指向网络资源所在位置**，建立和当前元素（锚点）或当前文档（链接）之间的链接，如果我们在文档中添加
-
-&gt;
-
-> 那么浏览器会识别该文档为css文件，就**会并行下载资源并且不会停止对当前文档的处理**。这也是为什么建议使用link方式来加载css，而不是使用@import方式。
-
-## 十. 网页制作会用到的图片格式
+### 11. 网页制作会用到的图片格式
 
 * png-8，png-24，jpeg，gif，svg , Webp
 
-> Webp简介
-
-* WebP格式，谷歌（google）开发的一种旨在加快图片加载速度的图片格式。图片压缩体积大约只有JPEG的2/3，并能节省大量的服务器带宽资源和数据空间。Facebook Ebay等知名网站已经开始测试并使用WebP格式。
+> Webp简介：WebP格式，谷歌（google）开发的一种旨在加快图片加载速度的图片格式。图片压缩体积大约只有JPEG的2/3，并能节省大量的服务器带宽资源和数据空间。Facebook Ebay等知名网站已经开始测试并使用WebP格式。
 
 **在质量相同的情况下，WebP格式图像的体积要比JPEG格式图像小40%**
 
-## 十一. 微格式以及在前端构建中应该考虑微格式
+### 12. 微格式以及在前端构建中应该考虑微格式
 
-> **Microformat**，是一种**对Web网页进行语义注解的方法**，这种方法依托于标准的Web页面写作技术，例如，XHTML，这样引入语义信息对浏览器等所有现存的Web技术冲击最小。采用Microformat的Web页面，在XHTML文档中给一些标签（Tag）增加一些属性（attribute），这些属性对信息的语义结构进行注解，处理XHTML文档的软件，例如，浏览器等，如果不认识这些属性可以跳过，并不造成任何不良影响。
+> **Microformat**，是一种**对Web网页进行语义注解的方法**，这种方法依托于标准的Web页面写作技术，例如，XHTML，这样引入语义信息对浏览器等所有现存的Web技术冲击最小。采用Microformat的Web页面，在XHTML文档中给一些标签（Tag）增加一些属性（attribute），这些属性对信息的语义结构进行注解，处理XHTML文档的软件，例如，浏览器等，如果不认识这些属性可以跳过，并不造成任何不良影响
+>
+> **优点**：将智能数据添加到网页上，让网站内容在搜索引擎结果界面可以显示额外的提示。（应用范例：豆瓣，有兴趣自行google）
 
-* **优点**：将智能数据添加到网页上，让网站内容在搜索引擎结果界面可以显示额外的提示。（应用范例：豆瓣，有兴趣自行google）
-
-## 十二. 在css/js代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次js请求一般情况下有哪些地方会有缓存处理？
+### 13. 在css/js代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次js请求一般情况下有哪些地方会有缓存处理？
 
 * dns缓存
 * cdn缓存
 * 浏览器缓存
 * 服务器缓存。
 
-## 十三. 一个页面上有大量的图片（大型电商网站），加载很慢，你有哪些方法**优化这些图片的加载**，给用户更好的体验
+### 14. 一个页面上有大量的图片（大型电商网站），加载很慢，你有哪些方法**优化这些图片的加载**，给用户更好的体验
 
 * 图片懒加载:
 
@@ -173,39 +136,39 @@
 >
 > 4.如果图片展示区域小于图片的真实大小，则因在服务器端根据业务需要先行进行图片压缩，图片压缩后大小与展示一致。
 
-## 十四. 谈谈以前端角度出发做好SEO需要考虑什么？
+### 15. 谈谈以前端角度出发做好SEO需要考虑什么？
 
-* 1. 了解搜索引擎如何抓取网页和如何索引网页
-* 1. 你需要知道一些搜索引擎的基本工作原理，各个搜索引擎之间的区别，搜索机器人（SE robot 或叫 web crawler）如何进行工作，搜索引擎如何对搜索结果进行排序等等。
-* 1. Meta标签优化
+* 了解搜索引擎如何抓取网页和如何索引网页
+* 你需要知道一些搜索引擎的基本工作原理，各个搜索引擎之间的区别，搜索机器人（SE robot 或叫 web crawler）如何进行工作，搜索引擎如何对搜索结果进行排序等等。
+* Meta标签优化
 
 > 主题（Title\)，网站描述\(Description\)，和关键词（Keywords）。
 >
 > \(还有一些其它的隐藏文字比如Author（作者），Category（目录），Language（编码语种）等。\)
 
-## 十五. 有哪项方式可以对一个DOM设置它的CSS样式？
+### 16. 有哪项方式可以对一个DOM设置它的CSS样式？
 
-* 1.外部样式表，引入一个外部css文件
-* 2.内部样式表，将css代码放在  标签内部
-* 3.内联样式，将css样式直接定义在 HTML 元素内部
+* 外部样式表，引入一个外部css文件
+* 内部样式表，将css代码放在  标签内部
+* 内联样式，将css样式直接定义在 HTML 元素内部
 
-## 十六. CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？
+### 17. CSS中可以通过哪些属性定义，使得一个DOM元素不显示在浏览器可视范围内？
 
-* 1.基本：
+* 基本：
 
 > 设置display属性为none，或者设置visibility属性为hidden
 
-* 2.技巧性：
+* 技巧性：
 
 > 设置宽高为0，设置透明度为0，设置z-index位置在-1000em
 
-## 十七. 7. 超链接访问过后hover样式就不出现的问题是什么？如何解决？
+### 18. 超链接访问过后hover样式就不出现的问题是什么？如何解决？
 
 * 被点击访问过的超链接样式不再具有hover和active了,解决方法是改变CSS属性的排列顺序: L-V-H-A**（link,visited,hover,active）**
 
-> Love hate 就爱恨准则
+> Love hate 爱恨准则
 
-## 十八. Css Hack/ie6,7,8的hack分别是什么？
+### 19. Css Hack/ie6,7,8的hack分别是什么？
 
 * 针对不同的浏览器写不同的CSS code的过程，就是CSS hack。
 * 示例如下：
@@ -225,27 +188,21 @@
   } /ie9/
   ```
 
-## 十九. 9. 行内元素和块级元素的具体区别/行内元素的padding和margin可设置吗？
+### 20. 行内元素和块级元素的具体区别、行内元素的padding和margin可设置吗？
 
-* 1. 块级元素\(block\)特性：
+* 块级元素\(block\)特性：
 
-> 总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示;宽度\(width\)、高度
+> 总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示;宽度\(width\)、高度\(height\)、内边距\(padding\)和外边距\(margin\)都可控制;
 
-\(height\)、内边距\(padding\)和外边距\(margin\)都可控制;
+* 内联元素\(inline\)特性：
 
-* 1. 内联元素\(inline\)特性：
-
-> 和相邻的内联元素在同一行;宽度\(width\)、高度\(height\)、内边距的top/bottom\(padding-top/
-
-padding-bottom\)和外边距的top/bottom\(margin-top/margin-bottom\)都**不可改变**
-
-（也就是padding和margin的left和right是可以设置的），就是里面文字或图片的大小。
+> 和相邻的内联元素在同一行;宽度\(width\)、高度\(height\)、内边距的top/bottom\(padding-top/padding-bottom\)和外边距的top/bottom\(margin-top/margin-bottom\)都**不可改变**（也就是padding和margin的left和right是可以设置的），就是里面文字或图片的大小。
 
 * 注释:浏览器还有默认的天生**inline-block元素**（拥有内在尺寸，可设置高宽，但不会自动换行）
 
-  input 、img 、button 、texterea 、label。
+> input 、img 、button 、texterea 、label。
 
-## 二十.rgba\(\)和opacity的透明效果有什么不同？
+### 21. rgba\(\)和opacity的透明效果有什么不同？
 
 * 相同点:
 
@@ -255,19 +212,14 @@ padding-bottom\)和外边距的top/bottom\(margin-top/margin-bottom\)都**不可
 
 > opacity作用于元素，以及元素内的所有内容的透明度，
 >
-> rgba\(\)只作用于元素的颜色或其背景色。
->
-> **（设置rgba透明的元素的子元素不会继承透明效果！）**
+> rgba\(\)只作用于元素的颜色或其背景色。**（设置rgba透明的元素的子元素不会继承透明效果！）**
 
-## 二十一. css中可以让文字在垂直和水平方向上重叠的两个属性是什么？
+### 22. css中可以让文字在垂直和水平方向上重叠的两个属性是什么？
 
 * 垂直方向：line-height
 * 水平方向：letter-spacing
-* 关于letter-spacing的妙用
 
-> 可以用于消除inline-block元素间的换行符空格间隙问题。
-
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "\[\[\[\[\[\[\[\[[http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\]\(http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;\)\)\)\)\)\)\)\](http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">]%28http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">%29%29%29%29%29%29%29\)\)
+> 关于letter-spacing的妙用：可以用于消除inline-block元素间的换行符空格间隙问题。
 
 CSS letter-spacing 属性示例
 
