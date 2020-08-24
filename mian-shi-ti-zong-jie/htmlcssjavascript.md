@@ -140,7 +140,45 @@ CSS的盒子模型有两种：IE盒子模型、标准的W3C盒子模型
 
 * 图片懒加载:
 
-> 在页面上的未可视区域可以添加一个滚动条事件，**判断图片位置与浏览器顶端的距离与页面的距离**，如果前者小于后者，优先加载
+> 在页面上的未可视区域可以添加一个滚动条事件，**判断图片位置与浏览器的视口高度+页面卷去的距离**，如果前者小于后者，优先加载
+
+```js
+// 一开始出现在可视区域中的图片也该加载
+start()
+
+var timer;
+window.onscroll = function(){
+   // 防抖函数
+  if(timer){
+    clearTimeout(timer)
+  }else {
+    timer = setTimeout(() => {
+      start()
+    }, 200);
+  }
+}
+
+function start(){
+  $('.container img').not('[data-isloading]').each(function() {
+    if(isShow($(this))){
+      loadImg($(this))
+    }
+  })
+}
+
+// 是否在显示区域
+function isShow($img){
+  return $img.offsetTop <= $(window).height() + $(window).scrollTop()
+}
+
+// 加载图片
+function loadImg($img){
+  $img.attr(src, $(this).attr('data-src'))
+
+  // 避免重复加载
+  $img.attr('data-isloading', 1)
+}
+```
 
 * 几种情况:
 

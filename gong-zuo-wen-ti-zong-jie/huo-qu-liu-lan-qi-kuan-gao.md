@@ -40,7 +40,8 @@ window.onscroll= function(){
     //滚动条滚动距离
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
     //窗口可视范围高度
-    var clientHeight = window.innerHeight || Math.min(document.documentElement.clientHeight,document.body.clientHeight);
+    var clientHeight = window.innerHeight 
+                        || Math.min(document.documentElement.clientHeight,document.body.clientHeight);
 
     if(clientHeight + scrollTop >= scrollHeight){
         console.log("===加载更多内容……===");
