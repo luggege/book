@@ -7,13 +7,13 @@ xhr.open("POST", url)
 
 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
 
+xhr.send(data)
+
 xhr.onreadystatechange = function(){
   if(xhr.status === 200 && xhr.readyState === 4){
     console.log(this.response)    
   }
 }
-
-xhr.send(data)
 ```
 
 ### jquery请求
