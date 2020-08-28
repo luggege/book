@@ -1,4 +1,65 @@
-## contentType
+### 原生ajax请求
+
+```js
+var xhr = new XMLHttpRequest()
+
+xhr.open("POST", url)
+
+xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+
+xhr.onreadystatechange = function(){
+  if(xhr.status === 200 && xhr.readyState === 4){
+    console.log(this.response)    
+  }
+}
+
+xhr.send(data)
+```
+
+### jquery请求
+
+```js
+$.ajax({
+  url: 'url',
+  type: post,
+  contentType: 'application/json',
+  dataType: 'json',
+  data: data,
+  success: function(){},
+  error: function(){}
+})
+```
+
+### axios请求
+
+```js
+import axios from 'axios'
+
+const service = axios.create({
+  baseURL: process.env.BASE_URL + 'manage/', // api 的 base_url
+  // timeout: 5000 // request timeout
+})
+
+service.interceptors.request.use(
+  config => {
+    if (store.getters.token) {
+      // 让每个请求携带token
+      config.headers['SYJusticeAuthorization'] = getToken()
+    }
+  }
+)
+
+service.interceptors.reponse.use(
+  response => {
+    if(response.data.status !== 0){
+      // 不成功 do something
+    }else {
+      // 成功
+      return response.data
+    }
+  }
+)
+```
 
 ### contentType：设置传给服务器的格式
 
