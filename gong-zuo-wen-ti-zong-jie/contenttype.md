@@ -3,7 +3,7 @@
 ```js
 var xhr = new XMLHttpRequest()
 
-xhr.open("POST", url)
+xhr.open("POST", url, async) // async默认：true（执行异步操作）
 
 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
 
@@ -24,6 +24,8 @@ $.ajax({
   type: post,
   contentType: 'application/json',
   dataType: 'json',
+  async: true,(默认：true 异步，false：同步)
+  cache: true,(默认：true，若为false：不会从浏览器缓存中加载请求信息)
   data: data,
   success: function(){},
   error: function(){}
@@ -33,6 +35,7 @@ $.ajax({
 ### axios请求
 
 ```js
+// request.js
 import axios from 'axios'
 
 const service = axios.create({
@@ -59,6 +62,25 @@ service.interceptors.reponse.use(
     }
   }
 )
+
+export default service
+
+// 调用
+import request from '@/utils/request'
+
+export function loginByUsername(username, password) {
+  const data = {
+    username,
+    password
+  }
+  return request({
+    url: 'syUser/login',
+    method: 'post',
+    data: {
+      data
+    }
+  })
+}
 ```
 
 ### contentType：设置传给服务器的格式
