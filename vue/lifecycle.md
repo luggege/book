@@ -9,7 +9,7 @@ new Vue({
   },
   beforeCreate: function() {
     console.group('------beforeCreate创建前状态------');
-    console.log("%c%s", "color:red" , "el     : " + this.$el); //undefined
+    console.log("%c%s", "color:red" , "el   : " + this.$el); //undefined
     console.log("%c%s", "color:red","data   : " + this.$data); //undefined 
     console.log("%c%s", "color:red","message: " + this.message) //undefined
   },
