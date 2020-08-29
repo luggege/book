@@ -9,7 +9,6 @@ watch：**数据监听**，监听页面中某个特定状态的变化，监听�
   <p>Original message: "{{ message }}"</p>
   <p>Computed reversed message: "{{ reversedMessage }}"</p>
   <p>fullname: "{{ fullname }}"</p>
-
 </div>
 ```
 

@@ -8,7 +8,7 @@
 <delete-dialog :visible.sync="deleteDialogVisible" title="我是title···" @commitDelete="commitDelete(arguments)" />
 
 commitDelete(data) {
-    console.log("成功删除了·····", data); // 成功删除了····· Arguments(2) [false, true, callee: (...), Symbol(Symbol.iterator): ƒ]
+    console.log("成功删除了·····", data); // 成功删除了····· Arguments(2) [hello, world, callee: (...), Symbol(Symbol.iterator): ƒ]    
     console.log(data[0]);  // hello
     console.log(data[1]);  // world
 }
