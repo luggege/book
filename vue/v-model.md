@@ -19,8 +19,11 @@
 // <input type="radio" name="person" value="男" v-model="checked">
 // <input type="radio" name="person" value="女" v-model="checked">
 
-<input type="radio" name="person" value="男" v-on:change="$event.target.checked ? value = $event.target.value : ''">
-<input type="radio" name="person" value="女" v-on:change="$event.target.checked ? value = $event.target.value : ''">
+<input type="radio" name="person" value="男" 
+    v-on:change="$event.target.checked ? value = $event.target.value : ''">
+
+<input type="radio" name="person" value="女" 
+    v-on:change="$event.target.checked ? value = $event.target.value : ''">
 
 <div>输入的input值为：{{checked}}</div>  // 选中的value值
 
@@ -65,8 +68,15 @@ export default {
 // <input type="checkbox" id="checkbox2" name="person" value="女" v-model="names">
 // <label for="checkbox2">女</label>
 
-<input type="checkbox" value="男" v-on:change="$event.target.checked ? names.push($event.target.value) : names.splice(names.indexOf($event.target.value), 1)">
-<input type="checkbox" value="女" v-on:change="$event.target.checked ? names.push($event.target.value) : names.splice(names.indexOf($event.target.value), 1)">
+<input type="checkbox" value="男" 
+    v-on:change="$event.target.checked ?
+         names.push($event.target.value) : 
+             names.splice(names.indexOf($event.target.value), 1)">
+
+<input type="checkbox" value="女" 
+    v-on:change="$event.target.checked ?
+         names.push($event.target.value) : 
+             names.splice(names.indexOf($event.target.value), 1)">
 
 <div>输入的input值为：{{names}}</div>  // [ "男", "女" ]
 
@@ -112,6 +122,7 @@ value: '', // A
 
 ```js
 // 父组件
+// <heatmapChart v-bind:value="newValue" v-on:input="newValue = $event.target.vlue"></heatmapChart>
 <heatmapChart v-model="newValue"></heatmapChart>
 
 // 子组件
