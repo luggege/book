@@ -20,11 +20,11 @@
 #### 存储API
 
 1. ```javascript
-   1. setItem():          localstorage.setItem('a', 1);
-   2. getItem():          localstorage.getItem('a');
-   3. removeItem():       localstorage.removeItem('a');
+   1. setItem():          localStorage.setItem('a', 1);
+   2. getItem():          localStorage.getItem('a');
+   3. removeItem():       localStorage.removeItem('a');
    4. 非IE8中,使用delete操作
-   5. clear():            localstorage.clear();  清空全部
+   5. clear():            localStorage.clear();  清空全部
    6. 枚举
    for(var i = 0; i < localStorage.length; i++){
        var name = localStorage.key(i);
@@ -42,6 +42,10 @@
 
 1. **有效期**很短暂，随**浏览器关闭而删除**cookie文件。但与sessionStorage不同的是：cookie的有效期是整个**浏览器进程**而不是单个窗口
 2. **作用域**是通过**文档源**和**文档路径**来确定的，默认情况下，cookie和创建他的web页面有关，并对该页面及其该页面**同目录**或者**子目录**的其他页面可见（[http://www.baidu.com/catalog/index.html创建的cookie，在http://www.baidu.com/catalog/test.html和http://www.baidu.com/catalog/test/index.html是可见的）](http://www.baidu.com/catalog/index.html创建的cookie,在http://www.baidu.com/catalog/test.html和http://www.baidu.com/catalog/test/index.html是可见的）)
+
+```js
+document.cookie
+```
 
 ## IE User Data
 

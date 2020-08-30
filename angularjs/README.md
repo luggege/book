@@ -77,3 +77,5 @@ config方法：在模块加载阶段，对模块进行自定义配置
 
   config里允许注入的是provider和constance（常量），run里允许注入的是provider和constant，还可以是factory, service, value
 
+
+
