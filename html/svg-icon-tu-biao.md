@@ -20,7 +20,7 @@
 
 ## iconfont使用方法![](/assets/iconfont.png)
 
-* unicode
+* * unicode
 
 > 优点：兼容性好 支持IE6+浏览器，font-size、color直接控制大小颜色  
 > 缺点：语义性差，因为是字体所以无法控制多色图标颜色（遇多色图标自动去色）
@@ -52,7 +52,7 @@
 <i class="iconfont">&#xe745;</i>
 ```
 
-* font-class
+* * font-class
 
 > 优点：语义性强，图标类别一目了然。兼容性良好支持IE8+，及现代浏览器
 >
@@ -66,7 +66,7 @@
 <i class="iconfont icon-icon11"></i>
 ```
 
-* symbol
+* * symbol
 
 > 优点：可以像字体那样控制font-size、color直接控制大小颜色。支持多色图标 更有色彩。矢量 不失真。减少http请求。
 >
