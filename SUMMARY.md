@@ -7,7 +7,7 @@
   * [canvas day3](chapter1/canvas-di-3-tian.md)
   * [canvas day4](chapter1/canvas-di-si-tian.md)
 * [JavaScript](javascript-gao-ji-he-mian-xiang-dui-xiang/README.md)
-  * [javascript基础复习](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/README.md)
+  * [javascript基础知识](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/README.md)
     * [值类型和引用类型](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/zhi-lei-xing-he-yin-yong-lei-xing.md)
     * [隐式类型转换](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/yin-shi-lei-xing-zhuan-huan.md)
     * [Array](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/array.md)
