@@ -71,7 +71,7 @@ console.log('obj2````````', obj2)          // {1: "aaa", 2: "bbb", a: 1, b: 2}
 
 ```js
 // 所有层级
-// 1. JSON.parse() + JSON.stringify(obj)
+// 1. JSON.stringify(obj) + JSON.parse()
 
 // 2. 递归复制所有层级属性
 function deepCopy(obj){
