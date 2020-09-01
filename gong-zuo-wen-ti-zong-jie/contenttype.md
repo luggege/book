@@ -1,19 +1,27 @@
 ### 原生ajax请求
 
 ```js
+// 创建异步对象
 var xhr = new XMLHttpRequest()
 
+// 调用open方法，配置请求信息
 xhr.open("POST", url, async) // async默认：true（执行异步操作）
+xhr.open("GET", "/ashx/myzhuye/Detail.ashx?methodName=GetAllComment", async) // get请求参数拼接在URL后边
 
+// post方法需要设置请求头
 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
 
-xhr.send(data)
+// 发送请求，post请求传递的参数在这
+xhr.send("methodName=GetAllComment&str1=str1&str2=str2")
 
+// 注册回调函数
 xhr.onreadystatechange = function(){
   if(xhr.status === 200 && xhr.readyState === 4){
     console.log(this.response)    
   }
 }
+
+// readyState： 0：请求未初始化；1：服务器连接已建立；2：请求已接收；3：请求处理中；4：请求已完成，响应已就绪
 ```
 
 ### jquery请求

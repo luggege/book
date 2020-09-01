@@ -87,7 +87,7 @@ if(true){
     console.log(tmp)     // 123
 }
 
-typeof x                // 报错
+typeof x                // 报错 Uncaught ReferenceError: aaaaa is not defined
 let x
 // 直接对未声明的变量使用typeof反而不会报错
 typeof aaaaaa           // undefined
