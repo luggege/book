@@ -12,9 +12,9 @@ Angular内部的$watch会实时检查\(观察者模式,深度优先遍历\)$scop
 
 ### **MVVM定义：**即Model-View-ViewModel
 
-1. Model 代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑
-2. View 代表UI视图，负责数据的展示 
-3. ViewModel 负责监听 Model 中数据的改变并且控制视图的更新，处理用户交互操作
+1. Model 代表数据**模型**，也可以在Model中定义数据修改和操作的业务逻辑
+2. View 代表UI**视图**，负责数据的展示 
+3. ViewModel 负责监听 Model 中数据的改变并且控制视图的更新，**处理用户交互**操作
 4. Model 和 View 并无直接关联，而是通过 ViewModel 来进行联系的，Model 和 ViewModel 之间有着**双向数据绑定**的联系。 
 
 mvvm的设计原理是基于mvc的，所以说mvvm不算是一种创新，是一种改造，这其中的ViewModel便是一个小小的创新

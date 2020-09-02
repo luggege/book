@@ -103,7 +103,7 @@
 
 使用webpack loader的svg-sprite-loader可以将多个svg打包成svg-sprite.
 
-vue-cli默认使用url-loader对svg进行处理，会将他它放在/img目录下，这时引入svg-sprite-loader会有些问题
+vue-cli默认使用url-loader对svg进行处理，会将他们放在/img目录下，这时引入svg-sprite-loader会有些问题
 
 ```javascript
 //默认`vue-cli` 对svg做的处理，正则匹配后缀名为.svg的文件，匹配成功之后使用 url-loader 进行处理。
