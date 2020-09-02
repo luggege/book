@@ -1,4 +1,19 @@
-# jQuery API
+# jQuery
+
+jQuery对外暴露的两个方法:jQuery和$
+
+这两个方法是同一个方法,实际上是一个工厂函数.  
+通过调用者两个方法,可以得到一个jQuery实例对象  
+jQuery实例对象是一个伪数组对象
+
+### jQuery实现机制
+
+> 给原型方法添加了一些功能方法
+
+### Object.prototype.toString
+
+> 作用:根据内部的ｔｈｉｓ返回一个类似于这样的字符串'\[object constructorName\]'\(这个实例的构造函数的名\)  
+> 只能获取内置对象的类型
 
 ## jQuery--DOM操作
 
@@ -81,4 +96,6 @@
 > getAttribute获取的是默认的value值
 >
 > .value获取的是**最新**的value值,必须通过点或者\[\]的方式获取
+
+
 
