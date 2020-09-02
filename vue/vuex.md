@@ -81,11 +81,14 @@ const store = new Vuex.Store({
 })
 
 console.log(store.state.count)   // 1
+// 1. commit修改
 store.commit('change')
+// 2. 直接修改（多人协作容易出现问题，可开启严格模式）
+// store.state.count = 2
 console.log(store.state.count)   // 2
 
-
-store.dispatch('GetUserInfo')
+// 3. dispatch分发
+store.dispatch('SET_TOKEN')
 ```
 
 * state：存放共享数据
