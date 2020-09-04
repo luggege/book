@@ -46,7 +46,8 @@ let [r = true] = []                                // true
 let [s, t = 'bbb'] = ['aaa']                       // aaa bbb
 let [u, v = 'bbb'] = ['aaa', undefined]            // aaa bbb
 let [w, x = 'bbb'] = ['aaa', 'ccc']                // aaa ccc 
-let [uu, vv = 'bbb'] = ['aaa', null]               // aaa null （数组成员严格等于undefined，默认值才会生效。null不严格等于undefined，所以默认值不会生效。）
+let [uu, vv = 'bbb'] = ['aaa', null]               
+// aaa null （数组成员严格等于undefined，默认值才会生效。null不严格等于undefined，所以默认值不会生效。）
 // *默认值是表达式*
 function fn(){
     console.log('aaa')
@@ -80,7 +81,8 @@ let obj = {
             { y: 'world' }
     ]
 }
-let { p, p: [x, y] } = obj                               // p => ["hello", {…}]    x => "hello"  y => { y: 'world' }
+let { p, p: [x, y] } = obj                               
+// p => ["hello", {…}]    x => "hello"  y => { y: 'world' }
 
 // 嵌套赋值
 let obj = {};

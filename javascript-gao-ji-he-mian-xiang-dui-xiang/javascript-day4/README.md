@@ -108,7 +108,7 @@ console.log(a);                   // [1, 2, 3, 4, 5]
 console.log(b);                   // [4, 5]
 ```
 
-![](../../.gitbook/assets/console %282%29.png)
+![](/html-css-js/.gitbook/assets/console %281%29.png)
 
 ### 字符串方法
 
