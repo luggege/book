@@ -2102,12 +2102,12 @@
         <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.birth)  <span class="hljs-comment">// 1990</span>
         <span class="hljs-keyword">var</span> fn = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
             <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.birth) <span class="hljs-comment">// undefined</span>
-            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getFullYear - <span class="hljs-keyword">this</span>.birth;
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getFullYear() - <span class="hljs-keyword">this</span>.birth;
         }
         <span class="hljs-keyword">return</span> fn();
     }
-}
-obj.getAge()
+} 
+obj.getAge()  <span class="hljs-comment">// NaN</span>
 
 <span class="hljs-comment">// &#x4E00;&#x822C;&#x4F7F;&#x7528;that&#x66FF;&#x6362;this</span>
 <span class="hljs-keyword">var</span> obj = {
@@ -2123,7 +2123,7 @@ obj.getAge()
         <span class="hljs-keyword">return</span> fn();
     }
 }
-obj.getAge()
+obj.getAge()  <span class="hljs-comment">// 30</span>
 </code></pre>
 <ul>
 <li><ul>
@@ -2141,14 +2141,11 @@ obj.getAge()
         <span class="hljs-keyword">return</span> fn();
     }
 }
-obj.getAge()
+obj.getAge()   <span class="hljs-comment">// 30</span>
 </code></pre>
 <ul>
 <li><ul>
-<li><ul>
 <li>&#x6B63;&#x56E0;&#x4E3A;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x4E2D;&#x7684;this&#x7531;&#x8BCD;&#x6CD5;&#x4F5C;&#x7528;&#x57DF;&#x51B3;&#x5B9A;&#xFF0C;&#x6240;&#x4EE5;&#x7528;call()&#x548C;apply()&#x8C03;&#x7528;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x65F6;&#x7684;&#x65E0;&#x6CD5;&#x6539;&#x53D8;this&#xFF0C;&#x5373;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5931;&#x6548;</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -2222,7 +2219,7 @@ func()   <span class="hljs-comment">// {foo: 1}</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"箭头函数","level":"1.14.1","depth":2,"next":{"title":"Promise","level":"1.14.2","depth":2,"path":"es6/promise.md","ref":"es6/promise.md","articles":[]},"previous":{"title":"ES6","level":"1.14","depth":1,"path":"es6/README.md","ref":"es6/README.md","articles":[{"title":"箭头函数","level":"1.14.1","depth":2,"path":"es6/jian-tou-han-shu.md","ref":"es6/jian-tou-han-shu.md","articles":[]},{"title":"Promise","level":"1.14.2","depth":2,"path":"es6/promise.md","ref":"es6/promise.md","articles":[]},{"title":"Object.assign()","level":"1.14.3","depth":2,"path":"es6/assign.md","ref":"es6/assign.md","articles":[]},{"title":"扩展运算符","level":"1.14.4","depth":2,"path":"es6/kuo-zhan-yun-suan-fu.md","ref":"es6/kuo-zhan-yun-suan-fu.md","articles":[]},{"title":"变量的解构赋值","level":"1.14.5","depth":2,"path":"es6/bian-liang-de-jie-gou-fu-zhi.md","ref":"es6/bian-liang-de-jie-gou-fu-zhi.md","articles":[]},{"title":"let 和 const 命令","level":"1.14.6","depth":2,"path":"es6/let-he-const-ming-ling.md","ref":"es6/let-he-const-ming-ling.md","articles":[]},{"title":"Symbol","level":"1.14.7","depth":2,"path":"es6/symbol.md","ref":"es6/symbol.md","articles":[]},{"title":"async","level":"1.14.8","depth":2,"path":"es6/async.md","ref":"es6/async.md","articles":[]},{"title":"Array.from()","level":"1.14.9","depth":2,"path":"es6/arrayfrom.md","ref":"es6/arrayfrom.md","articles":[]},{"title":"Set数据结构","level":"1.14.10","depth":2,"path":"es6/setshu-ju-jie-gou.md","ref":"es6/setshu-ju-jie-gou.md","articles":[]},{"title":"Map数据结构","level":"1.14.11","depth":2,"path":"es6/mapshu-ju-jie-gou.md","ref":"es6/mapshu-ju-jie-gou.md","articles":[]},{"title":"includes","level":"1.14.12","depth":2,"path":"es6/includes.md","ref":"es6/includes.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"es6/jian-tou-han-shu.md","mtime":"2020-03-30T01:50:41.095Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-06T13:10:07.910Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"箭头函数","level":"1.14.1","depth":2,"next":{"title":"Promise","level":"1.14.2","depth":2,"path":"es6/promise.md","ref":"es6/promise.md","articles":[]},"previous":{"title":"ES6","level":"1.14","depth":1,"path":"es6/README.md","ref":"es6/README.md","articles":[{"title":"箭头函数","level":"1.14.1","depth":2,"path":"es6/jian-tou-han-shu.md","ref":"es6/jian-tou-han-shu.md","articles":[]},{"title":"Promise","level":"1.14.2","depth":2,"path":"es6/promise.md","ref":"es6/promise.md","articles":[]},{"title":"Object.assign()","level":"1.14.3","depth":2,"path":"es6/assign.md","ref":"es6/assign.md","articles":[]},{"title":"扩展运算符","level":"1.14.4","depth":2,"path":"es6/kuo-zhan-yun-suan-fu.md","ref":"es6/kuo-zhan-yun-suan-fu.md","articles":[]},{"title":"变量的解构赋值","level":"1.14.5","depth":2,"path":"es6/bian-liang-de-jie-gou-fu-zhi.md","ref":"es6/bian-liang-de-jie-gou-fu-zhi.md","articles":[]},{"title":"let 和 const 命令","level":"1.14.6","depth":2,"path":"es6/let-he-const-ming-ling.md","ref":"es6/let-he-const-ming-ling.md","articles":[]},{"title":"Symbol","level":"1.14.7","depth":2,"path":"es6/symbol.md","ref":"es6/symbol.md","articles":[]},{"title":"async","level":"1.14.8","depth":2,"path":"es6/async.md","ref":"es6/async.md","articles":[]},{"title":"Array.from()","level":"1.14.9","depth":2,"path":"es6/arrayfrom.md","ref":"es6/arrayfrom.md","articles":[]},{"title":"Set数据结构","level":"1.14.10","depth":2,"path":"es6/setshu-ju-jie-gou.md","ref":"es6/setshu-ju-jie-gou.md","articles":[]},{"title":"Map数据结构","level":"1.14.11","depth":2,"path":"es6/mapshu-ju-jie-gou.md","ref":"es6/mapshu-ju-jie-gou.md","articles":[]},{"title":"includes","level":"1.14.12","depth":2,"path":"es6/includes.md","ref":"es6/includes.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"es6/jian-tou-han-shu.md","mtime":"2020-09-06T14:41:33.491Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-06T14:45:13.078Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

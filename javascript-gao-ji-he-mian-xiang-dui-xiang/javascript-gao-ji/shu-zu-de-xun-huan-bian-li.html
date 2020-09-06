@@ -2147,16 +2147,19 @@
 [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>].map(x =&gt; x*<span class="hljs-number">2</span>)
 <span class="hljs-comment">// [2, 8, 18, 32]</span>
 
+<span class="hljs-number">3.</span>&#x6709;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x8FD4;&#x56DE;<span class="hljs-literal">true</span>
 [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>].some((value, key, array) =&gt; {
     <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">4</span>
 })
 <span class="hljs-comment">// true</span>
 
+<span class="hljs-number">4.</span>&#x6240;&#x6709;&#x90FD;&#x7B26;&#x5408;&#x624D;&#x8FD4;&#x56DE;<span class="hljs-literal">true</span>
 [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>].every((value, key, array) =&gt; {
     <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">4</span>
 })
 <span class="hljs-comment">// false</span>
 
+<span class="hljs-number">5.</span>&#x8FC7;&#x6EE4;&#x51FA;&#x7B26;&#x5408;&#x7684;
 [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>].filter((value, key, array) =&gt; {
     <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">4</span>
 })
@@ -2205,7 +2208,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数组的循环遍历","level":"1.3.7","depth":2,"next":{"title":"几种遍历方式","level":"1.3.8","depth":2,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/for-infor-offoreach-de-qu-bie.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/for-infor-offoreach-de-qu-bie.md","articles":[]},"previous":{"title":"数组去重","level":"1.3.6","depth":2,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu-qu-zhong.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu-qu-zhong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu-de-xun-huan-bian-li.md","mtime":"2020-09-06T12:46:15.305Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-06T13:10:07.910Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数组的循环遍历","level":"1.3.7","depth":2,"next":{"title":"几种遍历方式","level":"1.3.8","depth":2,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/for-infor-offoreach-de-qu-bie.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/for-infor-offoreach-de-qu-bie.md","articles":[]},"previous":{"title":"数组去重","level":"1.3.6","depth":2,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu-qu-zhong.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu-qu-zhong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu-de-xun-huan-bian-li.md","mtime":"2020-09-06T13:19:40.461Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-06T14:45:13.078Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
