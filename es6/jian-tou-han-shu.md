@@ -27,12 +27,12 @@ var obj = {
         console.log(this.birth)  // 1990
         var fn = function(){
             console.log(this.birth) // undefined
-            return new Date().getFullYear - this.birth;
+            return new Date().getFullYear() - this.birth;
         }
         return fn();
     }
-}
-obj.getAge()
+} 
+obj.getAge()  // NaN
 
 // 一般使用that替换this
 var obj = {
@@ -48,7 +48,7 @@ var obj = {
         return fn();
     }
 }
-obj.getAge()
+obj.getAge()  // 30
 ```
 
 * * 箭头函数this由词法作用域，上下文确定
@@ -64,10 +64,10 @@ var obj = {
         return fn();
     }
 }
-obj.getAge()
+obj.getAge()   // 30
 ```
 
-* * * 正因为箭头函数中的this由词法作用域决定，所以用call\(\)和apply\(\)调用箭头函数时的无法改变this，即第一个参数失效
+* * 正因为箭头函数中的this由词法作用域决定，所以用call\(\)和apply\(\)调用箭头函数时的无法改变this，即第一个参数失效
 
 ```js
 var obj = {

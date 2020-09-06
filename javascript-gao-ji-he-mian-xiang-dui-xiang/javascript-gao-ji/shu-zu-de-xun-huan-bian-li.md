@@ -84,16 +84,19 @@ for(var i = arr.length - 1; i >= 0; i--){
 [1, 4, 9, 16].map(x => x*2)
 // [2, 8, 18, 32]
 
+3.有一个符合返回true
 [1, 4, 9, 16].some((value, key, array) => {
     return value > 4
 })
 // true
 
+4.所有都符合才返回true
 [1, 4, 9, 16].every((value, key, array) => {
     return value > 4
 })
 // false
 
+5.过滤出符合的
 [1, 4, 9, 16].filter((value, key, array) => {
     return value > 4
 })
