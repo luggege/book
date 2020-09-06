@@ -72,5 +72,33 @@ for(var i = arr.length - 1; i >= 0; i--){
 [Log] [1, 4, 5] (3)
 ```
 
+### forEach、map、some、every、filter
+
+```js
+1.forEach没有返回值，不能跳出循环
+[1, 4, 9, 16].forEach((value, key, array) => {
+    console.log(value, key, array)
+})
+
+2.map有返回值
+[1, 4, 9, 16].map(x => x*2)
+// [2, 8, 18, 32]
+
+[1, 4, 9, 16].some((value, key, array) => {
+    return value > 4
+})
+// true
+
+[1, 4, 9, 16].every((value, key, array) => {
+    return value > 4
+})
+// false
+
+[1, 4, 9, 16].filter((value, key, array) => {
+    return value > 4
+})
+//[9, 16]
+```
+
 
 
