@@ -1,4 +1,4 @@
-### Array.prototype.includes
+### Array.prototype.includes（ES2016）
 
 > 返回一个布尔值，表示某个数组是否包含给定的值
 
