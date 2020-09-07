@@ -55,6 +55,63 @@ right: {
 }
 ```
 
+## 三栏布局
+
+```js
+1.浮动
+//父元素需要清楚浮动
+left: {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+right: {
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+main: {
+    // 防止文字环绕
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+2.定位
+left: {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+}
+right: {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+}
+main: {
+    position: absolute;
+    left: 100px;
+    right: 100px;
+}
+
+3.flex
+father {
+    display: flex;
+}
+left: {
+    width: 100px;
+    height: 100px;
+}
+right: {
+    width: 100px;
+    height: 100px;
+}
+main{
+
+}
+```
+
 ## 水平垂直居中一个盒子
 
 ```css
