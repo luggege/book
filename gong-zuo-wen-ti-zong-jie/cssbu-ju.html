@@ -2125,6 +2125,60 @@ right: {
     flex: 1;
 }
 </code></pre>
+<h2 id="&#x4E09;&#x680F;&#x5E03;&#x5C40;">&#x4E09;&#x680F;&#x5E03;&#x5C40;</h2>
+<pre><code class="lang-js"><span class="hljs-number">1.</span>&#x6D6E;&#x52A8;
+<span class="hljs-comment">//&#x7236;&#x5143;&#x7D20;&#x9700;&#x8981;&#x6E05;&#x695A;&#x6D6E;&#x52A8;</span>
+left: {
+    width: <span class="hljs-number">100</span>px;
+    height: <span class="hljs-number">100</span>px;
+    float: left;
+}
+right: {
+    width: <span class="hljs-number">100</span>px;
+    height: <span class="hljs-number">100</span>px;
+    float: right;
+}
+main: {
+    <span class="hljs-comment">// &#x9632;&#x6B62;&#x6587;&#x5B57;&#x73AF;&#x7ED5;</span>
+    margin-left: <span class="hljs-number">100</span>px;
+    margin-right: <span class="hljs-number">100</span>px;
+}
+
+<span class="hljs-number">2.</span>&#x5B9A;&#x4F4D;
+left: {
+    width: <span class="hljs-number">100</span>px;
+    height: <span class="hljs-number">100</span>px;
+    position: absolute;
+    left: <span class="hljs-number">0</span>;
+}
+right: {
+    width: <span class="hljs-number">100</span>px;
+    height: <span class="hljs-number">100</span>px;
+    position: absolute;
+    right: <span class="hljs-number">0</span>;
+}
+main: {
+    position: absolute;
+    left: <span class="hljs-number">100</span>px;
+    right: <span class="hljs-number">100</span>px;
+}
+
+<span class="hljs-number">3.</span>flex
+father {
+    display: flex;
+}
+left: {
+    width: <span class="hljs-number">100</span>px;
+    height: <span class="hljs-number">100</span>px;
+}
+right: {
+    width: <span class="hljs-number">100</span>px;
+    height: <span class="hljs-number">100</span>px;
+}
+main{
+
+}
+</code></pre>
 <h2 id="&#x6C34;&#x5E73;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x4E00;&#x4E2A;&#x76D2;&#x5B50;">&#x6C34;&#x5E73;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x4E00;&#x4E2A;&#x76D2;&#x5B50;</h2>
 <pre><code class="lang-css">//&#x65B9;&#x6CD5;&#x4E00;:
 father {
@@ -2223,7 +2277,7 @@ son {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"CSS布局","level":"1.10.5","depth":2,"next":{"title":"前端优化","level":"1.10.6","depth":2,"path":"gong-zuo-wen-ti-zong-jie/qian-duan-you-hua.md","ref":"gong-zuo-wen-ti-zong-jie/qian-duan-you-hua.md","articles":[]},"previous":{"title":"百度UEditor编辑器","level":"1.10.4","depth":2,"path":"gong-zuo-wen-ti-zong-jie/bai-du-ueditor-bian-ji-qi.md","ref":"gong-zuo-wen-ti-zong-jie/bai-du-ueditor-bian-ji-qi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gong-zuo-wen-ti-zong-jie/cssbu-ju.md","mtime":"2020-03-01T04:24:09.746Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-06T14:45:13.078Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"CSS布局","level":"1.10.5","depth":2,"next":{"title":"前端优化","level":"1.10.6","depth":2,"path":"gong-zuo-wen-ti-zong-jie/qian-duan-you-hua.md","ref":"gong-zuo-wen-ti-zong-jie/qian-duan-you-hua.md","articles":[]},"previous":{"title":"百度UEditor编辑器","level":"1.10.4","depth":2,"path":"gong-zuo-wen-ti-zong-jie/bai-du-ueditor-bian-ji-qi.md","ref":"gong-zuo-wen-ti-zong-jie/bai-du-ueditor-bian-ji-qi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gong-zuo-wen-ti-zong-jie/cssbu-ju.md","mtime":"2020-09-07T05:38:34.176Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-04T12:53:49.531Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
