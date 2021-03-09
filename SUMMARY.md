@@ -126,6 +126,7 @@
   * [Object.defineProperty\(\)](es5/objectdefineproperty.md)
   * [Object.getOwnPropertyDescriptor\(\)](es5/objectgetownpropertydescriptor.md)
   * [Object.create\(\)](es5/objectcreate.md)
+  * [Object.freeze\(\)](es5/objectfreeze.md)
 * [ES6](es6/README.md)
   * [箭头函数](es6/jian-tou-han-shu.md)
   * [Promise](es6/promise.md)

@@ -20,7 +20,7 @@ Object.defineProperty(obj, "a", {
 ##### 两个描述符共有的必选项：enumerable、configurable
 
 * enumerable： 是否可枚举（能否通过for-in遍历到属性）
-* configurable： 是否可修改（能否通过delete删除属性；）
+* configurable： 是否可修改（能否通过delete删除属性）
 
 ```js
 //configurable: true
