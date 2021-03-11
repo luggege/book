@@ -47,5 +47,40 @@ Object.assign(Person.prototype, {
 Object.keys(Person.prototype)     // ["like"]
 ```
 
+* 类直接调用报错，普通构造函数直接调用不会报错
+
+```js
+Person()
+// VM2102:1 Uncaught TypeError: Class constructor Person cannot be invoked without 'new'
+
+Student()
+// undefined
+```
+
+* 类内部默认constructor，且constructor默认返回this（同样也可返回指定对象）
+
+```js
+class Teacher {
+    
+}
+
+// 等同于
+class Teacher {
+    constructor() {}    
+}
+```
+
+```js
+class Foo {
+    constructor() {
+        return Object.create(null)
+    }
+}
+
+new Foo() instanceof Foo     // false
+
+// 说明：新生成的对象不在原构造函数的原型链上
+```
+
 
 
