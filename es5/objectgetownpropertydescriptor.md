@@ -40,5 +40,9 @@ Object.getOwnPropertyDescriptor([], 'length')
 // {value: 0, writable: true, enumerable: false, configurable: false}
 ```
 
+### obj.hasOwnProperty\(property\)： 检测对象是否含有某个属性（不包含原型链上的属性）
+
+### Object.getPrototypeOf\(obj\)：获取实例对象的原型
+
 
 

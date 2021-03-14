@@ -61,7 +61,7 @@ Student()
 
 ```js
 class Teacher {
-    
+
 }
 
 // 等同于
@@ -80,6 +80,43 @@ class Foo {
 new Foo() instanceof Foo     // false
 
 // 说明：新生成的对象不在原构造函数的原型链上
+```
+
+* getter 和 setter 存值函数和取值函数
+
+```js
+class Point {
+    constructor() {}
+
+    get prop() {
+        return 'getter'
+    }
+    set prop(value) {
+        console.log('setter: ' + value)
+    }
+}
+
+let point = new Point()
+
+point.prop = 123      // setter: 123
+
+point.prop            // "getter"
+```
+
+* 属性表达式
+
+```js
+let methodName = 'getArea'
+
+class Square {
+    constructor(){}
+
+    [methodName]() {}
+}
+
+let s = new Square()
+
+s.__proto__.hasOwnProperty('getArea')    // true
 ```
 
 
