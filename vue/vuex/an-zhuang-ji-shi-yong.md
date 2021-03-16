@@ -13,6 +13,14 @@ npm install vue
 npm install vuex
 ```
 
+#### 组成部分
+
+* state：存放共享数据
+* mutation：定义方法修改state的值（同步：如果非同步，状态的改变将无法追踪）
+* actions：通过dispatch分发actions（异步），通过commit提交mutation更改状态
+* getters：类似于vue的计算属性，用来过滤一些数据（达到抽取通用方法的目的）
+* modules：分模块管理
+
 ```javascript
 // 项目中引入、安装
 import Vue from 'vue'
@@ -52,12 +60,6 @@ console.log(store.state.count)   // 2
 // 3. dispatch分发
 store.dispatch('SET_TOKEN')
 ```
-
-* state：存放共享数据
-* mutation：定义方法修改state的值
-* actions：通过dispatch分发actions，通过commit异步处理数据
-* getters：类似于vue的计算属性，用来过滤一些数据
-* modules：分模块管理
 
 
 
