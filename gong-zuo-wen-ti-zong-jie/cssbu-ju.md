@@ -14,6 +14,9 @@ left: {
 }
 right: {
  margin-left: 100px;
+ 
+ // 或者利用BFC
+ overflow: hidden;
 }
 ```
 
