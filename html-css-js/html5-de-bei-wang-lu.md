@@ -126,7 +126,7 @@ gt ：就是Greater than的简写，也就是大于的意思。
 
 * 新的表单
 
-**input 类型 -email邮箱类型**
+* * **input 类型 -email邮箱类型**
 
 ```text
  <lable>
@@ -136,7 +136,7 @@ gt ：就是Greater than的简写，也就是大于的意思。
  </lable>;
 ```
 
-**input 类型 -url 网址**
+* * **input 类型 -url 网址**
 
 ```text
  <lable>
@@ -146,7 +146,7 @@ gt ：就是Greater than的简写，也就是大于的意思。
  </lable>;
 ```
 
-**input 类型 -search 搜索框**
+* * **input 类型 -search 搜索框**
 
 ```text
  <lable>
@@ -156,7 +156,7 @@ gt ：就是Greater than的简写，也就是大于的意思。
  </lable>t;
 ```
 
-**input 类型 - number\(value,max,min,step\(数字的间隔\)\)**
+* * **input 类型 - number\(value,max,min,step\(数字的间隔\)\)**
 
 ```text
  <lable>
@@ -166,7 +166,7 @@ gt ：就是Greater than的简写，也就是大于的意思。
  </lable>
 ```
 
-**input 类型 -range\(value,max,min,step\)滑块**
+* * **input 类型 -range\(value,max,min,step\)滑块**
 
 ```text
  <lable>
@@ -176,7 +176,7 @@ gt ：就是Greater than的简写，也就是大于的意思。
  </lable>
 ```
 
-**Input 类型 - Date Pickers（time, date, month, week, datetime-local）**
+* * **Input 类型 - Date Pickers（time, date, month, week, datetime-local）**
 
 ![](https://github.com/luggege/book/tree/f7d098fe1f889ccf3b383f621c0b48c599f5fdd3/assets/00.png)
 

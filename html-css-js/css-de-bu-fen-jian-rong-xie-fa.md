@@ -24,6 +24,7 @@ CSS ’width’ 指的是标准CSS中所指的width的宽度，
   **这个针对不同的浏览器写不同的CSS code的过程，就叫CSS hack,也叫写CSS hack**
 
 * !important这个规则对Ie6.0,Ie7.0和Firefox能写hack
+
 * \*对于Ie系列浏览器都能够识别， firefox 浏览器则不能识别;
 * !important只有Ie7.0和firefox可以识别，但是Ie6.0不能成功应用.
 
@@ -40,6 +41,7 @@ CSS ’width’ 指的是标准CSS中所指的width的宽度，
   ```
 
 * 在\(1\)中，之所以'\*'把放在后面是因为ff不识别,而导致只对它设置了一次border;而ie 系列进行了两次border设置后，后一个属性覆盖了前一个属性，故为一像素的边框。
+
 * 在\(2\)中，之所以把!important放在第一个border 设置，是因为它把这次border的优先级提高了，即使后面在一次甚至在N次设置border 也无效，但是Ie6.0对这个规则不接受，而导致它应用了第二次的border 设置，也就是第二次覆盖了第一次的这一原理， 并不是它不识别!important;所以它的border为2 像素的红框.
 
 #### 部分hack写法总结：
@@ -101,9 +103,9 @@ body:{text-align:center;margin:0px auto;}
 
    下面给大家个可以解决IE6、IE7、FF各个CSS优先权的方法
 
-    **\#1 { color: \#333; } FF环境**
+   **\#1 { color: \#333; } FF环境**
 
-   **\\* html \#1 { color: \#666; } IE6环境** 
+   **\\* html \#1 { color: \#666; } IE6环境**
 
    **\\*+html \#1 { color: \#999; } IE7环境**
 
@@ -129,4 +131,6 @@ body:{text-align:center;margin:0px auto;}
     display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
 }
 ```
+
+
 
