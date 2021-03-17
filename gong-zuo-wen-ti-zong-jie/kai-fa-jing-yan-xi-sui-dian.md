@@ -103,56 +103,58 @@ getElementsByClassName只兼容到IE 9 以上.
 
 ## 利用C3限制div内文字字数
 
-overflow: hidden;  
-display: -webkit-box;  
-text-overflow: ellipsis; //文字隐藏后添加省略号  
--webkit-line-clamp: 3; //控制行数  
+```css
+overflow: hidden;
+display: -webkit-box;
+text-overflow: ellipsis; //文字隐藏后添加省略号
+-webkit-line-clamp: 3; //控制行数
 -webkit-box-orient: vertical; //子元素垂直排列
+```
 
 * 限制文字在一行内显示
 
-> overflow: hidden; //溢出隐藏\(指定宽度\)
->
-> white-space: nowrap; //默认在不换行
->
-> text-overflow: ellipsis; //超出部分显示省略号
+```css
+overflow: hidden; //溢出隐藏(指定宽度)
+white-space: nowrap; //默认在不换行
+text-overflow: ellipsis; //超出部分显示省略号
+```
 
 ## 清除浮动遇到的问题
 
 > overflow: hidden; 只适合子元素没有设置position的元素,,否则超出父盒子高的部分将被截掉
->
-> 解决方法: 使用添加如下类的方法
->
-> ```js
-> /*清除浮动*/
-> .clearfix:before, .clearfix:after{
->   content: "";
->   display: table;
-> }
->
-> .clearfix:after{
->     clear: both;
-> }
->
-> .clearfix{
->     *zoom: 1; /*IE/7/6*/
-> }
-> ```
->
-> ```js
-> /*清除浮动代码*/
-> .clearfix:after{   
->     content:"";       
->     display:block;
->     clear:both;
->     visibility:hidden;
->     height:0
-> }    
->
-> .clearfix{
->     zoom:1
-> }
-> ```
+
+解决方法: 使用添加如下类的方法
+
+```css
+/*清除浮动*/
+.clearfix:before, .clearfix:after{
+  content: "";
+  display: table;
+}
+
+.clearfix:after{
+    clear: both;
+}
+
+.clearfix{
+    *zoom: 1; /*IE/7/6*/
+}
+```
+
+```css
+/*清除浮动代码*/
+.clearfix:after{   
+    content:"";       
+    display:block;
+    clear:both;
+    visibility:hidden;
+    height:0
+}    
+
+.clearfix{
+    zoom:1
+}
+```
 
 
 

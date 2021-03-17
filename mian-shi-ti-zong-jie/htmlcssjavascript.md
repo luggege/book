@@ -20,6 +20,8 @@ CSS的盒子模型有两种：IE盒子模型、标准的W3C盒子模型
 
 盒模型：内容、内边距、外边距（一般不计入盒子实际宽度）、边框
 
+通过box-sazing指定盒子模型种类：border-box（IE盒子模型）、content-box（标准盒子模型）
+
 ![](/assets/boxModel.png)
 
 ### 4. 行内元素和块级元素的具体区别、行内元素的padding和margin可设置吗？

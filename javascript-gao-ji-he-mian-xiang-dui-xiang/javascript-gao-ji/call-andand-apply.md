@@ -2,14 +2,13 @@
 
 > call和apply是Function.prototype的方法，所以每个function 实例都有这两个属性
 
-### 相同点
+* 相同点
 
-> 改变this指向
+* * 改变this指向
 
-### 不同点
-
-* call的后边参数需要**逐个**列出来
-* apply的后边参数是一个**数组**
+* 不同点
+* * call的后边参数需要**逐个**列出来
+  * apply的后边参数是一个**数组**
 
 ```js
 function add(c, d){

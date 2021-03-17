@@ -2,19 +2,24 @@
 
 ### 两栏布局
 
+> 前两种方法一定不能设置width:100%;只能自适应左边定宽浮动的盒子剩下的宽度,否则是继承整个父盒子的宽度,然后会有超出的部分
+
+* 方法一: 左盒子定宽设浮动
+
 ```css
-前两种方法一定不能设置width:100%;只能自适应左边定宽浮动的盒子剩下的宽度,否则是继承整个父盒子的宽度,然后会有超出的部分
-//方法一: 左盒子定宽设浮动
 left: {
-    width: 100px;
-    height: 100px;
-    float: left;
+ width: 100px;
+ height: 100px;
+ float: left;
 }
 right: {
-    margin-left: 100px;
+ margin-left: 100px;
 }
+```
 
-//方法二: 右边盒子设浮动,负边距
+* 方法二：右边盒子设浮动，负边距
+
+```css
 left: {
     width: 100px;
     height: 100px;
@@ -24,8 +29,11 @@ right: {
     margin-left: 100px;
     margin-top: -100px;
 }
+```
 
-//方法三: 父盒子利用padding占位子
+* 方法三: 父盒子利用padding占位子（左盒子相对父盒子相对定位）
+
+```css
 box: {
     padding-left: 100px;
     position: relative;
@@ -40,8 +48,11 @@ left: {
 right: {
     width: 100%;  //可设可不设
 }
+```
 
-//方法四: 利用弹性盒子
+* 方法四: 利用弹性盒子
+
+```css
 box: {
    display: flex;
 }
@@ -57,9 +68,9 @@ right: {
 
 ## 三栏布局
 
-```js
-1.浮动
-//父元素需要清楚浮动
+* 1.浮动（父元素需要清除浮动）
+
+```css
 left: {
     width: 100px;
     height: 100px;
@@ -75,8 +86,11 @@ main: {
     margin-left: 100px;
     margin-right: 100px;
 }
+```
 
-2.定位
+* 2.定位
+
+```css
 left: {
     width: 100px;
     height: 100px;
@@ -94,8 +108,11 @@ main: {
     left: 100px;
     right: 100px;
 }
+```
 
-3.flex
+* 3.flex
+
+```css
 father {
     display: flex;
 }
@@ -114,8 +131,9 @@ main{
 
 ## 水平垂直居中一个盒子
 
+* 方法一:
+
 ```css
-//方法一:
 father {
     position: relative;
 }
@@ -128,8 +146,11 @@ son {
     margin-left: -100px;
     margin-top: -100px;
 }
+```
 
-//方法二:  好处: 不需要知道子元素宽高,但是存在兼容性问题
+* 方法二:  好处: 不需要知道子元素宽高，但是存在兼容性问题
+
+```css
 father {
     position: relative;
 }
@@ -139,8 +160,11 @@ son {
     top: 50%;
     transform: translate(-50%,-50%);
 }
+```
 
-//方法三:  利用弹性盒子
+* 方法三:  利用弹性盒子
+
+```css
 father {
     display: flex;
     jusitify-content: center;
