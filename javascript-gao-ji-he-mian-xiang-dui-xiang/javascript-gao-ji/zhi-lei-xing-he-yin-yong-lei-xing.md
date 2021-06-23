@@ -7,8 +7,8 @@
 * String
 * Number
 * Boolean
-* Undefined
-* Null
+* Undefined（变量申明未定义）
+* Null（空对象指针）
 
 值类型是存储在栈（stack）中的简单数据，也就是说，它们的值直接存储在变量访问的位置。
 

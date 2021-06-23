@@ -87,7 +87,7 @@ obj.getAge(2020)   // 30
 
 * 箭头函数不能当作构造函数使用，new 的时候报错
 * 没有prototype属性
-* 返回对象时必须用圆括号包起来
+* **返回对象时必须用圆括号包起来**
 
 ```js
 var func = () => {foo: 1}
@@ -95,7 +95,7 @@ func()   // undefined
 
 var func = () => ({foo: 1})
 func()   // {foo: 1}
-// 或者
+// 等同于
 var func = () => {return {foo: 1}}
 func()   // {foo: 1}
 ```

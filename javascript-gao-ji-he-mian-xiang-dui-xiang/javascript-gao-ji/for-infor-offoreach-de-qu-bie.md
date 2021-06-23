@@ -16,8 +16,9 @@
 
 1. 会跳过空值，不能使用break，continue跳出循环，不同于for-in、for-of
 
+* 1、Object
+
 ```javascript
-1、Object
 var obj = {
   2: 'aaa',
   c: 333,
@@ -46,9 +47,11 @@ for(let item of obj){
   console.log('of````````', item)
 }
 //Uncaught TypeError: obj[Symbol.iterator] is not a function
+```
 
+* 2、Array
 
-2、Array
+```javascript
 var arr = [0, , null, 1, undefined, 2, 3]
 
 arr.test = 'testing'
@@ -78,8 +81,11 @@ arr.forEach(element => {
   console.log('forEach```````', element)
   // [0, null, 1, undefined, 2, 3] 
 })
+```
 
-3、String
+* 3、String
+
+```javascript
 var str = 'aaabbbccc'
 
 3-1

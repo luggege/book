@@ -21,7 +21,9 @@ for(var i = 0; i < 10; i++){
 
 }
 i // 10
+```
 
+```javascript
 // for循环中的经典使用
 var a = []
 for(var i = 0; i < 10; i++){

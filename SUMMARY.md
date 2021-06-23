@@ -139,4 +139,6 @@
   * [includes](es6/includes.md)
   * [Class](es6/class.md)
 * [HTTP协议](httpxie-yi.md)
+* [React](react.md)
+  * [react定义组件的方式](react/reactding-yi-zu-jian-de-fang-shi.md)
 
