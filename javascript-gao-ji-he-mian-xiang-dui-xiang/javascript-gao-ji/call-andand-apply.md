@@ -5,8 +5,8 @@
 * 相同点
 
 * * 改变this指向
-
 * 不同点
+
 * * call的后边参数需要**逐个**列出来
   * apply的后边参数是一个**数组**
 
@@ -17,7 +17,7 @@ function add(c, d){
 var obj = {a: 1, b: 2};
 
 add.call(obj, 3, 4)       // 1 + 2 + 3 + 4
-add.apply(obj, [10, 20])  // 1 + 2 + 10 + 20
+add.apply(obj, [3, 4])    // 1 + 2 + 3 + 4
 ```
 
 
