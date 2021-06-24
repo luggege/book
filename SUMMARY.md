@@ -41,7 +41,7 @@
     * [闭包](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/bi-bao.md)
     * [事件](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shi-jian.md)
     * [函数的四种调用模式](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/han-shu-de-si-zhong-diao-yong-mo-shi.md)
-    * [call && apply](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/call-andand-apply.md)
+    * [call && apply && bind](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/call-andand-apply.md)
     * [微任务、宏任务](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/wei-ren-wu-3001-hong-ren-wu.md)
     * [防抖与节流](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/fang-dou-yu-jie-liu.md)
   * [DOM操作复习](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/domcao-zuo-fu-xi.md)
