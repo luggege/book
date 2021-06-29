@@ -10,11 +10,11 @@
 function debounce(fn,ms){
     var timer = null
     return function(){
-        if(timer !== null){
-            // 计时过程中触发相同事件，取消当前计时，重新开始计时
+        if(timer){
+            // 计时过程中触发相同事件，取消上次的计时器
             clearTimeout(timer)
         }
-        // 当前无计时，开始计时
+        // 当前无计时，重新开始计时
         timer = setTimeout(fn, ms)
     }
 }
