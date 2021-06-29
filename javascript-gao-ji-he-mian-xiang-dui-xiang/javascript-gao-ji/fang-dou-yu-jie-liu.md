@@ -55,6 +55,20 @@ function scrollTop(){
 window.onscroll = throttle(scrollTop, 3000)
 ```
 
+```js
+function throttle(fn, delay) {
+    let begin = 0
+    return function() {
+        const cur = new Date().getTime()
+        // 当前事件与上次事件时间间隔大于限定时间，则执行
+        if(cur - begin > delay){
+            fn.apply(this, arguments)
+            begin = cur
+        }
+    }
+}
+```
+
 ### 区别
 
 防抖：大量重复操作，按最后一次重新计时，时间到开始执行
