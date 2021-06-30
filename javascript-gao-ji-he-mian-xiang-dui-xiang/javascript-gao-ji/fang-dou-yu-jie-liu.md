@@ -28,7 +28,7 @@ document.getElementById('id').onclick = debounce(function(){
 
 > 类似阀门控制一样，大量重复触发事件，定期只执行一次（举例：等红灯，1分钟才能通过一次）
 
-业务场景：滚动条、联想、表单重复提交
+业务场景：滚动条、窗口改变事件、联想、表单重复提交
 
 ```js
 function throttle(fn,delay){
@@ -42,6 +42,7 @@ function throttle(fn,delay){
         flag = false
         setTimeout(() => {
             fn()
+            // 规定时间到达后改变标识
             flag = true
         },delay)
     }
