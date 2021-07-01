@@ -44,6 +44,7 @@
     * [call && apply && bind](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/call-andand-apply.md)
     * [微任务、宏任务](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/wei-ren-wu-3001-hong-ren-wu.md)
     * [防抖与节流](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/fang-dou-yu-jie-liu.md)
+    * [函数柯里化](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/han-shu-ke-li-hua.md)
   * [DOM操作复习](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/domcao-zuo-fu-xi.md)
   * [jQuery API](javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-day3.md)
   * [冒泡排序](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-day4/mao-pao-pai-xu.md)
