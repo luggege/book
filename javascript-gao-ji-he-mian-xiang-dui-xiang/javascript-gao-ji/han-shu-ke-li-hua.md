@@ -1,6 +1,6 @@
 ### 柯里化
 
-> 是把接收多个参数的函数变成一个单一参数（最初函数的第一个参数）的函数，并且返回接收余下的参数而且返回结果的新函数的技术
+> 是把接收**多个参数**的函数变成一个**单一参数**（最初函数的第一个参数）的函数，并且返回接收余下的参数而且**返回结果**的新函数的技术（累积函数的参数，最后延迟执行）
 
 好处：
 
@@ -101,22 +101,26 @@ function curry(fn) {
 
 ```js
 // 支持多参数传递（递归）
+function fn(a, b, c, d) {
+    return a + b + c + d
+}
 function curry(fn, args) {
-    var _this = this;
-    var len = fn.length;
-    var args = args || [];
-
+    args = args || [];
+    const len = fn.length;  // 4
+    let _this = this;
     return function() {
-        // args 获取第一个方法内的全部参数
-        var _args = Array.prototype.slice.call(arguments);
+        // 收集参数
+        let _args = Array.prototype.slice.call(arguments) // [1]、[2]、[3]、[4]
         Array.prototype.push.apply(args, _args)
-        if(_args.length < len) {
-            return curry.call(_this, fn, _args);
+        if(args.length < len) {
+            return curry.apply(_this, fn, args)
         }
-        // 参数收集完毕，执行fn
-        return fn.apply(this, _args)
+        // 收集完毕，执行fn
+        return fn.apply(_this, args)
     }
 }
+const add = curry(fn)
+add(1)(2)(3)(4)     // 10
 ```
 
 #### 性能
@@ -127,6 +131,4 @@ function curry(fn, args) {
 * 创建大量嵌套作用域和闭包函数会带来花销，无论是在内存上还是速度上
 
 其实在大部分应用中，主要的性能瓶颈是在操作DOM节点上，这些js的性能损耗基本是可以忽略的，所以curry是可以放心使用的
-
-
 
