@@ -16,7 +16,7 @@ Netscape Communicator的事件流是事件**捕获流**。
 
 **先捕获，后冒泡**
 
-所有事件的**顺序**：其他元素捕获阶段事件 ==》目标阶段（按注册事件先后顺序）==〉其他元素冒泡阶段事件
+所有事件的**顺序**：其他元素**捕获**阶段事件 ==》**目标阶段**（按注册事件**先后顺序**）==〉其他元素**冒泡**阶段事件
 
 ```js
 <div id="div1">
@@ -50,8 +50,8 @@ document.getElementById('div4').addEventListener("click",function(){alert("4");}
 
 ```js
 box.click(function(e){
-    e = windown.event || e;
-    if(e&&e.stopPropagation){     
+    e = window.event || e;
+    if(e && e.stopPropagation){     
         e.stopPropagation();
     }
     else{    
@@ -64,12 +64,12 @@ box.click(function(e){
 
 ```js
 function stopDefaultEvent(){
-    if(windowm.event){   // IE
-        window.event.returnValue = true
+    if(window.event){   // IE
+        window.event.returnValue = false
+        // 或者 return false
     }else {
         event.preventDefault()
     }
-    return false
 }
 ```
 
