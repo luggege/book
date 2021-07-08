@@ -1,4 +1,4 @@
-### Object.create\(proto\[, propertiesObject\]\): 创建一个新对象
+### Object.create\(proto\[, propertiesObject\]\): 创建一个以该对象为原型对象的新对象
 
 > 兼容：IE9+、Firefox4+、Safari5+、Opera12+、Chrome
 
@@ -19,10 +19,10 @@ Object.create({})
 // {__proto__:{__proto__: Object}}
 ```
 
-* propertiesObject：可选，添加到新创建对象上的不可枚举（默认）或可枚举属性，对应Objecr.defineProperty的参数
+* propertiesObject：可选，添加到新创建对象上的不可枚举（默认）或可枚举属性，对应Object.defineProperty的参数
 
 ```js
-o = Object. create({}, {p: {value: 111}})
+o = Object.create({}, {p: {value: 111}})
 
 for(var i in o){
     console.log(i)

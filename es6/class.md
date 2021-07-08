@@ -1,6 +1,6 @@
 ### class
 
-* ES6的class类，只是一个语法糖，只是看起来更像面向对象编程的语法而已，完全可以看作是构造函数的另一种写法
+* ES6的class类，只是一个**语法糖**，只是看起来更像面向对象编程的语法而已，完全可以看作是构造函数的另一种写法
 
 ```js
 class Person {
@@ -22,7 +22,7 @@ Person.prototype.skill = function() {
 }
 ```
 
-* 类本身就指向构造函数
+* 类本身就指向**构造函数**
 
 ```js
 Person === Person.prototype.constructor   // true
@@ -57,7 +57,7 @@ Student()
 // undefined
 ```
 
-* 类内部默认constructor，且constructor默认返回this（同样也可返回指定对象）
+* 类内部默认constructor，且constructor默认返回this（实例对象），同样也可返回指定对象
 
 ```js
 class Teacher {

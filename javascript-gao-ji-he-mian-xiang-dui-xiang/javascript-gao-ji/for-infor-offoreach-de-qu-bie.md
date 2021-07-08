@@ -16,7 +16,7 @@
 
 1. 会跳过空值，不能使用break，continue跳出循环，不同于for-in、for-of
 
-* 1、Object
+2. 1、Object
 
 ```javascript
 var obj = {

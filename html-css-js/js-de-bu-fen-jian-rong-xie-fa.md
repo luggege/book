@@ -144,11 +144,11 @@ getButton: function(event){
         case 5:
         case 7:
         return 0;
-        
+
         case 2:
         case 6:
         return 2;
-        
+
         case 4:
         return 1;
      }
