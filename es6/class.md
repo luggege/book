@@ -25,13 +25,14 @@ Person.prototype.skill = function() {
 * 类本身就指向**构造函数**
 
 ```js
+typeof Person  // function
 Person === Person.prototype.constructor   // true
 ```
 
 **注意：**
 
 * 类内部定义的各方法之间无需用逗号隔开
-* 定义在**类内部**的方法是**不可枚举**的，通过Object.assign\(\)和ES5中直接向**构造函数的原型上**添加的方法是**可枚举**的
+* 定义在**类内部**的方法是**不可枚举**的，通过**Object.assign\(\)**和ES5中直接向**构造函数的原型上**添加的方法是**可枚举**的
 
 ```js
 Object.keys(Person.prototype)     // []
@@ -82,7 +83,7 @@ new Foo() instanceof Foo     // false
 // 说明：新生成的对象不在原构造函数的原型链上
 ```
 
-* getter 和 setter 存值函数和取值函数
+* 对某个**属性**设置，getter 和 setter 存值函数和取值函数，拦截该属性的存取行为
 
 ```js
 class Point {
@@ -118,6 +119,101 @@ let s = new Square()
 
 s.__proto__.hasOwnProperty('getArea')    // true
 ```
+
+* class表达式
+
+```js
+// Point是定义在class内部的，不能直接new
+const MyPoint = class Point {
+    say() {
+        console.log(111)
+    }
+}
+(new MyPoint()).say()   // 111
+
+// 可以简写为
+const MyPoint = class {
+    say() {
+        console.log(111)
+    }
+}
+
+// 进而可以写出立即执行的类
+const p = new class {
+    say() {
+        console.log(111)
+    }
+}
+p.say()  // 111
+```
+
+**注意点**
+
+* class内部默认严格模式
+
+* class不存在变量提升
+
+```js
+// 不报错
+new Student()
+function Student(){}
+
+// Person is not defined
+new Person()
+class Person{}
+```
+
+* this指向
+
+```js
+// 将方法单独提取出来使用造成的this指向错误问题
+class Foo {
+    say(name = 'jack') {
+        // 严格模式，this指向undefined
+        this.print(name)
+    }
+    print(name) {
+        console.log(name)
+    }
+}
+const {say} = new Foo()
+say()  // Cannot read property 'print' of undefined
+```
+
+解决办法
+
+* * constructor绑定this，给实例添加属性方法
+
+```js
+class Foo {
+    constructor(){
+        this.say = this.say.bind(this)
+    }
+    say(name = 'jack') {
+        this.print(name)
+    }
+    print(name) {
+        console.log(name)
+    }
+}
+const f1 = new Foo()
+const {say} = f1
+say() // jack
+```
+
+* * 箭头函数（this取决于上下文）
+
+  ```js
+  class Foo {
+      constructor(){
+          console.log('this', this)
+          this.getThis = () => this
+      }
+  }
+
+  const f1 = new Foo()
+  f1.say() === f1    // true
+  ```
 
 
 

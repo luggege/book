@@ -123,6 +123,7 @@
   * [Object.keys\(\)/Object.values\(\)/Object.entries\(\)](es5/objectkey.md)
   * [Object.defineProperty\(\)](es5/objectdefineproperty.md)
   * [Object.getOwnPropertyDescriptor\(\)](es5/objectgetownpropertydescriptor.md)
+  * [Object.getOwnPropertyNames\(\)](es5/objectgetownpropertynames.md)
   * [Object.create\(\)](es5/objectcreate.md)
   * [Object.freeze\(\)](es5/objectfreeze.md)
 * [ES6](es6/README.md)
