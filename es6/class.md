@@ -165,8 +165,9 @@ class Person{}
 
 * this指向
 
+> 将方法单独提取出来使用造成的this指向错误问题
+
 ```js
-// 将方法单独提取出来使用造成的this指向错误问题
 class Foo {
     say(name = 'jack') {
         // 严格模式，this指向undefined
