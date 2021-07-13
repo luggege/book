@@ -140,7 +140,7 @@
   * [Set数据结构](es6/setshu-ju-jie-gou.md)
   * [Map数据结构](es6/mapshu-ju-jie-gou.md)
   * [includes](es6/includes.md)
-  * Object.setPrototypeOf\(\)/Object.getPrototypeOf\(\)
+  * [super](es6/super.md)
 * [HTTP协议](httpxie-yi.md)
 * [React](react.md)
   * [react定义组件的方式](react/reactding-yi-zu-jian-de-fang-shi.md)
