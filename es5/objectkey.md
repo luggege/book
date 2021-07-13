@@ -1,11 +1,15 @@
 # Object.keys\(\)：返回一个数组，参数是一个\*对象\*所有可遍历属性的\*键名\*
 
+> ES5
+
 ```javascript
 Object.keys({'a': 1, 'b': 2, 'c': 3});   // ["a", "b", "c"]
 Object.keys(["a", "b", "c"]);            // ["0", "1", "2"]
 ```
 
 ## Object.values\(\)：返回一个数组，参数是一个\*对象\*所有可遍历属性的\*键值\*
+
+> ES6
 
 ```javascript
 1. 对象
@@ -25,6 +29,8 @@ Object.values(null);   // VM11854:1 Uncaught TypeError: Cannot convert undefined
 ```
 
 ## Object.entries\(\)：返回一个数组，参数是一个\*对象\*所有可遍历属性的\*键值对\*数组
+
+> ES6
 
 ```javascript
 Object.entries({'a': 1, 'b': 2, 'c': 3}); // (3) [["a", 1], ["b", 2], ["c", 3]]
