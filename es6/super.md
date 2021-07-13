@@ -63,5 +63,51 @@ const obj = {
 // super.foo 等同于 Object.getPrototypeOf(this).foo 或者 Object.getPrototypeOf(this).foo.call(this)
 ```
 
+* super 实现继承 删除 super 上的属性将抛出异常
+
+```js
+class A{
+    constructor(n){
+        console.log(n); //=>100;
+        this.x = 300;
+    }
+    getX(){
+        console.log(this.x);
+    }
+    add() {
+        return this.x + this.y
+    }
+}
+
+class B extends A{ //=>extends 类似实现原型继承
+    constructor(){
+        // 注意: 在派生的类中, 在你可以使用'this'之前, 必须先调用super()
+        super(100);//=>类似于call的继承：在这里super相当于把A的constructor给执行了，并且让方法中的this是B的实例，super当中传递的实参都是在给A的constructor传递。
+        this.y = 200;
+    }
+    getY(){
+        console.log(this.y);
+    }
+    add() {
+        return super.add()
+    }
+}
+
+let f = new B();
+
+f        // {x: 300, y: 200}
+f.add()  // 500
+```
+
+* 删除 super 上的属性将抛出异常
+
+```js
+delete() {
+    delete super.foo; 
+}
+
+f.delete(); // ReferenceError: invalid delete involving 'super'.
+```
+
 
 
