@@ -63,7 +63,7 @@ const obj = {
 // super.foo 等同于 Object.getPrototypeOf(this).foo 或者 Object.getPrototypeOf(this).foo.call(this)
 ```
 
-* super 实现继承 删除 super 上的属性将抛出异常
+* super 实现继承，删除 super 上的属性将抛出异常
 
 ```js
 class A{

@@ -140,6 +140,7 @@
   * [Set数据结构](es6/setshu-ju-jie-gou.md)
   * [Map数据结构](es6/mapshu-ju-jie-gou.md)
   * [includes](es6/includes.md)
+  * [class](/es6/class.md)
   * [super](es6/super.md)
 * [HTTP协议](httpxie-yi.md)
 * [React](react.md)
