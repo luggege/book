@@ -147,11 +147,10 @@ const p = new class {
 p.say()  // 111
 ```
 
-**注意点**
+注意点
 
-* class内部默认严格模式
-
-* class不存在变量提升
+* * class内部默认严格模式
+* * class不存在变量提升
 
 ```js
 // 不报错
@@ -163,7 +162,7 @@ new Person()
 class Person{}
 ```
 
-* this指向
+* * this指向
 
 > 将方法单独提取出来使用造成的this指向错误问题
 
@@ -183,7 +182,7 @@ say()  // Cannot read property 'print' of undefined
 
 解决办法
 
-* * constructor绑定this，给实例添加属性方法
+* * * constructor绑定this，给实例添加属性方法
 
 ```js
 class Foo {
@@ -202,7 +201,7 @@ const {say} = f1
 say() // jack
 ```
 
-* * 箭头函数（this取决于上下文）
+* * * 箭头函数（this取决于上下文）
 
   ```js
   class Foo {
@@ -215,6 +214,17 @@ say() // jack
   const f1 = new Foo()
   f1.say() === f1    // true
   ```
+* 静态方法
+
+> 方法前加**static**关键字，只能构造函数调用，实例不能调用
+
+* 属性的新写法
+
+> 通常实例的属性写在constructor里，新写法可以提取出来去掉this与其他方法平级（prop = 0）
+
+* 静态属性
+
+> 老写法在构造函数上绑定属性（Foo.prop），不符合相关代码放在一起的代码组织原则且容易忽略。新写法在属性前加**static**关键字，表示构造函数的属性
 
 
 

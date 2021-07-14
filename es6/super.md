@@ -1,6 +1,6 @@
 ### super
 
-> this关键字总是指向函数所在的当前对象，ES6新增类似的super关键字，总是指向**当前对象的原型对象**
+> this关键字总是指向函数所在的当前对象，ES6新增类似的**super**关键字，总是指向**当前对象的原型对象**
 
 ```js
 const proto = {
@@ -82,6 +82,8 @@ class A{
 class B extends A{ //=>extends 类似实现原型继承
     constructor(){
         // 注意: 在派生的类中, 在你可以使用'this'之前, 必须先调用super()
+        // 调用父类的constructor()，类似于 A.prototype.constructor.call(this)
+        // 用作函数，代表父类的构造函数
         super(100);//=>类似于call的继承：在这里super相当于把A的constructor给执行了，并且让方法中的this是B的实例，super当中传递的实参都是在给A的constructor传递。
         this.y = 200;
     }
@@ -89,6 +91,8 @@ class B extends A{ //=>extends 类似实现原型继承
         console.log(this.y);
     }
     add() {
+        // 调用父类的add()
+        // 用作对象，代表的父类的原型对象（A.prototype.add()）
         return super.add()
     }
 }
