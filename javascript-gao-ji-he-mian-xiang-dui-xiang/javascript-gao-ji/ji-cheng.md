@@ -1,6 +1,6 @@
 ### 继承
 
-> 定义：自己没有的属性和方法,拿过别人有的来用,就叫继承
+> 定义：自己没有的属性和方法，拿过别人有的来用，就叫继承
 >
 > 实现：利用原型中的成员可以被和其相关的对象共享这一属性
 
@@ -336,7 +336,7 @@ console.log(instance1)
 已知如下类Animal，要求设计一个Cat类继承自Animal，并实现如下功能：
 
 ```js
-Animal:
+// Animal:
 function Animal(){
     this.name = "Animal";
     this.showName = function(){
@@ -344,19 +344,15 @@ function Animal(){
     }
 }
 
-Cat:
+// Cat:
 function Cat(){
-
     this.name = "Cat";
-
     this.showName1 = function(){
         console.log(this.name); 
     }
-
     this.showName2 = function(){
         console.log(this.name); 
     } 
-
     this.showName3 = function(){
         console.log(this.__super.name + "=>" + this.name); 
     }
