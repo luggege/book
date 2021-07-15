@@ -164,29 +164,32 @@ class Person{}
 
 * * this指向
 
-> 将方法单独提取出来使用造成的this指向错误问题
+> 类中方法中的this默认指向实例。但是如果将方法单独提取出来使用（**直接调用**），this会指向该方法**运行时的所在环境**，造成的this指向错误问题
 
 ```js
 class Foo {
     say(name = 'jack') {
-        // 严格模式，this指向undefined
         this.print(name)
     }
     print(name) {
         console.log(name)
     }
 }
-const {say} = new Foo()
+const foo = new Foo()
+// foo.say()：实例调用，this指向实例
+const {say} = foo
+// say()：直接调用，类中默认开启严格模式，所以this指向undefined
 say()  // Cannot read property 'print' of undefined
 ```
 
 解决办法
 
-* * * constructor绑定this，给实例添加属性方法
+* * * constructor绑定this，给**实例添加**属性方法
 
 ```js
 class Foo {
     constructor(){
+        // bind作用：生成一个新的函数、改变this
         this.say = this.say.bind(this)
     }
     say(name = 'jack') {
@@ -201,7 +204,7 @@ const {say} = f1
 say() // jack
 ```
 
-* * * 箭头函数（this取决于上下文）
+* * * **箭头函数**（this取决于上下文）
 
   ```js
   class Foo {
@@ -212,11 +215,25 @@ say() // jack
   }
 
   const f1 = new Foo()
-  f1.say() === f1    // true
+  f1.getThis() === f1    // true
+  ```
+
+  ```js
+  class Foo {
+      say = (name = 'jack') => {
+          this.print(name)
+      }
+      print(name) {
+          console.log(name)
+      }
+  }
+  const f1 = new Foo()
+  const {say} = f1
+  say() // jack
   ```
 * 静态方法
 
-> 方法前加**static**关键字，只能构造函数调用，实例不能调用
+> 方法前加**static**关键字，只能**构造函数调用**，实例不能调用
 
 * 属性的新写法
 
@@ -224,7 +241,7 @@ say() // jack
 
 * 静态属性
 
-> 老写法在构造函数上绑定属性（Foo.prop），不符合相关代码放在一起的代码组织原则且容易忽略。新写法在属性前加**static**关键字，表示构造函数的属性
+> 老写法在构造函数上绑定属性（Foo.prop），不符合相关代码放在一起的代码组织原则且容易忽略。新写法在属性前加**static**关键字，表示**构造函数的属性**
 
 
 
