@@ -220,9 +220,11 @@ say() // jack
 
   ```js
   class Foo {
+      // 定义在实例上的方法
       say = (name = 'jack') => {
           this.print(name)
       }
+      // 定义在原型上的方法
       print(name) {
           console.log(name)
       }
@@ -237,7 +239,7 @@ say() // jack
 
 * 属性的新写法
 
-> 通常实例的属性写在constructor里，新写法可以提取出来去掉this与其他方法平级（prop = 0）
+> 通常**实例**的属性写在constructor里，新写法可以提取出来去掉this与其他方法平级（prop = 0）
 
 * 静态属性
 
