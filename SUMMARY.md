@@ -137,6 +137,7 @@
   * [Symbol](es6/symbol.md)
   * [async](es6/async.md)
   * [Array.from\(\)](es6/arrayfrom.md)
+  * [reduce](es6/reduce.md)
   * [Set数据结构](es6/setshu-ju-jie-gou.md)
   * [Map数据结构](es6/mapshu-ju-jie-gou.md)
   * [includes](es6/includes.md)
