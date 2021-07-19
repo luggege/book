@@ -75,6 +75,7 @@ let { baz } = { foo: 'aaa', bar: 'bbb' };                 // baz => undefined
 
 let { a: bbbb } = { a: 'aaaa' }                          // a => a is not defined    bbb => 'aaaa'
 
+// 连续解构赋值
 let obj = {
     p: [
         'hello',
@@ -112,6 +113,29 @@ let x;
 
 3. 对数组进行对象属性的解构
 let {0: first, [array.length - 1]: last} = array       // first => 1  last => 3
+```
+
+连续解构赋值+重命名
+
+```js
+let obj = {
+    a:{
+        b: {
+            c: 1
+        }
+    }
+}
+const {a: {b: {c}}} = obj
+a b // a is not defined
+c   // 1
+
+let obj2 = {
+    a:{
+        b: 3
+    }
+}
+const {a: {b: data}} = obj2
+data // 3
 ```
 
 ## 字符串的解构赋值
