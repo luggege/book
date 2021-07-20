@@ -26,7 +26,6 @@ componentDidMount() {
     // 订阅消息
     this.token = PubSub.subscribe('addTodo', (msg, todo) => {
         console.log('消息已发布：', msg, todo);  // 消息已发布：addTodo
-        this.addTodo(todo)
     })
 }
 
