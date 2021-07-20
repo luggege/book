@@ -1,5 +1,7 @@
 ### 原生ajax请求
 
+> 原生xhr
+
 ```js
 // 创建异步对象
 var xhr = new XMLHttpRequest()
@@ -25,6 +27,8 @@ xhr.onreadystatechange = function(){
 ```
 
 ### jquery请求
+
+> 基于xhr封装
 
 ```js
 $.ajax({
@@ -58,7 +62,6 @@ $.ajax({
   * multipart/form-data
 
   > 用于文件上传提交文件
-
 * dataType：收到服务器的格式
 
 * * json
@@ -66,6 +69,8 @@ $.ajax({
   * xml
 
 ### axios请求
+
+> 基于xhr封装
 
 ```js
 // request.js

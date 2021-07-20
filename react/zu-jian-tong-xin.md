@@ -5,7 +5,7 @@
 
 ### 非父子组件之间通信
 
-* 借用第三方库pubsub-js，消息**订阅**-**发布机制（先订阅后发布）**技术实现
+* 借用第三方库pubsub-js，消息**订阅**-**发布机制（先订阅，后发布）**技术实现
 
 解决的问题：之前，状态及状态操作的方法只能放在共同的父组件。现在，实现状态谁用谁操作，结构更清晰
 
@@ -28,8 +28,8 @@ componentDidMount() {
         console.log('消息已发布：', msg, todo);  // 消息已发布：addTodo
     })
 }
-
 componentWillMount() {
+    // 取消订阅
     PubSub.unsubscribe(this.token)
 }
 ```
