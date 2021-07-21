@@ -23,10 +23,12 @@ handleKeyUp = () => {
 }
 ```
 
-**内联的函数**，在**更新**过程中会调用两次，第一次为null，第二次真实dom，因为每次渲染会创建新的函数实例，React清空旧的ref并且设置新的；class的绑定函数的方式可以避免，但无关紧要。
+**内联的函数**，在**更新\(render\)**过程中会调用两次，第一次为null，第二次真实dom，因为每次渲染会创建新的函数实例，React清空旧的ref并且设置新的；**class的绑定函数**的方式可以避免，但无关紧要。
 
 * createRef
-  > React调用后返回一个容器，该容器可以存储被ref所标识的节点。该容器是专人专用的，同一命名后边的会覆盖前边的
+  > React.createRef\(\)被调用后返回一个容器，该容器可以存储被ref所标识的节点。该容器是专人专用的，同一命名后边的会覆盖前边的
+  >
+  > 缺点：重复创建，比较繁琐
 
 ```js
 // 内联函数
@@ -35,6 +37,7 @@ handleKeyUp = () => {
 {/*<input ref={this.saveInput} type="text" placeholder="按回车确认"/>*/}
 
 myRef = React.createRef()
+myRef1 = React.createRef()
 
 handleKeyUp = () => {
     console.log(this.myRef)   // {current: input} ===> this.myRef.current.value

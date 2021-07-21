@@ -19,6 +19,12 @@ ReactDOM.render(<App />, document.getElementById('root'));
 import React, { Component } from 'react'
 
 export default class App extends Component {
+  // 对接收的props进行：类型、必要性的限制
+  // static propTypes = {
+  //    updateTodo: PropTypes.func.isRequired,
+  //    todoList: PropTypes.array.isRequired
+  // }
+  
   // 给实例直接添加一个属性
   state = {}
 
