@@ -19,7 +19,7 @@ import {NavLink, BrowserRouter, Route, HashRouter, Redirect} from 'react-router-
 
 render() {
     return (
-        <HashRouter>
+        <BrowserRouter>
           <Header />
           <div>
               {/* Link标签换为 NavLink会追加 active类，添加 activeClassName会将选中的类变为指定的类名 */}
@@ -35,7 +35,7 @@ render() {
               {/* Redirect */}
               <Redirect to="/home" />
           </h3>
-        </HashRouter>
+        </BrowserRouter>
     )
 }
 ```
@@ -196,6 +196,17 @@ render() {
         </div>
     )
 }
+```
+
+#### withRouter
+
+```js
+// Header.jsx
+import {withRouter} from 'react-router-dom'
+
+// withRouter专门解决一般组件使用路由组件api的问题
+// 返回值是一个新组件
+export default withRouter(Header)
 ```
 
 

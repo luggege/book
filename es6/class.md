@@ -184,7 +184,7 @@ say()  // Cannot read property 'print' of undefined
 
 解决办法
 
-* * * constructor绑定this，给**实例添加**属性方法
+* * * constructor**绑定this**，给**实例添加**属性方法
 
 ```js
 class Foo {

@@ -24,21 +24,21 @@ export default class App extends Component {
   //    updateTodo: PropTypes.func.isRequired,
   //    todoList: PropTypes.array.isRequired
   // }
-  
+
   // 给实例直接添加一个属性
   state = {}
 
-  // 调用几次：1次
+  // 调用次数：1次
   constructor() {}
 
-  // 调用几次：1（初始化）+ n（状态更新）次
+  // 调用次数：1（初始化）+ n（状态更新）次
   render() {
     return (
       <div onClick={this.handle}></div>
     )
   }
 
-  // 调用几次：点几次调几次
+  // 调用次数：点几次调几次
   // this指向问题
   // 作为onclick的回调，所以不是通过实例调用的，而是直接调用，类中的方法默认开启局部的严格模式，所以this为undefined
   // handle() {
