@@ -91,10 +91,6 @@ import {NavLink, BrowserRouter, Route, HashRouter, Switch} from 'react-router-do
 * 注册子路由时要写上**父路由的path**值
 * 路由的**匹配**是按照注册路由的**顺序**进行的
 
-#### 
-
-
-
 #### 编程式路由导航
 
 ```js
