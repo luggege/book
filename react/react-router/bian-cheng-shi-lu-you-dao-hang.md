@@ -6,25 +6,20 @@ handleReplace = (id, title) => {
     // this.props.history.replace(`/home/message/detail/?id=${id}&title=${title}`)
     this.props.history.replace(`/home/message/detail`, {id, title})
 }
-
 handlePush = (id, title) => {
     // this.props.history.push(`/home/message/detail/${id}/${title}`)
     this.props.history.replace(`/home/message/detail/?id=${id}&title=${title}`)
     this.props.history.replace(`/home/message/detail`, {id, title})
 }
-
 forward = () => {
     this.props.history.goForward()
 }
-
 back = () => {
     this.props.history.goBack()
 }
-
 go = () => {
     this.props.history.go(2)
 }
-
 render() {
     const { messageArr } = this.state
     return (
@@ -57,7 +52,6 @@ render() {
             <button onClick={this.forward}>前进</button>
             <button onClick={this.back}>回退</button>
             <button onClick={this.go}>go</button>
-
         </div>
     )
 }
