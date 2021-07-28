@@ -2,13 +2,13 @@
 
 ```js
 handleReplace = (id, title) => {
-// this.props.history.replace(`/home/message/detail/${id}/${title}`)
+    // this.props.history.replace(`/home/message/detail/${id}/${title}`)
     // this.props.history.replace(`/home/message/detail/?id=${id}&title=${title}`)
     this.props.history.replace(`/home/message/detail`, {id, title})
 }
 handlePush = (id, title) => {
     // this.props.history.push(`/home/message/detail/${id}/${title}`)
-    this.props.history.replace(`/home/message/detail/?id=${id}&title=${title}`)
+    // this.props.history.replace(`/home/message/detail/?id=${id}&title=${title}`)
     this.props.history.replace(`/home/message/detail`, {id, title})
 }
 forward = () => {
