@@ -152,4 +152,5 @@
   * [react-router](react/react-router.md)
     * [路由传参方式](react/react-router/lu-you-chuan-can-fang-shi.md)
     * [编程式路由导航](react/react-router/bian-cheng-shi-lu-you-dao-hang.md)
+    * [history和hash详解](react/react-router/historyhe-hash-xiang-jie.md)
 
