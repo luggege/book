@@ -5,6 +5,7 @@
 ```js
 // 首字母大写的标签
 function App() {
+  console.log(this) // undefined, 因为开启了严格模式，不能玩三大属性，props除外
   return (
     <div></div>
   );
