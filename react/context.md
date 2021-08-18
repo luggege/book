@@ -1,4 +1,4 @@
-### context
+### context：生产者-消费者模式
 
 > 适用于祖祖组件之间值的传递，实际更多情况使用react-redux
 
