@@ -157,4 +157,5 @@
   * [Fragment](react/fragment.md)
   * [context](react/context.md)
   * [PureComponent](react/purecomponent.md)
+  * [renderProps](react/renderprops.md)
 
