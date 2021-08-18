@@ -158,4 +158,5 @@
   * [context](react/context.md)
   * [PureComponent](react/purecomponent.md)
   * [renderProps](react/renderprops.md)
+  * [errorBoundary](react/errorboundary.md)
 
