@@ -156,4 +156,5 @@
   * [hooks](react/hooks.md)
   * [Fragment](react/fragment.md)
   * [context](react/context.md)
+  * [PureComponent](react/purecomponent.md)
 
