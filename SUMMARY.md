@@ -153,10 +153,14 @@
     * [路由传参方式](react/react-router/lu-you-chuan-can-fang-shi.md)
     * [编程式路由导航](react/react-router/bian-cheng-shi-lu-you-dao-hang.md)
     * [history和hash详解](react/react-router/historyhe-hash-xiang-jie.md)
+  * [setState](react/setstate.md)
+  * [lazy-load](react/lazy-load.md)
   * [hooks](react/hooks.md)
   * [Fragment](react/fragment.md)
   * [context](react/context.md)
-  * [PureComponent](react/purecomponent.md)
-  * [renderProps](react/renderprops.md)
-  * [errorBoundary](react/errorboundary.md)
+  * [PureComponent](/react/purecomponent.md "PureComponent")
+  * [renderProps](/react/renderprops.md "renderProps")
+  * [errorBoundary](/react/errorboundary.md "errorBoundary")
+
+
 
