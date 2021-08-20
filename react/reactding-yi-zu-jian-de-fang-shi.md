@@ -40,7 +40,7 @@ export default class App extends Component {
   }
 
   // 调用次数：点几次调几次
-  // this指向问题
+  // this指向问题（详见class篇）
   // 作为onclick的回调，所以不是通过实例调用的，而是直接调用，类中的方法默认开启局部的严格模式，所以this为undefined
   // handle() {
   //    // 该方法放在原型对象上，供实例使用

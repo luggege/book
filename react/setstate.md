@@ -18,6 +18,7 @@ export default class SetState extends Component {
         //     console.log('异步。。。', this.state.count)
         // })
         // console.log('同步。。。', this.state.count)
+        // 提示：this.state.count = count + 1 // 错误写法，无法更新状态
 
         // 2. 函数式的setState
         this.setState((state, prop) => {
