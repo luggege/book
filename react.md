@@ -58,5 +58,5 @@ function fn(obj, b) {
 const obj = {x: 2}
 ```
 
-
+所有React组件都必须是纯函数，并禁止修改其自身props
 
