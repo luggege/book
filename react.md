@@ -81,7 +81,7 @@ const obj = {x: 2}
 
 > 非受控组件：状态现用现取（ref）
 >
-> 受控组件：状态由React维护（setState）
+> 受控组件：状态由React维护（setState存 state取）
 
 
 
