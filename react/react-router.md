@@ -5,7 +5,7 @@
 #### 一般组件&路由组件区别
 
 * 一般组件直接标签引用，路由组件需要Route标签注册
-* 一般组件传递什么接收什么，路由组件（this.props）接收到三个固定的属性：history\location\match
+* 一般组件传递什么接收什么，路由组件（this.props）接收到三个固定的属性：history/location/match
 
 #### NavLink与封装NavLink
 
