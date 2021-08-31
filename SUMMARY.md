@@ -158,9 +158,10 @@
   * [hooks](react/hooks.md)
   * [Fragment](react/fragment.md)
   * [context](react/context.md)
-  * [PureComponent](/react/purecomponent.md "PureComponent")
-  * [renderProps](/react/renderprops.md "renderProps")
-  * [errorBoundary](/react/errorboundary.md "errorBoundary")
-
-
+  * [PureComponent](/react/purecomponent.md)
+  * [renderProps](/react/renderprops.md)
+  * [errorBoundary](/react/errorboundary.md)
+* 算法
+  * [数据结构](shu-ju-jie-gou.md)
+    * [二叉树](shu-ju-jie-gou/er-cha-shu.md)
 
