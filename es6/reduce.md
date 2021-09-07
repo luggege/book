@@ -8,7 +8,7 @@ arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue]
 
 * * accumulator：累计器累计回调的返回值，它是上一次调用回调时返回的**累积值**，或**initialValue**
   * currentValue：数组中正在处理的元素
-  * index（可选）：数组中正在处理的元素的索引。如果指定了initialValue，则起始索引为0，否则**从1起始**
+  * index（可选）：数组中正在处理的元素的索引。如果**指定了initialValue**，则**起始索引为0**，否则**从1起始**
   * array（可选）：调用reduce的数组
 * initialValue（可选）：第一次调用callback的第一个参数。注意：在**没有初始值**的**空数组**上调用reduce会**报错**
 
