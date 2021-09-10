@@ -11,7 +11,6 @@
 
 ```js
 const vm = <h1 className="title">Hello React</h1>
-
 // 等同于
 const vm = React.createElement('h1', {className: 'title'}, 'Hello React')
 
