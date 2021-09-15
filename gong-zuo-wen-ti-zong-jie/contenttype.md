@@ -140,7 +140,9 @@ fetch('www.baidu.com').then(
   res => console.log('获取数据成功了', res),
   err => console.log('获取数据失败了', err)
 )
+```
 
+```js
 // 优化
 fetch('www.baidu.com').then(
   res => {
@@ -153,7 +155,9 @@ fetch('www.baidu.com').then(
   // 统一处理错误
   err => console.log('请求出错', err)
 )
+```
 
+```js
 //继续优化
 try {
   const response = await fetch('www.baidu.com')
