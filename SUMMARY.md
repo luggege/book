@@ -165,4 +165,6 @@
   * [数据结构](shu-ju-jie-gou.md)
     * [栈、队列](shu-ju-jie-gou/zhan-3001-dui-lie.md)
     * [二叉树](shu-ju-jie-gou/er-cha-shu.md)
+  * 排序
+    * [冒泡排序](mao-pao-pai-xu.md)
 
