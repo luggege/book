@@ -8,23 +8,25 @@ let rec = (arr) => {
     if(arr.length <= 1) {
         return arr
     }
-    let midPoint = Math.floor(arr.length / 2);
-    let left = arr.slice(0, midPoint);
-    let right = arr.slice(midPoint);
-    console.log('111', left, right, arr)
-    let sortLeft = rec(left);
-    let sortRight = rec(right);
-    console.log('222', sortLeft, sortRight, arr);
+    const midPoint = Math.floor(arr.length / 2);
+    const left = arr.slice(0, midPoint);
+    const right = arr.slice(midPoint);
+    const orderLeft = rec(left);
+    const orderRight = rec(right);
+    // console.log(orderLeft, orderRight, arr);
     let temp = [];
-    while(sortLeft.length && sortRight.length) {
-        if(sortLeft[0] < sortRight[0]) {
-            temp.push(sortLeft.shift());
+    // 逐个取出最小值放到temp中(排序)
+    while(orderLeft.length && orderRight.length) {
+        if(orderLeft[0] < orderRight[0]) {
+            temp.push(orderLeft.shift());
         }else {
-            temp.push(sortRight.shift());
+            temp.push(orderRight.shift());
         }
     }
-    console.log('temp: ', temp, sortLeft, sortRight, temp.concat(sortLeft, sortRight));
-    return temp.concat(sortLeft, sortRight);
+    // 拼接剩下的(orderLeft, orderRight长度不一致的情况)
+    temp = temp.concat(orderLeft, orderRight);
+    console.log('temp', temp);
+    return temp
 }
 rec(arr)
 ```
