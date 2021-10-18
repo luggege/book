@@ -15,7 +15,7 @@ let rec = (arr) => {
     const orderRight = rec(right);
     // console.log(orderLeft, orderRight, arr);
     let temp = [];
-    // 逐个取出最小值放到temp中(排序)
+    // 逐个*取出*最小值放到temp中(排序)
     while(orderLeft.length && orderRight.length) {
         if(orderLeft[0] < orderRight[0]) {
             temp.push(orderLeft.shift());

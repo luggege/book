@@ -170,4 +170,5 @@
     * [选择排序](xuan-ze-pai-xu.md)
     * [插入排序](cha-ru-pai-xu.md)
     * [归并排序](gui-bing-pai-xu.md)
+    * [快速排序](kuai-su-pai-xu.md)
 
