@@ -50,7 +50,7 @@ Object.getPrototypeOf(true) === Boolean.prototype // true
 // 由于undefined和null无法转为对象，会报错
 Object.getPrototypeOf(undefined)
 Object.getPrototypeOf(null)
-// Uncaught TypeError: Cannot convert undefined or null to object
+// Uncaught TypeError: Cannot convert undefined or null to object、
 ```
 
 

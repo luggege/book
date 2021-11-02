@@ -3,6 +3,7 @@
 ## let
 
 * 基本用法
+* * let只在代码块中有效
 
 ```javascript
 // let声明的变量只在代码块中有效
@@ -23,6 +24,8 @@ for(var i = 0; i < 10; i++){
 i // 10
 ```
 
+* * for循环中的经典使用
+
 ```javascript
 // for循环中的经典使用
 var a = []
@@ -32,6 +35,7 @@ for(var i = 0; i < 10; i++){
     }
 }
 a[5]()    //10
+
 // 循环生成10个子块级作用域
 for(let i = 0; i < 10; i++){
     a[i] = function(){
@@ -44,8 +48,8 @@ var array  = []
 for(var i = 0; i < 10; i++){
     (function(i){
         array[i] = function(){
-        console.log(i)
-    }
+            console.log(i)
+        }
     })(i)
 }
 array[7]()  // 7
@@ -145,7 +149,7 @@ function fn(arg){
 fn()        //不报错
 ```
 
-## const\(指变量指向的内存地址的值不可修改，如果定义复合类型只是指针不可修改，不能保证对象结构改变\)
+## const（指变量指向的内存地址的值不可修改，如果定义的是复合类型只是指针不可修改，不能保证对象的结构改变）
 
 * const声明常量，值不可修改
 
