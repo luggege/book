@@ -6,7 +6,7 @@
 4. Object.prototype.toString.call\(\)：根据内部的this返回一个类似于这样的字符串'\[object constructorName\]'\(这个实例的构造函数的名\)
 5. Array.isArray\(\)
 
-**封装一个获取变量准确类型的函数**
+#### 封装一个获取变量准确类型的函数
 
 ```js
 function gettype(obj) {
@@ -22,7 +22,7 @@ function gettype(obj) {
 }
 ```
 
-#### 为什么要用Object原型上的toString方法
+##### 为什么要用Object原型上的toString方法，和call方法？
 
 > Number、Boolean、String、Array、Function...每一个内置类都改写了Object原型上的toString方法，故表现形式不一，所以通过call改变this指向，统一使用Object原型的toString方法来判断类型
 
