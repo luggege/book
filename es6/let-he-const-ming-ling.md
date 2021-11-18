@@ -125,7 +125,7 @@ function foo(){
     var a = 20;
 }
 
-//报错
+// Uncaught SyntaxError: Identifier 'a' has already been declared
 function foo(){
     var a = 10;
     let a = 20;
@@ -139,11 +139,11 @@ function foo(){
 function fn(arg){
     let arg
 }
-fn()        // 报错
+fn()        // Uncaught SyntaxError: Identifier 'arg' has already been declared
 
 function fn(arg){
     {
-    let arg
+        let arg
     }
 }
 fn()        //不报错
@@ -167,6 +167,14 @@ bbb = 111
 // Uncaught SyntaxError: Missing initializer in const declaration
 ```
 
+* 和let一样，不可重复声明
+
+```js
+let bar = 100
+const bar = 200
+// VM1276:2 Uncaught SyntaxError: Identifier 'bar' has already been declared
+```
+
 * 和let一样，存在块级作用域，未声明前不可用
 
 ```js
@@ -179,14 +187,6 @@ console.log(eee)
 console.log(ddd)
 const ddd = 100
 // Uncaught ReferenceError: Cannot access 'ddd' before initialization
-```
-
-* 和let一样，不可重复声明
-
-```js
-let bar = 100
-const bar = 200
-// VM1276:2 Uncaught SyntaxError: Identifier 'bar' has already been declared
 ```
 
 
