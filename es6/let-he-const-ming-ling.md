@@ -70,14 +70,7 @@ const bar = 111
 
 * 暂时性死区（在代码块内，let声明变量之前，该变量不可用，不会受外部的影响）
 
-```javascript
-// 报错
-tmp = '222'
-if(true){
-    tmp = 'abc'
-    let tmp
-}
-
+```js
 tmp = '222'
 if(true){
     tmp = 'abc'
@@ -89,27 +82,32 @@ if(true){
     tmp = 123
     console.log(tmp)     // 123
 }
+```
 
+```js
 typeof x                // 报错 Uncaught ReferenceError: a is not defined
 let x
 // 直接对未声明的变量使用typeof反而不会报错
 typeof a           // undefined
+```
 
-// 报错
+```js
+// 参数x等于参数y，此时y还没有声明，属于“死区“
 function bar(x = y, y = 2){
     return [x,y]
 }
-bar()                  
+bar()     // VM1986:1 Uncaught ReferenceError: Cannot access 'y' before initialization              
 
-// [2, 2]
 function bar(x = 2, y = x){
     return [x,y]
 }
-bar()                   
+bar()   // [2, 2]
+```
 
+```js
 // 不报错
 var x = x;
-// 报错（变量未声明就使用）
+// （变量未声明就使用）Uncaught ReferenceError: x is not defined
 let x = x;
 ```
 
