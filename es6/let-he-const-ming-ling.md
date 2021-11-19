@@ -14,13 +14,9 @@
 console.log(i)  // 报错
 console.log(j)  // 2
 
-for(let i = 0; i < 10; i++){
-
-}
-i //报错
-for(var i = 0; i < 10; i++){
-
-}
+for(let i = 0; i < 10; i++){}
+i // i is not defined
+for(var i = 0; i < 10; i++){}
 i // 10
 ```
 
@@ -63,12 +59,13 @@ for(let i = 0; i < 3; i++){
 
 * 不允许变量提升
 
-```javascript
+```js
 console.log(bar)      // undefined
 var bar = 2
 
-console.log(bar)      // 报错
+console.log(bar)      // Uncaught ReferenceError: bar is not defined
 let bar = 2
+const bar = 111
 ```
 
 * 暂时性死区（在代码块内，let声明变量之前，该变量不可用，不会受外部的影响）
@@ -84,7 +81,7 @@ if(true){
 tmp = '222'
 if(true){
     tmp = 'abc'
-    console.log(tmp)     // 报错
+    console.log(tmp)     // VM1289:3 Uncaught ReferenceError: Cannot access 'tmp' before initialization
 
     let tmp
     console.log(tmp)     // undefined
