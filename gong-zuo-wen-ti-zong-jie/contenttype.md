@@ -52,7 +52,7 @@ $.ajax({
 
   * application/json
 
-  > 设置contentType：application/json；data需传json格式的字符串。不设置，可以传json对象
+  > data需传json格式的字符串。不设置，可以传json对象
 
   * text/xml
 
