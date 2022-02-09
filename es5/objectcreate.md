@@ -5,7 +5,7 @@
 * proto：必填，新创建对象的原型对象
 
 ```js
-Object.create()
+Object.create()/Object.create(undefined)
 // VM1719:1 Uncaught TypeError: Object prototype may only be an Object or null: undefined
 
 o = Object.create(null)
