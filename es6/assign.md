@@ -36,7 +36,7 @@
    Object.assign(num) // Number {10}
    Object.assign({}, str, bool, num); // {0: "a", 1: "b", 2: "c"}
 
-   // 6.1 如果源对象的属性的值是对象, 那么目标对象得到的是这个对象的引用----（浅拷贝）
+   // 6.1 如果源对象的属性的值是对象, 那么目标对象得到的是这个对象的引用----（*浅拷贝*）
    var obj1 = {a: {b: 1}}
    var obj2 = Object.assign({}, obj1);
    obj1.a.b  // 1

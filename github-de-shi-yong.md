@@ -10,9 +10,9 @@
 
 ### github可以托管利用gitbook editor或者是gitbook.com编写的电子书
 
-> github上的master分支用来保存文档笔记源码\(md\)
+> github上的master分支用来保存文档笔记源码\(.md\)
 >
-> gh-pages分支\(只能叫这个名字\)用来保存利用gitbook build生成\(\_book文件夹中\)的静态文件\(html文件/gitbook样式文件\)
+> gh-pages分支\(只能叫这个名字\)用来保存利用gitbook build生成\(\_book文件夹中\)的静态文件\(html文件、gitbook样式文件\)
 
 ### 最终利用GitHub线上预览自己的电子书 [https://luggege.github.io/book](https://luggege.github.io/book%29\)
 
