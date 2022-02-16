@@ -29,3 +29,9 @@ mvvm的设计原理是基于mvc的，所以说mvvm不算是一种创新，是一
 
 首先利用defineProperty的get、set来定义获取属性，然后调用Ovserve方法，启用观察者模式，当数据发生变化时，会通知watcher重新计算，通过compile模版指令更新视图
 
+### react是如何数据驱动视图改变的？
+
+每次渲染形成虚拟dom，然后diff虚拟dom是否发生变化，如果有变化就更新真正的dom
+
+
+
