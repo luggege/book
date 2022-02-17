@@ -1,23 +1,27 @@
 ### 性能优化
 
-1. css/js/图片压缩
+1. css/js/图片压缩，icon用iconfont字体库
 2. 提高复用性
 3. 减少http请求
-4. js脚本底部加载
+4. css放顶部，js脚本底部加载（详情见：HTML+CSS----12条，src和link的区别）
+
+> html顺序加载执行文档和脚本，如若脚本自身延迟问题，就会导致页面白屏。因此js应该放到页面底部或者延迟加载
 
 #### JS延迟加载
 
-1. setTimeout
+* setTimeout
 
-   ![](/assets/setTimeout-js.png)
+![](/assets/setTimeout-js.png)
 
-2. script标签放到页面最后执行
+* script标签放到页面最后执行
 
-3. $.getScript\(‘out.js’，function\(\){} \)加载脚本![](/assets/getScript.png)
+* $.getScript\(‘out.js’，function\(\){} \)加载脚本![](/assets/getScript.png)
 
-4. defer和async（相同点：异步加载脚本；不同点：defer是**文档**加载完后执行脚本，async下载完立马执行**脚本**然后再继续解析文档）
+* defer和async
 
-5. 动态创建DOM方式![](/assets/js-dom.png)
+* * 相同点：异步加载脚本；
+  * 不同点：defer是**文档**加载完后顺序**执行**脚本，async下载完**立马执行**脚本然后再继续解析文档
+* 动态创建DOM方式![](/assets/js-dom.png)
 
 ### 雅虎 13条技巧提高网页速度
 
@@ -37,8 +41,9 @@
 * 12.删除重复的脚本 
 * 13.配置Etags\(注：etags就是emacs的建表程式\) 
 
-//post比get安全一点,地址栏看不到你的信息.\(但是post也会被抓包\)  
-//get发送表单数据,post请求表单
+post比get安全一点,地址栏看不到你的信息.\(但是post也会被抓包\)
+
+get发送表单数据,post请求表单
 
 响应式布局: \(媒体查询\)会改变板式布局  
 屏幕自适应: \(rem/em\)不会改变板式布局

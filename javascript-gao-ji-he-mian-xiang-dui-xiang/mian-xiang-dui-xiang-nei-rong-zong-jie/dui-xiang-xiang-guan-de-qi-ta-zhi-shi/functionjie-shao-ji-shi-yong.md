@@ -2,9 +2,9 @@
 
 ## 创建函数方式
 
-1. 直接声明函数
-2. 函数表达式
-3. new Function
+1. 函数声明：`funtion fn() {}`
+2. 函数表达式\(变量声明\)：`var fn = function() {}`
+3. new Function：`var fn = new Function("console.log('1')")`
 
 无参:创建的是空函数; 函数体: 创建的是无参的函数
 

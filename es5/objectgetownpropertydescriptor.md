@@ -1,6 +1,6 @@
-### Object.getOwnPropertyDescriptor\(obj, prop\) 返回指定对象所有自身（非继承性）属性的描述对象
+### Object.getOwnPropertyDescriptor\(obj, prop\)
 
-返回值是一个对象
+> 返回指定对象所有**自身**（非继承性）属性的**描述对象，**返回值是一个对象
 
 * 如果是数据描述符，这个对象的属性包含：value、writable、enumerable、configurable
 * 如果是访问描述符，这个对象的属性包含：enumerable、configurable、get、set
@@ -40,9 +40,17 @@ Object.getOwnPropertyDescriptor([], 'length')
 // {value: 0, writable: true, enumerable: false, configurable: false}
 ```
 
-### obj.hasOwnProperty\(property\)： 检测对象是否含有某个属性（不包含原型链上的属性）
+### Object.getOwnPropertyNames\(obj\)
 
-### Object.getPrototypeOf\(obj\)：获取实例对象的原型
+> 遍历**自身**的**可枚举**或**不可枚举**属性（不包含Symbol属性）
+
+### Object.getPrototypeOf\(obj\)
+
+> 获取实例对象的原型
+
+### obj.hasOwnProperty\(property\)
+
+> 检测对象自身是否含有某个属性（**不包含原型链**上的属性）
 
 
 

@@ -102,9 +102,8 @@
   * [canvas day4](chapter1/canvas-di-si-tian.md)
 * [ES5](es5/es5.md)
   * [Object.keys\(\)/Object.values\(\)/Object.entries\(\)](es5/objectkey.md)
+  * [Object.getOwnPropertyDescriptor\(\)/Object.getOwnPropertyNames\(\)](es5/objectgetownpropertydescriptor.md)
   * [Object.defineProperty\(\)](es5/objectdefineproperty.md)
-  * [Object.getOwnPropertyDescriptor\(\)](es5/objectgetownpropertydescriptor.md)
-  * [Object.getOwnPropertyNames\(\)](es5/objectgetownpropertynames.md)
   * [Object.create\(\)](es5/objectcreate.md)
   * [Object.freeze\(\)](es5/objectfreeze.md)
 * [ES6](es6/README.md)
@@ -179,6 +178,4 @@
     * [插入排序](cha-ru-pai-xu.md)
     * [归并排序](gui-bing-pai-xu.md)
     * [快速排序](kuai-su-pai-xu.md)
-
-
 

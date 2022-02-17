@@ -58,7 +58,7 @@ Student()
 // undefined
 ```
 
-* 类内部默认constructor，且constructor默认返回this（实例对象），同样也可返回指定对象
+* 类内部默认constructor，且constructor默认返回this（实例对象），同样也可返回**指定对象**
 
 ```js
 class Teacher {

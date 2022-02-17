@@ -5,7 +5,7 @@
 * 为对象设置一个属性，并设置值
 * 给该属性设置描述符（数据描述符/访问描述符）
 
-### 数据描述符：value/writable
+#### 数据描述符：value/writable
 
 ```js
 let obj = {};
@@ -44,7 +44,7 @@ Object.defineProperty(obj, 'a', {
 // Uncaught TypeError: Cannot redefine property: a
 ```
 
-### 访问描述符：get/set
+#### 访问描述符：get/set
 
 > 其实并没有getter/setter这样的属性，只是两个概念，与之对应的是两个访问描述符
 

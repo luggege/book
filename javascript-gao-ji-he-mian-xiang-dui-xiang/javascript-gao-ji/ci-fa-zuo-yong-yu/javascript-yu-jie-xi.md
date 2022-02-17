@@ -16,7 +16,7 @@ function fn(){
 
 **所以，可以得出结论，JavaScript并非仅在运行时简简单单的逐句解析执行！**
 
-## JavaScript 预解析 
+## JavaScript 预解析
 
 JavaScript引擎在对JavaScript代码进行解释执行之前，会对JavaScript代码进行**预解析**，在预解析阶段，会将以关键字  **var** 和** function **开头的语句块提前进行处理。
 
@@ -52,7 +52,7 @@ alert(a);
 var a = 1;
 ```
 
-由于JavaScript的预解析机制，上面这段代码，alert出来的值是**`undefined`**，如果没有预解析，代码应该会直接报错`a is not defined`，而不是输出值。
+由于JavaScript的预解析机制，上面这段代码，alert出来的值是`undefined`，如果没有预解析，代码应该会直接报错`a is not defined`，而不是输出值。
 
 Wait a minute, 不是说要提前的吗？那不是应该alert出来1，为什么是`undefined`?
 
@@ -79,59 +79,102 @@ alert(a);
 a = 1;
 ```
 
-## 复杂点的情况分析 
+## 函数表达式并不会被提升
+
+```javascript
+func();
+
+var func = function(){
+    alert("我被提升了");
+};
+```
+
+这里会直接报错，`func is not a function`，原因就是函数表达式，并不会被提升。只是简单地当做变量声明进行了处理，如下：
+
+```js
+var func;
+
+func();
+
+func = function(){
+    alert("我被提升了");
+}
+```
+
+## 复杂点的情况分析
 
 通过上一小节的内容，我们对变量、函数声明提升已经有了一个最基本的理解。那么接下来，我们就来分析一些略复杂的情况。
 
-### 函数同名 
+### 函数同名（函数声明）
 
 观察下面这段代码:
 
 ```javascript
 fn()
-
 function fn(){
     console.log(1111)
 }
-
 fn()
-
 function fn(){
     console.log(22222)
 }
+// 22222
+// 22222
 ```
 
-输出结果为：
-
-```javascript
-22222
-22222
-```
-
-原因分析：由于预解析机制，`func1`的声明会被提升，提升之后的代码为：
+原因分析：由于预解析机制，function的声明会被提升，提升之后的代码为：
 
 ```javascript
 function fn(){
-    console.log(1111)
+    console.log(11111)
 }
-
 function fn(){
     console.log(22222)
 }
-
 fn();
 fn();
 ```
 
 同名的函数（变量），**后面的会覆盖前面的**，所以两次输出结果都是`22222`。
 
+### 变量同名（函数表达式/变量声明）
+
+```js
+//函数表达式
+var fn = function(){
+    console.log(11111);
+}
+fn()
+var fn = function(){
+    console.log(22222);
+}
+fn()
+// 11111
+// 22222
+```
+
+**因此：**一般开发中倾向于使用函数表达式的方式，因为js文件互相引入，可能存在函数名重复的情况，如果使用函数声明的方式后边的函数会覆盖前边函数。如果使用函数表达式就不会。
+
+### 变量和函数同名（函数表达式申明和函数声明）
+
+> 函数申明的优先级大于变量申明
+
+```js
+var fn = function() {
+    console.log(111)
+}
+function fn() {
+    console.log(222)
+}
+fn()
+// 111
+```
+
 ### 变量和函数同名
 
 ```javascript
 alert(foo);
-
 function foo(){}
-
 var foo = 2;
 ```
 
@@ -145,9 +188,7 @@ function foo(){}
 
 ```javascript
 function foo(){};
-
 alert(foo);
-
 foo = 2;
 ```
 
@@ -155,7 +196,6 @@ foo = 2;
 
 ```javascript
 var num = 1;
-
 function num () {
      alert( num );
 }
@@ -174,12 +214,11 @@ Uncaught TypeError: num is not a function
 function num(){
      alert(num);
 }
-
 num = 1;
 num();
 ```
 
-## 预解析是分作用域的 
+## 预解析是分作用域的
 
 声明提升并不是将所有的声明都提升到window对象下面，提升原则是提升到变量运行的环境\(作用域\)中去。
 
@@ -213,7 +252,7 @@ alert(msg);
     function func(){
         console.log('AA1');
     }
-    
+
     function func(){
         console.log('AA2');
     }
@@ -230,58 +269,7 @@ alert(msg);
 
 tip：但是要注意，分段只是单纯的针对函数，变量并不会分段预解析。
 
-## 函数表达式并不会被提升 
-
-```javascript
-func();
-
-var func = function(){
-    alert("我被提升了");
-};
-```
-
-这里会直接报错，`func is not a function`，原因就是函数表达式，并不会被提升。只是简单地当做变量声明进行了处理，如下：
-
-```javascript
-var func;
-
-func();
-
-func = function(){
-    alert("我被提升了");
-}
-```
-
-一般开发中倾向于使用函数表达式的方式，因为js文件互相引入，可能存在函数名重复的情况，如果使用函数声明的方式后边的函数会覆盖前边函数。如果使用函数表达式就不会。
-
-```javascript
-//函数表达式
-var fn = function(){
-    console.log(111111);
-}
-fn()
-var fn = function(){
-    console.log(2222);
-}
-fn()
-VM264:2 111111
-VM264:6 2222
-
-
-//函数声明
-function fn(){
-    console.log(111111);
-}
-fn()
-function fn(){
-    console.log(2222);
-}
-fn()
-VM276:6 2222
-VM276:6 2222
-```
-
-## 条件式函数声明 
+## 条件式函数声明
 
 ```javascript
 console.log(typeof func);
