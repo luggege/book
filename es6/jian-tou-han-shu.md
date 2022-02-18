@@ -26,7 +26,7 @@ var obj = {
         var b = this.birth;
         console.log(this.birth)  // 1990
         var fn = function(){
-            console.log(this.birth) // undefined
+            console.log(this.birth) // this指向window或者undefined
             return new Date().getFullYear() - this.birth;
         }
         return fn();

@@ -184,7 +184,7 @@ say()  // Cannot read property 'print' of undefined
 
 解决办法
 
-* * * constructor**绑定this**，给**实例添加**属性方法
+* * * constructor**绑定this**，给**实例**添加**属性方法**
 
 ```js
 class Foo {
@@ -220,11 +220,11 @@ say() // jack
 
   ```js
   class Foo {
-      // 定义在实例上的方法
+      // 定义在*实例*上的方法
       say = (name = 'jack') => {
           this.print(name)
       }
-      // 定义在原型上的方法
+      // 定义在*原型*上的方法
       print(name) {
           console.log(name)
       }
@@ -233,13 +233,13 @@ say() // jack
   const {say} = f1
   say() // jack
   ```
-* 静态方法
-
-> 方法前加**static**关键字，只能**构造函数调用**，实例不能调用
-
 * 属性的新写法
 
 > 通常**实例**的属性写在constructor里，新写法可以提取出来去掉this与其他方法平级（prop = 0）
+
+* 静态方法
+
+> 方法前加**static**关键字，表示**构造函数的方法，**只能**构造函数调用**，实例不能调用
 
 * 静态属性
 

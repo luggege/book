@@ -1,4 +1,4 @@
-# 构造函数
+### 构造函数
 
 ```javascript
 function Person(name, age){
@@ -16,11 +16,11 @@ var p4 = new RegExp();
 var p5 = {};
 ```
 
-## 1.构造函数是干什么用的？
+#### 构造函数是干什么用的？
 
 在JavaScript中，构造函数是给对象添加属性，初始化属性用的。
 
-## 2. 对象的创建过程
+#### 对象的创建过程
 
 ```javascript
 var p = new Person();
