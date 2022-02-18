@@ -33,7 +33,7 @@
       * [面向对象的三大特性](javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/mian-xiang-dui-xiang-de-san-da-te-xing.md)
       * [传统构造函数存在的问题](javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/chuan-tong-gou-zao-han-shu-cun-zai-de-wen-ti.md)
     * [对象相关的其他知识](javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/README.md)
-      * [Function介绍及使用](javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/functionjie-shao-ji-shi-yong.md)
+      * [创建函数的三种方式](javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/functionjie-shao-ji-shi-yong.md)
       * [解决代码太长的问题](javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/jie-jue-dai-ma-tai-chang-de-wen-ti.md)
       * [静态成员和实例成员](javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/jing-tai-cheng-yuan-he-shi-li-cheng-yuan.md)
       * [arguments对象](javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-nei-rong-zong-jie/dui-xiang-xiang-guan-de-qi-ta-zhi-shi/argumentsdui-xiang.md)
