@@ -1,6 +1,4 @@
-# Object.prototype成员介绍
-
-## `Object.prototype`常用成员
+### Object.prototype成员介绍
 
 | 成员 | 描述 |
 | :--- | :--- |

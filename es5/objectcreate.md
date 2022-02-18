@@ -1,4 +1,4 @@
-### Object.create\(proto\[, propertiesObject\]\): 创建一个以该对象为原型对象的新对象
+#### Object.create\(proto\[, propertiesObject\]\): 创建一个以该对象为原型对象的新对象
 
 > 兼容：IE9+、Firefox4+、Safari5+、Opera12+、Chrome
 

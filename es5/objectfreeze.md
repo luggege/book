@@ -1,4 +1,4 @@
-### Object.freeze\(\): 冻结一个对象
+#### Object.freeze\(\): 冻结一个对象
 
 * 冻结基础类型的属性
 
@@ -23,7 +23,7 @@ person.skill.name = 'eat'
 console.log(person)  // {name: "jack", skill: {name: "eat"}}
 ```
 
-### Object.isFrozen\(\): 判断一个对象是否冻结
+#### Object.isFrozen\(\): 判断一个对象是否冻结
 
 ```js
 Object.isFrozen(person) // true

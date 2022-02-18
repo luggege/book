@@ -1,7 +1,5 @@
-### Object.keys\(obj\)
+#### Object.keys\(obj\)：返回一个数组，参数是一个\*对象\*所有**可遍历**属性的\*键名\*
 
-> 返回一个数组，参数是一个\*对象\*所有**可遍历**属性的\*键名\*
->
 > ES5
 
 ```javascript
@@ -9,10 +7,8 @@ Object.keys({'a': 1, 'b': 2, 'c': 3});   // ["a", "b", "c"]
 Object.keys(["a", "b", "c"]);            // ["0", "1", "2"]
 ```
 
-### Object.values\(obj\)
+#### Object.values\(obj\)：返回一个数组，参数是一个\*对象\*所有**可遍历**属性的\*键值\*
 
-> 返回一个数组，参数是一个\*对象\*所有**可遍历**属性的\*键值\*
->
 > ES6
 
 ```javascript
@@ -32,10 +28,8 @@ Object.values(undefined);
 Object.values(null);   // VM11854:1 Uncaught TypeError: Cannot convert undefined or null to object
 ```
 
-### Object.entries\(obj\)
+#### Object.entries\(obj\)：返回一个数组，参数是一个\*对象\*所有**可遍历**属性的\*键值对\*数组
 
-> 返回一个数组，参数是一个\*对象\*所有**可遍历**属性的\*键值对\*数组
->
 > ES6
 
 ```javascript
