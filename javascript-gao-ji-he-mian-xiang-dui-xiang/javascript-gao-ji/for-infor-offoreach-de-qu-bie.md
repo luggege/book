@@ -1,20 +1,20 @@
-# for in、for of、forEach的区别
+### for in、for of、forEach的区别
 
-### for in：**只遍历对象自身的和继承的可枚举属性**
+#### for in：**只遍历对象自身的和继承的可枚举属性**
 
-1. 只遍历可循环属性，跳过空值  
+1. 只遍历可循环属性，**跳过空值**
 2. 循环的输出顺序问题：先遍历**整数**属性（按照**升序**），其他属性按照创建顺序遍历
-3. 对于数组中的属性（如：test： testing），只有for-in循环才能打印出这种键值对
+3. 对于数组中的属性（如：test：testing），只有for-in循环才能打印出这种键值对
 
-### for of：只遍历自身的可枚举属性
+#### for of：只遍历自身的可枚举属性
 
-1. for-of不会跳过空值，默认为undefined。
+1. for-of不会跳过空值，默认为undefined
 2. for-in、forEach遇数组空项会跳过，for-in循环遇数组空项key值发生变化
 3. 对于数组中的属性（如：test： testing），不能遍历出
 
-### forEach：只遍历自身的可枚举属性
+#### forEach：只遍历自身的可枚举属性
 
-1. 会跳过空值，不能使用break，continue跳出循环，不同于for-in、for-of
+1. 会跳过空值。不能使用break，continue跳出循环，不同于for-in、for-of
 
 2. 1、Object
 
@@ -122,7 +122,7 @@ for(let item of str){
 1. for in：  遍历**自身**的和**继承**的**可枚举**属性
 2. Object.keys\(\) ：遍历**自身**的**可枚举**属性
 3. Object.getOwnPropertyNames\(Object.prototype\)： 遍历**自身**的**可枚举或不可枚举**属性（不包含Symbol属性）
-4. Object.getOwnPropertySymbols\(obj\)： 只遍历自身的**Symbol属性**
+4. Object.getOwnPropertySymbols\(obj\)： 只遍历**自身**的**Symbol属性**
 5. Reflect.ownKeys\(obj\)： 返回对象自身的所有键名的数组，**不管是否是Symbol，是否可枚举**
 
 ```js
@@ -143,9 +143,9 @@ for(let item of str){
 
 以上的 5 种方法遍历对象的键名，都遵守同样的属性遍历的次序规则。
 
-* 首先遍历所有**数值键**，按照数值**升序**排列。
-* 其次遍历所有**字符串键**，按照**加入时间**升序排列。
-* 最后遍历所有 **Symbol 键**，按照**加入时间**升序排列。
+* 首先遍历所有**数值键**，按照数值**升序**排列
+* 其次遍历所有**字符串键**，按照**加入时间**升序排列
+* 最后遍历所有 **Symbol 键**，按照**加入时间**升序排列
 
 #### in 关键字
 

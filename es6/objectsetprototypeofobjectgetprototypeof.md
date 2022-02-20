@@ -1,4 +1,4 @@
-### Object.setPrototypeOf\(obj, proto\)：设置一个对象的原型对象，返回参数对象本身
+#### Object.setPrototypeOf\(obj, proto\)：设置一个对象的原型对象，返回参数对象本身
 
 ```js
 let proto = {}
@@ -27,7 +27,7 @@ Object.setPrototypeOf(null, {})
 // Uncaught TypeError: Object.setPrototypeOf called on null or undefined
 ```
 
-### Object.getPrototypeOf\(obj\)：获取对象的原型对象
+#### Object.getPrototypeOf\(obj\)：获取对象的原型对象
 
 ```js
 Object.getPrototypeOf(obj)             // {y: 20, z: 40}
@@ -52,6 +52,8 @@ Object.getPrototypeOf(undefined)
 Object.getPrototypeOf(null)
 // Uncaught TypeError: Cannot convert undefined or null to object、
 ```
+
+#### proto.isPrototypeOf\(obj\)：判断一个对象是否在另一个对象的原型链上
 
 
 

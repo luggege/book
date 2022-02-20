@@ -1,4 +1,35 @@
-# 删除数组多项值
+### forEach、map、some、every、filter
+
+```js
+1.forEach没有返回值，不能跳出循环
+[1, 4, 9, 16].forEach((value, key, array) => {
+    console.log(value, key, array)
+})
+
+2.map有返回值
+[1, 4, 9, 16].map(x => x*2)
+// [2, 8, 18, 32]
+
+3.有一个符合返回true
+[1, 4, 9, 16].some((value, key, array) => {
+    return value > 4
+})
+// true
+
+4.所有都符合才返回true
+[1, 4, 9, 16].every((value, key, array) => {
+    return value > 4
+})
+// false
+
+5.过滤出符合的，返回新值
+[1, 4, 9, 16].filter((value, key, array) => {
+    return value > 4
+})
+//[9, 16]
+```
+
+### 删除数组多项值
 
 问题：删除数组中的某两项值
 
@@ -70,37 +101,6 @@ for(var i = arr.length - 1; i >= 0; i--){
 [Warning] i`````````````` – 0
 [Log] arr[i]````````` – 1
 [Log] [1, 4, 5] (3)
-```
-
-### forEach、map、some、every、filter
-
-```js
-1.forEach没有返回值，不能跳出循环
-[1, 4, 9, 16].forEach((value, key, array) => {
-    console.log(value, key, array)
-})
-
-2.map有返回值
-[1, 4, 9, 16].map(x => x*2)
-// [2, 8, 18, 32]
-
-3.有一个符合返回true
-[1, 4, 9, 16].some((value, key, array) => {
-    return value > 4
-})
-// true
-
-4.所有都符合才返回true
-[1, 4, 9, 16].every((value, key, array) => {
-    return value > 4
-})
-// false
-
-5.过滤出符合的
-[1, 4, 9, 16].filter((value, key, array) => {
-    return value > 4
-})
-//[9, 16]
 ```
 
 

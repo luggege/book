@@ -49,10 +49,10 @@
     * [微任务、宏任务](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/wei-ren-wu-3001-hong-ren-wu.md)
   * [数组](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu.md)
     * [伪数组转为真数组的方式](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu/wei-shu-zu-zhuan-wei-zhen-shu-zu.md)
+    * [数组去重](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu-qu-zhong.md)
+    * [数组的循环遍历](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu-de-xun-huan-bian-li.md)
   * [DOM操作复习](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/domcao-zuo-fu-xi.md)
   * [jQuery API](javascript-gao-ji-he-mian-xiang-dui-xiang/mian-xiang-dui-xiang-day3.md)
-  * [数组去重](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu-qu-zhong.md)
-  * [数组的循环遍历](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu-de-xun-huan-bian-li.md)
   * [几种遍历方式](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/for-infor-offoreach-de-qu-bie.md)
   * [深拷贝浅拷贝](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shen-kao-bei-qian-kao-bei.md)
   * [判断数据类型](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/pan-duan-shu-ju-lei-xing.md)
@@ -182,6 +182,4 @@
     * [插入排序](cha-ru-pai-xu.md)
     * [归并排序](gui-bing-pai-xu.md)
     * [快速排序](kuai-su-pai-xu.md)
-
-
 
