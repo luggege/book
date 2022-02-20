@@ -42,6 +42,8 @@ document.getElementById('div4').addEventListener("click",function(){alert("4");}
 </script>
 ```
 
+利用冒泡原理实现事件委托（事件代理）
+
 ### mouseover与mouseout是冒泡的
 
 ### mouseenter与mouseleave是不冒泡的

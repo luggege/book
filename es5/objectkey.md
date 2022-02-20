@@ -1,6 +1,8 @@
-#### Object.keys\(obj\)：返回一个数组，参数是一个\*对象\*所有**可遍历**属性的\*键名\*
+#### Object.keys\(obj\)：返回一个数组，参数是一个\*对象\*所有**可遍历**属性的\*键名\*（不包含Symbol属性）
 
 > ES5
+>
+> Reflect.ownKeys\(obj\)：返回所有常规及Symbol键名的数组
 
 ```javascript
 Object.keys({'a': 1, 'b': 2, 'c': 3});   // ["a", "b", "c"]

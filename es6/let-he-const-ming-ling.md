@@ -5,7 +5,7 @@
 * 基本用法
 * * let只在代码块中有效
 
-```javascript
+```js
 // let声明的变量只在代码块中有效
 {
     let i = 1;
@@ -22,9 +22,10 @@ i // 10
 
 * * for循环中的经典使用
 
-```javascript
+```js
 // for循环中的经典使用
 var a = []
+// var定义的i全局有效
 for(var i = 0; i < 10; i++){
     a[i] = function(){
         console.log(i)
@@ -32,13 +33,14 @@ for(var i = 0; i < 10; i++){
 }
 a[5]()    //10
 
-// 循环生成10个子块级作用域
+// 循环生成10个子块级作用域，相互独立
 for(let i = 0; i < 10; i++){
     a[i] = function(){
         console.log(i)
     }
 }
 a[7]()    // 7
+
 // 或者使用闭包
 var array  = []
 for(var i = 0; i < 10; i++){
@@ -51,7 +53,9 @@ for(var i = 0; i < 10; i++){
 array[7]()  // 7
 
 // 父作用域与子作用域相互独立
+// 父作用域
 for(let i = 0; i < 3; i++){
+    // 子作用域，相互独立
     let i = 'abc'
     console.log(i)   // abc（3次）
 }

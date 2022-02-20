@@ -141,7 +141,7 @@ console.log(p.age);
 
 考虑如下情况：输出结果是多少？
 
-```javascript
+```js
 function foo(o){
     o = {name:"张三", age:18};
 }

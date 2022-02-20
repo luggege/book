@@ -12,7 +12,7 @@ jQuery实例对象是一个伪数组对象
 
 ### Object.prototype.toString
 
-> 作用:根据内部的ｔｈｉｓ返回一个类似于这样的字符串'\[object constructorName\]'\(这个实例的构造函数的名\)  
+> 作用：根据内部的 this 返回一个类似于这样的字符串'\[object constructorName\]'\(这个实例的构造函数的名\)  
 > 只能获取内置对象的类型
 
 ## jQuery--DOM操作
