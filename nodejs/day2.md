@@ -4,7 +4,7 @@
 
 * 如果省略后缀,会按次序一次加载".js"/".node"/'.json'
 
-   **尽量不要省略后缀** 
+  **尽量不要省略后缀**
 
 ### 规范
 
@@ -24,7 +24,7 @@ npm install -g 包名 全局安装就是安装命令行工具
 
 #### package.json中的包名要和外边的文件夹名一致
 
- **把自己写的包放在npm官网上,才能install下载自己写的包** 
+**把自己写的包放在npm官网上,才能install下载自己写的包**
 
 #### npm i -S jquery@3.\*  \(npm install --save\)
 
@@ -45,25 +45,6 @@ npm install -g 包名 全局安装就是安装命令行工具
 ### nrm数据源管理工具\(npm install -g nrm\)
 
 * 切换数据源\(nrm use taobao\)===&gt;.npmrc
-
-#### 箭头函数\(不能使用在构造函数中\)
-
-1. var foo=参数=&gt;返回值
-2. var foo=\(参数1,参数2\)=&gt;返回值
-3. var foo=参数=&gt;{return v1 + v2}
-4. var foo=\(\)=&gt;{console.log\(v1\)}
-
-## 脏检查
-
-### MVVM
-
-M: model V: view VM: ViewModel===&gt;$scope
-
- **理解脏检查机制** 
-
-## node-lesson2
-
-## 1.复习
 
 ### 1.1 概念
 
@@ -91,7 +72,9 @@ M: model V: view VM: ViewModel===&gt;$scope
   `ls linux`
 
 * ren（rename）重命名文件
+
 * del（delete）删除文件
+
 * cls（clear screen）清屏
 
   `clear linux`
@@ -131,6 +114,7 @@ windows 盘符的根目录\`
   `关于这俩家伙，一般在读取文件的时候，最好使用绝对路径的方式，通过这俩家伙拼接`
 
 * console
+
   * assert\(foo==1,"失败"\);断言
   * time\('timer'\)
   * timeEnd\('timer'\)
@@ -227,6 +211,7 @@ common.js规范----->加载后，再次加载时，去缓存中取module.exports
   ```
 
 * 标识符中可以不包含扩展名
+
   * Node会按照`.js、.node、.json`的次序补足扩展名，依次尝试
 
 ```text
@@ -383,46 +368,6 @@ npm i -D jquery@3.\*
 
 ## 4.文件操作
 
-#### 4.1箭头函数
-
-```text
-箭头函数就是一种语法糖
-
-语法糖是一种语法，用这种语法能尝到甜头，能是编程高效
-
-当函数体有一个参数有返回值的时候
-
-var foo=function(v){ return v;}
-
-var foo=v=>v;
-
-当函数体没有参数有返回值的时候
-
-var foo=function(){ return v;}
-
-var foo=()=>v;
-
-当函数体有多个参数有返回值的时候
-
-var foo=function(v1,v2){ return v1+v2;}
-
-var foo=(v1,v2)=>v1+v2;
-
-当函数体有多个参数没有返回值的时候
-
-var foo=function(v1,v2){
-
- console.log(v1); console.log(v2);
-
- }
-
-var foo=(v1,v2)=>{
-
- console.log(v1); console.log(v2);
-
- };
-```
-
 #### 4.2文件读写
 
 * fs.readFile\(\) 读文件
@@ -449,13 +394,7 @@ fs.readFile\(file, \[options\], callback\)
 
 //callback 只有一个参数err，错，文件有问题
 
-## 其它
-
-* vsc教程[http://i5ting.github.io/vsc/](https://github.com/luggege/book/tree/f7d098fe1f889ccf3b383f621c0b48c599f5fdd3/vsc教程/README.md)
-
-## 作业
-
-2.npm 和package.json结合着连
+2.npm 和package.json结合
 
 npm init 初始化package.json
 
@@ -482,10 +421,4 @@ nrm ls 查看数据源
 nrm test 测试你的网连那个npm的数据源快
 
 nrm use 切换数据源
-
-5.阅读参考文献 朴灵 require
-
-阅读参考文献 package.json全字段解析
-
-6.github自己玩玩
 

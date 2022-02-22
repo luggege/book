@@ -44,7 +44,7 @@ export default {
 // <input type="checkbox" id="checkbox1" name="person" v-model="bool">
 // <label for="checkbox1">男</label>
 
-<input type="checkbox" v-bind:checked="bool" v-on:change="bool= $event.target.checked">
+<input type="checkbox" v-bind:checked="bool" v-on:change="bool = $event.target.checked">
 
 <div>输入的input值为：{{bool}}</div>  // true / false
 

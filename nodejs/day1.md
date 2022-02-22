@@ -10,9 +10,9 @@
    * js代码--&gt;机器码/字节码
 2. 移植性
 
-    \*
+   \*
 
-    **node中的js是基于v8引擎的 \(好处: 不用考虑兼容性问题\)**
+   **node中的js是基于v8引擎的 \(好处: 不用考虑兼容性问题\)**
 
 #### node是一门技术,用的语言就是JavaScript
 
@@ -38,7 +38,7 @@
 
 #### emit: 发射\(只能向上\)
 
- **如果控制器向同级传值: 可以通过向上发射,然后再向下广播回来** 
+**如果控制器向同级传值: 可以通过向上发射,然后再向下广播回来**
 
 ## JavaScript 模块化编程
 
@@ -120,6 +120,7 @@
   **暴露接口 exports 和 module.exports**
 
 * module.exports曝露出一个完整的对象，只能扔一次只能曝露出来一个
+
 * exports是module.exports的别名，可以用来单个属性、方法、对象的曝露，用.的形式,exports能做的事情module.exports也可以做
 * 使用场景用.属性的形式曝露属性和方法的时候，而且是多个的时候用exports
 * module.exports直接等于的方式用，直接等于一个方法属性对象等等~~~
@@ -134,5 +135,5 @@
 
   [http://www.requirejs.cn/](http://www.requirejs.cn/)
 
-  **作业**![](../.gitbook/assets/image1.jpg)\*\*\*\*
+
 

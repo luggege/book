@@ -1,7 +1,7 @@
 ### forEach、map、some、every、filter
 
 ```js
-1.forEach没有返回值，不能跳出循环
+1.forEach没有返回值，不能跳出循环，（可通过some、every来实现）
 [1, 4, 9, 16].forEach((value, key, array) => {
     console.log(value, key, array)
 })

@@ -2,17 +2,7 @@
 
 ## node-lesson4
 
-## 反馈
-
-同步代码和异步代码分不清
-
-异步非io模型图不是很理解
-
-path使用有点不太清楚
-
-知识点多，比较乱，需要整理
-
-## 1.复习
+## 
 
 #### 1.1什么是io?
 
@@ -138,9 +128,7 @@ error .message .stack .code
 
 var err =new Error\('这是一个自定义错误'\);
 
-## 其它
 
-* vsc教程[http://i5ting.github.io/vsc/](https://github.com/luggege/book/tree/f7d098fe1f889ccf3b383f621c0b48c599f5fdd3/vsc教程/README.md)
 
 ## 3.es6
 
@@ -336,13 +324,7 @@ Buffer 是一个全局对象，使用的时候不需要 require
 
 我们可以通过监听stream对象里面的事件，去控制读写流。
 
-## 其它
+## 
 
-* vsc教程[http://i5ting.github.io/vsc/](https://github.com/luggege/book/tree/f7d098fe1f889ccf3b383f621c0b48c599f5fdd3/vsc教程/README.md)
 
-## 作业
-
-* 装node-inspector
-* 读[http://es6.ruanyifeng.com/\#README](http://es6.ruanyifeng.com/#README)
-* vsc教程[http://i5ting.github.io/vsc/](https://github.com/luggege/book/tree/f7d098fe1f889ccf3b383f621c0b48c599f5fdd3/vsc教程/README.md)
 

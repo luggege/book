@@ -54,7 +54,10 @@ var maxCallback = ( acc, cur ) => Math.max( acc.x, cur.x );
 [ { x: 2 }                       ].reduce( maxCallback ); // { x: 2 }
 [                                ].reduce( maxCallback ); // TypeError
 // 所以最好指定初始值
-[ { x: 2 }, { x: 22 }, { x: 42 } ].reduce( (accumulator, currentValue) => Math.max(accumulator, currentValue.x), 0 );  // 42
+[ { x: 2 }, { x: 22 }, { x: 42 } ].reduce( 
+    (accumulator, currentValue) => Math.max(accumulator, currentValue.x)
+    , 0 
+);  // 42
 ```
 
 

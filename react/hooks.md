@@ -1,5 +1,11 @@
 ### hooks
 
+解决了三个问题：
+
+* 维护state状态：React.useState\(当前状态名，更新状态的函数名\)函数
+* 模拟类式组件中的生命周期：React.useEffect\(\(\) =&gt; {}, \[\]\)
+* 保存标签对象React.useRef\(\)
+
 ```js
 import React, { Component } from 'react'
 import reactDom from 'react-dom'
@@ -53,7 +59,8 @@ function Demo() {
     const [count, setCount] = React.useState(0)
     const [name, setName] = React.useState('tom')
 
-    // 2. useEffect() （用于模拟类式组件中的生命周期）: 不写第二个参数时，相当于检测所有人，有改变就调用。若第二个为空，则只调用一次
+    // 2. useEffect() （用于模拟类式组件中的生命周期）: 
+    // 不写第二个参数时，相当于检测所有人，有改变就调用。若第二个为空，则只调用一次
     React.useEffect(() => {
         console.log('@@@')
         let timer = setInterval(() => {

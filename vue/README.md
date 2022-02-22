@@ -1,18 +1,12 @@
-# Vue
+### Vue
 
-### key值的作用
+> 渐进式Javascript框架
+
+#### key值的作用
 
 > vue为了更高效的渲染元素，会采取“就地复用”策略，对已经渲染过的元素不会因顺序改变而重新渲染。因此使用key来更新DOM元素，解决不想复用的问题。
 
-eslint\`\`\`\`\`\`\`
-
-webpack
-
-babel
-
-用户状态管理
-
-## 目录结构
+#### 目录结构
 
 ```javascript
 │  .browserslistrc                  // browser-loader 配置<br/>

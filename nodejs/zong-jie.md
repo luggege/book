@@ -29,68 +29,6 @@
 * 分清楚前台模块化和node中的模块化的区别
 * 掌握模块化的思想
 
-## node-lesson1
-
-### 1.解决几个问题？
-
-#### 1.前端、后端都是干什么的？
-
-前端 做静态资源的
-
-后端 操控服务器的硬件的
-
-#### 2.为什么学习node.js？
-
-1.就业有市场
-
-2.有商业用途
-
-国内一些创业公司用用的比较多，功夫熊（做上门保健的，美甲、按摩）
-
-国外的一些大公司都有使用：Facebook、Twitter、Google
-
-国内的一些大公司：Alibaba（天猫所有的页面都是通过Node提供的服务）、Tencent、Baidu
-
-3.本身技术是有价值
-
-4.js开发
-
-#### 3.什么是JavaScript？
-
-一门脚步语言 需要嵌入html执行
-
-#### 4.浏览器中的JavaScript可以做什么？
-
-校验表单 操作dom 等等
-
-#### 5.浏览器中的JavaScript不可以做什么？
-
-操作服务器硬件
-
-#### 6.浏览器与JavaScript是什么关系？
-
-浏览器解析js，目的是为了让计算机能看懂js，看懂01010101，机器码、字节码
-
-编译
-
-内核--&gt;js引擎
-
-引擎 1.转化 汽油柴油等等-&gt;转化-&gt;成动能
-
-模板+数据---&gt;页面
-
-js代码---&gt;机器码\字节码
-
-2.移植性
-
-js引擎套一个壳子，写js代码传给js引擎，操作硬件
-
-node.js v8引擎去解析js
-
-#### 7.JavaScript只可以运行在浏览器中吗？
-
-不是
-
 ### 什么是 Node?
 
 * [https://nodejs.org/en/](zong-jie.md)
@@ -109,10 +47,12 @@ node.js v8引擎去解析js
   node js
 
 * Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+
   * JavaScript runtime JavaScript 运行时
   * Chrome's V8 JavaScript engine Chrome 浏览器 V8 引擎
   * Node.js 是一个 构建于 谷歌的 Chrome 浏览器的 V8 引擎之上的一个 `JavaScript运行时` 环境
   * Node.js可以解析和执行 JavaScript 代码
+
 * Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.
   * event-driven 事件驱动模型
   * non-blocking I/O model 非阻塞IO模型 IO（input/output）输入与输出
@@ -358,4 +298,6 @@ module.exports用来曝露属性和方法的，因为模块有封装性，需要
 
 exports是module.exports的别名，exports可以做的事情，module.exports都可以做，exports只能用.的形式曝露属性和方法
 ```
+
+
 
