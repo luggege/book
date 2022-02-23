@@ -78,14 +78,15 @@ Linux默认使用bash
 2. 暂缓区域
 3. Git仓库
 
-* git config 初始化配置
-* git init 初始化仓库
-* git clone 克隆仓库
-* git add 给缓存增添东西\( -A添加全部\)
-* git commit -m '备注信息'\(放到仓库中的编号\)
-* git status 查看仓库当前文件状态\(红色未提交,绿色已提交\)
-* git log 查看历史
-* git checkout 切换到其他分支下
+4. git config 初始化配置
+
+5. git init 初始化仓库
+6. git clone 克隆仓库
+7. git add 给缓存增添东西\( -A添加全部\)
+8. git commit -m '备注信息'\(放到仓库中的编号\)
+9. git status 查看仓库当前文件状态\(红色未提交,绿色已提交\)
+10. git log 查看历史
+11. git checkout 切换到其他分支下
 
 > git checkout SHA -- "某个文件"，代表只是从SHA这个版中取出特定的文件，
 
@@ -98,7 +99,7 @@ Linux默认使用bash
 
 ### 更新本地仓库为远程仓库
 
- **git fetch 远程仓库地址**   **git fetch 远程仓库地址 分支名称**
+**git fetch 远程仓库地址**   **git fetch 远程仓库地址 分支名称**
 
 ### git fetch 和 git pull区别
 
@@ -109,6 +110,8 @@ Linux默认使用bash
 
 * git push origin --delete
 * git push origin: 分支名称
+
+### git stash 、git stash pop/git stash apply\(git stash drop\)
 
 ### gitignore 创建忽略文件
 
@@ -125,5 +128,5 @@ Linux默认使用bash
     git init blog
 ```
 
-![&#x5C55;&#x793A;&#x56FE;&#x7247;](https://github.com/luggege/book/tree/f7d098fe1f889ccf3b383f621c0b48c599f5fdd3/路径)
+![展示图片](https://github.com/luggege/book/tree/f7d098fe1f889ccf3b383f621c0b48c599f5fdd3/路径)
 

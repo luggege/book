@@ -1,21 +1,18 @@
 ### 浏览器存储机制
 
-#### web存储
-
-> localstorage & sessionStorage的区别: 有效期和作用域，同时兼容当前所有主流浏览器
+> web存储：localstorage & sessionStorage的区别: 有效期和作用域，同时兼容当前所有主流浏览器
 
 #### localstorage:
 
 1. 数据存储**永久性**永不过期: 除非刻意删除或者设置过期时间
-2. **作用域**限定在**文档源**: 只有同源的文档才可共享localstorage数据
+2. **作用域**限定在**文档源**: 只有同源的文档才可共享localstorage数据，大小5M左右
 3. 作用域受**浏览器**供应商限制: 不同浏览器不可共享
 
 #### sessionStorage:
 
 1. **有效期**随窗口**标签页的关闭**而消失: sessionStorage存储的数据即被删除
-2. **作用域**限定在**文档源**
-3. 不同浏览器不可共享sessionStorage数据
-4. 同一浏览器不同窗口，**无法共享**：每次通过复制地址新打开的标签页即使同源都会重新初始化一个session，故无法共享。但是通过**a链接或者window.open**打开的新标签页之间**共享**sessionStorage（低版本的Chrome可以，高版本的及火狐还是会生成新的session，需要给a链接添加rel=“opener”属性即可）
+2. **作用域**限定在**文档源：**不同浏览器不可共享sessionStorage数据，大小5M左右
+3. 同一浏览器不同窗口，**无法共享**：每次通过复制地址新打开的标签页即使同源都会重新初始化一个session，故无法共享。但是通过**a链接或者window.open**打开的新标签页之间**共享**sessionStorage（低版本的Chrome可以，高版本的及火狐还是会生成新的session，需要给a链接添加rel=“opener”属性即可）
 
 存储API
 
@@ -34,6 +31,8 @@
 
 #### **cookie**
 
+> **cookie在浏览器和服务器间来回传递**
+>
 > 用户担心cookie的不安全性，可能会将浏览器的cookie禁用，可以通过navigator.cookieEnabled这个属性检测\(true：cookie启用，flase：禁用\)。
 >
 > 每个cookie的**有效期**和**作用域**都需要通过**字符串**的形式读写document对象的cookie属性来指定
@@ -47,13 +46,11 @@
 document.cookie
 ```
 
-**cookie的跨域问题：**
+##### cookie的跨域问题：
 
-domain表示的是cookie所在的域，默认为请求的地址，如网址为www.study.com/study，那么domain默认为www.study.com。而跨域访问，如域A为t1.study.com，域B为t2.study.com，那么在域A生产一个令域A和域B都能访问的cookie就要将该cookie的domain设置为.study.com；如果要在域A生产一个令域A不能访问而域B能访问的cookie就要将该cookie的domain设置为t2.study.com。
+domain表示的是cookie所在的域，默认为请求的地址，如网址为www.study.com/study，那么**domain**默认为**www.study.com**。而跨域访问，如域A为t1.study.com，域B为t2.study.com，那么在域A生产一个令域A和域B都能访问的cookie就要将该cookie的domain设置为**.study.com**；如果要在域A生产一个令域A不能访问而域B能访问的cookie就要将该cookie的domain设置为t2.study.com。
 
-注意：
-
-一般在域名前是需要加一个"."的，如"domain=.study.com"。
+注意：一般在域名前是需要加一个"."的，如"domain=.study.com"
 
 #### IE User Data
 
