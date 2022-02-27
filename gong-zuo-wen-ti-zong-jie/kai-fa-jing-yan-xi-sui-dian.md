@@ -1,4 +1,10 @@
-# 开发经验细碎点
+# CSS
+
+CSS 优先级：
+
+* !important &gt; id &gt; class &gt; tag 
+* 内联 &gt; 内部 &gt; 外部 （内部 &gt; 外部的前提还要看他们的层叠顺序，即外部引用在前）
+* !important &gt; 内联
 
 ### border-radius 针对 table 失效
 
@@ -12,13 +18,16 @@
 >
 > 解决办法: 给td设border,或给table设border
 
-## 获取dom元素
+#### 画一条0.5px的线
 
-getElementById和getElementsByTagName 可以兼容到IE 5.5, 适用于IE 6 以上.
+* ```js
+  // 1.scaleY
+  transform: scaleY(0.5);
+  transform-origin: 50% 100%; // 解决变虚的问题
 
-document.querySelector和document.querySelectorAll可以兼容IE 8
-
-getElementsByClassName只兼容到IE 9 以上.
+  // 2.线性渐变 linear-gradient
+  background: linear-gradient(0deg, #fff, #000);
+  ```
 
 ### 使用如下meta标签使IE浏览器使用谷歌浏览器内核或最高版本的IE
 

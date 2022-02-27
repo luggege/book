@@ -70,7 +70,7 @@ getTarget: function(event){
 }
 ```
 
-④阻止浏览器默认事件的兼容性写法
+④阻止浏览器默认事件\(捕获\)的兼容性写法
 
 ```js
 preventDefault: function(event){

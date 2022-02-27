@@ -1,10 +1,8 @@
-# Promise
+### Promise
 
-## 什么是Promise
+> es一种技术，解决**异步回调**，解决**回调地狱**
 
-es一种技术，解决**异步回调**，解决**回调地狱**
-
-## 为什么要使用Promise
+#### 为什么要使用Promise
 
 * promise是一个对象，对象和函数的区别就是对象可以保存状态，函数不可以（闭包除外）
 
@@ -14,7 +12,7 @@ es一种技术，解决**异步回调**，解决**回调地狱**
 
 * 多个异步等待合并便于解决
 
-## 如何使用Promise
+#### 如何使用Promise
 
 `fn().then();`
 
@@ -32,7 +30,7 @@ new Promise(function (resolve, reject) {
 )
 ```
 
-## Promise原理是怎么实现的
+#### Promise原理是怎么实现的
 
 ```js
 function Promise(executor){
@@ -71,7 +69,7 @@ Promise.prototype.then = function(onFufiled, onRejected){
 
 > 指定resolved和rejected状态的回调函数
 
-Promise是一个构造函数，原型上也有then、catch、finally方法，.then\(\)方法返回一个**新的promise实例**，因此可以练式结构
+Promise是一个构造函数，原型上也有then、catch、finally方法，.then\(\)方法返回一个**新的promise实例**，因此可以链式结构
 
 ### catch\(\)
 

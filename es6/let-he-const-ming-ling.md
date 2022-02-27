@@ -78,7 +78,7 @@ const bar = 111
 tmp = '222'
 if(true){
     tmp = 'abc'
-    console.log(tmp)     // VM1289:3 Uncaught ReferenceError: Cannot access 'tmp' before initialization
+    console.log(tmp)     // Uncaught ReferenceError: Cannot access 'tmp' before initialization
 
     let tmp
     console.log(tmp)     // undefined

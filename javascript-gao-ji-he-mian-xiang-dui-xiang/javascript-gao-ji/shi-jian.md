@@ -42,13 +42,13 @@ document.getElementById('div4').addEventListener("click",function(){alert("4");}
 </script>
 ```
 
-利用冒泡原理实现事件委托（事件代理）
+**利用冒泡原理实现事件委托（事件代理**）
 
 ### mouseover与mouseout是冒泡的
 
 ### mouseenter与mouseleave是不冒泡的
 
-### 阻止冒泡行为
+#### 阻止冒泡行为
 
 ```js
 box.click(function(e){
@@ -62,7 +62,7 @@ box.click(function(e){
 })
 ```
 
-### 阻止默认行为
+#### 阻止默认行为
 
 ```js
 function stopDefaultEvent(){

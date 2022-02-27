@@ -58,5 +58,10 @@ const obj = {x: 2}
 > <input type="text" name="username" onChange={event => this.saveFormData('username', event)}/>
 > ```
 
+#### 有状态组件 & 无状态组件
+
+* 有状态组件：属于一个class类，有this，有state，props，可继承，有生命周期
+* 无状态组件：属于函数式组件，无state、props，只关注DOM渲染，不关注其他逻辑
+
 
 

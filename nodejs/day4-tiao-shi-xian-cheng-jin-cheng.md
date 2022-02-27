@@ -1,9 +1,5 @@
 # day4调试,线程进程
 
-## node-lesson4
-
-## 
-
 #### 1.1什么是io?
 
 ```text
@@ -127,8 +123,6 @@ url: '[http://127.0.0.1:3000/in\_theaters/](http://127.0.0.1:3000/in_theaters/)'
 error .message .stack .code
 
 var err =new Error\('这是一个自定义错误'\);
-
-
 
 ## 3.es6
 

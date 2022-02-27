@@ -11,6 +11,7 @@
 '' == '0'   // false
 
 // 3. null undefined 不进行转换
+// 规范中提到， 要比较相等性之前，不能将 null 和 undefined 转换成其他任何值，并且规定null 和 undefined 是相等的
 null == undefined // true
 
 // 4. NaN

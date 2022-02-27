@@ -25,30 +25,19 @@ var obj = {
     getAge: function(){
         var b = this.birth;
         console.log(this.birth)  // 1990
-        var fn = function(){
-            console.log(this.birth) // this指向window或者undefined
-            return new Date().getFullYear() - this.birth;
-        }
-        return fn();
-    }
-} 
-obj.getAge()  // NaN
-
-// 一般使用that替换this
-var obj = {
-    birth: 1990,
-    getAge: function(){
-        var b = this.birth;
+        // 一般使用that替换this
         var that = this;
-        console.log(this.birth)  // 1990
         var fn = function(){
-            console.log(that.birth)  //1990
+            //this指向window或者undefined
+            //return new Date().getFullYear() - this.birth;
+            console.log(that.birth)
             return new Date().getFullYear - that.birth;
         }
         return fn();
     }
-}
-obj.getAge()  // 30
+} 
+//obj.getAge()  // NaN
+obj.getAge()    // 30
 ```
 
 * * 箭头函数this由词法作用域，上下文确定

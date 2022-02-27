@@ -1,6 +1,6 @@
 ### 宏任务
 
-> 由宿主环境（执行JavaScript的环境，如浏览器、node）提供的，如setTimeout、setInterval
+> 由宿主环境（执行JavaScript的环境，如浏览器、node）提供的，如setTimeout、setInterval、requestAnimationFrame、I/O
 
 ### 微任务
 

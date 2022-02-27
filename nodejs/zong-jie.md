@@ -1,21 +1,5 @@
 # 总结
 
-## node-lesson1
-
-### 模块化开发复习
-
-#### 什么是模块化
-
-* 现实中的模块化
-  * 生产效率高
-  * 维护方便，成本低
-* 程序中的模块化
-  * 开发效率高 一次编写多次使用
-  * 方便维护了（维护的成本更低）模块之间有高耦合低内聚的特点
-* 为什么要在 程序 中使用 模块化的开发方式
-  * 命名冲突
-  * 文件依赖
-
 #### `SeaJS` 的使用
 
 * 定义模块 `define`作用域就在define的函数体里，三个参数require、exports、module
@@ -54,6 +38,7 @@
   * Node.js可以解析和执行 JavaScript 代码
 
 * Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.
+
   * event-driven 事件驱动模型
   * non-blocking I/O model 非阻塞IO模型 IO（input/output）输入与输出
   * lightweight\[ˈlaɪtweɪt\] 轻量级
@@ -62,6 +47,7 @@
   * 轻量级也就意味着有更好的 跨平台 特性（平台的差异性，兼容性）
   * efficient\[ɪˈfɪʃnt\] 高效的
   * Node.js的 事件驱动和非阻塞IO模型使得Node.js本身非常的轻量和高效
+
 * Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
   * package ecosystem npm 包生态系统 npm
   * largest 最大的
