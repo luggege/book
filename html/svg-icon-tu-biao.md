@@ -236,8 +236,8 @@ requireAll(req)
   }
   </style>
   ```
-
 * 页面使用
+
 * ```js
   <svg-icon icon-class="eye" class-name="eyeStyle" />
   ```

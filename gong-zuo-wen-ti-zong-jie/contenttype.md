@@ -23,6 +23,9 @@ xhr.onreadystatechange = function(){
   }
 }
 
+// 终止请求（背景：表单检索修改查询条件后，上次的请求比本次还慢时，会出现bug，不是防抖节流能解决的，所以需要终止上次请求）
+xhr.abort() //readyState将变为0
+
 // readyState： 0：请求未初始化；1：服务器连接已建立；2：请求已接收；3：请求处理中；4：请求已完成，响应已就绪
 ```
 
@@ -31,7 +34,12 @@ xhr.onreadystatechange = function(){
 > 基于xhr封装
 
 ```js
-$.ajax({
+let queryTruckAjax
+if(queryTruckAjax) {
+  queryTruckAjax.abort()
+}
+
+queryTruckAjax = $.ajax({
   url: 'url',
   type: post,
   contentType: 'application/json',
@@ -70,7 +78,7 @@ $.ajax({
 
 ### axios请求
 
-> 基于xhr封装
+> 基于xhr封装，基于promise的HTTP库
 
 ```js
 // request.js
@@ -117,7 +125,11 @@ export function loginByUsername(username, password) {
     method: 'post',
     data: {
       data
-    }
+    },
+    // 取消请求
+    cancelToken: new axios.CancelToken((c) => {
+      that.source = c;
+    })
   })
 }
 ```
@@ -127,6 +139,8 @@ export function loginByUsername(username, password) {
 > windows内置的（关注分离的设计思想），和xhr同级别，不用下载直接使用，promise风格的。缺点是低版本浏览器不支持
 
 ```js
+const contronller = new AbortContronller()
+
 fetch('www.baidu.com').then(
   res => {
     console.log('联系服务器成功', res.json())
@@ -140,6 +154,9 @@ fetch('www.baidu.com').then(
   res => console.log('获取数据成功了', res),
   err => console.log('获取数据失败了', err)
 )
+
+// 终止请求
+contronller.abort()
 ```
 
 ```js

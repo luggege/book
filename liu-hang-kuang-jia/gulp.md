@@ -4,6 +4,8 @@
 
 gulp 和 grunt 非常类似，但相比于 grunt 的频繁 IO 操作，gulp 的流操作，能更快地更便捷地完成构建工作。
 
+gulp 和 grunt ：基于任务和流（task、stream），基于管道的思想，进行一系列链式操作。
+
 ## 使用步骤:
 
 1.全局安装gulp
@@ -29,4 +31,6 @@ gulp 和 grunt 非常类似，但相比于 grunt 的频繁 IO 操作，gulp 的�
 ![](../.gitbook/assets/import1.png)
 
 ## 项目构建
+
+
 

@@ -3,7 +3,7 @@
 > assign：Object.assign\(target, source1,  source2\)方法用于将源对象自身的所有**可枚举**属性复制到目标对象
 
 1. ```js
-   // 1. 源对象属性复制到目标对象
+   // 1. 源对象属性复制到目标对象，得到的新对象是深拷贝
    var target = {a: 1};
    var source = {b: 2};
    Object.assign(target, source)  // {a: 1, b: 2}

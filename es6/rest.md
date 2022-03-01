@@ -1,6 +1,6 @@
 ### rest
 
-> 接收余下参数
+> 接收余下参数的数组
 
 ```js
 function fn(a, ...rest) {
@@ -8,7 +8,7 @@ function fn(a, ...rest) {
     console.log(Array.prototype.slice.apply(arguments))
 }
 fn(2, 3)
-// 2 [3] Arguments(2) [2, 3, callee: (...), Symbol(Symbol.iterator): ƒ]
+// 2 [3] Arguments(2) [2, 3, callee: (...), Symbol(Symbol.iterator): ƒ]
 // [2, 3]
 ```
 

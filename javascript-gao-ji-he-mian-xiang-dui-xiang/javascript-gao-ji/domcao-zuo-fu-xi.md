@@ -10,6 +10,8 @@ getElementById  getElementsByTagName  getElementsByClassName  document.querySele
 //getElementById和getElementsByTagName：可以兼容到IE 5.5, 适用于IE 6 以上.
 //document.querySelector和document.querySelectorAll：可以兼容IE 8
 //getElementsByClassName：只兼容到IE 9 以上.
+
+document.getElementById("test").parentNode.children[1];
 ```
 
 #### 元素节点操作
