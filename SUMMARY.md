@@ -162,7 +162,7 @@
     * [$router 和 $route](vue/vue-router/router-he-route.md)
     * [导航守卫](vue/vue-router/dao-hang-shou-wei.md)
     * [钩子函数](vue/vue-router/gou-zi-han-shu.md)
-    * [hash & history](vue/vue-router/hash-and-history.md)
+    * [hash & history 模式](vue/vue-router/hash-and-history.md)
 * [React](react.md)
   * [react-router](react/react-router.md)
     * [路由传参方式](react/react-router/lu-you-chuan-can-fang-shi.md)

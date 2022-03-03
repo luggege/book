@@ -9,6 +9,8 @@
 * * 原理：利用script标签的src属性，发送get请求不受跨域影响。缺点：只能**get**方式
   * ```js
     <script src='https://xxx.xxx.xx?key=value&callback=xxx'><script>
+
+    img的src也可以绕过同源策略，但是script可以解析js执行回调函数
     ```
 * iframe嵌套另一个页面
 

@@ -14,8 +14,10 @@
 
 #### loader 和 plugin的区别
 
-* 二者都是webpack 功能的扩展。loader职责单一，一个loade就是一个NodeJs模块只是一种转换；plugin除了优化打包、压缩，还可以重新定义环境变量（define-plugin）
-* loader运行在打包文件之前（预处理）；plugin运行在整个生命周期，监听webpack广播出的各种事件，然后在合适的时机通过webpack的API改变输出结果
+* 二者都是webpack 功能的扩展。loader职责单一，一个loade就是一个NodeJs模块只是一种转换；
+  plugin除了优化打包、压缩，还可以重新定义环境变量（define-plugin）
+* loader运行在打包文件之前（预处理）；
+  plugin运行在整个生命周期，监听webpack广播出的各种事件，然后在合适的时机通过webpack的API改变输出结果
 * 写法
 * * loader：是一个函数，入参是上一个loader返回的source，出参是经过处理的source，这也说明了loader是顺序执行的
   * plugin：new出来的，所以是一个类，每个阶段都有响应的钩子

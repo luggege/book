@@ -1,4 +1,4 @@
-# mpvue lifecycle
+### mpvue lifecycle
 
 ```javascript
   beforeCreate(){

@@ -30,7 +30,7 @@ componentDidMount() {
         console.log('消息已发布：', msg, todo);  // 消息已发布：addTodo
     })
 }
-componentWillMount() {
+componentWillUnMount() {
     // 取消订阅
     PubSub.unsubscribe(this.token)
 }
