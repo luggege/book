@@ -2,9 +2,9 @@
 
 解决了三个问题：
 
-* 维护state状态：React.useState\(当前状态名，更新状态的函数名\)函数
-* 模拟类式组件中的生命周期：React.useEffect\(\(\) =&gt; {}, \[\]\)
-* 保存标签对象React.useRef\(\)
+* 维护state状态：**React.useState**\(当前状态名，更新状态的函数名\)
+* 模拟类式组件中的生命周期：**React.useEffect**\(\(\) =&gt; {}, \[\]\)
+* 保存标签对象**React.useRef**\(\)
 
 ```js
 import React, { Component } from 'react'
