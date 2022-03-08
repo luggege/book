@@ -7,6 +7,7 @@ let arr = [29, 10, 19, 9, 33];
 for(let i = 0; i < arr.length - 1; i++) {
     let minIndex = i;
     for(let j = i + 1; j < arr.length; j++) {
+        // minIndex：每次和最小值比较
         if(arr[j] < arr[minIndex]) {
             minIndex = j;
         }
