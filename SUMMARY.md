@@ -123,16 +123,16 @@
   * [let 和 const 命令](es6/let-he-const-ming-ling.md)
   * [箭头函数](es6/jian-tou-han-shu.md)
   * [Promise](es6/promise.md)
+  * [async](/es6/async.md)
   * [Object.assign\(\)](es6/assign.md)
   * [Object.setPrototypeOf\(\)/Object.getPrototypeOf\(\)](es6/objectsetprototypeofobjectgetprototypeof.md)
   * [扩展运算符](es6/kuo-zhan-yun-suan-fu.md)
-  * [rest](es6/rest.md)
   * [变量的解构赋值](es6/bian-liang-de-jie-gou-fu-zhi.md)
-  * [Symbol](es6/symbol.md)
-  * [async](es6/async.md)
-  * [Array.from\(\)](es6/arrayfrom.md)
-  * [reduce](es6/reduce.md)
+  * [rest](es6/rest.md)
+  * [reduce](/es6/reduce.md)
   * [includes](es6/includes.md)
+  * [Symbol](/es6/symbol.md)
+  * [Array.from\(\)](es6/arrayfrom.md)
   * [Set数据结构](es6/setshu-ju-jie-gou.md)
   * [Map数据结构](es6/mapshu-ju-jie-gou.md)
   * [class](/es6/class.md)
@@ -195,4 +195,6 @@
     * [插入排序](cha-ru-pai-xu.md)
     * [归并排序](gui-bing-pai-xu.md)
     * [快速排序](kuai-su-pai-xu.md)
+
+
 

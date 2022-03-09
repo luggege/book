@@ -1,6 +1,6 @@
-# 变量的解构赋值
+### 变量的解构赋值
 
-## 数组的解构赋值
+#### 数组的解构赋值
 
 > 解构：从数组和对象中提取值，对变量进行赋值，称为解构。
 
@@ -61,7 +61,7 @@ let [x = 1, y = x] = [1, 2]; // x=1; y=2
 let [x = y, y = 1] = [];     // ReferenceError: y is not defined
 ```
 
-## 对象的解构赋值
+#### 对象的解构赋值
 
 > 数组的解构：变量是按元素的排列次序相应取值；
 >
@@ -138,7 +138,7 @@ const {a: {b: data}} = obj2
 data // 3
 ```
 
-## 字符串的解构赋值
+#### 字符串的解构赋值
 
 ```javascript
 // 字符串被转换为一个类似数组的对象
@@ -148,7 +148,7 @@ const [a, b, c, d, e] = 'hello'                       // a => 'h', b => 'e', c =
 let {length: len} = 'hello'                          // len => 5
 ```
 
-## 数值和布尔值的解构赋值
+#### 数值和布尔值的解构赋值
 
 > 解构赋值时，如果等号右边的值不是数组或对象，都会先转为对象
 
@@ -165,7 +165,7 @@ let { prop: hh } = null
 // VM1317:1 Uncaught TypeError: Cannot destructure property `prop` of 'undefined' or 'null'.
 ```
 
-## 函数参数的解构赋值
+#### 函数参数的解构赋值
 
 ```javascript
 // 解构成x, y变量来看
@@ -194,7 +194,7 @@ move({})                                            // [undefined, undefined]
 move()                                              // [0, 0]
 ```
 
-## 不能使用圆括号的情况
+#### **不能使用圆括号的情况**
 
 ```javascript
 // 全部报错 Uncaught SyntaxError: Unexpected token (
@@ -219,7 +219,7 @@ function f([(z)]) {
 ({ p }) = {p: 1}
 ```
 
-## 可以使用圆括号的情况
+#### **可以使用圆括号的情况**
 
 > 只有一种情况：赋值语句的**非模式**部分
 
@@ -229,7 +229,7 @@ function f([(z)]) {
 { p: (p) } = {p: 1}
 ```
 
-## 用途
+#### 用途
 
 ```javascript
 1. 变量交换
