@@ -144,13 +144,14 @@
 * [Vue](vue/README.md)
   * [MVC和MVVM的区别](vue/mvc-he-mvvm-de-qu-bie.md)
   * [vue的安装及使用](vue/vuede-an-zhuang-ji-shi-yong.md)
+  * [Vue.use\(\)](vue/vueuse.md)
   * [lifecycle](vue/lifecycle.md)
   * [父子组件生命周期执行顺序](vue/fu-zi-zu-jian-sheng-ming-zhou-qi-zhi-xing-shun-xu.md)
   * [mpvue lifecycle](vue/mpvue-lifecycle.md)
   * [v-model](vue/v-model.md)
   * [this.$set](vue/thisset.md)
   * [组件通信](vue/zu-jian-tong-xin.md)
-  * [computed与watch的区别](vue/computedyu-watch-de-qu-bie.md)
+  * Vue.use\(\)
   * [自定义指令](vue/zi-ding-yi-zhi-ling.md)
   * [自定义过滤器](vue/zi-ding-yi-guo-lv-qi.md)
   * [axios](vue/axios.md)
@@ -195,6 +196,4 @@
     * [插入排序](cha-ru-pai-xu.md)
     * [归并排序](gui-bing-pai-xu.md)
     * [快速排序](kuai-su-pai-xu.md)
-
-
 
