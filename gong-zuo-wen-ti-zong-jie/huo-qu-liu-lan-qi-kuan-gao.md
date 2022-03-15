@@ -1,9 +1,9 @@
-# 浏览器相关问题
+### 浏览器相关问题
 
-## 获取浏览器宽高
+#### 获取浏览器宽高
 
 ```javascript
-// 文档的宽 高
+// 文档的宽 高（元素到顶端的距离）
 console.log( document.body.scrollWidth );
 console.log( document.body.scrollHeight || document.documentElement.scrollHeight );
 
@@ -28,13 +28,13 @@ console.log( window.screen.height );
 console.log( $(window).width() );
 console.log( $(window).height() );
 
-div.style.top : 指对象距离浏览器显示区域顶端的垂直距离  (可读&可写 带单位)
-div.offsetTop : 指对象距离顶边距显示区域顶端的垂直距离  (可读 不带单位)
+div.style.top: 指对象距离浏览器显示区域顶端的垂直距离  (可读&可写 带单位)
+div.offsetTop: 指对象距离顶边距显示区域顶端的垂直距离  (可读 不带单位)
 ```
 
 ```js
-// 滑动到底部加载更多
-window.onscroll= function(){
+// 1.滑动到底部加载更多
+window.onscroll = function(){
     //文档内容实际高度（包括超出视窗的溢出部分）
     var scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
     //滚动条滚动距离
@@ -47,8 +47,10 @@ window.onscroll= function(){
         console.log("===加载更多内容……===");
     }
 }
+```
 
-$(window).on("resize scroll",function(){
+```js
+$(window).on("resize scroll", function(){
     var windowHeight = $(window).height();//当前窗口的高度
     var scrollTop = $(window).scrollTop();//当前滚动条从上往下滚动的距离
     var docHeight = $(document).height(); //当前文档的高度
@@ -61,9 +63,31 @@ $(window).on("resize scroll",function(){
 });
 ```
 
-### 页面位置
+```js
+// 2.getBoundingClientRect：判断元素在视窗之内
+rect = target.getBoundingClientRect();
 
-### touch事件的属性
+rect.top >= 0 && rect.bottom <= viewHeight && rect.left >= 0 && rect.right <= viewWidth
+```
+
+```js
+// 3.interSection observer：重叠观察者，
+// 通过创建观察者，传入被观察者的方式，判断两个元素是否重叠，性能要比getBoundingClientRect好
+const options = {
+  // 表示重叠面积占被观察者的比例，从 0 - 1 取值，
+  // 1 表示完全被包含
+  threshold: 1.0, 
+  root:document.querySelector('#scrollArea') // 必须是目标元素的父级元素
+};
+
+const observer = new IntersectionObserver(callback, options)
+
+observer.observe(document.querySelector('#target'))
+```
+
+#### 页面位置
+
+#### touch事件的属性
 
 touchstart:当手指触摸屏幕时触发；即使已经有一个手指放在了屏幕上也会触发。
 
@@ -73,7 +97,7 @@ touchend:当手指从屏幕上移开时触发。
 
 touchcancel:当系统停止跟踪触摸时触发。关于此事件的确切触发事件，文档中没有明确说明。
 
-#### 以上事件的event对象上面都存在如下属性：
+**以上事件的event对象上面都存在如下属性：**
 
 touches:表示当前跟踪的触摸操作的Touch对象的数组。
 
@@ -81,7 +105,7 @@ targetTouches:特定于事件目标的Touch对象的数组。
 
 changeTouches:表示自上次触摸以来发生了什么改变的Touch对象的数组。
 
-#### 每个Touch对象包含下列属性：
+**每个Touch对象包含下列属性：**
 
 clientX:触摸目标在**视口**中的X坐标。
 
@@ -99,7 +123,7 @@ screenY:触摸目标在**屏幕**中的y坐标。
 
 target:触摸的DOM节点坐标
 
-## 浏览器navigator属性
+#### 浏览器navigator属性
 
 navigator 对象包含有关浏览器的信息。没有应用于 navigator 对象的公开标准，不过所有浏览器都支持该对象。但是其内部一些属性及其返回值在各浏览器并不统一。
 
@@ -112,11 +136,7 @@ navigator 对象包含有关浏览器的信息。没有应用于 navigator 对�
 
 对于浏览器，Mozilla Developer Center 中的 language 属性与 MSDN 中的 browserLanguage 属性描述很像。
 
-#### 代码中打印出了各浏览器对于这 4 个属性返回值的情况：
-
-|  |
-| :--- |
-
+**代码中打印出了各浏览器对于这 4 个属性返回值的情况：**
 
 |  | IE6 IE7 IE8 | Firefox Chrome Safari | Opera |
 | :--- | :--- | :--- | :--- |
@@ -125,7 +145,7 @@ navigator 对象包含有关浏览器的信息。没有应用于 navigator 对�
 | navigator.browserLanguage | zh-cn | undefined | zh-cn |
 | navigator.systemLanguage | zh-cn | undefined | undefined |
 
-#### 解决方案
+**解决方案**
 
 可以使用下面的代码获取当前浏览器语言：
 

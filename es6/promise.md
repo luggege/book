@@ -270,7 +270,7 @@ new Promise((resolve, reject) => {
 // error
 ```
 
-## 应用
+#### 应用
 
 * 图片加载：加载完成调用resolve方法，改变Promise状态
 

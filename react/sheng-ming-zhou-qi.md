@@ -3,7 +3,7 @@
 * componentWillMount
 * componentDidMount
 * componentWillReceiveProps\(props\): 从父类接受props，并且在渲染前调用
-* shouldComponentUpdate\(\): true/false，组件是否更新，默认false
+* shouldComponentUpdate\(nextProps\): true/false，组件是否更新，默认false
 * componentWillUpdate
 * componentDidUpdate
 * componentWillUnMount

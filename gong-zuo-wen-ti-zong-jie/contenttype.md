@@ -1,4 +1,10 @@
-### 原生ajax请求
+### 请求
+
+> post比get安全一点，地址栏看不到你的信息.\(但是post也会被抓包\)
+>
+> get发送表单数据,post请求表单
+
+#### 原生ajax请求
 
 > 原生xhr
 
@@ -29,7 +35,7 @@ xhr.abort() //readyState将变为0
 // readyState： 0：请求未初始化；1：服务器连接已建立；2：请求已接收；3：请求处理中；4：请求已完成，响应已就绪
 ```
 
-### jquery请求
+#### jquery请求
 
 > 基于xhr封装
 
@@ -76,7 +82,7 @@ queryTruckAjax = $.ajax({
   * html
   * xml
 
-### axios请求
+#### axios请求
 
 > 基于xhr封装，基于promise的HTTP库
 
@@ -110,8 +116,9 @@ service.interceptors.reponse.use(
 )
 
 export default service
+```
 
-=====================================
+```js
 // 调用
 import request from '@/utils/request'
 
@@ -134,7 +141,7 @@ export function loginByUsername(username, password) {
 }
 ```
 
-### fetch
+#### fetch
 
 > windows内置的（关注分离的设计思想），和xhr同级别，不用下载直接使用，promise风格的。缺点是低版本浏览器不支持
 

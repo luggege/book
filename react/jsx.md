@@ -12,9 +12,14 @@
 ```js
 const vm = <h1 className="title">Hello React</h1>
 // 等同于
-const vm = React.createElement('h1', {className: 'title'}, 'Hello React')
+// const vm = React.createElement('h1', {className: 'title'}, 'Hello React')
 
+// 1. ReactDOM.render()：用于将虚拟DOM渲染到浏览器的真实DOM上
 ReactDOM.render(vm, document.getElementById('root'))
+
+// 2. ReactDOM.findDOMNode()：获取真实DOM，组件挂载之后使用，componentDidMount和componentDidUpdate方法中获取
+// 3. ReactDOM.unmountCompoentAtNode()：用于执行卸载操作，在componentWillMount之前
+// 4. ReactDOM.creatPortal(child, container)：将子几点挂载到指定Dom中，并不直接渲染DOM元素，不同于render
 ```
 
 #### 虚拟dom与真实dom的区别
@@ -22,6 +27,12 @@ ReactDOM.render(vm, document.getElementById('root'))
 * 虚拟dom属性少，真实dom属性多（虚拟dom是React内部用，无需真实dom那么多属性）
 * 虚拟dom最终会被react转为真实的dom呈现在页面上
 * 二者本质上都是object对象
+
+#### diff算法三个策略
+
+* 结构不一样，直接卸载重新create
+* 结构一样，不会卸载但update
+* 同层子节点，通过key来区分
 
 #### React/Vue中key的作用
 

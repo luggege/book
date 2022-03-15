@@ -184,7 +184,7 @@
   * [PureComponent](/react/purecomponent.md)
   * [renderProps](/react/renderprops.md)
   * [errorBoundary](/react/errorboundary.md)
-  * [React与Vue区别](react/reactyu-vue-qu-bie.md)
+* [React与Vue区别](react/reactyu-vue-qu-bie.md)
 * [算法](suan-fa.md)
   * [数据结构](shu-ju-jie-gou.md)
     * [栈、队列](shu-ju-jie-gou/zhan-3001-dui-lie.md)
