@@ -151,7 +151,6 @@
   * [v-model](vue/v-model.md)
   * [this.$set](vue/thisset.md)
   * [组件通信](vue/zu-jian-tong-xin.md)
-  * Vue.use\(\)
   * [自定义指令](vue/zi-ding-yi-zhi-ling.md)
   * [自定义过滤器](vue/zi-ding-yi-guo-lv-qi.md)
   * [axios](vue/axios.md)
