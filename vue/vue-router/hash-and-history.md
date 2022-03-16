@@ -2,8 +2,8 @@
 
 > mode: history/hash\(默认\)，本质上还是利用浏览器自身的特性，改变url但是不请求接口，监听浏览器的两个原生事件，实现前端路由，如：
 
-* hashChange事件
 * popState事件
+* hashChange事件
 
 #### history
 

@@ -1,4 +1,4 @@
-# 屏幕适配
+### 屏幕适配
 
 #### 浏览器默认字体大小16px,最小显示12px;
 
@@ -12,7 +12,7 @@
 
 6. vmin：选取vw和vh中最小的那个
 
-1. ```js
+7. ```js
    html {
     font-size: 62.5%;
     /*10 ÷ 16 × 100% = 62.5%*/
@@ -98,7 +98,7 @@
 
 **device-width  检测设备宽度**
 
-```js
+```css
 //完全等于宽/高度时，才会变成蓝色
 @media only screen and (width: 320px) and (height: 568px) {
     body {
@@ -107,7 +107,7 @@
 }
 ```
 
-```js
+```css
 //小于等于宽/高度时，才会变成蓝色
 @media only screen and (max-height: 400px) {
     body {
@@ -116,7 +116,7 @@
 }
 ```
 
-```js
+```css
 //当视口中设置的width/height为device-height的值是,就会起作用
 @media only screen and (device-height: 568px) {
     body {

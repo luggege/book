@@ -48,6 +48,7 @@
     * [事件](/javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shi-jian.md)
     * [微任务、宏任务](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/wei-ren-wu-3001-hong-ren-wu.md)
     * [setTimeout、setInterval、requestAnimationFrame](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/settimeoutsetintervalrequestanimationframe.md)
+    * [异步解决方案](/javascript-gao-ji-he-mian-xiang-dui-xiang/yi-bu-jie-jue-fang-an.md)
   * [数组](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu.md)
     * [伪数组转为真数组的方式](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu/wei-shu-zu-zhuan-wei-zhen-shu-zu.md)
     * [数组去重](javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shu-zu-qu-zhong.md)
@@ -195,4 +196,6 @@
     * [插入排序](cha-ru-pai-xu.md)
     * [归并排序](gui-bing-pai-xu.md)
     * [快速排序](kuai-su-pai-xu.md)
+
+
 

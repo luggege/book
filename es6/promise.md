@@ -14,7 +14,11 @@
 
 #### 如何使用Promise
 
-`fn().then();`
+三个状态：
+
+* pending
+* fulfilled
+* rejected
 
 ```js
 new Promise(function (resolve, reject) {

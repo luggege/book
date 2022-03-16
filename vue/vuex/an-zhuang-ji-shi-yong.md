@@ -1,4 +1,4 @@
-## Vuex安装及使用
+### Vuex安装及使用
 
 ```javascript
 <script src="/path/to/vue.js"></script>
