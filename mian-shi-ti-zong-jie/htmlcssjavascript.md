@@ -18,7 +18,7 @@
 
 CSS的盒子模型有两种：IE盒子模型、标准的W3C盒子模型
 
-盒模型：内容、内边距、外边距（一般不计入盒子实际宽度）、边框
+盒模型：内容、内边距、边框、外边距（一般不计入盒子实际宽度）
 
 通过box-sizing指定盒子模型种类：border-box（IE盒子模型）、content-box（标准盒子模型）
 
@@ -31,17 +31,11 @@ CSS的盒子模型有两种：IE盒子模型、标准的W3C盒子模型
 条件
 
 * body根元素
-
 * 设置浮动，不包括none
-
 * 设置定位，absoulte或者fixed
-
 * 行内块显示模式，inline-block
-
 * 设置overflow，即hidden，auto，scroll
-
 * 表格单元格，table-cell
-
 * 弹性布局，flex
 
 **解决的实际场景**

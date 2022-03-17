@@ -2,6 +2,9 @@
 
 > 导航：表示**路由**正在发生改变，利用导航守卫控制导航跳转
 
+* 前置守卫：beforeEach\(\(to, from, next\) =&gt; {}\)
+* 后置守卫：afterEach\(\(to, from\) =&gt; {}\)
+
 ```js
 // import router from './router'
 import store from './store'

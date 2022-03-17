@@ -151,6 +151,7 @@
   * [mpvue lifecycle](vue/mpvue-lifecycle.md)
   * [v-model](vue/v-model.md)
   * [this.$set](vue/thisset.md)
+  * [this.$delete](vue/thisdelete.md)
   * [组件通信](vue/zu-jian-tong-xin.md)
   * [自定义指令](vue/zi-ding-yi-zhi-ling.md)
   * [自定义过滤器](vue/zi-ding-yi-guo-lv-qi.md)

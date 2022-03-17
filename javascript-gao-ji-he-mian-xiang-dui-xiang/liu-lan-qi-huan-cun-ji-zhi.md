@@ -52,6 +52,16 @@ domain表示的是cookie所在的域，默认为请求的地址，如网址为ww
 
 注意：一般在域名前是需要加一个"."的，如"domain=.study.com"
 
+| 参数 | 描述 |
+| :--- | :--- |
+| name |  |
+| value |  |
+| domain | 子域 |
+| path | 一般设为/，表示该站点下所有页面都可以访问 |
+| expire | 过期时间，不设置则随浏览器关闭消失 |
+| httpOnly | 若开启，则脚本无法获取cookie |
+| secure | 若设置，则只允许https协议连接可以访问cookie |
+
 #### IE User Data
 
 > IE8以前,web存储的替代方案
