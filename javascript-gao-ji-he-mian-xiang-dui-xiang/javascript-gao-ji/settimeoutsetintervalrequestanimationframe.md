@@ -4,7 +4,6 @@
 
 ```js
 // 用setInterval实现setTimeout
-
 mySetTimeout(() => {
     console.log('mySetTimeout')
 }, 1000)
@@ -20,8 +19,19 @@ function mySetTimeout(callback, ms) {
 ### setInterval
 
 ```js
-// 用setTimeout实现setInterval
+mySetInterval(() => console.log('mySetInterval'), 1000)
 
+function mySetInterval(callback, ms) {
+    var timer = setTimeout(() => {
+        callback();
+        clearTimeout(timer)
+        mySetInterval(callback, ms)
+    }, ms)
+}
+```
+
+```js
+// 用setTimeout实现setInterval
 var timer = myInterval(() => {
     console.log('myInterval')
 }, 1000)
