@@ -1,6 +1,6 @@
-# Number
+### Number
 
-## Number 对象属性
+#### Number 对象属性
 
 | 属性 | 描述 |
 | :--- | :--- |
@@ -10,7 +10,7 @@
 | NEGATIVE\_INFINITY | 负无穷大，溢出时返回该值。相当于-Infinity       -Infinity |
 | POSITIVE\_INFINITY | 正无穷大，溢出时返回该值。相当于Infinity        Infinity |
 
-## Number 对象方法
+#### Number 对象方法
 
 | 方法 | 描述 |
 | :--- | :--- |
@@ -20,7 +20,7 @@
 | toPrecision | 把数字格式化为指定的长度。 |
 | valueOf | 返回一个 Number 对象的基本数字值。 |
 
-## 浮点数值
+#### 浮点数值
 
 ECMAScript会将那些极大极小的值用科学计数法表示
 
@@ -34,7 +34,7 @@ ECMAScript会将那些极大极小的值用科学计数法表示
 2.2e+21
 ```
 
-#### 浮点运算精度问题
+**浮点运算精度问题**
 
 ```js
 0.1 + 0.1 = 0.2

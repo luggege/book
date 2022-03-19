@@ -1,6 +1,6 @@
 ### for in、for of、forEach的区别
 
-#### for in：**只遍历对象自身的和继承的可枚举属性**
+#### for in：只遍历对象自身的和继承的可枚举属性
 
 1. 只遍历可循环属性，**跳过空值**
 2. 循环的输出顺序问题：先遍历**整数**属性（按照**升序**），其他属性按照创建顺序遍历
@@ -8,13 +8,13 @@
 
 #### for of：只遍历自身的可枚举属性
 
-1. for-of不会跳过空值，默认为undefined
+1. for-of**不会**跳过空值，默认为undefined
 2. for-in、forEach遇数组空项会跳过，for-in循环遇数组空项key值发生变化
 3. 对于数组中的属性（如：test： testing），不能遍历出
 
 #### forEach：只遍历自身的可枚举属性
 
-1. 会跳过空值。不能使用break，continue跳出循环，不同于for-in、for-of
+1. 会**跳过空值**。不能使用break，continue跳出循环，不同于for-in、for-of
 
 2. 1、Object
 
@@ -121,7 +121,7 @@ for(let item of str){
 
 1. for in：  遍历**自身**的和**继承**的**可枚举**属性
 2. Object.keys\(\) ：遍历**自身**的**可枚举**属性
-3. Object.getOwnPropertyNames\(Object.prototype\)： 遍历**自身**的**可枚举或不可枚举**属性（不包含Symbol属性）
+3. Object.getOwnPropertyNames\(Object.prototype\)： 遍历**自身**的**可枚举**或**不可枚举**属性（不包含Symbol属性）
 4. Object.getOwnPropertySymbols\(obj\)： 只遍历**自身**的**Symbol属性**
 5. Reflect.ownKeys\(obj\)： 返回对象自身的所有键名的数组，**不管是否是Symbol，是否可枚举**
 
@@ -132,7 +132,7 @@ for(let item of str){
 // []
 
 3.Object.getOwnPropertyNames(Object.prototype)
-// ["constructor", "__defineGetter__", "__defineSetter__", "hasOwnProperty", "__lookupGetter__", "__lookupSetter__", "isPrototypeOf", "propertyIsEnumerable", "toString", "valueOf", "__proto__", "toLocaleString"]
+// ["constructor", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "__proto__", ...]
 
 4.Object.getOwnPropertySymbols({ [Symbol()]:0, b:0, 10:0, 2:0, a:0 })
 // [Symbol()]

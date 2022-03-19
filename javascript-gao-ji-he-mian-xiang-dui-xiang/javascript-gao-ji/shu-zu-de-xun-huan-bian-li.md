@@ -1,4 +1,4 @@
-### forEach、map、some、every、filter
+#### forEach、map、some、every、filter
 
 ```js
 1.forEach没有返回值，不能跳出循环，（可通过some、every来实现）
@@ -29,7 +29,7 @@
 //[9, 16]
 ```
 
-### 删除数组多项值
+#### 删除数组多项值
 
 问题：删除数组中的某两项值
 
