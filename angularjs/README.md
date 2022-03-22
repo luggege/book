@@ -77,5 +77,11 @@ config方法：在模块加载阶段，对模块进行自定义配置
 
   config里允许注入的是provider和constance（常量），run里允许注入的是provider和constant，还可以是factory, service, value
 
+### Angularjs控制器传参问题
 
+#### broadcast: 广播\(只能向下\)
+
+#### emit: 发射\(只能向上\)
+
+**如果控制器向同级传值: 可以通过向上发射,然后再向下广播回来**
 
