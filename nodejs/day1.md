@@ -1,6 +1,6 @@
 # node基础及requirejs/seajs
 
-浏览器解析js,目的是为了让计算机可以看懂js
+> 浏览器解析js,目的是为了让计算机可以看懂js
 
 ### 引擎
 
@@ -10,9 +10,7 @@
    * js代码--&gt;机器码/字节码
 2. 移植性
 
-   \*
-
-   **node中的js是基于v8引擎的 \(好处: 不用考虑兼容性问题\)**
+   * **node中的js是基于v8引擎的 \(好处: 不用考虑兼容性问题\)**
 
 #### node是一门技术,用的语言就是JavaScript
 
@@ -23,8 +21,6 @@
 * 轻量,高效
 
 > Node.js最早是运行在linux系统下的
-
-#### 熟悉基本的linux命令
 
 #### node 下的每一个js都是一个模块
 
@@ -77,7 +73,7 @@
 
 ### 模块化规范
 
-#### 服务器端模块化规范
+> ES6之后有了类class的定义，根据服务器端模块化的思想，也就产生了前端的模块化思想：协同开发，复用别人的模块
 
 #### 浏览器端模块化规范
 
@@ -85,14 +81,44 @@
   * RequireJS
 * CMD
   * SeaJS
-* commonjs
+* CommonJS
   * node.js
+
+#### CMD与AMD的区别
+
+* 二者都是异步加载模块
+* 对依赖模块的执行时机不同：
+* * AMD依赖前置，知道依赖的是谁，立即加载
+  * CMD就近依赖，需要把模块变为字符串加载一遍才知道依赖了哪些模块
+
+#### require和import的区别
+
+* 二者都是异步加载
+* require运行时调用，故可放在文件任意位置；import是编译时调用，故放在文件开头
+* require\(\)拿到的等于是exports对象，需要`let { test } = require('./a.js');`的方式从exports中取出，**值的拷贝**
+* ```js
+  // module.js
+  module.exports = {
+      a: function() {
+          console.log('exports from module');
+      }
+  }
+
+  // sample.js
+  var obj = require('./module.js');
+  obj.a()  // exports from module
+  ```
+* import\(\)需要与export\(\)对应使用，**值的引用**
+* ```js
+  // import、export是ES6引入的新规范
+  export default function() {}
+
+  import test from './a.js'
+  ```
 
 ### SeaJS
 
 #### 基本使用
-
-#### 整体感知
 
 #### 定义模块 define
 
@@ -128,6 +154,19 @@
   seajs是懒加载的，就是有拖延症，用的时候才加载
 
   [http://www.requirejs.cn/](http://www.requirejs.cn/)
+
+#### `SeaJS` 的使用
+
+* 定义模块 `define`作用域就在define的函数体里，三个参数require、exports、module
+* 加载模块 `require`
+  * 在一个模块系统中，`require` 加载过的模块会被缓存
+  * 默认 `require` 是同步加载模块的
+* 暴露接口 `exports` 和 `module.exports` exports是module.exports的别名，exports能做什么，module.exports就能做什么，module.exports是全局变量，exports是局部变量
+* 启动模块系统 `seajs.use(callback)`
+  * seajs.use 和 Document 的 ready 没有任何关系
+  * 要想保证 文档结构加载完毕再执行你的 js 代码，一定要在 seajs.use 内部通过 window.onload 或者 $\(function\(\){}\)
+* 分清楚前台模块化和node中的模块化的区别
+* 掌握模块化的思想
 
 
 

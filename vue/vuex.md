@@ -4,7 +4,7 @@
 
 #### 数据丢失问题
 
-vuex的数据是保存在**运行内存**中的，当页面刷新的时候，会重新加载vue实例，vuex里面的数据就会重新初始化重新赋值，所以值会丢失，一般借助sessionStorage和localStorage、cookie来解决这个问题
+> vuex的数据是保存在**运行内存**中的，当页面刷新的时候，会重新加载vue实例，vuex里面的数据就会重新初始化重新赋值，所以值会丢失，一般借助sessionStorage和localStorage、cookie来解决这个问题
 
 * vuex的数据直接保存在sessionStorage和localStorage、cookie。例如：token保存在cookie中
 * 再次请求远程数据，动态刷新vuex数据。例如菜单信息

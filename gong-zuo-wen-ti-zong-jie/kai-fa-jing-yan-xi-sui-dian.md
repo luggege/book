@@ -128,42 +128,54 @@ white-space: nowrap; //默认在不换行
 text-overflow: ellipsis; //超出部分显示省略号
 ```
 
-## 清除浮动遇到的问题
+#### 清除浮动的几种方法
 
-> overflow: hidden; 只适合子元素没有设置position的元素,,否则超出父盒子高的部分将被截掉
+* 额外标签法
+* ```css
+  <div>
+      <div class="left"></div>
+      <div class="left"></div>
+      <div class="clear" style="clear: both;"></div>
+  </div>
+  ```
 
-解决方法: 使用添加如下类的方法
+  缺点：增加无意义的标签
 
-```css
-/*清除浮动*/
-.clearfix:before, .clearfix:after{
-  content: "";
-  display: table;
-}
+* 父元素添加`overflow: hidden;` 触发BFC，实现清除浮动  
+  缺点：只适合子元素没有设置position的元素,否则超出父盒子高的部分将被截掉
 
-.clearfix:after{
-    clear: both;
-}
+* 推荐：伪类清除法
 
-.clearfix{
-    *zoom: 1; /*IE/7/6*/
-}
-```
+* ```css
+  /*清除浮动代码*/
+  .clearfix:after{   
+      content:"";       
+      display:block;
+      clear:both;
+      visibility:hidden;
+      height:0
+  }    
 
-```css
-/*清除浮动代码*/
-.clearfix:after{   
-    content:"";       
-    display:block;
-    clear:both;
-    visibility:hidden;
-    height:0
-}    
+  .clearfix{
+      zoom:1
+  }
+  ```
+* 推荐：双伪类清除法
+* ```css
+  /*清除浮动*/
+  .clearfix:before, .clearfix:after{
+      content: "";
+      display: table;
+  }
 
-.clearfix{
-    zoom:1
-}
-```
+  .clearfix:after{
+      clear: both;
+  }
+
+  .clearfix{
+      *zoom: 1; /*IE/7/6*/ //触发hasLayout
+  }
+  ```
 
 #### white-space属性
 

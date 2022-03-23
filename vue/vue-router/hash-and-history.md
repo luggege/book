@@ -49,7 +49,7 @@ window.addEventListener('hashchange', function (e) {
 **比较：**
 
 * hash丑，只能传短字符串，history可以传递state对象
-* history模式，需要后端配合，否则（页面回退刷新？）找不到路径404的问题
+* history模式，需要后端配合（配置index.html），解决（页面回退刷新）找不到路径404的问题
 * hash只能是同一文档，history可以是同源的任意文档URL
 * hash浏览器都支持，history是HTML5的新特性
 

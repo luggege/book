@@ -4,9 +4,9 @@
 
 * 减少DOM节点
 * 合理使用requestAnimationFrame替代setTimeout
-* css放顶部，js脚本底部加载（详情见：HTML+CSS----12条：src和link的区别）（使用link，而不是@important）
+* css放顶部，js脚本底部加载（详情见：HTML+CSS----12条：src和link的区别）（css引用使用link，而不是@important）
 * > html顺序加载执行文档和脚本，如若脚本自身延迟问题，就会导致页面白屏。因此js应该放到页面底部或者延迟加载
-* 重排（布局改变）的代价大于重绘（不影响布局），所以：避免CSS表达式（cal\(\)）、table布局、js设置样式、img应该提前指定宽高
+* 重排（布局改变）的代价大于重绘（不影响布局），所以：避免：CSS表达式（cal\(\)）、table布局、js设置样式、img应该提前指定宽高
 
 #### 资源
 

@@ -1,18 +1,5 @@
 # 总结
 
-#### `SeaJS` 的使用
-
-* 定义模块 `define`作用域就在define的函数体里，三个参数require、exports、module
-* 加载模块 `require`
-  * 在一个模块系统中，`require` 加载过的模块会被缓存
-  * 默认 `require` 是同步加载模块的
-* 暴露接口 `exports` 和 `module.exports` exports是module.exports的别名，exports能做什么，module.exports就能做什么
-* 启动模块系统 `seajs.use(callback)`
-  * seajs.use 和 Document 的 ready 没有任何关系
-  * 要想保证 文档结构加载完毕再执行你的 js 代码，一定要在 seajs.use 内部通过 window.onload 或者 $\(function\(\){}\)
-* 分清楚前台模块化和node中的模块化的区别
-* 掌握模块化的思想
-
 ### 什么是 Node?
 
 * [https://nodejs.org/en/](zong-jie.md)
@@ -49,6 +36,7 @@
   * Node.js的 事件驱动和非阻塞IO模型使得Node.js本身非常的轻量和高效
 
 * Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
+
   * package ecosystem npm 包生态系统 npm
   * largest 最大的
   * open source libraries 开源库

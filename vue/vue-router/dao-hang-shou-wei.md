@@ -4,6 +4,11 @@
 
 * 前置守卫：beforeEach\(\(to, from, next\) =&gt; {}\)
 * 后置守卫：afterEach\(\(to, from\) =&gt; {}\)
+* 全局解析守卫（beforeResolve）
+
+* 路由独享守卫（beforeEnter）
+
+* 组件内守卫（beforeRouteEnter、beforeRouteUpdate、beforeRouteLeave）
 
 ```js
 // import router from './router'

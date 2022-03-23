@@ -47,5 +47,5 @@ var vm = new Vue({
 
 #### v-for与v-if
 
-v-for不能与v-if同时使用，因为v-for比v-if优先级高，会引起性能问题
+v-for不能与v-if同时使用，因为v-for比v-if优先级高，每v-for一次就会执行一次v-if，会引起性能问题
 
