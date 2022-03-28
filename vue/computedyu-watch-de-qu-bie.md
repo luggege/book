@@ -41,7 +41,17 @@ var vm = new Vue({
         console.log(oldVal.id)
       }，
       deep: true  // 深度监听 对象中的属性发生改变
-    }
+    },
+    '$route.path': function (newVal, oldVal) {
+       if (newVal !== oldVal) {
+          console.log('路由变化');
+       }
+    },
+    $route( to , from ){   
+      console.log( to , from )
+      // to , from 分别表示从哪跳转到哪，都是一个对象
+      // to.path  ( 表示的是要跳转到的路由的地址 eg: /home );
+   }
 })
 ```
 

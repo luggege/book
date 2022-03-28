@@ -21,7 +21,7 @@ new Vue({
   },
   beforeMount: function() {
     console.group('------beforeMount挂载前状态------');
-    console.log("%c%s", "color:red","el     : " + this.$el); //undefined
+    console.log("%c%s", "color:red","el     : " + this.$el); //undefined  相关的render函数开始执行
     console.log(this.$el);
     console.log("%c%s", "color:red","data   : " + this.$data); //已被初始化  
     console.log("%c%s", "color:red","message: " + this.message); //已被初始化  
@@ -66,9 +66,9 @@ new Vue({
 // render函数选项 > template选项 > outer HTML.
 ```
 
-![](/assets/屏幕快照 2020-02-27 下午3.54.13.png)参考博客：[https://segmentfault.com/a/1190000011381906](https://segmentfault.com/a/1190000011381906)
+#### ![](/assets/屏幕快照 2020-02-27 下午3.54.13.png)
 
-### 什么是钩子函数
+#### 什么是钩子函数
 
 > 钩子函数是Windows处理消息机制的一部分，通过设置钩子，应用程序可以在**系统级对所有消息、事件进行过滤**，可以访问在正常情况下无法访问到的消息，钩子的**本质是一段用以处理系统消息的程序 **
 

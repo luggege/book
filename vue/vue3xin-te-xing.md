@@ -7,5 +7,25 @@
 * 生命周期
 * Fragment、Teleport、Suspense
 
+#### vue3的生命周期
+
+|   vue2.x | vue3.x |
+| :--- | :--- |
+|   beforeCreated | Not needed\* |
+| `created` | Not needed\* |
+| `beforeMount` | `onBeforeMount` |
+| `mounted` | `onMounted` |
+| `beforeUpdate` | `onBeforeUpdate` |
+| `updated` | `onUpdated` |
+| `beforeUnmount` | `onBeforeUnmount` |
+| `unmounted` | `onUnmounted` |
+| `errorCaptured` | `onErrorCaptured` |
+| `renderTracked` | `onRenderTracked` |
+| `renderTriggered` | `onRenderTriggered` |
+| `activated` | `onActivated` |
+| `deactivated` | `onDeactivated` |
+
+
+
 
 

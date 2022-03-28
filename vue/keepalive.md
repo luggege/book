@@ -1,10 +1,10 @@
-### keepalive组件
+### keep-alive组件
 
 > vue在页面切换的时候，会将原来的页面注销掉，然后渲染新的页面，看似一样，实则每次打开的都是新页面。性能不好，所以有了keepalive
 
 * 它拥有两个独有的生命周期钩子函数，分别为 activated 和 deactivated
 
-* keepalive包裹的组件不会销毁，而是会缓存在 deactivated 钩子函数中，根据缓存渲染后执行 activated 函数
+* keepalive包裹的组件**不会销毁**，而是会**缓存**在 deactivated 钩子函数中，根据缓存渲染后执行 activated 函数
 
-
+应用：商品列表页到详情页，从详情页回到列表页的时候需要记录一些信息，比如下次在进来详情页直接无感定位到上次浏览的位置，这时就需要用到keepalive来做活性组件。如果回到列表页的时候需要实时刷新数据，那可以在 activated 钩子函数中请求数据，也可以在watch中监听路由的变化
 

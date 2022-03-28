@@ -39,7 +39,7 @@ vm.$set(vm.userProfile, 'age', 27)
 
 ```js
 // 通过索引修改数组、修改数组长度，vue是不能检测到的，所以不能更新视图
-// 其他修改数组的方式 keepalive
+// 其他修改数组的方式
 1.set
 Vue.set(vm.arr, 1, 'w')
 

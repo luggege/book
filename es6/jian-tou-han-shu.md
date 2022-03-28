@@ -40,7 +40,7 @@ var obj = {
 obj.getAge()    // 30
 ```
 
-* * 箭头函数this由词法作用域，上下文确定
+* * 箭头函数this由词法作用域，上下文确定（没有自己的this、arguments）
 
 ```js
 var obj = {
