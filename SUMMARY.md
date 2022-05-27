@@ -202,4 +202,6 @@
     * [插入排序](cha-ru-pai-xu.md)
     * [归并排序](gui-bing-pai-xu.md)
     * [快速排序](kuai-su-pai-xu.md)
+* [Nuxt](nuxt.md)
+  * [CSR & SSR](nuxt/csr-and-ssr.md)
 
