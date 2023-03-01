@@ -1,4 +1,4 @@
-# CSS
+### CSS
 
 CSS 优先级：
 
@@ -6,17 +6,17 @@ CSS 优先级：
 * 内联 &gt; 内部 &gt; 外部 （内部 &gt; 外部的前提还要看他们的层叠顺序，即外部引用在前）
 * !important &gt; 内联
 
-### border-radius 针对 table 失效
+#### border-radius 针对 table 失效
 
 > 如果table设置了 border-collapse: collapse;\(边框可并\)样式时,border-radius就会无效. 除此之外可以应用到所有元素.
 >
 > 解决办法: 外边在套一层div
 
-### border 针对tr无效
+#### border 针对tr无效
 
-> 原因: td没有边框,把tr设的边框给覆盖掉了
+> 原因：td没有边框，把tr设的边框给覆盖掉了
 >
-> 解决办法: 给td设border,或给table设border
+> 解决办法：给td设border，或给table设border
 
 #### 画一条0.5px的线
 
@@ -29,15 +29,15 @@ CSS 优先级：
   background: linear-gradient(0deg, #fff, #000);
   ```
 
-### 使用如下meta标签使IE浏览器使用谷歌浏览器内核或最高版本的IE
+#### 使用如下meta标签使IE浏览器使用谷歌浏览器内核或最高版本的IE
 
 > &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
 
-## 使用媒体查询引入不同的CSS文件\(兼容不同屏幕\)
+#### 使用媒体查询引入不同的CSS文件\(兼容不同屏幕\)
 
 > &lt;link rel="stylesheet" type="text/css" media="screen and \(min-width: 479px\) and \(max-width: 639px\)" href="css/pic480.css"&gt;
 
-## 如何解决IE8以下兼容html5标签
+#### 如何解决IE8以下兼容html5标签
 
 ```js
 <!-- 条件引入html5.js -->
@@ -70,47 +70,45 @@ CSS 优先级：
 
 <!--[if lt IE9]>
 <script>
-
     (function() {
         if(!0) 
         return;
-
+    
         var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
-
+    
         var i= e.length;
         while(i--){
                 document.createElement(e[i])
             }
-        })()
-
+    })()
 </script>
 <![endif]-->
 ```
 
-## IE低版本兼容CSS3属性
+#### IE低版本兼容CSS3属性
 
 > 解决方案: 使用 ie-css3.htc 文件
 >
 > 使用方法: 在要使用C3的元素样式中按以下方法引入: behavior: url\(ie-css3.htc\);
 
-### 问题和必要的说明
+**问题和必要的说明**
 
 > 毕竟不是浏览器自带的属性, 方法有一定局限性,注意事项如下:
 
 1. 当前元素一定要有定位属性，像是position:relative或是position:absolute属性。
 2. z-index值一定要比周围元素的要高，否则……只能说抱歉了~~
 
-### 所支持的样式
+**所支持的样式**
 
 1. border-radius
 2. box-shadow
 3. text-shadow
 
-### IE中button的type属性默认值: button，其他浏览器默认type：submit
+#### IE中button的type属性默认值: button，其他浏览器默认type：submit
 
 > IE10及以下input回车时，浏览器默认会执行页面中的第一个button的click事件，如要避免可将button标签改为input且type设为button类型，或者页面顶端写一个空的button标签且用父盒子包裹，父盒子宽高设为0将其隐藏。
 
-## 利用C3限制div内文字字数
+#### 利用C3限制div内文字字数
 
 ```css
 overflow: hidden;
