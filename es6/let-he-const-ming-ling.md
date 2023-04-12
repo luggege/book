@@ -23,7 +23,6 @@ i // 10
 * * for循环中的经典使用
 
 ```js
-// for循环中的经典使用
 var a = []
 // var定义的i全局有效
 for(var i = 0; i < 10; i++){
@@ -32,7 +31,9 @@ for(var i = 0; i < 10; i++){
     }
 }
 a[5]()    //10
+```
 
+```js
 // 循环生成10个子块级作用域，相互独立
 for(let i = 0; i < 10; i++){
     a[i] = function(){
@@ -40,10 +41,13 @@ for(let i = 0; i < 10; i++){
     }
 }
 a[7]()    // 7
+```
 
+```js
 // 或者使用闭包
 var array  = []
 for(var i = 0; i < 10; i++){
+    // 块级作用域的出现，取代了匿名立即执行函数
     (function(i){
         array[i] = function(){
             console.log(i)
@@ -51,7 +55,9 @@ for(var i = 0; i < 10; i++){
     })(i)
 }
 array[7]()  // 7
+```
 
+```js
 // 父作用域与子作用域相互独立
 // 父作用域
 for(let i = 0; i < 3; i++){
@@ -88,36 +94,36 @@ if(true){
 }
 ```
 
-```js
-typeof x                // 报错 Uncaught ReferenceError: a is not defined
-let x
-// 直接对未声明的变量使用typeof反而不会报错
-typeof a           // undefined
-```
+* * 因为暂时性死区的原因，typeof不是一个百分百安全的操作，因为申明之前不可用
+  * ```js
+    typeof x                // 报错 Uncaught ReferenceError: a is not defined
+    let x
 
-```js
-// 参数x等于参数y，此时y还没有声明，属于“死区“
-function bar(x = y, y = 2){
-    return [x,y]
-}
-bar()     // VM1986:1 Uncaught ReferenceError: Cannot access 'y' before initialization              
+    // 直接对未声明的变量使用typeof反而不会报错
+    typeof a           // undefined
+    ```
 
-function bar(x = 2, y = x){
-    return [x,y]
-}
-bar()   // [2, 2]
-```
+  ```js
+  // 参数x等于参数y，此时y还没有声明，属于“死区“
+  function bar(x = y, y = 2){
+      return [x,y]
+  }
+  bar()     // VM1986:1 Uncaught ReferenceError: Cannot access 'y' before initialization              
 
-```js
-// 不报错
-var x = x;
-// （变量未声明就使用）Uncaught ReferenceError: x is not defined
-let x = x;
-```
+  function bar(x = 2, y = x){
+      return [x,y]
+  }
+  bar()   // [2, 2]
+  ```
 
+  ```js
+  var x = x;  // 不报错
+  // 变量未声明就使用
+  let x = x;  // Uncaught ReferenceError: x is not defined
+  ```
 * 不允许重复声明
 
-```javascript
+```js
 // 不报错
 function foo(){
     var a = 10;
@@ -129,11 +135,19 @@ function foo(){
     var a = 10;
     let a = 20;
 }
+// Uncaught SyntaxError: Identifier 'a' has already been declared
 function foo(){
     let a = 10;
     let a = 20;
 }
+// Uncaught SyntaxError: Identifier 'a' has already been declared
+function foo () {
+    let a = 10
+    var a = 20
+}
+```
 
+```js
 // 因此函数内部不能重复声明
 function fn(arg){
     let arg
@@ -147,6 +161,47 @@ function fn(arg){
 }
 fn()        //不报错
 ```
+
+##### 为什么使用let替代var
+
+> 因为let有块级作用域的限制，var没有，容易造成变量污染
+
+* 场景一：内层变量覆盖外层变量
+
+```js
+var tmp = new Date()
+function f() {
+    console.log(tmp)
+    if (false) {
+        var tmp = 'Hello world'   // var tmp 变量提升覆盖外层变量
+    }
+}
+f()  // undefined
+```
+
+* 场景二：用来计数的循环变量泄漏为全局变量
+
+```js
+var s = 'hello'
+for (var i = 0; i < s.length; i++) {
+    console.log(s[i])
+}
+console.log(i)  // 5
+```
+
+##### let只能出现在当前作用域的顶层
+
+```js
+if (true) let x = 1   // Uncaught SyntaxError: Lexical declaration cannot appear in a single-statement context
+
+// 严格模式下，函数只能申明在当前作用域的顶层
+'use strict'
+if (true) function f() {}    // Uncaught SyntaxError: In strict mode code, functions can only be declared at top level or inside a block.
+
+if (true) function f() {}   // undefined
+```
+
+##### 顶层对象家？？？this？？？globalThis？？？？ES2020
 
 #### const：指变量指向的内存地址的值不可修改，如果定义的是复合类型只是指针不可修改，不能保证对象的结构改变
 
