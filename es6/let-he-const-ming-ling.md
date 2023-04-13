@@ -95,13 +95,14 @@ if(true){
 ```
 
 * * 因为暂时性死区的原因，typeof不是一个百分百安全的操作，因为申明之前不可用
-  * ```js
-    typeof x                // 报错 Uncaught ReferenceError: a is not defined
-    let x
 
-    // 直接对未声明的变量使用typeof反而不会报错
-    typeof a           // undefined
-    ```
+  ```js
+  typeof x                // 报错 Uncaught ReferenceError: a is not defined
+  let x
+
+  // 直接对未声明的变量使用typeof反而不会报错
+  typeof a           // undefined
+  ```
 
   ```js
   // 参数x等于参数y，此时y还没有声明，属于“死区“
@@ -198,10 +199,59 @@ if (true) let x = 1   // Uncaught SyntaxError: Lexical declaration cannot appear
 'use strict'
 if (true) function f() {}    // Uncaught SyntaxError: In strict mode code, functions can only be declared at top level or inside a block.
 
-if (true) function f() {}   // undefined
+'use strict'
+if (true) {	function f() {} } // undefined
 ```
 
-##### 顶层对象家？？？this？？？globalThis？？？？ES2020
+##### 顶层对象的属性
+
+> 顶层对象：在浏览器指的是window，在Node指的是global。而window实体含义是浏览器的窗口对象，顶层对象也有一个实体含义，混为一谈不合适
+
+* ES5中，顶层对象的属性和全局变量是一样的，这也是javascript语言设计最大的败笔之一
+* ES6中，作出改变：var和function申明的全局变量，依旧是顶层对象的属性，let、const、class 申明的全局变量不属于顶层对象的属性，全局变量逐步与顶层对象的属性脱钩
+
+```js
+var a = 111
+window.a  // 111
+
+let b = 222
+window.b. // undefined
+```
+
+##### globalThis 对象
+
+> JavaScript 语言存在一个顶层对象，它提供全局环境（即全局作用域），所有代码都运行在这个环境，使用this 可以拿到这个顶层对象，但是不同环境的this 不同
+
+* 全局环境中
+* * this 返回顶层对象
+  * Node.js中，this 是当前模块
+  * ES6中，this 返回的是 undefined
+* 函数里的this
+* * 如果函数不是作为对象的方法运行，单纯作为函数运行，this 会指向顶层对象
+  * 如果是严格模式下，this 返回 undefined
+
+综上所述，很难找到一种方法，在所有情况下，都取到顶层对象，下面是两种可以勉强使用的方法
+
+```js
+(typeof window !== 'undefined'
+ ? window
+ : (typeof process === 'object' &&
+ typeof require === 'function' &&
+ typeof global === 'object')
+ ? global
+ : this);
+```
+
+```js
+var getGlobal = function () {
+ if (typeof self !== 'undefined') { return self; }
+ if (typeof window !== 'undefined') { return window; }
+ if (typeof global !== 'undefined') { return global; }
+ throw new Error('unable to locate global object');
+};
+```
+
+**ES2020中，globalThis可以在任何环境中拿到顶层对象，指向全局环境下的this**
 
 #### const：指变量指向的内存地址的值不可修改，如果定义的是复合类型只是指针不可修改，不能保证对象的结构改变
 
