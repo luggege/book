@@ -3064,14 +3064,13 @@ array[<span class="hljs-number">7</span>]()  <span class="hljs-comment">// 7</sp
 <ul>
 <li><ul>
 <li>&#x56E0;&#x4E3A;&#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;&#x7684;&#x539F;&#x56E0;&#xFF0C;typeof&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x767E;&#x5206;&#x767E;&#x5B89;&#x5168;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x56E0;&#x4E3A;&#x7533;&#x660E;&#x4E4B;&#x524D;&#x4E0D;&#x53EF;&#x7528;</li>
-<li><pre><code class="lang-js"><span class="hljs-keyword">typeof</span> x                <span class="hljs-comment">// &#x62A5;&#x9519; Uncaught ReferenceError: a is not defined</span>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">typeof</span> x                <span class="hljs-comment">// &#x62A5;&#x9519; Uncaught ReferenceError: a is not defined</span>
 <span class="hljs-keyword">let</span> x
 
 <span class="hljs-comment">// &#x76F4;&#x63A5;&#x5BF9;&#x672A;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x4F7F;&#x7528;typeof&#x53CD;&#x800C;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;</span>
 <span class="hljs-keyword">typeof</span> a           <span class="hljs-comment">// undefined</span>
 </code></pre>
-</li>
-</ul>
 <pre><code class="lang-js"><span class="hljs-comment">// &#x53C2;&#x6570;x&#x7B49;&#x4E8E;&#x53C2;&#x6570;y&#xFF0C;&#x6B64;&#x65F6;y&#x8FD8;&#x6CA1;&#x6709;&#x58F0;&#x660E;&#xFF0C;&#x5C5E;&#x4E8E;&#x201C;&#x6B7B;&#x533A;&#x201C;</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bar</span>(<span class="hljs-params">x = y, y = 2</span>)</span>{
     <span class="hljs-keyword">return</span> [x,y]
@@ -3156,10 +3155,60 @@ f()  <span class="hljs-comment">// undefined</span>
 <span class="hljs-comment">// &#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x51FD;&#x6570;&#x53EA;&#x80FD;&#x7533;&#x660E;&#x5728;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x9876;&#x5C42;</span>
 <span class="hljs-meta">&apos;use strict&apos;</span>
 <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>{}    <span class="hljs-comment">// Uncaught SyntaxError: In strict mode code, functions can only be declared at top level or inside a block.</span>
-
-<span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>{}   <span class="hljs-comment">// undefined</span>
+<span class="hljs-meta">
+&apos;use strict&apos;</span>
+<span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>{} } <span class="hljs-comment">// undefined</span>
 </code></pre>
-<h5 id="&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x5BB6;&#xFF1F;&#xFF1F;&#xFF1F;this&#xFF1F;&#xFF1F;&#xFF1F;globalthis&#xFF1F;&#xFF1F;&#xFF1F;&#xFF1F;es2020">&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x5BB6;&#xFF1F;&#xFF1F;&#xFF1F;this&#xFF1F;&#xFF1F;&#xFF1F;globalThis&#xFF1F;&#xFF1F;&#xFF1F;&#xFF1F;ES2020</h5>
+<h5 id="&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;">&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;</h5>
+<blockquote>
+<p>&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#xFF1A;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x6307;&#x7684;&#x662F;window&#xFF0C;&#x5728;Node&#x6307;&#x7684;&#x662F;global&#x3002;&#x800C;window&#x5B9E;&#x4F53;&#x542B;&#x4E49;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x7A97;&#x53E3;&#x5BF9;&#x8C61;&#xFF0C;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;&#x542B;&#x4E49;&#xFF0C;&#x6DF7;&#x4E3A;&#x4E00;&#x8C08;&#x4E0D;&#x5408;&#x9002;</p>
+</blockquote>
+<ul>
+<li>ES5&#x4E2D;&#xFF0C;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x8FD9;&#x4E5F;&#x662F;javascript&#x8BED;&#x8A00;&#x8BBE;&#x8BA1;&#x6700;&#x5927;&#x7684;&#x8D25;&#x7B14;&#x4E4B;&#x4E00;</li>
+<li>ES6&#x4E2D;&#xFF0C;&#x4F5C;&#x51FA;&#x6539;&#x53D8;&#xFF1A;var&#x548C;function&#x7533;&#x660E;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x4F9D;&#x65E7;&#x662F;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;let&#x3001;const&#x3001;class &#x7533;&#x660E;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4E0D;&#x5C5E;&#x4E8E;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x9010;&#x6B65;&#x4E0E;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x8131;&#x94A9;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> a = <span class="hljs-number">111</span>
+<span class="hljs-built_in">window</span>.a  <span class="hljs-comment">// 111</span>
+
+<span class="hljs-keyword">let</span> b = <span class="hljs-number">222</span>
+<span class="hljs-built_in">window</span>.b. <span class="hljs-comment">// undefined</span>
+</code></pre>
+<h5 id="globalthis-&#x5BF9;&#x8C61;">globalThis &#x5BF9;&#x8C61;</h5>
+<blockquote>
+<p>JavaScript &#x8BED;&#x8A00;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x5168;&#x5C40;&#x73AF;&#x5883;&#xFF08;&#x5373;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#xFF09;&#xFF0C;&#x6240;&#x6709;&#x4EE3;&#x7801;&#x90FD;&#x8FD0;&#x884C;&#x5728;&#x8FD9;&#x4E2A;&#x73AF;&#x5883;&#xFF0C;&#x4F7F;&#x7528;this &#x53EF;&#x4EE5;&#x62FF;&#x5230;&#x8FD9;&#x4E2A;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x7684;this &#x4E0D;&#x540C;</p>
+</blockquote>
+<ul>
+<li>&#x5168;&#x5C40;&#x73AF;&#x5883;&#x4E2D;</li>
+<li><ul>
+<li>this &#x8FD4;&#x56DE;&#x9876;&#x5C42;&#x5BF9;&#x8C61;</li>
+<li>Node.js&#x4E2D;&#xFF0C;this &#x662F;&#x5F53;&#x524D;&#x6A21;&#x5757;</li>
+<li>ES6&#x4E2D;&#xFF0C;this &#x8FD4;&#x56DE;&#x7684;&#x662F; undefined</li>
+</ul>
+</li>
+<li>&#x51FD;&#x6570;&#x91CC;&#x7684;this</li>
+<li><ul>
+<li>&#x5982;&#x679C;&#x51FD;&#x6570;&#x4E0D;&#x662F;&#x4F5C;&#x4E3A;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x8FD0;&#x884C;&#xFF0C;&#x5355;&#x7EAF;&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x8FD0;&#x884C;&#xFF0C;this &#x4F1A;&#x6307;&#x5411;&#x9876;&#x5C42;&#x5BF9;&#x8C61;</li>
+<li>&#x5982;&#x679C;&#x662F;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;this &#x8FD4;&#x56DE; undefined</li>
+</ul>
+</li>
+</ul>
+<p>&#x7EFC;&#x4E0A;&#x6240;&#x8FF0;&#xFF0C;&#x5F88;&#x96BE;&#x627E;&#x5230;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x6240;&#x6709;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x90FD;&#x53D6;&#x5230;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x4E24;&#x79CD;&#x53EF;&#x4EE5;&#x52C9;&#x5F3A;&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x6CD5;</p>
+<pre><code class="lang-js">(<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span> !== <span class="hljs-string">&apos;undefined&apos;</span>
+ ? <span class="hljs-built_in">window</span>
+ : (<span class="hljs-keyword">typeof</span> process === <span class="hljs-string">&apos;object&apos;</span> &amp;&amp;
+ <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">require</span> === <span class="hljs-string">&apos;function&apos;</span> &amp;&amp;
+ <span class="hljs-keyword">typeof</span> global === <span class="hljs-string">&apos;object&apos;</span>)
+ ? global
+ : <span class="hljs-keyword">this</span>);
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> getGlobal = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+ <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> self !== <span class="hljs-string">&apos;undefined&apos;</span>) { <span class="hljs-keyword">return</span> self; }
+ <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span> !== <span class="hljs-string">&apos;undefined&apos;</span>) { <span class="hljs-keyword">return</span> <span class="hljs-built_in">window</span>; }
+ <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> global !== <span class="hljs-string">&apos;undefined&apos;</span>) { <span class="hljs-keyword">return</span> global; }
+ <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;unable to locate global object&apos;</span>);
+};
+</code></pre>
+<p><strong>ES2020&#x4E2D;&#xFF0C;globalThis&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x73AF;&#x5883;&#x4E2D;&#x62FF;&#x5230;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#xFF0C;&#x6307;&#x5411;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x4E0B;&#x7684;this</strong></p>
 <h4 id="const&#xFF1A;&#x6307;&#x53D8;&#x91CF;&#x6307;&#x5411;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x7684;&#x503C;&#x4E0D;&#x53EF;&#x4FEE;&#x6539;&#xFF0C;&#x5982;&#x679C;&#x5B9A;&#x4E49;&#x7684;&#x662F;&#x590D;&#x5408;&#x7C7B;&#x578B;&#x53EA;&#x662F;&#x6307;&#x9488;&#x4E0D;&#x53EF;&#x4FEE;&#x6539;&#xFF0C;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x5BF9;&#x8C61;&#x7684;&#x7ED3;&#x6784;&#x6539;&#x53D8;">const&#xFF1A;&#x6307;&#x53D8;&#x91CF;&#x6307;&#x5411;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x7684;&#x503C;&#x4E0D;&#x53EF;&#x4FEE;&#x6539;&#xFF0C;&#x5982;&#x679C;&#x5B9A;&#x4E49;&#x7684;&#x662F;&#x590D;&#x5408;&#x7C7B;&#x578B;&#x53EA;&#x662F;&#x6307;&#x9488;&#x4E0D;&#x53EF;&#x4FEE;&#x6539;&#xFF0C;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x5BF9;&#x8C61;&#x7684;&#x7ED3;&#x6784;&#x6539;&#x53D8;</h4>
 <ul>
 <li>const&#x58F0;&#x660E;&#x5E38;&#x91CF;&#xFF0C;&#x503C;&#x4E0D;&#x53EF;&#x4FEE;&#x6539;</li>
@@ -3238,7 +3287,7 @@ bbb = <span class="hljs-number">111</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"let 和 const 命令","level":"1.12.1","depth":2,"next":{"title":"箭头函数","level":"1.12.2","depth":2,"path":"es6/jian-tou-han-shu.md","ref":"es6/jian-tou-han-shu.md","articles":[]},"previous":{"title":"ES6","level":"1.12","depth":1,"path":"es6/README.md","ref":"es6/README.md","articles":[{"title":"let 和 const 命令","level":"1.12.1","depth":2,"path":"es6/let-he-const-ming-ling.md","ref":"es6/let-he-const-ming-ling.md","articles":[]},{"title":"箭头函数","level":"1.12.2","depth":2,"path":"es6/jian-tou-han-shu.md","ref":"es6/jian-tou-han-shu.md","articles":[]},{"title":"Promise","level":"1.12.3","depth":2,"path":"es6/promise.md","ref":"es6/promise.md","articles":[]},{"title":"async","level":"1.12.4","depth":2,"path":"es6/async.md","ref":"es6/async.md","articles":[]},{"title":"Object.assign()","level":"1.12.5","depth":2,"path":"es6/assign.md","ref":"es6/assign.md","articles":[]},{"title":"Object.setPrototypeOf()/Object.getPrototypeOf()","level":"1.12.6","depth":2,"path":"es6/objectsetprototypeofobjectgetprototypeof.md","ref":"es6/objectsetprototypeofobjectgetprototypeof.md","articles":[]},{"title":"扩展运算符","level":"1.12.7","depth":2,"path":"es6/kuo-zhan-yun-suan-fu.md","ref":"es6/kuo-zhan-yun-suan-fu.md","articles":[]},{"title":"变量的解构赋值","level":"1.12.8","depth":2,"path":"es6/bian-liang-de-jie-gou-fu-zhi.md","ref":"es6/bian-liang-de-jie-gou-fu-zhi.md","articles":[]},{"title":"rest","level":"1.12.9","depth":2,"path":"es6/rest.md","ref":"es6/rest.md","articles":[]},{"title":"reduce","level":"1.12.10","depth":2,"path":"es6/reduce.md","ref":"es6/reduce.md","articles":[]},{"title":"includes","level":"1.12.11","depth":2,"path":"es6/includes.md","ref":"es6/includes.md","articles":[]},{"title":"Array.from()","level":"1.12.12","depth":2,"path":"es6/arrayfrom.md","ref":"es6/arrayfrom.md","articles":[]},{"title":"Symbol","level":"1.12.13","depth":2,"path":"es6/symbol.md","ref":"es6/symbol.md","articles":[]},{"title":"Set数据结构","level":"1.12.14","depth":2,"path":"es6/setshu-ju-jie-gou.md","ref":"es6/setshu-ju-jie-gou.md","articles":[]},{"title":"Map数据结构","level":"1.12.15","depth":2,"path":"es6/mapshu-ju-jie-gou.md","ref":"es6/mapshu-ju-jie-gou.md","articles":[]},{"title":"class","level":"1.12.16","depth":2,"path":"es6/class.md","ref":"es6/class.md","articles":[]},{"title":"super","level":"1.12.17","depth":2,"path":"es6/super.md","ref":"es6/super.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"es6/let-he-const-ming-ling.md","mtime":"2023-04-12T15:15:58.702Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-12T15:20:48.935Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"let 和 const 命令","level":"1.12.1","depth":2,"next":{"title":"箭头函数","level":"1.12.2","depth":2,"path":"es6/jian-tou-han-shu.md","ref":"es6/jian-tou-han-shu.md","articles":[]},"previous":{"title":"ES6","level":"1.12","depth":1,"path":"es6/README.md","ref":"es6/README.md","articles":[{"title":"let 和 const 命令","level":"1.12.1","depth":2,"path":"es6/let-he-const-ming-ling.md","ref":"es6/let-he-const-ming-ling.md","articles":[]},{"title":"箭头函数","level":"1.12.2","depth":2,"path":"es6/jian-tou-han-shu.md","ref":"es6/jian-tou-han-shu.md","articles":[]},{"title":"Promise","level":"1.12.3","depth":2,"path":"es6/promise.md","ref":"es6/promise.md","articles":[]},{"title":"async","level":"1.12.4","depth":2,"path":"es6/async.md","ref":"es6/async.md","articles":[]},{"title":"Object.assign()","level":"1.12.5","depth":2,"path":"es6/assign.md","ref":"es6/assign.md","articles":[]},{"title":"Object.setPrototypeOf()/Object.getPrototypeOf()","level":"1.12.6","depth":2,"path":"es6/objectsetprototypeofobjectgetprototypeof.md","ref":"es6/objectsetprototypeofobjectgetprototypeof.md","articles":[]},{"title":"扩展运算符","level":"1.12.7","depth":2,"path":"es6/kuo-zhan-yun-suan-fu.md","ref":"es6/kuo-zhan-yun-suan-fu.md","articles":[]},{"title":"变量的解构赋值","level":"1.12.8","depth":2,"path":"es6/bian-liang-de-jie-gou-fu-zhi.md","ref":"es6/bian-liang-de-jie-gou-fu-zhi.md","articles":[]},{"title":"rest","level":"1.12.9","depth":2,"path":"es6/rest.md","ref":"es6/rest.md","articles":[]},{"title":"reduce","level":"1.12.10","depth":2,"path":"es6/reduce.md","ref":"es6/reduce.md","articles":[]},{"title":"includes","level":"1.12.11","depth":2,"path":"es6/includes.md","ref":"es6/includes.md","articles":[]},{"title":"Array.from()","level":"1.12.12","depth":2,"path":"es6/arrayfrom.md","ref":"es6/arrayfrom.md","articles":[]},{"title":"Symbol","level":"1.12.13","depth":2,"path":"es6/symbol.md","ref":"es6/symbol.md","articles":[]},{"title":"Set数据结构","level":"1.12.14","depth":2,"path":"es6/setshu-ju-jie-gou.md","ref":"es6/setshu-ju-jie-gou.md","articles":[]},{"title":"Map数据结构","level":"1.12.15","depth":2,"path":"es6/mapshu-ju-jie-gou.md","ref":"es6/mapshu-ju-jie-gou.md","articles":[]},{"title":"class","level":"1.12.16","depth":2,"path":"es6/class.md","ref":"es6/class.md","articles":[]},{"title":"super","level":"1.12.17","depth":2,"path":"es6/super.md","ref":"es6/super.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"es6/let-he-const-ming-ling.md","mtime":"2023-04-13T15:31:31.839Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-13T15:32:43.051Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
