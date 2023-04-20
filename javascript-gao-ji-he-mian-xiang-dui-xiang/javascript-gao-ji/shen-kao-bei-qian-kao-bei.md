@@ -126,5 +126,63 @@ console.log(obj, obj1);
 // {1: "aaa", 2: "bbb", a: {aaa: 1}, b: 2}
 ```
 
+##### JSON.stringify\(\) 的缺点
+
+> JSON.parse\(JSON.stringify\(obj\)\)
+
+* 对象里的时间对象，会变成字符串形式，而不是对象的形式
+
+```js
+typeof test.date[0]  // 'object'
+typeof copyed.date[0]  // 'string'
+```
+
+* 对象里的正则、Error对象，会变成空对象
+
+```js
+test.reg // /\w+/
+copyed.reg // {}
+```
+
+* 对象里的undefined、function，会过滤掉
+* 对象里的NaN、Infinity、-Infinity，会变成null
+* 对象里的构造函数生成的对象，会丢失掉原本对象的constructor
+
+```js
+let a, b = NaN, c = Infinity, d = -Infinity;
+
+function Person (name) {
+    this.name = name
+}
+const jack = new Person('Jack')
+
+let test = {
+    name: 'a',
+    date: [new Date(1536627600000), new Date(1540047600000)],
+    reg: new RegExp('\\w+'),
+    fn: function () {},
+    a,
+    b,
+    c,
+    d,
+    person: jack
+};
+
+let copyed = JSON.parse(JSON.stringify(test))
+
+// copyed
+{
+    b: null,
+    c: null,
+    d: null,
+    date: ['2018-09-11T01:00:00.000Z', '2018-10-20T15:00:00.000Z'],
+    name: "a",
+    person: {name: 'Jack'},
+    reg: {}
+}
+jack.constructor // ƒ Person (name) { this.name = name }
+copyed.person.constructor  // ƒ Object() { [native code] }
+```
+
 
 
