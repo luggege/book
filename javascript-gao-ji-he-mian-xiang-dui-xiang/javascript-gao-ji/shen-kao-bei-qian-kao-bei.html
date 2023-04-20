@@ -3091,6 +3091,61 @@ obj.a.aaa = <span class="hljs-number">111</span>;
 <span class="hljs-comment">// {1: &quot;aaa&quot;, 2: &quot;bbb&quot;, a: {aaa: 111}, b: 2}  </span>
 <span class="hljs-comment">// {1: &quot;aaa&quot;, 2: &quot;bbb&quot;, a: {aaa: 1}, b: 2}</span>
 </code></pre>
+<h5 id="jsonstringify-&#x7684;&#x7F3A;&#x70B9;">JSON.stringify() &#x7684;&#x7F3A;&#x70B9;</h5>
+<blockquote>
+<p>JSON.parse(JSON.stringify(obj))</p>
+</blockquote>
+<ul>
+<li>&#x5BF9;&#x8C61;&#x91CC;&#x7684;&#x65F6;&#x95F4;&#x5BF9;&#x8C61;&#xFF0C;&#x4F1A;&#x53D8;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x5F62;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">typeof</span> test.date[<span class="hljs-number">0</span>]  <span class="hljs-comment">// &apos;object&apos;</span>
+<span class="hljs-keyword">typeof</span> copyed.date[<span class="hljs-number">0</span>]  <span class="hljs-comment">// &apos;string&apos;</span>
+</code></pre>
+<ul>
+<li>&#x5BF9;&#x8C61;&#x91CC;&#x7684;&#x6B63;&#x5219;&#x3001;Error&#x5BF9;&#x8C61;&#xFF0C;&#x4F1A;&#x53D8;&#x6210;&#x7A7A;&#x5BF9;&#x8C61;</li>
+</ul>
+<pre><code class="lang-js">test.reg <span class="hljs-comment">// /\w+/</span>
+copyed.reg <span class="hljs-comment">// {}</span>
+</code></pre>
+<ul>
+<li>&#x5BF9;&#x8C61;&#x91CC;&#x7684;undefined&#x3001;function&#xFF0C;&#x4F1A;&#x8FC7;&#x6EE4;&#x6389;</li>
+<li>&#x5BF9;&#x8C61;&#x91CC;&#x7684;NaN&#x3001;Infinity&#x3001;-Infinity&#xFF0C;&#x4F1A;&#x53D8;&#x6210;null</li>
+<li>&#x5BF9;&#x8C61;&#x91CC;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x751F;&#x6210;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4F1A;&#x4E22;&#x5931;&#x6389;&#x539F;&#x672C;&#x5BF9;&#x8C61;&#x7684;constructor</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> a, b = <span class="hljs-literal">NaN</span>, c = <span class="hljs-literal">Infinity</span>, d = -<span class="hljs-literal">Infinity</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span> (<span class="hljs-params">name</span>) </span>{
+    <span class="hljs-keyword">this</span>.name = name
+}
+<span class="hljs-keyword">const</span> jack = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&apos;Jack&apos;</span>)
+
+<span class="hljs-keyword">let</span> test = {
+    name: <span class="hljs-string">&apos;a&apos;</span>,
+    date: [<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">1536627600000</span>), <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">1540047600000</span>)],
+    reg: <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">&apos;\\w+&apos;</span>),
+    fn: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{},
+    a,
+    b,
+    c,
+    d,
+    person: jack
+};
+
+<span class="hljs-keyword">let</span> copyed = <span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(test))
+
+<span class="hljs-comment">// copyed</span>
+{
+    b: <span class="hljs-literal">null</span>,
+    c: <span class="hljs-literal">null</span>,
+    d: <span class="hljs-literal">null</span>,
+    date: [<span class="hljs-string">&apos;2018-09-11T01:00:00.000Z&apos;</span>, <span class="hljs-string">&apos;2018-10-20T15:00:00.000Z&apos;</span>],
+    name: <span class="hljs-string">&quot;a&quot;</span>,
+    person: {name: <span class="hljs-string">&apos;Jack&apos;</span>},
+    reg: {}
+}
+jack.constructor <span class="hljs-comment">// &#x192; Person (name) { this.name = name }</span>
+copyed.person.constructor  <span class="hljs-comment">// &#x192; Object() { [native code] }</span>
+</code></pre>
 
                                 
                                 </section>
@@ -3134,7 +3189,7 @@ obj.a.aaa = <span class="hljs-number">111</span>;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"深拷贝浅拷贝","level":"1.3.4","depth":2,"next":{"title":"判断数据类型","level":"1.3.5","depth":2,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/pan-duan-shu-ju-lei-xing.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/pan-duan-shu-ju-lei-xing.md","articles":[]},"previous":{"title":"几种遍历方式","level":"1.3.3","depth":2,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/for-infor-offoreach-de-qu-bie.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/for-infor-offoreach-de-qu-bie.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shen-kao-bei-qian-kao-bei.md","mtime":"2023-03-28T05:16:45.556Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-13T15:32:43.051Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"深拷贝浅拷贝","level":"1.3.4","depth":2,"next":{"title":"判断数据类型","level":"1.3.5","depth":2,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/pan-duan-shu-ju-lei-xing.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/pan-duan-shu-ju-lei-xing.md","articles":[]},"previous":{"title":"几种遍历方式","level":"1.3.3","depth":2,"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/for-infor-offoreach-de-qu-bie.md","ref":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/for-infor-offoreach-de-qu-bie.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/javascript-gao-ji/shen-kao-bei-qian-kao-bei.md","mtime":"2023-04-20T15:47:01.237Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-20T15:48:14.645Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
