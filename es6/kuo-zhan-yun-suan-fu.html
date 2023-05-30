@@ -2998,7 +2998,7 @@
 <p>&#x5E94;&#x7528;&#xFF1A;</p>
 <ul>
 <li><ul>
-<li>&#x590D;&#x5236;&#x6570;&#x7EC4;&#xFF08;&#x6D45;&#x590D;&#x5236;&#xFF0C;&#x53EF;&#x501F;&#x52A9;concat&#x95F4;&#x63A5;&#x5B9E;&#x73B0;&#x6DF1;&#x590D;&#x5236;&#xFF09;</li>
+<li>&#x590D;&#x5236;&#x6570;&#x7EC4;&#xFF08;&#x5982;&#x679C;&#x6210;&#x5458;&#x662F;&#x590D;&#x5408;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x662F;<strong>&#x6D45;&#x590D;&#x5236;</strong>&#xFF0C;&#x53EF;&#x501F;&#x52A9;concat&#x95F4;&#x63A5;&#x5B9E;&#x73B0;&#x6DF1;&#x590D;&#x5236;&#xFF09;</li>
 <li>&#x5408;&#x5E76;&#x6570;&#x7EC4;</li>
 <li>&#x4E0E;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x7ED3;&#x5408;</li>
 <li><pre><code class="lang-js"><span class="hljs-keyword">const</span> list = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
@@ -3041,12 +3041,17 @@ o2.b   <span class="hljs-comment">// undefined</span>
 
 o1.c = <span class="hljs-number">333</span>
 <span class="hljs-keyword">let</span> {...o3, c} = o1  <span class="hljs-comment">// Uncaught SyntaxError: Rest element must be last element</span>
+
+<span class="hljs-keyword">let</span> obj = { a: { b: <span class="hljs-number">1</span> } };
+<span class="hljs-keyword">let</span> { ...x } = obj;
+obj.a.b = <span class="hljs-number">2</span>;
+x.a.b   <span class="hljs-comment">// 2</span>
 </code></pre>
 <p>&#x5E94;&#x7528;</p>
 <ul>
 <li><ul>
-<li>&#x590D;&#x5236;&#xFF08;&#x6D45;&#x590D;&#x5236;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;Object.assign&#xFF09;</li>
-<li>&#x5408;&#x5E76;</li>
+<li>&#x590D;&#x5236;&#xFF08;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x7684;&#x62F7;&#x8D1D;&#x662F;<strong>&#x6D45;&#x62F7;&#x8D1D;</strong>&#xFF09;</li>
+<li>&#x5408;&#x5E76;&#xFF08;&#x5BF9;&#x8C61;&#x7684;&#x6269;&#x5C55;&#x8FD0;&#x7B97;&#x7B26;&#x7B49;&#x540C;&#x4E8E;&#x4F7F;&#x7528;Object.assign()&#x65B9;&#x6CD5;&#xFF0C;&#x53EA;&#x4F1A;&#x8FD4;&#x56DE;&#x81EA;&#x8EAB;&#x7684;&#x3001;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;&#x3002;&#xFF08;&#x6210;&#x5458;&#x662F;<strong>&#x57FA;&#x7840;&#x6570;&#x636E;</strong>&#x5219;<strong>&#x6DF1;&#x62F7;&#x8D1D;</strong>&#xFF0C;<strong>&#x590D;&#x5408;&#x6570;&#x636E;&#x7C7B;&#x578B;</strong>&#x5219;<strong>&#x6D45;&#x62F7;&#x8D1D;</strong>&#xFF09;&#xFF09;</li>
 </ul>
 </li>
 </ul>
@@ -3115,7 +3120,7 @@ arr1.push(...arr2)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"扩展运算符","level":"1.12.7","depth":2,"next":{"title":"变量的解构赋值","level":"1.12.8","depth":2,"path":"es6/bian-liang-de-jie-gou-fu-zhi.md","ref":"es6/bian-liang-de-jie-gou-fu-zhi.md","articles":[]},"previous":{"title":"Object.setPrototypeOf()/Object.getPrototypeOf()","level":"1.12.6","depth":2,"path":"es6/objectsetprototypeofobjectgetprototypeof.md","ref":"es6/objectsetprototypeofobjectgetprototypeof.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"es6/kuo-zhan-yun-suan-fu.md","mtime":"2023-03-28T05:16:45.518Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-08T15:51:08.492Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"扩展运算符","level":"1.12.7","depth":2,"next":{"title":"变量的解构赋值","level":"1.12.8","depth":2,"path":"es6/bian-liang-de-jie-gou-fu-zhi.md","ref":"es6/bian-liang-de-jie-gou-fu-zhi.md","articles":[]},"previous":{"title":"Object.setPrototypeOf()/Object.getPrototypeOf()","level":"1.12.6","depth":2,"path":"es6/objectsetprototypeofobjectgetprototypeof.md","ref":"es6/objectsetprototypeofobjectgetprototypeof.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"es6/kuo-zhan-yun-suan-fu.md","mtime":"2023-05-30T15:54:03.162Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-30T16:08:06.645Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

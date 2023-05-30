@@ -2991,7 +2991,47 @@
 <li>&#x4E00;&#x79CD;&#x662F;<strong>&#x5BF9;&#x8C61;</strong>&#xFF0C;&#x4F46;&#x662F;&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A;<strong>install</strong>&#x51FD;&#x6570;</li>
 <li>&#x4E00;&#x79CD;&#x662F;&#x76F4;&#x63A5;&#x662F;<strong>&#x51FD;&#x6570;</strong>&#x66B4;&#x9732;&#x7ED9;Vue&#xFF0C;&#x5F53;&#x4F5C;install&#x76F4;&#x63A5;&#x6267;&#x884C;</li>
 </ul>
-<p>&#x6E90;&#x7801;&#x5206;&#x6790;&#xFF1A;&#x5148;&#x770B;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x662F;&#x5426;&#x6CE8;&#x518C;&#x8FC7;&#xFF08;&#x4E0D;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x6CE8;&#x518C;&#xFF09;&#xFF0C;&#x6CE8;&#x518C;&#x8FC7;&#x5C31;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;this&#xFF08;Vue&#x5BF9;&#x8C61;&#xFF09;&#x3002;&#x5426;&#x5219;&#x5C31;&#x770B;&#x5982;&#x679C;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x8C03;&#x7528;install&#x65B9;&#x6CD5;&#xFF0C;&#x901A;&#x8FC7;apply&#x6539;&#x53D8;this&#x4E3A;&#x8BE5;&#x7EC4;&#x4EF6;&#x5E76;&#x4F20;&#x53C2;arguments&#xFF1B;&#x5982;&#x679C;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x5C31;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#xFF0C;&#x6B64;&#x65F6;&#x7684;this&#x4E3A;null</p>
+<p>&#x6E90;&#x7801;&#x5206;&#x6790;&#xFF1A;</p>
+<ol>
+<li>&#x5148;&#x770B;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x662F;&#x5426;&#x6CE8;&#x518C;&#x8FC7;&#xFF08;&#x4E0D;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x6CE8;&#x518C;&#xFF09;&#xFF0C;&#x6CE8;&#x518C;&#x8FC7;&#x5C31;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;this&#xFF08;Vue&#x5BF9;&#x8C61;&#xFF09;</li>
+<li>&#x7136;&#x540E;&#x5C06;arguments&#x4F2A;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;&#x8F6C;&#x4E3A;&#x771F;&#x6B63;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x53C2;&#x6570;&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5373;vue&#x53BB;&#x9664;&#x6389;</li>
+<li>&#x6CA1;&#x6CE8;&#x518C;&#x8FC7;&#x5C31;&#x770B;&#x5982;&#x679C;&#x6709;install&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x8C03;&#x7528;plugin.install()&#x65B9;&#x6CD5;&#xFF0C;&#x901A;&#x8FC7;apply&#x6539;&#x53D8;this&#x4E3A;&#x8BE5;plugin&#x7EC4;&#x4EF6;&#x5E76;&#x4F20;&#x53C2;arguments&#xFF1B;</li>
+<li>&#x5982;&#x679C;&#x6CA1;&#x6709;&#xFF0C;&#x5C31;&#x628A;plugin&#x5F53;&#x4F5C;install&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x6B64;&#x65F6;plugin&#x5185;&#x7684;this&#x4E3A;null</li>
+<li>&#x6700;&#x540E;push&#x5230;installedPlugins&#x4E2D;&#xFF0C;&#x544A;&#x77E5;vue&#x8BE5;&#x63D2;&#x4EF6;&#x5DF2;&#x7ECF;&#x88AB;&#x6CE8;&#x518C;&#x8FC7;&#xFF0C;&#x907F;&#x514D;&#x91CD;&#x590D;&#x6CE8;&#x518C;</li>
+</ol>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">initUse</span>(<span class="hljs-params">Vue</span>) </span>{
+  Vue.use = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">plugin</span>) </span>{
+      <span class="hljs-keyword">var</span> installedPlugins = <span class="hljs-keyword">this</span>._installedPlugins || (<span class="hljs-keyword">this</span>._installedPlugins = []);
+      <span class="hljs-keyword">if</span> (installedPlugins.indexOf(plugin) &gt; <span class="hljs-number">-1</span>) {
+          <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+      }
+      <span class="hljs-comment">// additional parameters</span>
+      <span class="hljs-keyword">var</span> args = toArray(<span class="hljs-built_in">arguments</span>, <span class="hljs-number">1</span>);
+      args.unshift(<span class="hljs-keyword">this</span>);
+      <span class="hljs-keyword">if</span> (isFunction(plugin.install)) {
+          plugin.install.apply(plugin, args);
+      }
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isFunction(plugin)) {
+          plugin.apply(<span class="hljs-literal">null</span>, args);
+      }
+      installedPlugins.push(plugin);
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+  };
+}
+
+<span class="hljs-comment">/**
+* Convert an Array-like object to a real Array.
+*/</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toArray</span>(<span class="hljs-params">list, start</span>) </span>{
+  start = start || <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">var</span> i = list.length - start;
+  <span class="hljs-keyword">var</span> ret = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(i);
+  <span class="hljs-keyword">while</span> (i--) {
+      ret[i] = list[i + start];
+  }
+  <span class="hljs-keyword">return</span> ret;
+}
+</code></pre>
 
                                 
                                 </section>
@@ -3035,7 +3075,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Vue.use()","level":"1.14.4","depth":2,"next":{"title":"diff比较","level":"1.14.5","depth":2,"path":"vue/diffbi-jiao.md","ref":"vue/diffbi-jiao.md","articles":[]},"previous":{"title":"Vue3新特性","level":"1.14.3","depth":2,"path":"vue/vue3xin-te-xing.md","ref":"vue/vue3xin-te-xing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vueuse.md","mtime":"2023-03-28T05:16:45.618Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-08T15:51:08.492Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Vue.use()","level":"1.14.4","depth":2,"next":{"title":"diff比较","level":"1.14.5","depth":2,"path":"vue/diffbi-jiao.md","ref":"vue/diffbi-jiao.md","articles":[]},"previous":{"title":"Vue3新特性","level":"1.14.3","depth":2,"path":"vue/vue3xin-te-xing.md","ref":"vue/vue3xin-te-xing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vueuse.md","mtime":"2023-05-30T16:07:30.630Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-30T16:08:06.645Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
