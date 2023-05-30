@@ -13,7 +13,7 @@ console.log((...[3]))                      // Uncaught SyntaxError: Unexpected n
 
 应用：
 
-* * 复制数组（浅复制，可借助concat间接实现深复制）
+* * 复制数组（如果成员是复合数据类型的数据，就是**浅复制**，可借助concat间接实现深复制）
   * 合并数组
   * 与解构赋值结合
   * ```js
@@ -59,12 +59,17 @@ o2.b   // undefined
 
 o1.c = 333
 let {...o3, c} = o1  // Uncaught SyntaxError: Rest element must be last element
+
+let obj = { a: { b: 1 } };
+let { ...x } = obj;
+obj.a.b = 2;
+x.a.b   // 2
 ```
 
 应用
 
-* * 复制（浅复制，相当于Object.assign）
-  * 合并
+* * 复制（解构赋值的拷贝是**浅拷贝**）
+  * 合并（对象的扩展运算符等同于使用Object.assign\(\)方法，只会返回自身的、可枚举属性。（成员是**基础数据**则**深拷贝**，**复合数据类型**则**浅拷贝**））
 
 #### 替代函数的 apply 方法
 
