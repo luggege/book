@@ -84,7 +84,9 @@
   * [百度UEditor编辑器](gong-zuo-wen-ti-zong-jie/bai-du-ueditor-bian-ji-qi.md)
   * [前端优化](gong-zuo-wen-ti-zong-jie/qian-duan-you-hua.md)
   * [web的缓存技术](gong-zuo-wen-ti-zong-jie/webde-huan-cun-ji-zhu.md)
+  * [浏览器输入url到页面渲染的全过程](gong-zuo-wen-ti-zong-jie/liu-lan-qi-shu-ru-url-dao-ye-mian-xuan-ran-de-quan-guo-cheng.md)
   * [HTTP协议](httpxie-yi.md)
+  * [HTTP、HTTPS、websockets、http1.0和http2.0的比较](gong-zuo-wen-ti-zong-jie/httphttpswebsocketshttp10he-http2-0-de-bi-jiao.md)
   * [HTTP状态码](gong-zuo-wen-ti-zong-jie/http-zhuang-tai-ma.md)
   * [网络安全](gong-zuo-wen-ti-zong-jie/wang-luo-an-quan.md)
 * [扩展技术](/html/README.md)
@@ -206,6 +208,4 @@
     * [快速排序](kuai-su-pai-xu.md)
 * [Nuxt](nuxt.md)
   * [CSR & SSR](nuxt/csr-and-ssr.md)
-
-
 
