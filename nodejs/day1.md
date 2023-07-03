@@ -122,7 +122,7 @@
 
 #### 定义模块 define
 
-* 定义模块 define\(function\(\){}\)
+* 定义模块` define(function(){})`
 * 函数体内的方法属性都属于这个方法，对外有封装性;解决了命名冲突问题，使js代码有了封装性
 * 直接调用 jQuery 插件等非标准模块的方法 [http://my.oschina.net/briviowang/blog/208587](http://my.oschina.net/briviowang/blog/208587)
 
