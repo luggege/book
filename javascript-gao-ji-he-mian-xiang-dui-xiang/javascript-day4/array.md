@@ -116,9 +116,9 @@ Array.prototype.push.apply\(arr1, arr2\)：
 var a = [1,2,3];
 var b = [4,5];
 
-b.concat(a)                       // [4, 5, 1, 2, 3, 4, 5]
+a.concat(b)                       // [1, 2, 3, 4, 5]
 console.log(b);                   // [4, 5]
-console.log(a);                   // [1, 2, 3, 4, 5]
+console.log(a);                   // [1, 2, 3]
 
 Array.prototype.push.apply(a,b)   // 5 
 console.log(a);                   // [1, 2, 3, 4, 5]
