@@ -3050,49 +3050,43 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="js&#x7684;6&#x79CD;&#x52A0;&#x8F7D;&#x65B9;&#x5F0F;">JS&#x7684;6&#x79CD;&#x52A0;&#x8F7D;&#x65B9;&#x5F0F;</h3>
-<ul>
+<ol>
 <li><p>&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF1A;JS&#x963B;&#x585E;dom&#x6E32;&#x67D3;</p>
-</li>
-<li><pre><code class="lang-js">&lt;script src=<span class="hljs-string">&quot;index.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+<pre><code class="lang-js">&lt;script src=<span class="hljs-string">&quot;index.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
 </code></pre>
 </li>
 <li><p>async&#x6A21;&#x5F0F;&#xFF1A;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;JS&#xFF0C;&#x4F46;&#x52A0;&#x8F7D;&#x5B8C;&#x7ACB;&#x5373;&#x6267;&#x884C;</p>
-</li>
-<li><pre><code class="lang-js">&lt;script <span class="hljs-keyword">async</span> src=<span class="hljs-string">&quot;index.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+<pre><code class="lang-js">&lt;script <span class="hljs-keyword">async</span> src=<span class="hljs-string">&quot;index.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
 </code></pre>
 </li>
 <li><p>defer&#x6A21;&#x5F0F;&#xFF1A;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;JS&#xFF0C;&#x4F46;&#x662F;&#x6587;&#x6863;&#x52A0;&#x8F7D;&#x5B8C;&#x987A;&#x5E8F;&#x6267;&#x884C;JS</p>
-</li>
-<li><pre><code class="lang-js">&lt;script defer src=<span class="hljs-string">&quot;index.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+<pre><code class="lang-js">&lt;script defer src=<span class="hljs-string">&quot;index.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
 </code></pre>
 </li>
 <li><p>module&#x6A21;&#x5F0F;&#xFF1A;&#x5728;&#x4E3B;&#x6D41;&#x7684;&#x73B0;&#x4EE3;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#xFF0C;&#x5BF9;import&#x5F15;&#x7528;&#x53D1;&#x8D77;HTTP&#x8BF7;&#x6C42;&#xFF0C;&#x83B7;&#x53D6;&#x6A21;&#x5757;&#x5185;&#x5BB9;&#xFF0C;&#x540C;defer&#x6A21;&#x5F0F;&#x4E00;&#x6837;&#x3002;vite&#x5C31;&#x662F;&#x5229;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x652F;&#x6301;&#x539F;&#x751F;&#x7684;es module&#x6A21;&#x5757;&#xFF0C;&#x5F00;&#x53D1;&#x65F6;&#x8DF3;&#x8FC7;&#x6253;&#x5305;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x63D0;&#x5347;&#x7F16;&#x8BD1;&#x6548;&#x7387;</p>
-</li>
-<li><pre><code class="lang-js">&lt;script type=&quot;module&quot;&gt;import { a } from &apos;./a.js&apos;&lt;/script&gt;
+<pre><code class="lang-js">&lt;script type=&quot;module&quot;&gt;import { a } from &apos;./a.js&apos;&lt;/script&gt;
 </code></pre>
 </li>
 <li><p>preload&#xFF1A;link&#x6807;&#x7B7E;&#x7684;preload&#x5C5E;&#x6027;&#xFF1A;&#x7528;&#x4E8E;&#x63D0;&#x524D;&#x52A0;&#x8F7D;&#x4E00;&#x4E9B;&#x9700;&#x8981;&#x7684;&#x4F9D;&#x8D56;&#xFF0C;&#x8FD9;&#x4E9B;&#x8D44;&#x6E90;&#x4F1A;&#x4F18;&#x5148;&#x52A0;&#x8F7D;&#x3002;vue2&#x9879;&#x76EE;&#x6253;&#x5305;&#x7684;index.html&#x6587;&#x4EF6;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x7ED9;&#x9996;&#x9875;&#x6240;&#x9700;&#x8981;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x5168;&#x90E8;&#x6DFB;&#x52A0;preload&#xFF0C;&#x5B9E;&#x73B0;&#x5173;&#x952E;&#x8D44;&#x6E90;&#x7684;&#x63D0;&#x524D;&#x52A0;&#x8F7D;</p>
-</li>
-<li><pre><code class="lang-js">&lt;link rel=<span class="hljs-string">&quot;preload&quot;</span> <span class="hljs-keyword">as</span>=<span class="hljs-string">&quot;script&quot;</span> href=<span class="hljs-string">&quot;index.js&quot;</span>&gt;
+<pre><code class="lang-js">&lt;link rel=<span class="hljs-string">&quot;preload&quot;</span> <span class="hljs-keyword">as</span>=<span class="hljs-string">&quot;script&quot;</span> href=<span class="hljs-string">&quot;index.js&quot;</span>&gt;
 </code></pre>
-</li>
-</ul>
-<h5 id="preload&#x7279;&#x70B9;&#xFF1A;">preload&#x7279;&#x70B9;&#xFF1A;</h5>
+<p>preload&#x7279;&#x70B9;&#xFF1A;</p>
 <ol>
-<li>preload &#x52A0;&#x8F7D;&#x7684;&#x8D44;&#x6E90;&#x662F;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x6E32;&#x67D3;&#x673A;&#x5236;&#x4E4B;&#x524D;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x4F1A;&#x963B;&#x585E;onload &#x4E8B;&#x4EF6;</li>
+<li>preload&#x52A0;&#x8F7D;&#x7684;&#x8D44;&#x6E90;&#x662F;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x6E32;&#x67D3;&#x673A;&#x5236;&#x4E4B;&#x524D;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x4F1A;&#x963B;&#x585E;onload&#x4E8B;&#x4EF6;</li>
 <li>preload &#x52A0;&#x8F7D;&#x7684;JS&#x811A;&#x672C;&#x5176;&#x52A0;&#x8F7D;&#x548C;&#x6267;&#x884C;&#x7684;&#x8FC7;&#x7A0B;&#x662F;&#x5206;&#x79BB;&#x7684;&#xFF0C;&#x5373;preload &#x4F1A;&#x9884;&#x52A0;&#x8F7D;&#x76F8;&#x5E94;&#x7684;&#x811A;&#x672C;&#x4EE3;&#x7801;&#xFF0C;&#x5F85;&#x5230;&#x9700;&#x8981;&#x65F6;&#x81EA;&#x884C;&#x8C03;&#x7528;</li>
 </ol>
-<ul>
+</li>
 <li><p>prefetch&#xFF1A;&#x5229;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x7A7A;&#x95F2;&#x65F6;&#x95F4;&#xFF0C;&#x52A0;&#x8F7D;&#x9875;&#x9762;&#x5C06;&#x6765;&#x53EF;&#x80FD;&#x7528;&#x5230;&#x7684;&#x8D44;&#x6E90;&#x7684;&#x4E00;&#x79CD;&#x673A;&#x5236;&#x3002;&#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x52A0;&#x8F7D;&#x5176;&#x4ED6;&#x9875;&#x9762;&#xFF08;&#x975E;&#x9996;&#x9875;&#xFF09;&#x6240;&#x9700;&#x8981;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x4EE5;&#x4FBF;&#x52A0;&#x5FEB;&#x540E;&#x7EED;&#x9875;&#x9762;&#x7684;&#x6253;&#x5F00;&#x901F;&#x5EA6;</p>
-</li>
-<li><pre><code class="lang-js">&lt;link rel=<span class="hljs-string">&quot;prefetch&quot;</span> <span class="hljs-keyword">as</span>=<span class="hljs-string">&quot;script&quot;</span> href=<span class="hljs-string">&quot;index.js&quot;</span>&gt;
+<pre><code class="lang-js">&lt;link rel=<span class="hljs-string">&quot;prefetch&quot;</span> <span class="hljs-keyword">as</span>=<span class="hljs-string">&quot;script&quot;</span> href=<span class="hljs-string">&quot;index.js&quot;</span>&gt;
 </code></pre>
-</li>
-</ul>
-<h5 id="prefetch-&#x7279;&#x70B9;&#xFF1A;">prefetch &#x7279;&#x70B9;&#xFF1A;</h5>
+<p>prefetch &#x7279;&#x70B9;&#xFF1A;</p>
 <ol>
-<li>prefetch &#x52A0;&#x8F7D;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x975E;&#x5F53;&#x524D;&#x9875;&#x9762;&#x6240;&#x9700;&#x8981;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x5176;&#x653E;&#x5165;&#x7F13;&#x5B58;&#x81F3;&#x5C11;5&#x5206;&#x949F;&#xFF08;&#x65E0;&#x8BBA;&#x8D44;&#x6E90;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x7F13;&#x5B58;&#xFF09;</li>
-<li>&#x5F53;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#x65F6;&#xFF0C;&#x672A;&#x5B8C;&#x6210;&#x7684;prefetch&#x8BF7;&#x6C42;&#x4E0D;&#x4F1A;&#x4E2D;&#x65AD;</li>
+<li><p>prefetch &#x52A0;&#x8F7D;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x975E;&#x5F53;&#x524D;&#x9875;&#x9762;&#x6240;&#x9700;&#x8981;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x5176;&#x653E;&#x5165;&#x7F13;&#x5B58;&#x81F3;&#x5C11;5&#x5206;&#x949F;&#xFF08;&#x65E0;&#x8BBA;&#x8D44;&#x6E90;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x7F13;&#x5B58;&#xFF09;</p>
+</li>
+<li><p>&#x5F53;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#x65F6;&#xFF0C;&#x672A;&#x5B8C;&#x6210;&#x7684;prefetch&#x8BF7;&#x6C42;&#x4E0D;&#x4F1A;&#x4E2D;&#x65AD;</p>
+</li>
+</ol>
+</li>
 </ol>
 
                                 
@@ -3137,7 +3131,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"JS的6种加载方式","level":"1.4.16","depth":2,"next":{"title":"移动Web","level":"1.5","depth":1,"path":"yi-dong-web/README.md","ref":"yi-dong-web/README.md","articles":[{"title":"屏幕适配","level":"1.5.1","depth":2,"path":"yi-dong-web/ping-mu-shi-pei.md","ref":"yi-dong-web/ping-mu-shi-pei.md","articles":[]},{"title":"IOS兼容问题","level":"1.5.2","depth":2,"path":"yi-dong-web/iosjian-rong-wen-ti.md","ref":"yi-dong-web/iosjian-rong-wen-ti.md","articles":[]}]},"previous":{"title":"前端加密方式","level":"1.4.15","depth":2,"path":"mian-shi-ti-zong-jie/qian-duan-jia-mi-fang-shi.md","ref":"mian-shi-ti-zong-jie/qian-duan-jia-mi-fang-shi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/jsde-6-zhong-jia-zai-fang-shi.md","mtime":"2023-07-11T15:52:16.083Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-11T16:04:51.674Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JS的6种加载方式","level":"1.4.16","depth":2,"next":{"title":"移动Web","level":"1.5","depth":1,"path":"yi-dong-web/README.md","ref":"yi-dong-web/README.md","articles":[{"title":"屏幕适配","level":"1.5.1","depth":2,"path":"yi-dong-web/ping-mu-shi-pei.md","ref":"yi-dong-web/ping-mu-shi-pei.md","articles":[]},{"title":"IOS兼容问题","level":"1.5.2","depth":2,"path":"yi-dong-web/iosjian-rong-wen-ti.md","ref":"yi-dong-web/iosjian-rong-wen-ti.md","articles":[]}]},"previous":{"title":"前端加密方式","level":"1.4.15","depth":2,"path":"mian-shi-ti-zong-jie/qian-duan-jia-mi-fang-shi.md","ref":"mian-shi-ti-zong-jie/qian-duan-jia-mi-fang-shi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript-gao-ji-he-mian-xiang-dui-xiang/jsde-6-zhong-jia-zai-fang-shi.md","mtime":"2023-07-18T15:52:06.210Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-18T15:53:16.415Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
