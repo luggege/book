@@ -83,9 +83,16 @@ bash属于shell，Linux默认使用bash
 | git diff '文件' | 比较修改部分 |
 | git log, git reflog | 历史，未来所有历史 |
 | git checkout branch/git checkout SHA -- "某个文件" | 切换分支/从SHA这个版中取出特定的文件（不**会重写历史**） |
+| git checkout HEAD~2 文件名 | 把倒数第二次的该文件的提交放到暂存区 |
 | git reset --hard '' | 工作区会变 暂缓区会变 历史会变（**会重写历史**） |
 | git reset --soft '' | 只改变历史 |
 | git reset --mixed\(默认\) | 工作区不会变, 历史改变, 暂存区改变 |
+| git reset 文件名 | 只能将暂存区的文件重置到工作区 |
+| git reset HEAD~2 文件名 | 把倒数第二次的该文件的提交放到暂存区 |
+| git revert commitId | 回退到某一次提交，且会生成一次新的提交记录 |
+| git reset HEAD~2 | 回退到两次提交前（默认：工作区不受影响，暂存区更新为指定提交）（最好用于撤销私有分支的变更） |
+| git checkout HEAD~2 | 移动HEAD指针到指定提交（暂存区和工作区都清空） |
+| git revert HEAD~2 | 撤销公共分支的变更，创建一个新的提交来撤销这些内容，不会改变已有提交历史 |
 | git branch -d '文件名' | 删除本地分支 |
 | git push origin --delete '文件名' | 删除远程分支 |
 | git stash | 放入暂存区 |
