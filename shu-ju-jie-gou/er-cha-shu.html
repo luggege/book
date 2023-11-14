@@ -3052,7 +3052,7 @@
                                 <h3 id="&#x4E8C;&#x53C9;&#x6811;">&#x4E8C;&#x53C9;&#x6811;</h3>
 <h4 id="&#x6982;&#x5FF5;">&#x6982;&#x5FF5;</h4>
 <blockquote>
-<p>&#x6811;&#xFF1A;&#x4E00;&#x79CD;&#x5E38;&#x7528;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x7528;&#x6765;&#x6A21;&#x62DF;&#x5177;&#x6709;&#x6811;&#x72B6;&#x7ED3;&#x6784;&#x6027;&#x8D28;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5408;&#x3002;&#x7279;&#x5F81;&#xFF1A;<strong>N&#x4E2A;&#x8282;&#x70B9;&#x3001;N-1&#x6761;&#x8FB9;</strong>&#x7684;&#x6709;&#x9879;&#x65E0;&#x73AF;&#x56FE;&#x3002;<br>&#x4E8C;&#x53C9;&#x6811;&#xFF1A;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x6700;&#x591A;&#x6709;<strong>&#x4E24;&#x4E2A;&#x5B50;&#x6811;&#x3002;    
+<p>&#x6811;&#xFF1A;&#x4E00;&#x79CD;&#x5E38;&#x7528;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x7528;&#x6765;&#x6A21;&#x62DF;&#x5177;&#x6709;&#x6811;&#x72B6;&#x7ED3;&#x6784;&#x6027;&#x8D28;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5408;&#x3002;&#x7279;&#x5F81;&#xFF1A;<strong>N&#x4E2A;&#x8282;&#x70B9;&#x3001;N-1&#x6761;&#x8FB9;</strong>&#x7684;&#x6709;&#x9879;&#x65E0;&#x73AF;&#x56FE;&#x3002;<br>&#x4E8C;&#x53C9;&#x6811;&#xFF1A;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x6700;&#x591A;&#x6709;<strong>&#x4E24;&#x4E2A;&#x5B50;&#x6811;&#x3002;      
 </strong>&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF1A;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x8282;&#x70B9;&#x3002;</p>
 </blockquote>
 <h4 id="&#x904D;&#x5386;&#x65B9;&#x5F0F;">&#x904D;&#x5386;&#x65B9;&#x5F0F;</h4>
@@ -3060,8 +3060,57 @@
 <li>&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x904D;&#x5386;</li>
 <li><ul>
 <li>&#x524D;&#x5E8F;&#x904D;&#x5386;&#xFF1A;&#x6839;---&#x5DE6;---&#x53F3;</li>
+<li><pre><code class="lang-js"><span class="hljs-keyword">const</span> node = {
+    val: <span class="hljs-number">1</span>,
+    left: {
+        val: <span class="hljs-number">2</span>,
+        left: <span class="hljs-literal">null</span>,
+        right: <span class="hljs-literal">null</span>
+    },
+    right: {
+        val: <span class="hljs-number">3</span>,
+        left: {
+            val: <span class="hljs-number">4</span>,
+            left: <span class="hljs-literal">null</span>,
+            right: <span class="hljs-literal">null</span>
+        },
+        right: {
+            val: <span class="hljs-number">5</span>,
+            left: <span class="hljs-literal">null</span>,
+            right: <span class="hljs-literal">null</span>
+        }
+    }
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> dfs = (node) =&gt; {
+    <span class="hljs-keyword">if</span> (!node) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+    <span class="hljs-built_in">console</span>.log(node.val)
+    dfs(node.left)
+    dfs(node.right)
+}
+dfs(node) <span class="hljs-comment">// 1 2 3 4 5</span>
+</code></pre>
+</li>
 <li>&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#xFF1A;&#x5DE6;---&#x6839;---&#x53F3;</li>
+<li><pre><code class="lang-js"><span class="hljs-keyword">const</span> dfs = (node) =&gt; {
+    <span class="hljs-keyword">if</span> (!node) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+    dfs(node.left)
+    <span class="hljs-built_in">console</span>.log(node.val)
+    dfs(node.right)
+}
+dfs(node) <span class="hljs-comment">// 2 1 4 3 5</span>
+</code></pre>
+</li>
 <li>&#x540E;&#x5E8F;&#x904D;&#x5386;&#xFF1A;&#x5DE6;---&#x53F3;---&#x6839;</li>
+<li><pre><code class="lang-js"><span class="hljs-keyword">const</span> dfs = (node) =&gt; {
+    <span class="hljs-keyword">if</span> (!node) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+    dfs(node.left)
+    dfs(node.right)
+    <span class="hljs-built_in">console</span>.log(node.val)
+}
+dfs(node) <span class="hljs-comment">// 2 4 5 3 1</span>
+</code></pre>
+</li>
 </ul>
 </li>
 <li><p>&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#x904D;&#x5386;</p>
@@ -3071,15 +3120,15 @@
 </ul>
 </li>
 </ul>
-<h5 id="&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#xFF08;bfs&#xFF09;&#xFF1A;&#x961F;&#x5217;&#x7684;&#x5E94;&#x7528;">&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#xFF08;BFS&#xFF09;&#xFF1A;&#x961F;&#x5217;&#x7684;&#x5E94;&#x7528;</h5>
-<blockquote>
-<p>BFC&#x662F;&#x4E00;&#x79CD;&#x904D;&#x5386;&#x6216;&#x641C;&#x7D22;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7684;&#x7B97;&#x6CD5;&#x3002;&#x5E38;&#x89C1;&#x5E94;&#x7528;&#x662F;&#xFF1A;&#x627E;&#x51FA;&#x6839;&#x8282;&#x70B9;&#x5230;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x3002;</p>
-<p>&#x961F;&#x5217;&#x7684;&#x5165;&#x961F;&#x548C;&#x51FA;&#x961F;&#x987A;&#x5E8F;&#xFF1A;&#x9996;&#x5148;&#x5C06;&#x6839;&#x8282;&#x70B9;&#x6392;&#x5165;&#x961F;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x6BCF;&#x4E00;&#x8F6E;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x9010;&#x4E2A;&#x5904;&#x7406;&#x5DF2;&#x7ECF;&#x5728;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x5C06;&#x6240;&#x6709;&#x90BB;&#x5C45;&#x8282;&#x70B9;&#x6DFB;&#x52A0;&#x5230;&#x961F;&#x5217;&#x4E2D;&#x3002;&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x65B0;&#x6DFB;&#x52A0;&#x7684;&#x8282;&#x70B9;&#x4E0D;&#x4F1A;&#x7ACB;&#x5373;&#x904D;&#x5386;&#xFF0C;&#x800C;&#x662F;&#x5728;&#x4E0B;&#x4E00;&#x8F6E;&#x4E2D;&#x5904;&#x7406;&#x3002;</p>
-</blockquote>
 <h5 id="&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#xFF08;dfs&#xFF09;&#xFF1A;&#x6808;&#x7684;&#x5E94;&#x7528;">&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#xFF08;DFS&#xFF09;&#xFF1A;&#x6808;&#x7684;&#x5E94;&#x7528;</h5>
 <blockquote>
 <p>&#x67E5;&#x627E;&#x6839;&#x8282;&#x70B9;&#x5230;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x7684;&#x8DEF;&#x5F84;&#xFF08;&#x627E;&#x5230;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x8DEF;&#x5F84;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#xFF09;&#x3002;</p>
 <p>&#x6808;&#x7684;&#x5165;&#x6808;&#x548C;&#x51FA;&#x6808;&#x987A;&#x5E8F;&#xFF1A;&#x9996;&#x5148;&#x5C06;&#x6839;&#x8282;&#x70B9;&#x63A8;&#x5165;&#x5230;&#x6808;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x7B2C;&#x4E00;&#x4E2A;&#x90BB;&#x5C45;&#x8282;&#x70B9;&#x63A8;&#x5165;&#x5230;&#x6808;&#x4E2D;&#xFF0C;&#x5F53;&#x5230;&#x8FBE;&#x6700;&#x6DF1;&#x7684;&#x8282;&#x70B9;&#x800C;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x56DE;&#x6EAF;&#xFF0C;&#x56DE;&#x6EAF;&#x65F6;&#xFF0C;&#x5F39;&#x51FA;&#x6808;&#x4E2D;&#x6700;&#x6DF1;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x5373;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x5728;&#x91CD;&#x65B0;&#x67E5;&#x627E;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;&#x3002;&#x3002;</p>
+</blockquote>
+<h5 id="&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#xFF08;bfs&#xFF09;&#xFF1A;&#x961F;&#x5217;&#x7684;&#x5E94;&#x7528;">&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#xFF08;BFS&#xFF09;&#xFF1A;&#x961F;&#x5217;&#x7684;&#x5E94;&#x7528;</h5>
+<blockquote>
+<p>BFC&#x662F;&#x4E00;&#x79CD;&#x904D;&#x5386;&#x6216;&#x641C;&#x7D22;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7684;&#x7B97;&#x6CD5;&#x3002;&#x5E38;&#x89C1;&#x5E94;&#x7528;&#x662F;&#xFF1A;&#x627E;&#x51FA;&#x6839;&#x8282;&#x70B9;&#x5230;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x3002;</p>
+<p>&#x961F;&#x5217;&#x7684;&#x5165;&#x961F;&#x548C;&#x51FA;&#x961F;&#x987A;&#x5E8F;&#xFF1A;&#x9996;&#x5148;&#x5C06;&#x6839;&#x8282;&#x70B9;&#x6392;&#x5165;&#x961F;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x6BCF;&#x4E00;&#x8F6E;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x9010;&#x4E2A;&#x5904;&#x7406;&#x5DF2;&#x7ECF;&#x5728;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x5C06;&#x6240;&#x6709;&#x90BB;&#x5C45;&#x8282;&#x70B9;&#x6DFB;&#x52A0;&#x5230;&#x961F;&#x5217;&#x4E2D;&#x3002;&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x65B0;&#x6DFB;&#x52A0;&#x7684;&#x8282;&#x70B9;&#x4E0D;&#x4F1A;&#x7ACB;&#x5373;&#x904D;&#x5386;&#xFF0C;&#x800C;&#x662F;&#x5728;&#x4E0B;&#x4E00;&#x8F6E;&#x4E2D;&#x5904;&#x7406;&#x3002;</p>
 </blockquote>
 <h4 id="&#x8FD0;&#x7528;&#x9012;&#x5F52;&#x89E3;&#x51B3;&#x95EE;&#x9898;">&#x8FD0;&#x7528;&#x9012;&#x5F52;&#x89E3;&#x51B3;&#x95EE;&#x9898;</h4>
 <ul>
@@ -3134,7 +3183,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"二叉树","level":"1.19.1.2","depth":3,"next":{"title":"排序","level":"1.19.2","depth":2,"path":"pai-xu.md","ref":"pai-xu.md","articles":[{"title":"冒泡排序","level":"1.19.2.1","depth":3,"path":"mao-pao-pai-xu.md","ref":"mao-pao-pai-xu.md","articles":[]},{"title":"选择排序","level":"1.19.2.2","depth":3,"path":"xuan-ze-pai-xu.md","ref":"xuan-ze-pai-xu.md","articles":[]},{"title":"插入排序","level":"1.19.2.3","depth":3,"path":"cha-ru-pai-xu.md","ref":"cha-ru-pai-xu.md","articles":[]},{"title":"归并排序","level":"1.19.2.4","depth":3,"path":"gui-bing-pai-xu.md","ref":"gui-bing-pai-xu.md","articles":[]},{"title":"快速排序","level":"1.19.2.5","depth":3,"path":"kuai-su-pai-xu.md","ref":"kuai-su-pai-xu.md","articles":[]}]},"previous":{"title":"栈、队列","level":"1.19.1.1","depth":3,"path":"shu-ju-jie-gou/zhan-3001-dui-lie.md","ref":"shu-ju-jie-gou/zhan-3001-dui-lie.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"shu-ju-jie-gou/er-cha-shu.md","mtime":"2023-03-28T05:16:45.606Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-11T07:43:57.935Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"二叉树","level":"1.19.1.2","depth":3,"next":{"title":"排序","level":"1.19.2","depth":2,"path":"pai-xu.md","ref":"pai-xu.md","articles":[{"title":"冒泡排序","level":"1.19.2.1","depth":3,"path":"mao-pao-pai-xu.md","ref":"mao-pao-pai-xu.md","articles":[]},{"title":"选择排序","level":"1.19.2.2","depth":3,"path":"xuan-ze-pai-xu.md","ref":"xuan-ze-pai-xu.md","articles":[]},{"title":"插入排序","level":"1.19.2.3","depth":3,"path":"cha-ru-pai-xu.md","ref":"cha-ru-pai-xu.md","articles":[]},{"title":"归并排序","level":"1.19.2.4","depth":3,"path":"gui-bing-pai-xu.md","ref":"gui-bing-pai-xu.md","articles":[]},{"title":"快速排序","level":"1.19.2.5","depth":3,"path":"kuai-su-pai-xu.md","ref":"kuai-su-pai-xu.md","articles":[]}]},"previous":{"title":"栈、队列","level":"1.19.1.1","depth":3,"path":"shu-ju-jie-gou/zhan-3001-dui-lie.md","ref":"shu-ju-jie-gou/zhan-3001-dui-lie.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"shu-ju-jie-gou/er-cha-shu.md","mtime":"2023-11-14T15:05:48.073Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-14T15:06:48.181Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
