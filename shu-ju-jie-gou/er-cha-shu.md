@@ -3,7 +3,7 @@
 #### 概念
 
 > 树：一种常用的数据结构，用来模拟具有树状结构性质的数据集合。特征：**N个节点、N-1条边**的有项无环图。  
-> 二叉树：每个节点最多有**两个子树。      
+> 二叉树：每个节点最多有**两个子树。        
 > **叶子节点：没有子节点的节点。
 
 #### 遍历方式
@@ -66,6 +66,20 @@
 * 广度优先遍历
 
 * * 层次遍历：根---二级邻节点（左子树、右子树）---三级邻节点
+  * ```js
+    let res = []
+    function bfs (node, index) {
+        if (!node) return
+        if (!res[index]) {
+            res[index] = []
+        }
+        res[index].push(node.val)
+        bfs(node.left, index + 1)
+        bfs(node.right, index + 1)
+        return res
+    }
+    bfs (node, 0)   // [[1], [2, 3], [4, 5]]
+    ```
 
 ##### 深度优先搜索（DFS）：栈的应用
 
