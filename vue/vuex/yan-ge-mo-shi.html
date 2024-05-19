@@ -3067,20 +3067,17 @@
 })
 </code></pre>
 <ul>
-<li><p>&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x901A;&#x8FC7;this.$store.state.xxx = xxx&#x76F4;&#x63A5;&#x4FEE;&#x6539;state&#x7684;&#x503C;&#x4F1A;&#x62A5;&#x9519;&#xFF08;&#x72B6;&#x6001;&#x53D8;&#x66F4;<strong>&#x4E0D;&#x662F;&#x7531;mutation&#x51FD;&#x6570;&#x5F15;&#x8D77;</strong>&#x7684;&#xFF09;&#xFF0C;&#x8FD9;&#x80FD;&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x7684;&#x72B6;&#x6001;&#x53D8;&#x66F4;&#x90FD;&#x80FD;&#x88AB;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;&#x8FFD;&#x8E2A;&#x5230;</p>
-</li>
-<li><p>&#x5982;&#x679C;&#xFF1A;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#xFF1A;obj&#x662F;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x4E2D;&#x8FD4;&#x56DE;&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x4E8E;vuex&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x7528;&#x6237;&#x8F93;&#x5165;&#x65F6;&#xFF0C;v-model&#x4F1A;&#x8BD5;&#x56FE;&#x76F4;&#x63A5;&#x4FEE;&#x6539;obj.message&#xFF0C;&#x7531;&#x4E8E;&#x8FD9;&#x4E2A;&#x4FEE;&#x6539;&#x4E0D;&#x662F;mutation&#x51FD;&#x6570;&#x4E2D;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x62A5;&#x9519; <code>&lt;input v-model=&quot;obj.message&quot;&gt;</code>&#x4E24;&#x4E2A;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;</p>
-</li>
-<li><ol>
-<li>&#x7528;vue&#x7684;&#x601D;&#x7EF4;&#x6A21;&#x62DF;v-model </li>
-<li>```js<input :value="message" @input="updateMessage">
-
-
-</li>
-</ol>
-</li>
+<li>&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x901A;&#x8FC7;this.$store.state.xxx = xxx&#x76F4;&#x63A5;&#x4FEE;&#x6539;state&#x7684;&#x503C;&#x4F1A;&#x62A5;&#x9519;&#xFF08;&#x72B6;&#x6001;&#x53D8;&#x66F4;<strong>&#x4E0D;&#x662F;&#x7531;mutation&#x51FD;&#x6570;&#x5F15;&#x8D77;</strong>&#x7684;&#xFF09;&#xFF0C;&#x8FD9;&#x80FD;&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x7684;&#x72B6;&#x6001;&#x53D8;&#x66F4;&#x90FD;&#x80FD;&#x88AB;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;&#x8FFD;&#x8E2A;&#x5230;</li>
 </ul>
-<pre><code> computed: {
+<blockquote>
+<p>&#x5982;&#x679C;&#xFF1A;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#xFF1A;obj&#x662F;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x4E2D;&#x8FD4;&#x56DE;&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x4E8E;vuex&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x7528;&#x6237;&#x8F93;&#x5165;&#x65F6;&#xFF0C;v-model&#x4F1A;&#x8BD5;&#x56FE;&#x76F4;&#x63A5;&#x4FEE;&#x6539;obj.message&#xFF0C;&#x7531;&#x4E8E;&#x8FD9;&#x4E2A;&#x4FEE;&#x6539;&#x4E0D;&#x662F;mutation&#x51FD;&#x6570;&#x4E2D;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x62A5;&#x9519; <code>&lt;input v-model=&quot;obj.message&quot;&gt;</code>&#x4E24;&#x4E2A;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;</p>
+</blockquote>
+<ul>
+<li><ul>
+<li><p>&#x7528;vue&#x7684;&#x601D;&#x7EF4;&#x6A21;&#x62DF;v-model</p>
+<pre><code class="lang-js"> &lt;input :value=<span class="hljs-string">&quot;message&quot;</span> @input=<span class="hljs-string">&quot;updateMessage&quot;</span>&gt;
+
+ computed: {
      ...mapState({
          message: state =&gt; state.obj.message
      })
@@ -3088,50 +3085,57 @@
 
  methods: {
      updateMessage(e) {
-         this.$store.commit(&apos;updateMessage&apos;, e.target.value)
+         <span class="hljs-keyword">this</span>.$store.commit(<span class="hljs-string">&apos;updateMessage&apos;</span>, e.target.value)
      }
  }
 
- // store&#x4E2D;&#x7684;mutation&#x51FD;&#x6570;
+ <span class="hljs-comment">// store&#x4E2D;&#x7684;mutation&#x51FD;&#x6570;</span>
  state: {
      obj: {
-         message: &apos;&apos;
+         message: <span class="hljs-string">&apos;&apos;</span>
      }
  }
  mutations: {
      updateMessage(state, data) {
          state.obj.message = data
      }
- } 
- ```
-2. &#x4F7F;&#x7528;setter&#x7684;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;
-```js
-&lt;input :value=&quot;message&quot;&gt;
+ }
+</code></pre>
+</li>
+</ul>
+</li>
+<li><ul>
+<li><p>&#x4F7F;&#x7528;setter&#x7684;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</p>
+<pre><code class="lang-js">&lt;input :value=<span class="hljs-string">&quot;message&quot;</span>&gt;
 
 computed: {
     message: {
         get() {
-           return this.$store.state.obj.message 
+           <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.$store.state.obj.message 
         },
         set(value) {
-            this.$store.commit(&apos;updateMessage&apos;, value)
+            <span class="hljs-keyword">this</span>.$store.commit(<span class="hljs-string">&apos;updateMessage&apos;</span>, value)
         }
     }
 }
 
-// store&#x4E2D;&#x7684;mutation&#x51FD;&#x6570;
+<span class="hljs-comment">// store&#x4E2D;&#x7684;mutation&#x51FD;&#x6570;</span>
  state: {
      obj: {
-         message: &apos;&apos;
+         message: <span class="hljs-string">&apos;&apos;</span>
      }
  }
  mutations: {
      updateMessage(state, data) {
          state.obj.message = data
      }
- } 
-```
+ }
 </code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
                                 
                                 </section>
                             
@@ -3174,7 +3178,7 @@ computed: {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"严格模式","level":"1.15.3","depth":2,"next":{"title":"四种辅助函数","level":"1.15.4","depth":2,"path":"vue/vuex/fu-zhu-han-shu.md","ref":"vue/vuex/fu-zhu-han-shu.md","articles":[]},"previous":{"title":"修改state的三种方式","level":"1.15.2","depth":2,"path":"vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md","ref":"vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vuex/yan-ge-mo-shi.md","mtime":"2024-05-19T08:14:34.450Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-19T08:35:50.570Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"严格模式","level":"1.15.3","depth":2,"next":{"title":"四种辅助函数","level":"1.15.4","depth":2,"path":"vue/vuex/fu-zhu-han-shu.md","ref":"vue/vuex/fu-zhu-han-shu.md","articles":[]},"previous":{"title":"修改state的三种方式","level":"1.15.2","depth":2,"path":"vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md","ref":"vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vuex/yan-ge-mo-shi.md","mtime":"2024-05-19T08:50:16.802Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-19T08:51:03.021Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
