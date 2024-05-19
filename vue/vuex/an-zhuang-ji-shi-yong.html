@@ -2455,7 +2455,7 @@
                 <a href="fu-zhu-han-shu.html">
             
                     
-                    辅助函数
+                    四种辅助函数
             
                 </a>
             
@@ -3077,18 +3077,33 @@ Vue.use(Vuex)
     state: {
         count: <span class="hljs-number">1</span>,
         token: <span class="hljs-string">&apos;&apos;</span>,
+        todos: [
+            {id: <span class="hljs-number">1</span>, text: <span class="hljs-string">&apos;...&apos;</span>, done: <span class="hljs-literal">true</span>},
+            {id: <span class="hljs-number">2</span>, text: <span class="hljs-string">&apos;...&apos;</span>, done: <span class="hljs-literal">false</span>}
+        ]
     },
     mutations: {
         change(state) {
             state.count++
         },
-        SET_TOKEN: (state, token) =&gt; {
-          state.token = token
+        SET_TOKEN: (state, data) =&gt; {
+          state.token = data
         },
     },
     actions: {
-        commit(<span class="hljs-string">&apos;SET_TOKEN&apos;</span>, response.data.token)
-
+        setToken: ({commit, dispatch}, data) {
+            commit(<span class="hljs-string">&apos;SET_TOKEN&apos;</span>, response.data.token)
+        }
+    },
+    getters: {
+        doneTodos (state) {
+            <span class="hljs-keyword">return</span> state.todos.fiter(todo =&gt; todo.done)
+        }
+    },
+    modules: {
+        moduleA,
+        moduleB,
+        ...
     }
 })
 
@@ -3098,11 +3113,13 @@ Vue.use(Vuex)
 store.commit(<span class="hljs-string">&apos;change&apos;</span>)
 
 <span class="hljs-comment">// 2. &#x76F4;&#x63A5;&#x4FEE;&#x6539;&#xFF08;&#x591A;&#x4EBA;&#x534F;&#x4F5C;&#x5BB9;&#x6613;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x5F00;&#x542F;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#xFF09;</span>
-<span class="hljs-comment">// store.state.count = 2</span>
-<span class="hljs-built_in">console</span>.log(store.state.count)   <span class="hljs-comment">// 2</span>
+store.state.count = <span class="hljs-number">2</span>          <span class="hljs-comment">// console.log(store.state.count)   // 2</span>
 
 <span class="hljs-comment">// 3. dispatch&#x5206;&#x53D1;</span>
-store.dispatch(<span class="hljs-string">&apos;SET_TOKEN&apos;</span>)
+store.dispatch(<span class="hljs-string">&apos;setToken&apos;</span>, <span class="hljs-string">&apos;token...&apos;</span>)
+
+<span class="hljs-comment">// getters &#x7684;&#x4F7F;&#x7528;</span>
+store.getters.doneTodos <span class="hljs-comment">// [{id: 1, text: &apos;...&apos;, done: true}]</span>
 </code></pre>
 
                                 
@@ -3147,7 +3164,7 @@ store.dispatch(<span class="hljs-string">&apos;SET_TOKEN&apos;</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"安装及使用","level":"1.15.1","depth":2,"next":{"title":"修改state的三种方式","level":"1.15.2","depth":2,"path":"vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md","ref":"vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md","articles":[]},"previous":{"title":"Vuex","level":"1.15","depth":1,"path":"vue/vuex.md","ref":"vue/vuex.md","articles":[{"title":"安装及使用","level":"1.15.1","depth":2,"path":"vue/vuex/an-zhuang-ji-shi-yong.md","ref":"vue/vuex/an-zhuang-ji-shi-yong.md","articles":[]},{"title":"修改state的三种方式","level":"1.15.2","depth":2,"path":"vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md","ref":"vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md","articles":[]},{"title":"严格模式","level":"1.15.3","depth":2,"path":"vue/vuex/yan-ge-mo-shi.md","ref":"vue/vuex/yan-ge-mo-shi.md","articles":[]},{"title":"辅助函数","level":"1.15.4","depth":2,"path":"vue/vuex/fu-zhu-han-shu.md","ref":"vue/vuex/fu-zhu-han-shu.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vuex/an-zhuang-ji-shi-yong.md","mtime":"2023-03-28T05:16:45.619Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-19T15:00:59.457Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"安装及使用","level":"1.15.1","depth":2,"next":{"title":"修改state的三种方式","level":"1.15.2","depth":2,"path":"vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md","ref":"vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md","articles":[]},"previous":{"title":"Vuex","level":"1.15","depth":1,"path":"vue/vuex.md","ref":"vue/vuex.md","articles":[{"title":"安装及使用","level":"1.15.1","depth":2,"path":"vue/vuex/an-zhuang-ji-shi-yong.md","ref":"vue/vuex/an-zhuang-ji-shi-yong.md","articles":[]},{"title":"修改state的三种方式","level":"1.15.2","depth":2,"path":"vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md","ref":"vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md","articles":[]},{"title":"严格模式","level":"1.15.3","depth":2,"path":"vue/vuex/yan-ge-mo-shi.md","ref":"vue/vuex/yan-ge-mo-shi.md","articles":[]},{"title":"四种辅助函数","level":"1.15.4","depth":2,"path":"vue/vuex/fu-zhu-han-shu.md","ref":"vue/vuex/fu-zhu-han-shu.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vuex/an-zhuang-ji-shi-yong.md","mtime":"2024-05-19T08:33:27.203Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-19T08:35:50.570Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

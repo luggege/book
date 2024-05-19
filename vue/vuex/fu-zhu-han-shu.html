@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>辅助函数 · GitBook</title>
+        <title>四种辅助函数 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -2455,7 +2455,7 @@
                 <a href="fu-zhu-han-shu.html">
             
                     
-                    辅助函数
+                    四种辅助函数
             
                 </a>
             
@@ -3034,7 +3034,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >辅助函数</a>
+        <a href="../.." >四种辅助函数</a>
     </h1>
 </div>
 
@@ -3051,7 +3051,7 @@
                                 
                                 <h3 id="&#x56DB;&#x79CD;&#x8F85;&#x52A9;&#x51FD;&#x6570;">&#x56DB;&#x79CD;&#x8F85;&#x52A9;&#x51FD;&#x6570;</h3>
 <ul>
-<li>mapState:&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x4F7F;&#x7528;&#x8F85;&#x52A9;&#x51FD;&#x6570;&#x751F;&#x6210;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#xFF0C;&#x51CF;&#x5C11;&#x4EE3;&#x7801;&#x91CF;</li>
+<li>mapState:&#xFF1A;<strong>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</strong>&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x591A;&#x4E2A;&#x72B6;&#x6001;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F7F;&#x7528;&#x8F85;&#x52A9;&#x51FD;&#x6570;&#x751F;&#x6210;<strong>&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</strong>&#xFF0C;&#x51CF;&#x5C11;&#x4EE3;&#x7801;&#x91CF;</li>
 </ul>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> { mapState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex&apos;</span>
 
@@ -3071,19 +3071,19 @@
     })
 
 
-    <span class="hljs-comment">// 2. &#x540C;&#x540D;&#x65F6;&#x6570;&#x7EC4;&#x65B9;&#x5F0F;&#xFF08;&#x5F53;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x7684;&#x540D;&#x79F0;&#x4E0E;state&#x7684;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x540D;&#x79F0;&#x4E00;&#x81F4;&#x65F6;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x7B80;&#x5199;&#x5982;&#x4E0B;&#xFF1A;</span>
+    <span class="hljs-comment">// 2. &#x540C;&#x540D;&#x65F6;&#x6570;&#x7EC4;&#x65B9;&#x5F0F;&#xFF08;&#x5F53;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x7684;&#x540D;&#x79F0;&#x4E0E;state&#x7684;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x540D;&#x79F0;&#x4E00;&#x81F4;&#x65F6;&#xFF0C;&#x5373; this.count &#x4E3A; store.state.count&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x7B80;&#x5199;&#x5982;&#x4E0B;&#xFF1A;</span>
     computed: mapState([<span class="hljs-string">&apos;count&apos;</span>])
 
 
     <span class="hljs-comment">// 3. &#x6269;&#x5C55;&#x8FD0;&#x7B97;&#x7B26;&#x6DF7;&#x5408;&#x65B9;&#x5F0F;&#xFF08;&#x4E0E;&#x5C40;&#x90E8;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x6DF7;&#x5408;&#x4F7F;&#x7528;&#xFF09;</span>
     computed: {
       localComputed(){},
-      ...mapState()
+      ...mapState({})
     }
 }
 </code></pre>
 <ul>
-<li>mapGetters&#xFF1A;&#x4EC5;&#x4EC5;&#x662F;&#x5C06;store&#x4E2D;&#x7684;getter&#x6620;&#x5C04;&#x5230;&#x5C40;&#x90E8;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</li>
+<li>mapGetters&#xFF1A;&#x4EC5;&#x4EC5;&#x662F;&#x5C06;store&#x4E2D;&#x7684;getter&#x6620;&#x5C04;&#x5230;&#x5C40;&#x90E8;<strong>&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</strong></li>
 </ul>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> { mapGetters } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex&apos;</span>
 
@@ -3099,16 +3099,16 @@
 }
 </code></pre>
 <ul>
-<li>mapMutations&#xFF1A;&#x5C06;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;method&#x6620;&#x5C04;&#x4E3A;this.$store.commit()&#x8C03;&#x7528;</li>
+<li>mapMutations&#xFF1A;&#x5C06;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;<strong>methods</strong>&#x6620;&#x5C04;&#x4E3A;this.$store.commit()&#x8C03;&#x7528;</li>
 </ul>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> { mapMutations } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex&apos;</span>
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
-    method: {
-        <span class="hljs-comment">// &#x628A;&quot;this.add()&quot;&#x6620;&#x5C04;&#x4E3A;&#x201C;this.$store.commit(&apos;increment&apos;)&#x201D;</span>
+    methods: {
+        <span class="hljs-comment">// &#x5C06;&quot;this.increment()&quot;&#x6620;&#x5C04;&#x4E3A;&#x201C;this.$store.commit(&apos;increment&apos;)&#x201D;</span>
         ...mapMutations([<span class="hljs-string">&apos;increment&apos;</span>])
 
-        <span class="hljs-comment">// &#x6216;&#x8005;</span>
+        <span class="hljs-comment">// &#x6216;&#x8005; &#x5C06;&quot;this.add()&quot;&#x6620;&#x5C04;&#x4E3A;&#x201C;this.$store.commit(&apos;increment&apos;)&#x201D;</span>
         ...mapMutations({
             add: <span class="hljs-string">&apos;increment&apos;</span>
         })
@@ -3116,19 +3116,34 @@
 }
 </code></pre>
 <ul>
-<li>mapActions&#xFF1A;&#x5C06;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;method&#x6620;&#x5C04;&#x4E3A;this.$store.dispath()&#x8C03;&#x7528;</li>
+<li>mapActions&#xFF1A;&#x5C06;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;<strong>methods</strong>&#x6620;&#x5C04;&#x4E3A;this.$store.dispath()&#x8C03;&#x7528;</li>
 </ul>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> { mapActions } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex&apos;</span>
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
-    method: {
-        <span class="hljs-comment">// &#x628A;&quot;this.add()&quot;&#x6620;&#x5C04;&#x4E3A;&#x201C;this.$store.dispath(&apos;increment&apos;)&#x201D;</span>
+    methods: {
+        <span class="hljs-comment">// &#x5C06;&quot;this.increment()&quot;&#x6620;&#x5C04;&#x4E3A;&#x201C;this.$store.dispath(&apos;increment&apos;)&#x201D;</span>
         ...mapActions([<span class="hljs-string">&apos;increment&apos;</span>])
 
-        <span class="hljs-comment">// &#x6216;&#x8005;</span>
+        <span class="hljs-comment">// &#x6216;&#x8005; &#x5C06;&quot;this.add()&quot;&#x6620;&#x5C04;&#x4E3A;&#x201C;this.$store.dispath(&apos;increment&apos;)&#x201D;</span>
         ...mapActions({
             add: <span class="hljs-string">&apos;increment&apos;</span>
         })
+    }
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// store.dispatch &#x53EF;&#x4EE5;&#x5904;&#x7406;&#x88AB;&#x89E6;&#x53D1;&#x7684; action &#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684; Promise&#xFF0C;&#x5E76;&#x4E14; dispatch &#x4ECD;&#x65E7;&#x8FD4;&#x56DE; Promise</span>
+actions: {
+    actionA({commit, disptach}, data) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((res, rej) =&gt; {
+            setTimeout(() =&gt; {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;aaaa&apos;</span>)
+            }, <span class="hljs-number">1000</span>)
+        })
+    },
+    <span class="hljs-keyword">async</span> actionB({commit, dispatch}, data) {
+        <span class="hljs-keyword">await</span> dispatch(<span class="hljs-string">&apos;actionA&apos;</span>)
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;bbbb&apos;</span>)
     }
 }
 </code></pre>
@@ -3175,7 +3190,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"辅助函数","level":"1.15.4","depth":2,"next":{"title":"vue-router","level":"1.16","depth":1,"path":"vue/vue-router.md","ref":"vue/vue-router.md","articles":[{"title":"query 和 params","level":"1.16.1","depth":2,"path":"vue/vue-router/query-he-params.md","ref":"vue/vue-router/query-he-params.md","articles":[]},{"title":"$router 和 $route","level":"1.16.2","depth":2,"path":"vue/vue-router/router-he-route.md","ref":"vue/vue-router/router-he-route.md","articles":[]},{"title":"导航守卫","level":"1.16.3","depth":2,"path":"vue/vue-router/dao-hang-shou-wei.md","ref":"vue/vue-router/dao-hang-shou-wei.md","articles":[]},{"title":"钩子函数","level":"1.16.4","depth":2,"path":"vue/vue-router/gou-zi-han-shu.md","ref":"vue/vue-router/gou-zi-han-shu.md","articles":[]},{"title":"hash & history 模式","level":"1.16.5","depth":2,"path":"vue/vue-router/hash-and-history.md","ref":"vue/vue-router/hash-and-history.md","articles":[]}]},"previous":{"title":"严格模式","level":"1.15.3","depth":2,"path":"vue/vuex/yan-ge-mo-shi.md","ref":"vue/vuex/yan-ge-mo-shi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vuex/fu-zhu-han-shu.md","mtime":"2023-03-28T05:16:45.620Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-19T15:00:59.457Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"四种辅助函数","level":"1.15.4","depth":2,"next":{"title":"vue-router","level":"1.16","depth":1,"path":"vue/vue-router.md","ref":"vue/vue-router.md","articles":[{"title":"query 和 params","level":"1.16.1","depth":2,"path":"vue/vue-router/query-he-params.md","ref":"vue/vue-router/query-he-params.md","articles":[]},{"title":"$router 和 $route","level":"1.16.2","depth":2,"path":"vue/vue-router/router-he-route.md","ref":"vue/vue-router/router-he-route.md","articles":[]},{"title":"导航守卫","level":"1.16.3","depth":2,"path":"vue/vue-router/dao-hang-shou-wei.md","ref":"vue/vue-router/dao-hang-shou-wei.md","articles":[]},{"title":"钩子函数","level":"1.16.4","depth":2,"path":"vue/vue-router/gou-zi-han-shu.md","ref":"vue/vue-router/gou-zi-han-shu.md","articles":[]},{"title":"hash & history 模式","level":"1.16.5","depth":2,"path":"vue/vue-router/hash-and-history.md","ref":"vue/vue-router/hash-and-history.md","articles":[]}]},"previous":{"title":"严格模式","level":"1.15.3","depth":2,"path":"vue/vuex/yan-ge-mo-shi.md","ref":"vue/vuex/yan-ge-mo-shi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/vuex/fu-zhu-han-shu.md","mtime":"2024-05-19T08:31:31.073Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-19T08:35:50.570Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
