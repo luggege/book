@@ -172,7 +172,7 @@
   * [安装及使用](vue/vuex/an-zhuang-ji-shi-yong.md)
   * [修改state的三种方式](vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md)
   * [严格模式](vue/vuex/yan-ge-mo-shi.md)
-  * [辅助函数](vue/vuex/fu-zhu-han-shu.md)
+  * [四种辅助函数](vue/vuex/fu-zhu-han-shu.md)
 * [vue-router](vue/vue-router.md)
   * [query 和 params](vue/vue-router/query-he-params.md)
   * [$router 和 $route](vue/vue-router/router-he-route.md)

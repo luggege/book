@@ -33,18 +33,33 @@ const store = new Vuex.Store({
     state: {
         count: 1,
         token: '',
+        todos: [
+            {id: 1, text: '...', done: true},
+            {id: 2, text: '...', done: false}
+        ]
     },
     mutations: {
         change(state) {
             state.count++
         },
-        SET_TOKEN: (state, token) => {
-          state.token = token
+        SET_TOKEN: (state, data) => {
+          state.token = data
         },
     },
     actions: {
-        commit('SET_TOKEN', response.data.token)
-
+        setToken: ({commit, dispatch}, data) {
+            commit('SET_TOKEN', response.data.token)
+        }
+    },
+    getters: {
+        doneTodos (state) {
+            return state.todos.fiter(todo => todo.done)
+        }
+    },
+    modules: {
+        moduleA,
+        moduleB,
+        ...
     }
 })
 
@@ -54,11 +69,13 @@ console.log(store.state.count)   // 1
 store.commit('change')
 
 // 2. 直接修改（多人协作容易出现问题，可开启严格模式）
-// store.state.count = 2
-console.log(store.state.count)   // 2
+store.state.count = 2          // console.log(store.state.count)   // 2
 
 // 3. dispatch分发
-store.dispatch('SET_TOKEN')
+store.dispatch('setToken', 'token...')
+
+// getters 的使用
+store.getters.doneTodos // [{id: 1, text: '...', done: true}]
 ```
 
 
