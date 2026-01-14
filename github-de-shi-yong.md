@@ -33,7 +33,8 @@
 3. 将分支 push 到仓库：git push -u origin gh-pages
 4. 切换到主分支:git checkout master        
 > 经过这一步处理，我们已经创建好 gh-pages 分支了，有了这个分支，GitHub 会自动为你分配一个访问网址：http://USERNAME.github.io/book
-5. 本地编辑器存放.md文件的位置执行(GitBook>Library>luggege>book)：gitbook build (生成_book文件夹，包含静态文件和样式文件)
+5. 本地编辑器存放.md文件的位置执行(GitBook>Library>luggege>book)，（实际做法是另外单独新建book目录copy过来md文件，为了保存master分支代码）
+：gitbook build (生成_book文件夹，包含静态文件和样式文件)
 6. cd .. 退出一层克隆远程仓库的gh-pages分支并保存为book_build文件夹: git clone -b gh-pages https://github.com/luggege/book.git book_build
 7. 复制_book中的静态文件到book_build中
 8. 将静态文件push到远程仓库book的gh-pages分支上

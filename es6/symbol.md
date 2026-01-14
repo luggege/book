@@ -7,7 +7,7 @@
 > Symbol值通过**Symbol函数**生成
 
 ```js
-1. typeof 类型是 symbol
+// 1. typeof 类型是 symbol
 let symbol1 = Symbol()
 symbol1          // Symbol()
 
@@ -16,10 +16,10 @@ symbol2          // Symbol()
 
 typeof symbol1   // "symbol"
 
-2. 无参的情况不等
+// 2. 无参的情况不等
 symbol1 === symbol2   // false
 
-3. 参数只表示对当前Symbol的描述，也不等
+// 3. 参数只表示对当前Symbol的描述，也不等
 let sym1 = Symbol('foo')
 sym1             // Symbol(foo)
 
@@ -28,7 +28,7 @@ sym2             // Symbol(foo)
 
 sym1 === sym2    // false
 
-4. 参数为对象时调用对象内部的toString方法
+// 4. 参数为对象时调用对象内部的toString方法
 var obj = {
     toString(){
         return 'abc'
@@ -37,18 +37,18 @@ var obj = {
 let sym4 = Symbol(obj)
 sym4             // Symbol(abc)
 
-5. 与其他类型的值参与运算会报错
+// 5. 与其他类型的值参与运算会报错
 'I am string' + sym4
 // VM62296:1 Uncaught TypeError: Cannot convert a Symbol value to a string
 
-6. Symbol值可显示转为字符串
+// 6. Symbol值可显示转为字符串
 String(sym4)      // "Symbol(abc)"
 sym4.toString()   // "Symbol(abc)"
 
-7. Symbol值可显示转为布尔值
+// 7. Symbol值可显示转为布尔值
 Boolean(sym4)     // true
 
-8. Symbol值转为Number类型报错
+// 8. Symbol值转为Number类型报错
 Number(sym4)
 // VM62568:1 Uncaught TypeError: Cannot convert a Symbol value to a number
 ```

@@ -14,9 +14,9 @@ Netscape Communicator的事件流是事件**捕获流**。
 
 #### 事件执行的顺序
 
-**先捕获，后冒泡**
+> **先捕获，后冒泡**
 
-所有事件的**顺序**：其他元素**捕获**阶段事件 ==》**目标阶段**（按注册事件**先后顺序**）==〉其他元素**冒泡**阶段事件
+* 所有事件的**顺序**：其他元素**捕获**阶段事件 ==》**目标阶段**（按注册事件**先后顺序**）==〉其他元素**冒泡**阶段事件
 
 ```js
 <div id="div1">
@@ -44,9 +44,8 @@ document.getElementById('div4').addEventListener("click",function(){alert("4");}
 
 **利用冒泡原理实现事件委托（事件代理**）
 
-#### mouseover与mouseout是冒泡的
-
-#### mouseenter与mouseleave是不冒泡的
+* mouseover与mouseout是冒泡的
+* mouseenter与mouseleave是不冒泡的
 
 **阻止冒泡行为**
 

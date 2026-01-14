@@ -18,7 +18,7 @@ var flag = true;
 var un;
 var nu = null;
 
-typeof 类型: string，number，boolean，undefined，object，function
+typeof 类型: string、number、boolean、undefined、object、function、symbol
 ```
 
 _上面定义的这些值类型的数据在内存中的存储如下_

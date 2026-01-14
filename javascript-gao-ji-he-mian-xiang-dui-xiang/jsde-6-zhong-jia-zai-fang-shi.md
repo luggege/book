@@ -6,13 +6,13 @@
    <script src="index.js"></script>
    ```
 
-2. async模式：异步加载JS，但加载完立即执行
+2. async模式：异步加载JS，但**加载完立即执行js，**再继续解析文档
 
    ```js
    <script async src="index.js"></script>
    ```
 
-3. defer模式：异步加载JS，但是文档加载完顺序执行JS
+3. defer模式：异步加载JS，但是**文档加载完顺序执行JS**
 
    ```js
    <script defer src="index.js"></script>
