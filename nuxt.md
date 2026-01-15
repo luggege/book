@@ -112,7 +112,7 @@ validate: 参数校验，校验失败，则自动跳转到错误页面
 
 配置
 
-**路由守卫：**
+**路由守卫**
 
 * 前置：依赖中间件middleware、插件
 * * 全局守卫：nuxt.config 指向 middleware（redirect\(\)）
