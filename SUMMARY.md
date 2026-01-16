@@ -144,6 +144,7 @@
   * [Map数据结构](es6/mapshu-ju-jie-gou.md)
   * [class](/es6/class.md)
   * [super](/es6/super.md)
+  * [Proxy](es6/proxy.md)
 * [AngularJs](angularjs/README.md)
   * [modules](angularjs/modules.md)
   * [指令的使用](angularjs/zhi-ling-de-shi-yong.md)
