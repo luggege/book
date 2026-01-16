@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Object.setPrototypeOf()/Object.getPrototypeOf() · GitBook</title>
+        <title>Proxy · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="kuo-zhan-yun-suan-fu.html" />
+    <link rel="next" href="../angularjs/" />
     
     
-    <link rel="prev" href="assign.html" />
+    <link rel="prev" href="super.html" />
     
 
     </head>
@@ -1900,7 +1900,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.13.6" data-path="objectsetprototypeofobjectgetprototypeof.html">
+        <li class="chapter " data-level="1.13.6" data-path="objectsetprototypeofobjectgetprototypeof.html">
             
                 <a href="objectsetprototypeofobjectgetprototypeof.html">
             
@@ -2056,7 +2056,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.18" data-path="proxy.html">
+        <li class="chapter active" data-level="1.13.18" data-path="proxy.html">
             
                 <a href="proxy.html">
             
@@ -3009,7 +3009,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Object.setPrototypeOf()/Object.getPrototypeOf()</a>
+        <a href=".." >Proxy</a>
     </h1>
 </div>
 
@@ -3024,52 +3024,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="objectsetprototypeofobj-proto&#xFF1A;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;">Object.setPrototypeOf(obj, proto)&#xFF1A;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;</h4>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> proto = {}
-<span class="hljs-keyword">let</span> obj = {
-    x: <span class="hljs-number">10</span>
-}
-<span class="hljs-built_in">Object</span>.setPrototypeOf(obj, proto)
-
-proto.y = <span class="hljs-number">20</span>
-proto.z = <span class="hljs-number">40</span>
-
-obj.x   <span class="hljs-comment">// 10</span>
-obj.y   <span class="hljs-comment">// 20</span>
-obj.z   <span class="hljs-comment">// 40</span>
-</code></pre>
-<pre><code class="lang-js"><span class="hljs-comment">// &#x5982;&#x679C;&#x53C2;&#x6570;&#x4E0D;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x4F1A;&#x8F6C;&#x4E3A;&#x5BF9;&#x8C61;</span>
-<span class="hljs-built_in">Object</span>.setPrototypeOf(<span class="hljs-number">1</span>, {})     <span class="hljs-comment">// 1</span>
-<span class="hljs-built_in">Object</span>.setPrototypeOf(<span class="hljs-string">&apos;1&apos;</span>, {})   <span class="hljs-comment">// &quot;1&quot;</span>
-<span class="hljs-built_in">Object</span>.setPrototypeOf(<span class="hljs-literal">true</span>, {})  <span class="hljs-comment">// true</span>
-
-<span class="hljs-comment">// &#x7531;&#x4E8E;undefined&#x548C;null&#x65E0;&#x6CD5;&#x8F6C;&#x4E3A;&#x5BF9;&#x8C61;&#xFF0C;&#x4F1A;&#x62A5;&#x9519;</span>
-<span class="hljs-built_in">Object</span>.setPrototypeOf(<span class="hljs-literal">undefined</span>, {})
-<span class="hljs-built_in">Object</span>.setPrototypeOf(<span class="hljs-literal">null</span>, {})
-<span class="hljs-comment">// Uncaught TypeError: Object.setPrototypeOf called on null or undefined</span>
-</code></pre>
-<h4 id="objectgetprototypeofobj&#xFF1A;&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x5BF9;&#x8C61;">Object.getPrototypeOf(obj)&#xFF1A;&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x5BF9;&#x8C61;</h4>
-<pre><code class="lang-js"><span class="hljs-built_in">Object</span>.getPrototypeOf(obj)             <span class="hljs-comment">// {y: 20, z: 40}</span>
-<span class="hljs-built_in">Object</span>.getPrototypeOf(obj) === proto   <span class="hljs-comment">// true</span>
-</code></pre>
-<pre><code class="lang-js"><span class="hljs-comment">// &#x5982;&#x679C;&#x53C2;&#x6570;&#x4E0D;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x8F6C;&#x4E3A;&#x5BF9;&#x8C61;</span>
-<span class="hljs-built_in">Object</span>.getPrototypeOf(<span class="hljs-number">1</span>)  <span class="hljs-comment">// &#x7B49;&#x540C;&#x4E8E; Object.getPrototypeOf(Number(1))</span>
-<span class="hljs-comment">// Number {0, constructor: &#x192;, t...</span>
-<span class="hljs-built_in">Object</span>.getPrototypeOf(<span class="hljs-string">&apos;1&apos;</span>) <span class="hljs-comment">// &#x7B49;&#x540C;&#x4E8E; Object.getPrototypeOf(String(1))</span>
-<span class="hljs-comment">// String {&quot;&quot;, constructor: &#x192;, ...</span>
-<span class="hljs-built_in">Object</span>.getPrototypeOf(<span class="hljs-literal">true</span>) <span class="hljs-comment">// &#x7B49;&#x540C;&#x4E8E; Object.getPrototypeOf(Boolean(1))</span>
-<span class="hljs-comment">// Boolean {false, constructor: &#x192;, toString: &#x192;, valueOf: &#x192;}</span>
-
-<span class="hljs-built_in">Object</span>.getPrototypeOf(<span class="hljs-number">1</span>) === <span class="hljs-built_in">Number</span>.prototype <span class="hljs-comment">// true</span>
-<span class="hljs-built_in">Object</span>.getPrototypeOf(<span class="hljs-string">&apos;1&apos;</span>) === <span class="hljs-built_in">String</span>.prototype <span class="hljs-comment">// true</span>
-<span class="hljs-built_in">Object</span>.getPrototypeOf(<span class="hljs-literal">true</span>) === <span class="hljs-built_in">Boolean</span>.prototype <span class="hljs-comment">// true</span>
-
-<span class="hljs-comment">// &#x7531;&#x4E8E;undefined&#x548C;null&#x65E0;&#x6CD5;&#x8F6C;&#x4E3A;&#x5BF9;&#x8C61;&#xFF0C;&#x4F1A;&#x62A5;&#x9519;</span>
-<span class="hljs-built_in">Object</span>.getPrototypeOf(<span class="hljs-literal">undefined</span>)
-<span class="hljs-built_in">Object</span>.getPrototypeOf(<span class="hljs-literal">null</span>)
-<span class="hljs-comment">// Uncaught TypeError: Cannot convert undefined or null to object&#x3001;</span>
-</code></pre>
-<h4 id="protoisprototypeofobj&#xFF1A;&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x94FE;&#x4E0A;">proto.isPrototypeOf(obj)&#xFF1A;&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x94FE;&#x4E0A;</h4>
+                                <h3 id="proxy">Proxy</h3>
+<blockquote>
+<p>&#x5BF9;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x5C42;&#x62E6;&#x622A;</p>
+</blockquote>
 
                                 
                                 </section>
@@ -3097,12 +3055,12 @@ obj.z   <span class="hljs-comment">// 40</span>
 
             
                 
-                <a href="assign.html" class="navigation navigation-prev " aria-label="Previous page: Object.assign()">
+                <a href="super.html" class="navigation navigation-prev " aria-label="Previous page: super">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="kuo-zhan-yun-suan-fu.html" class="navigation navigation-next " aria-label="Next page: 扩展运算符">
+                <a href="../angularjs/" class="navigation navigation-next " aria-label="Next page: AngularJs">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -3113,7 +3071,7 @@ obj.z   <span class="hljs-comment">// 40</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Object.setPrototypeOf()/Object.getPrototypeOf()","level":"1.13.6","depth":2,"next":{"title":"扩展运算符","level":"1.13.7","depth":2,"path":"es6/kuo-zhan-yun-suan-fu.md","ref":"es6/kuo-zhan-yun-suan-fu.md","articles":[]},"previous":{"title":"Object.assign()","level":"1.13.5","depth":2,"path":"es6/assign.md","ref":"es6/assign.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"es6/objectsetprototypeofobjectgetprototypeof.md","mtime":"2023-03-28T05:16:45.519Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-01-16T10:10:05.667Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Proxy","level":"1.13.18","depth":2,"next":{"title":"AngularJs","level":"1.14","depth":1,"path":"angularjs/README.md","ref":"angularjs/README.md","articles":[{"title":"modules","level":"1.14.1","depth":2,"path":"angularjs/modules.md","ref":"angularjs/modules.md","articles":[]},{"title":"指令的使用","level":"1.14.2","depth":2,"path":"angularjs/zhi-ling-de-shi-yong.md","ref":"angularjs/zhi-ling-de-shi-yong.md","articles":[]},{"title":"数字动画","level":"1.14.3","depth":2,"path":"angularjs/shu-zi-dong-hua.md","ref":"angularjs/shu-zi-dong-hua.md","articles":[]}]},"previous":{"title":"super","level":"1.13.17","depth":2,"path":"es6/super.md","ref":"es6/super.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"es6/proxy.md","mtime":"2026-01-16T10:09:22.273Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-01-16T10:10:05.667Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
