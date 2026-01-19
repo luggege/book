@@ -3024,14 +3024,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="arrayfrom&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x7C7B;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;&#x6216;&#x53EF;&#x904D;&#x5386;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;&#x771F;&#x6B63;&#x7684;&#x6570;&#x7EC4;">Array.from()&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;*&#x7C7B;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;*&#x6216;*&#x53EF;&#x904D;&#x5386;&#x5BF9;&#x8C61;*&#x8F6C;&#x6362;&#x6210;&#x771F;&#x6B63;&#x7684;*&#x6570;&#x7EC4;*</h3>
+                                <h3 id="arrayfrom&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x7C7B;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;&#x6216;&#x53EF;&#x904D;&#x5386;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;&#x771F;&#x6B63;&#x7684;&#x6570;&#x7EC4;">Array.from()&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;*<em>&#x7C7B;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;</em>*&#x6216;*<em>&#x53EF;&#x904D;&#x5386;&#x5BF9;&#x8C61;</em>*&#x8F6C;&#x6362;&#x6210;&#x771F;&#x6B63;&#x7684;*<em>&#x6570;&#x7EC4;</em>*</h3>
 <blockquote>
-<p>&#x7C7B;&#x6570;&#x7EC4;/&#x4F2A;&#x6570;&#x7EC4;&#xFF1A;&#x6309;&#x7167;&#x7D22;&#x5F15;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;&#x4E14;&#x6709;length&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;</p>
+<p>&#x7C7B;&#x6570;&#x7EC4;/&#x4F2A;&#x6570;&#x7EC4;&#xFF1A;&#x6309;&#x7167;&#x7D22;&#x5F15;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;&#x4E14;&#x6709;<strong>length</strong>&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;</p>
 </blockquote>
 <ul>
 <li>&#x5C06;<strong>&#x7C7B;&#x6570;&#x7EC4;</strong>&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x4E3A;&#x771F;&#x6B63;&#x7684;&#x6570;&#x7EC4;</li>
-</ul>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> arrayLike = {
+<li><pre><code class="lang-js"><span class="hljs-keyword">let</span> arrayLike = {
     <span class="hljs-number">0</span>: <span class="hljs-string">&apos;tom&apos;</span>, 
     <span class="hljs-number">1</span>: <span class="hljs-string">&apos;65&apos;</span>,
     <span class="hljs-number">2</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>,
@@ -3040,11 +3039,21 @@
 }
 <span class="hljs-keyword">let</span> arr = <span class="hljs-built_in">Array</span>.from(arrayLike)
 <span class="hljs-comment">// [&quot;tom&quot;, &quot;65&quot;, &quot;&#x7537;&quot;, [&apos;jane&apos;,&apos;john&apos;,&apos;Mary&apos;]]</span>
+
+<span class="hljs-comment">// ES5&#x7684;&#x5199;&#x6CD5;</span>
+<span class="hljs-comment">// [].slice.call(arrayLike)</span>
 </code></pre>
-<ul>
-<li>&#x5C06;<strong>Set&#x7ED3;&#x6784;</strong>&#x7684;&#x6570;&#x7EC4;&#x8F6C;&#x4E3A;&#x771F;&#x6B63;&#x7684;&#x6570;&#x7EC4;</li>
-</ul>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>])
+</li>
+<li><p>&#x51FD;&#x6570;&#x5185;&#x90E8;&#x7684;<strong>arguments&#x5BF9;&#x8C61;</strong>&#x8F6C;&#x4E3A;&#x771F;&#x6B63;&#x7684;&#x5BF9;&#x8C61;</p>
+</li>
+<li><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> args = <span class="hljs-built_in">Array</span>.from(<span class="hljs-built_in">arguments</span>)
+}
+</code></pre>
+</li>
+<li><p>&#x5C06;<strong>Set&#x7ED3;&#x6784;</strong>&#x7684;&#x6570;&#x7EC4;&#x8F6C;&#x4E3A;&#x771F;&#x6B63;&#x7684;&#x6570;&#x7EC4;</p>
+</li>
+<li><pre><code class="lang-js"><span class="hljs-keyword">let</span> set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>])
 <span class="hljs-keyword">let</span> arr1 = <span class="hljs-built_in">Array</span>.from(set)
 <span class="hljs-comment">// [1, 2, 3]</span>
 
@@ -3052,18 +3061,25 @@
 <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Array</span>.from(set, item =&gt; item + <span class="hljs-number">1</span>))
 <span class="hljs-comment">// [2, 3, 4]</span>
 </code></pre>
-<ul>
-<li>&#x5C06;<strong>&#x5B57;&#x7B26;&#x4E32;</strong>&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x7EC4;</li>
-</ul>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> str = <span class="hljs-built_in">Array</span>.from(<span class="hljs-string">&apos;abbcd&apos;</span>)
+</li>
+<li><p>&#x5C06;<strong>&#x5B57;&#x7B26;&#x4E32;</strong>&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x7EC4;</p>
+</li>
+<li><pre><code class="lang-js"><span class="hljs-keyword">const</span> str = <span class="hljs-built_in">Array</span>.from(<span class="hljs-string">&apos;abbcd&apos;</span>)
 <span class="hljs-comment">// [&quot;a&quot;, &quot;b&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span>
 </code></pre>
-<ul>
-<li>Array.from&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x771F;&#x6B63;&#x7684;&#x6570;&#x7EC4;</li>
-</ul>
-<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Array</span>.from([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>]))
-<span class="hljs-comment">// [1, 2, 3, 3]</span>
+</li>
+<li><p>Array.from&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x51FD;&#x6570;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x6570;&#x7EC4;&#x7684;map()&#x65B9;&#x6CD5;</p>
+</li>
+<li><pre><code class="lang-js"><span class="hljs-built_in">Array</span>.from([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], x =&gt; x * x)
+<span class="hljs-comment">// [1, 4, 9, 16]</span>
+
+<span class="hljs-comment">//&#x7B49;&#x540C;&#x4E8E;</span>
+<span class="hljs-built_in">Array</span>.from(arrayLike).map(x =&gt; x * x)
 </code></pre>
+<pre><code class="lang-js"><span class="hljs-built_in">Array</span>.from({length: <span class="hljs-number">3</span>}, x =&gt; <span class="hljs-string">&apos;jack&apos;</span>)
+</code></pre>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -3107,7 +3123,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Array.from()","level":"1.13.12","depth":2,"next":{"title":"Symbol","level":"1.13.13","depth":2,"path":"es6/symbol.md","ref":"es6/symbol.md","articles":[]},"previous":{"title":"includes","level":"1.13.11","depth":2,"path":"es6/includes.md","ref":"es6/includes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"es6/arrayfrom.md","mtime":"2023-03-28T05:16:45.514Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-01-16T10:10:05.667Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Array.from()","level":"1.13.12","depth":2,"next":{"title":"Symbol","level":"1.13.13","depth":2,"path":"es6/symbol.md","ref":"es6/symbol.md","articles":[]},"previous":{"title":"includes","level":"1.13.11","depth":2,"path":"es6/includes.md","ref":"es6/includes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"es6/arrayfrom.md","mtime":"2026-01-19T10:03:01.214Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-01-19T10:03:47.290Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
