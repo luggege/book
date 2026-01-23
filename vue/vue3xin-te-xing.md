@@ -1,6 +1,8 @@
 ### Vue3新特性
 
-* ES5：defineProperty：劫持----&gt; ES6：Proxy：拦截\(解决之前监听数组的漏洞\)
+* ES5：defineProperty：劫持 ----&gt; ES6：Proxy：拦截
+* * defineProperty：无法监听动态新增属性，需要$set
+  * Proxy：解决之前监听数组的漏洞，如：可直接push、自动追踪深层嵌套对象变化、内存占用显著降低、渲染性能优化
 * 包体积更小（按需打包）
 * 虚拟dom
 * TypeScript
@@ -9,9 +11,9 @@
 
 #### vue3的生命周期
 
-|   vue2.x | vue3.x |
+| vue2.x | vue3.x |
 | :--- | :--- |
-|   beforeCreated | Not needed\* |
+| beforeCreated | Not needed\* |
 | `created` | Not needed\* |
 | `beforeMount` | `onBeforeMount` |
 | `mounted` | `onMounted` |
@@ -24,8 +26,6 @@
 | `renderTriggered` | `onRenderTriggered` |
 | `activated` | `onActivated` |
 | `deactivated` | `onDeactivated` |
-
-
 
 
 
