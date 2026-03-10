@@ -61,6 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="yuan-xing-mo-shi.html" />
+    
     
     <link rel="prev" href="dan-li-mo-shi.html" />
     
@@ -3062,6 +3064,136 @@
             
         </li>
     
+        <li class="chapter " data-level="1.23.3" data-path="yuan-xing-mo-shi.html">
+            
+                <a href="yuan-xing-mo-shi.html">
+            
+                    
+                    原型模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.4" data-path="dai-li-mo-shi.html">
+            
+                <a href="dai-li-mo-shi.html">
+            
+                    
+                    代理模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.5" data-path="zhuang-shi-qi-mo-shi.html">
+            
+                <a href="zhuang-shi-qi-mo-shi.html">
+            
+                    
+                    装饰器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.6" data-path="qiao-jie-mo-shi.html">
+            
+                <a href="qiao-jie-mo-shi.html">
+            
+                    
+                    桥接模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.7" data-path="guan-cha-zhe-mo-5f0f-fa-5e03-ding-yue-mo-shi.html">
+            
+                <a href="guan-cha-zhe-mo-5f0f-fa-5e03-ding-yue-mo-shi.html">
+            
+                    
+                    观察者模式/发布-订阅模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.8" data-path="ce-lve-mo-shi.html">
+            
+                <a href="ce-lve-mo-shi.html">
+            
+                    
+                    策略模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.9" data-path="mo-kuai-mo-shi.html">
+            
+                <a href="mo-kuai-mo-shi.html">
+            
+                    
+                    模块模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.10" data-path="mvcmvvm.html">
+            
+                <a href="mvcmvvm.html">
+            
+                    
+                    MVC/MVVM模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.11" data-path="ti-gong-zhe-mo-shi.html">
+            
+                <a href="ti-gong-zhe-mo-shi.html">
+            
+                    
+                    提供者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.12" data-path="gou-zi-mo-shi.html">
+            
+                <a href="gou-zi-mo-shi.html">
+            
+                    
+                    钩子模式
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -3114,7 +3246,7 @@
                                 
                                 <h3 id="&#x5DE5;&#x5382;&#x6A21;&#x5F0F;">&#x5DE5;&#x5382;&#x6A21;&#x5F0F;</h3>
 <blockquote>
-<p>&#x53EF;&#x521B;&#x5EFA;&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;&#x5DE5;&#x5382;&#x51FD;&#x6570;&#x91CC;&#x60F3;&#x8981;&#x5565;&#x5B9A;&#x5236;&#x5565;&#x3002;Vue3&#x6539;&#x4E3A;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;createApp()&#x521B;&#x5EFA;&#x72EC;&#x7ACB;&#x7684;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B9E;&#x4F8B;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x914D;&#x7F6E;&#x548C;&#x63D2;&#x4EF6;&#xFF0C;&#x4E92;&#x4E0D;&#x5E72;&#x6270;</p>
+<p>&#x53EF;&#x521B;&#x5EFA;<strong>&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;</strong>&#x3002;&#x5DE5;&#x5382;&#x51FD;&#x6570;&#x91CC;&#x60F3;&#x8981;&#x5565;&#x5B9A;&#x5236;&#x5565;&#x3002;Vue3&#x6539;&#x4E3A;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;createApp()&#x521B;&#x5EFA;&#x72EC;&#x7ACB;&#x7684;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B9E;&#x4F8B;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x914D;&#x7F6E;&#x548C;&#x63D2;&#x4EF6;&#xFF0C;&#x4E92;&#x4E0D;&#x5E72;&#x6270;</p>
 </blockquote>
 <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createPerson</span> (<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">let</span> o = {
@@ -3133,7 +3265,7 @@ p3 <span class="hljs-keyword">instanceof</span> createPerson    <span class="hlj
 p3.sayHi === p4.sayHi         <span class="hljs-comment">//false&#xFF0C;&#x8BF4;&#x660E;&#x5DE5;&#x5382;&#x5B9E;&#x4F8B;&#x5B8C;&#x5168;&#x9694;&#x79BB;&#xFF0C;&#x8D44;&#x6E90;&#x4E0D;&#x5171;&#x4EAB;</span>
 
 
-<span class="hljs-keyword">const</span> p5 = <span class="hljs-keyword">new</span> createPerson()  <span class="hljs-comment">// &#x548C;p3&#x3001;p4&#x521B;&#x5EFA;&#x51FA;&#x6765;&#x7684;&#x5BF9;&#x8C61;&#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x4F7F;&#x7528; new &#x5173;&#x952E;&#x5B57;</span>
+<span class="hljs-keyword">const</span> p5 = <span class="hljs-keyword">new</span> createPerson()  <span class="hljs-comment">// &#x548C;p3&#x3001;p4&#x521B;&#x5EFA;&#x51FA;&#x6765;&#x7684;&#x5BF9;&#x8C61;&#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; new &#x5173;&#x952E;&#x5B57;</span>
 </code></pre>
 
                                 
@@ -3162,10 +3294,14 @@ p3.sayHi === p4.sayHi         <span class="hljs-comment">//false&#xFF0C;&#x8BF4;
 
             
                 
-                <a href="dan-li-mo-shi.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 单例模式">
+                <a href="dan-li-mo-shi.html" class="navigation navigation-prev " aria-label="Previous page: 单例模式">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="yuan-xing-mo-shi.html" class="navigation navigation-next " aria-label="Next page: 原型模式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -3174,7 +3310,7 @@ p3.sayHi === p4.sayHi         <span class="hljs-comment">//false&#xFF0C;&#x8BF4;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"工厂模式","level":"1.23.2","depth":2,"previous":{"title":"单例模式","level":"1.23.1","depth":2,"path":"she-ji-mo-shi/dan-li-mo-shi.md","ref":"she-ji-mo-shi/dan-li-mo-shi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"she-ji-mo-shi/gong-chang-mo-shi.md","mtime":"2026-03-06T09:09:00.535Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-09T10:29:41.956Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"工厂模式","level":"1.23.2","depth":2,"next":{"title":"原型模式","level":"1.23.3","depth":2,"path":"she-ji-mo-shi/yuan-xing-mo-shi.md","ref":"she-ji-mo-shi/yuan-xing-mo-shi.md","articles":[]},"previous":{"title":"单例模式","level":"1.23.1","depth":2,"path":"she-ji-mo-shi/dan-li-mo-shi.md","ref":"she-ji-mo-shi/dan-li-mo-shi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"she-ji-mo-shi/gong-chang-mo-shi.md","mtime":"2026-03-10T02:59:50.659Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-10T03:44:47.127Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
