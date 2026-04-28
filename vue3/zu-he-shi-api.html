@@ -61,7 +61,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../react.html" />
+    <link rel="next" href="v-foryu-v-if-gong-tong-shi-yong.html" />
     
     
     <link rel="prev" href="../vue/vue3xin-te-xing.html" />
@@ -2580,6 +2580,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.18.5" data-path="v-foryu-v-if-gong-tong-shi-yong.html">
+            
+                <a href="v-foryu-v-if-gong-tong-shi-yong.html">
+            
+                    
+                    v-for与v-if共同使用
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -3259,7 +3272,7 @@
                                 
                                 <h3 id="&#x7EC4;&#x5408;&#x5F0F;api">&#x7EC4;&#x5408;&#x5F0F;API</h3>
 <blockquote>
-<p>&#x7EC4;&#x5408;&#x5F0F;API&#x662F;&#x4E00;&#x7CFB;&#x5217;API&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x4F7F;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x4E0D;&#x7528;&#x50CF;&#x58F0;&#x660E;&#x9009;&#x9879;&#x7684;&#x65B9;&#x5F0F;&#x4E66;&#x5199;Vue&#x7EC4;&#x4EF6;</p>
+<p>&#x7EC4;&#x5408;&#x5F0F; API &#x901A;&#x5E38;&#x4F1A;&#x4E0E;<a href="https://cn.vuejs.org/api/sfc-script-setup.html" target="_blank"><code>&lt;script setup&gt;</code></a>&#x642D;&#x914D;&#x4F7F;&#x7528;&#xFF0C;&#x8FD9;&#x4E2A;setup&#x5C5E;&#x6027;&#x544A;&#x8BC9;vue&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x505A;&#x4E00;&#x4E9B;&#x5904;&#x7406;&#x3002;&#x7EC4;&#x5408;&#x5F0F;API&#x662F;&#x4E00;&#x7CFB;&#x5217;API&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x4F7F;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x4E0D;&#x7528;&#x50CF;&#x58F0;&#x660E;&#x9009;&#x9879;&#x7684;&#x65B9;&#x5F0F;&#x4E66;&#x5199;Vue&#x7EC4;&#x4EF6;</p>
 </blockquote>
 <pre><code class="lang-js">&lt;script setup&gt;
 
@@ -3289,6 +3302,30 @@ onMounted(() =&gt; {
 </li>
 <li>&#x7EC4;&#x5408;&#x5F0F;API&#x66F4;&#x9002;&#x7528;&#x4E8E;&#x5927;&#x578B;&#x9879;&#x76EE;&#xFF0C;&#x9009;&#x9879;&#x5F0F;API&#x9002;&#x7528;&#x4E8E;&#x4E2D;&#x5C0F;&#x578B;&#x9879;&#x76EE;</li>
 </ul>
+<h3 id="&#x9009;&#x9879;&#x5F0F;api">&#x9009;&#x9879;&#x5F0F;API</h3>
+<blockquote>
+<p>&#x4F8B;&#x5982;vue2&#x7684; data&#x3001;methods&#x3001;mounted&#xFF0C;&#x9009;&#x9879;&#x6240;<strong>&#x5B9A;&#x4E49;&#x7684;&#x5C5E;&#x6027;</strong>&#x90FD;&#x4F1A;&#x66B4;&#x9732;&#x5728;<strong>&#x51FD;&#x6570;&#x5185;&#x90E8;&#x7684; this &#x4E0A;</strong>&#xFF0C;&#x6307;&#x5411;<strong>&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x7684;&#x5B9E;&#x4F8B;</strong></p>
+</blockquote>
+<pre><code class="lang-js">&lt;script&gt;
+export default {
+    data() {
+        return {}
+    },
+    methods: {},
+    mounted() {},
+    setup() {
+        const count2 = ref(0)
+        function increment2 () {
+          count2.value++
+        }
+        return {  // &#x6BCF;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x548C;&#x65B9;&#x6CD5;&#x90FD;&#x9700;&#x8981;&#x66B4;&#x9732;&#x51FA;&#x53BB;--&#x7E41;&#x7410;&#xFF0C;&#x4E0D;&#x5982;&lt;script setup&gt;&#x7B80;&#x4FBF;
+          count2,
+          increment2
+        }
+    }
+}
+&lt;/script&gt;
+</code></pre>
 
                                 
                                 </section>
@@ -3321,7 +3358,7 @@ onMounted(() =&gt; {
                 </a>
                 
                 
-                <a href="../react.html" class="navigation navigation-next " aria-label="Next page: React">
+                <a href="v-foryu-v-if-gong-tong-shi-yong.html" class="navigation navigation-next " aria-label="Next page: v-for与v-if共同使用">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -3332,7 +3369,7 @@ onMounted(() =&gt; {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"组合式API","level":"1.18.4","depth":2,"next":{"title":"React","level":"1.19","depth":1,"path":"react.md","ref":"react.md","articles":[{"title":"react-router","level":"1.19.1","depth":2,"path":"react/react-router.md","ref":"react/react-router.md","articles":[{"title":"路由传参方式","level":"1.19.1.1","depth":3,"path":"react/react-router/lu-you-chuan-can-fang-shi.md","ref":"react/react-router/lu-you-chuan-can-fang-shi.md","articles":[]},{"title":"编程式路由导航","level":"1.19.1.2","depth":3,"path":"react/react-router/bian-cheng-shi-lu-you-dao-hang.md","ref":"react/react-router/bian-cheng-shi-lu-you-dao-hang.md","articles":[]}]},{"title":"jsx和diff","level":"1.19.2","depth":2,"path":"react/jsx.md","ref":"react/jsx.md","articles":[]},{"title":"定义组件的方式","level":"1.19.3","depth":2,"path":"react/reactding-yi-zu-jian-de-fang-shi.md","ref":"react/reactding-yi-zu-jian-de-fang-shi.md","articles":[]},{"title":"定义ref的方式","level":"1.19.4","depth":2,"path":"react/ref.md","ref":"react/ref.md","articles":[]},{"title":"生命周期","level":"1.19.5","depth":2,"path":"react/sheng-ming-zhou-qi.md","ref":"react/sheng-ming-zhou-qi.md","articles":[]},{"title":"react脚手架配置代理的方式","level":"1.19.6","depth":2,"path":"react/reactjiao-shou-jia-pei-zhi-dai-li-de-fang-shi.md","ref":"react/reactjiao-shou-jia-pei-zhi-dai-li-de-fang-shi.md","articles":[]},{"title":"组件通信","level":"1.19.7","depth":2,"path":"react/zu-jian-tong-xin.md","ref":"react/zu-jian-tong-xin.md","articles":[]},{"title":"setState","level":"1.19.8","depth":2,"path":"react/setstate.md","ref":"react/setstate.md","articles":[]},{"title":"lazy-load","level":"1.19.9","depth":2,"path":"react/lazy-load.md","ref":"react/lazy-load.md","articles":[]},{"title":"hooks","level":"1.19.10","depth":2,"path":"react/hooks.md","ref":"react/hooks.md","articles":[]},{"title":"Fragment","level":"1.19.11","depth":2,"path":"react/fragment.md","ref":"react/fragment.md","articles":[]},{"title":"context","level":"1.19.12","depth":2,"path":"react/context.md","ref":"react/context.md","articles":[]},{"title":"PureComponent","level":"1.19.13","depth":2,"path":"react/purecomponent.md","ref":"react/purecomponent.md","articles":[]},{"title":"renderProps","level":"1.19.14","depth":2,"path":"react/renderprops.md","ref":"react/renderprops.md","articles":[]},{"title":"errorBoundary","level":"1.19.15","depth":2,"path":"react/errorboundary.md","ref":"react/errorboundary.md","articles":[]},{"title":"Redux","level":"1.19.16","depth":2,"path":"react/redux.md","ref":"react/redux.md","articles":[]}]},"previous":{"title":"Vue3新特性","level":"1.18.3","depth":2,"path":"vue/vue3xin-te-xing.md","ref":"vue/vue3xin-te-xing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue3/zu-he-shi-api.md","mtime":"2026-03-10T10:16:35.537Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-11T07:03:20.345Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"组合式API","level":"1.18.4","depth":2,"next":{"title":"v-for与v-if共同使用","level":"1.18.5","depth":2,"path":"vue3/v-foryu-v-if-gong-tong-shi-yong.md","ref":"vue3/v-foryu-v-if-gong-tong-shi-yong.md","articles":[]},"previous":{"title":"Vue3新特性","level":"1.18.3","depth":2,"path":"vue/vue3xin-te-xing.md","ref":"vue/vue3xin-te-xing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue3/zu-he-shi-api.md","mtime":"2026-04-10T09:32:22.844Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-04-28T03:24:18.602Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
