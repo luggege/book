@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>watch · GitBook</title>
+        <title>watch和watchEffect · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -2611,7 +2611,7 @@
                 <a href="reactive.html">
             
                     
-                    reactive
+                    ref和reactive声明响应式对象
             
                 </a>
             
@@ -2624,7 +2624,7 @@
                 <a href="watch.html">
             
                     
-                    watch
+                    watch和watchEffect
             
                 </a>
             
@@ -3294,7 +3294,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >watch</a>
+        <a href=".." >watch和watchEffect</a>
     </h1>
 </div>
 
@@ -3310,6 +3310,18 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="watch">watch</h3>
+<ul>
+<li>&#x9ED8;&#x8BA4;&#x61D2;&#x6267;&#x884C;&#xFF0C;&#x6570;&#x636E;&#x6E90;&#x53D8;&#x5316;&#x65F6;&#x624D;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8981;&#x521D;&#x59CB;&#x8FDB;&#x6765;&#xFF0C;<strong>&#x7ACB;&#x5373;&#x6267;&#x884C;</strong>&#x8BBE;&#x7F6E; <strong>immediate: true</strong></li>
+<li>&#x8BBE;&#x7F6E;<strong>deep: true</strong> &#x6DF1;&#x5C42;&#x904D;&#x5386;&#xFF08;&#x9ED8;&#x8BA4;&#x6D45;&#x5C42;&#x76D1;&#x542C;&#xFF0C;&#x53EA;&#x76D1;&#x542C;&#x9876;&#x5C42;&#x7684;&#x5C5E;&#x6027;&#x53D8;&#x5316;&#xFF09;&#x3002;Vue3.5+&#x4E2D;&#xFF0C;deep&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x6570;&#x5B57;&#xFF0C;&#x8868;&#x793A;&#x6700;&#x5927;&#x904D;&#x5386;&#x5C42;&#x6570;&#x3002;<strong>&#x6DF1;&#x5EA6;&#x76D1;&#x542C;</strong>&#x6709;&#x6027;&#x80FD;&#x5F00;&#x9500;&#xFF0C;&#x8C28;&#x614E;&#x4F7F;&#x7528;</li>
+<li><strong>once: true </strong>&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;</li>
+<li><strong>flush: &apos;post&apos; </strong>&#x56DE;&#x8C03;&#x89E6;&#x53D1;&#x65F6;&#x673A;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4FA6;&#x542C;&#x5668;&#x56DE;&#x8C03;&#x4F1A;&#x5728;&#x7236;&#x7EC4;&#x4EF6;&#x66F4;&#x65B0;&#x4E4B;&#x540E;&#xFF0C;&#x6240;&#x5C5E;<strong>&#x7EC4;&#x4EF6;DOM&#x66F4;&#x65B0;&#x4E4B;&#x524D;</strong>&#x8C03;&#x7528;</li>
+<li><ul>
+<li>post: &#x60F3;&#x8BA9;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x8BBF;&#x95EE;vue<strong>&#x66F4;&#x65B0;&#x4E4B;&#x540E;</strong>&#x6240;&#x5C5E;&#x7EC4;&#x4EF6;&#x7684;<strong>DOM</strong></li>
+<li>pre: &#x9ED8;&#x8BA4;</li>
+<li>sync: &#x540C;&#x6B65;&#x4FA6;&#x542C;&#x5668;&#xFF0C;&#x5728;vue&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x66F4;&#x65B0;&#x4E4B;&#x524D;&#x89E6;&#x53D1;</li>
+</ul>
+</li>
+</ul>
 <pre><code class="lang-js">&lt;script setup&gt;
 
   import { ref, watch } from &apos;vue&apos;
@@ -3319,30 +3331,81 @@
   const y = ref(0)
   const sum = ref(0)
 
-  // &#x76D1;&#x542C;&#x5355;&#x4E2A; ref
+  // 1. &#x76D1;&#x542C;&#x5355;&#x4E2A; ref
   watch(value1, (newVal, oldVal) =&gt; {
     console.log(`value1 changed from ${oldVal} to ${newVal}`)
+  }, {
+    immediate: true, // &#x521D;&#x59CB;&#x8FDB;&#x6765;&#xFF0C;&#x7ACB;&#x5373;&#x6267;&#x884C;&#x4E00;&#x6B21;
+    deep: true, // &#x6DF1;&#x5C42;&#x904D;&#x5386;&#xFF0C;&#x5FC5;&#x8981;&#x65F6;&#x4F7F;&#x7528;&#xFF0C;&#x6709;&#x6027;&#x80FD;&#x5F00;&#x9500;
+    once: true, // &#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;
+    flush: &apos;post&apos;  // &#x56DE;&#x8C03;&#x89E6;&#x53D1;&#x65F6;&#x673A;
   })
 
-  // &#x76D1;&#x542C;getter&#x51FD;&#x6570;
+  // 2. &#x76D1;&#x542C;getter&#x51FD;&#x6570;&#xFF08;&#x76D1;&#x542C;reactive&#x5BF9;&#x8C61;&#x7684;&#x7279;&#x5B9A;&#x5C5E;&#x6027;&#xFF0C;&#x6216;&#x8005;&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x6D3E;&#x751F;&#x503C;&#x65F6;&#xFF09;
+  // 2.1 &#x76D1;&#x542C;reactive&#x5BF9;&#x8C61;&#x7684;&#x7279;&#x5B9A;&#x5C5E;&#x6027;
+  const user = reactive({ name: &apos;John&apos;, age: 25 })
   watch(
-    () =&gt; x.value + y.value,
+    () =&gt; user.name,  // &#x53EA;&#x76D1;&#x542C; name &#x53D8;&#x5316;
+    (newName) =&gt; {
+      console.log(&apos;&#x7528;&#x6237;&#x540D;&#x53D8;&#x5316;:&apos;, newName)
+    }
+  )
+  // 2.2 &#x8BA1;&#x7B97;&#x6D3E;&#x751F;&#x503C;
+  watch(
+    () =&gt; x.value + y.value, // &#x76D1;&#x542C;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;
     (sum) =&gt; {
       console.log(`sum is ${sum}`)
     }
   )
 
-  // &#x76D1;&#x542C;&#x591A;&#x4E2A;&#x6765;&#x6E90;&#x7EC4;&#x6210;&#x7684;&#x6570;&#x7EC4;
-  watch([x, () =&gt; y.value], ([newX, newY]) =&gt; {
+  // 3. &#x76D1;&#x542C;&#x591A;&#x4E2A;&#x6765;&#x6E90;&#x7EC4;&#x6210;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x53C2;&#x6570;&#xFF08;&#x65B0;&#x503C;&#x6570;&#x7EC4;&#x3001;&#x65E7;&#x503C;&#x6570;&#x7EC4;&#xFF09;
+  watch([x, () =&gt; y.value], ([newX, newY], [oldX, oldY]) =&gt; {
     console.log(`x is ${newX}, y is ${newY}`)
   })
 
 &lt;/script&gt;
 
 &lt;template&gt;
-  &lt;input ref=&quot;my-input&quot; type=&quot;text&quot; :value=&quot;value1&quot; @input=&quot;value1 = $event.target.value&quot; /&gt;
+  &lt;input ref=&quot;my-input&quot; v-model=&quot;value1&quot; /&gt;
 &lt;/template&gt;
 </code></pre>
+<h3 id="watcheffect">watchEffect</h3>
+<blockquote>
+<p>&#x53EA;&#x76D1;&#x542C;<strong>&#x56DE;&#x8C03;&#x4E2D;</strong>&#x7528;&#x5230;&#x7684;<strong>&#x5C5E;&#x6027;</strong>&#xFF0C;&#x6BD4;&#x6DF1;&#x5EA6;&#x76D1;&#x542C;&#x66F4;&#x6709;&#x6548;&#xFF0C;&#x4E0D;&#x4F1A;&#x65E0;&#x8111;&#x6DF1;&#x5EA6;&#x904D;&#x5386;&#x6240;&#x6709;&#x5C5E;&#x6027;</p>
+</blockquote>
+<pre><code class="lang-js">watchEffect(<span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> fetch(
+    <span class="hljs-string">`https://jsonplaceholder.typicode.com/todos/<span class="hljs-subst">${todoId.value}</span>`</span>  <span class="hljs-comment">// &#x81EA;&#x52A8;&#x8FFD;&#x8E2A; todoId.value</span>
+  )
+  data.value = <span class="hljs-keyword">await</span> response.json()
+})
+</code></pre>
+<ul>
+<li>flush&#xFF1A;&#x4FEE;&#x6539;&#x56DE;&#x8C03;&#x89E6;&#x53D1;&#x65F6;&#x673A;</li>
+</ul>
+<pre><code class="lang-js">watchEffect(callback, {
+  flush: <span class="hljs-string">&apos;post&apos;</span> <span class="hljs-comment">// &#x2018;sync&#x2019;</span>
+})
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x540E;&#x7F6E;&#x5237;&#x65B0;&#x7684; watchEffect&#xFF0C;&#x6709;&#x4E2A;&#x522B;&#x540D; watchPostEffect</span>
+<span class="hljs-keyword">import</span> { watchPostEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+
+watchPostEffect(() =&gt; {
+  <span class="hljs-comment">/* &#x5728; Vue &#x66F4;&#x65B0;&#x540E;&#x6267;&#x884C; */</span>
+})
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x540C;&#x6B65;&#x89E6;&#x53D1;&#x7684; watchEffect&#xFF0C;&#x6709;&#x4E2A;&#x522B;&#x540D; watchSyncEffect</span>
+<span class="hljs-keyword">import</span> { watchSyncEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+
+watchSyncEffect(() =&gt; {
+  <span class="hljs-comment">/* &#x5728;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x53D8;&#x5316;&#x65F6;&#x540C;&#x6B65;&#x6267;&#x884C; */</span>
+})
+</code></pre>
+<h3 id="watch-&#x548C;-watcheffect-&#x7684;&#x533A;&#x522B;">watch &#x548C; watchEffect &#x7684;&#x533A;&#x522B;</h3>
+<ul>
+<li>watch&#xFF1A;<strong>&#x660E;&#x786E;&#x8FFD;&#x8E2A;&#x6307;&#x5B9A;&#x5C5E;&#x6027;</strong>&#xFF0C;&#x7CBE;&#x786E;&#x63A7;&#x5236;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x65F6;&#x673A;&#x3002;&#x9700;&#x8981;&#x6BD4;&#x5BF9;<strong>&#x65B0;&#x65E7;&#x503C;</strong>&#x65F6;&#x7528;watch</li>
+<li>watchEffect&#xFF1A;&#x540C;&#x6B65;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;<strong>&#x81EA;&#x52A8;&#x8FFD;&#x8E2A;&#x6240;&#x6709;</strong>&#x80FD;&#x8BBF;&#x95EE;&#x5230;&#x7684;&#x54CD;&#x5E94;&#x5F0F;<strong>&#x5C5E;&#x6027;</strong>&#xFF0C;&#x8FD9;&#x66F4;&#x65B9;&#x4FBF;&#x3001;&#x66F4;&#x9AD8;&#x6548;&#xFF0C;&#x4F46;&#x6709;&#x65F6;&#x54CD;&#x5E94;&#x6027;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x4E0D;&#x90A3;&#x4E48;&#x660E;&#x663E;</li>
+</ul>
 
                                 
                                 </section>
@@ -3370,7 +3433,7 @@
 
             
                 
-                <a href="reactive.html" class="navigation navigation-prev " aria-label="Previous page: reactive">
+                <a href="reactive.html" class="navigation navigation-prev " aria-label="Previous page: ref和reactive声明响应式对象">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -3386,7 +3449,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"watch","level":"1.18.7","depth":2,"next":{"title":"React","level":"1.19","depth":1,"path":"react.md","ref":"react.md","articles":[{"title":"react-router","level":"1.19.1","depth":2,"path":"react/react-router.md","ref":"react/react-router.md","articles":[{"title":"路由传参方式","level":"1.19.1.1","depth":3,"path":"react/react-router/lu-you-chuan-can-fang-shi.md","ref":"react/react-router/lu-you-chuan-can-fang-shi.md","articles":[]},{"title":"编程式路由导航","level":"1.19.1.2","depth":3,"path":"react/react-router/bian-cheng-shi-lu-you-dao-hang.md","ref":"react/react-router/bian-cheng-shi-lu-you-dao-hang.md","articles":[]}]},{"title":"jsx和diff","level":"1.19.2","depth":2,"path":"react/jsx.md","ref":"react/jsx.md","articles":[]},{"title":"定义组件的方式","level":"1.19.3","depth":2,"path":"react/reactding-yi-zu-jian-de-fang-shi.md","ref":"react/reactding-yi-zu-jian-de-fang-shi.md","articles":[]},{"title":"定义ref的方式","level":"1.19.4","depth":2,"path":"react/ref.md","ref":"react/ref.md","articles":[]},{"title":"生命周期","level":"1.19.5","depth":2,"path":"react/sheng-ming-zhou-qi.md","ref":"react/sheng-ming-zhou-qi.md","articles":[]},{"title":"react脚手架配置代理的方式","level":"1.19.6","depth":2,"path":"react/reactjiao-shou-jia-pei-zhi-dai-li-de-fang-shi.md","ref":"react/reactjiao-shou-jia-pei-zhi-dai-li-de-fang-shi.md","articles":[]},{"title":"组件通信","level":"1.19.7","depth":2,"path":"react/zu-jian-tong-xin.md","ref":"react/zu-jian-tong-xin.md","articles":[]},{"title":"setState","level":"1.19.8","depth":2,"path":"react/setstate.md","ref":"react/setstate.md","articles":[]},{"title":"lazy-load","level":"1.19.9","depth":2,"path":"react/lazy-load.md","ref":"react/lazy-load.md","articles":[]},{"title":"hooks","level":"1.19.10","depth":2,"path":"react/hooks.md","ref":"react/hooks.md","articles":[]},{"title":"Fragment","level":"1.19.11","depth":2,"path":"react/fragment.md","ref":"react/fragment.md","articles":[]},{"title":"context","level":"1.19.12","depth":2,"path":"react/context.md","ref":"react/context.md","articles":[]},{"title":"PureComponent","level":"1.19.13","depth":2,"path":"react/purecomponent.md","ref":"react/purecomponent.md","articles":[]},{"title":"renderProps","level":"1.19.14","depth":2,"path":"react/renderprops.md","ref":"react/renderprops.md","articles":[]},{"title":"errorBoundary","level":"1.19.15","depth":2,"path":"react/errorboundary.md","ref":"react/errorboundary.md","articles":[]},{"title":"Redux","level":"1.19.16","depth":2,"path":"react/redux.md","ref":"react/redux.md","articles":[]}]},"previous":{"title":"reactive","level":"1.18.6","depth":2,"path":"vue3/reactive.md","ref":"vue3/reactive.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue3/watch.md","mtime":"2026-05-20T10:19:13.810Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-05-22T07:49:03.981Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"watch和watchEffect","level":"1.18.7","depth":2,"next":{"title":"React","level":"1.19","depth":1,"path":"react.md","ref":"react.md","articles":[{"title":"react-router","level":"1.19.1","depth":2,"path":"react/react-router.md","ref":"react/react-router.md","articles":[{"title":"路由传参方式","level":"1.19.1.1","depth":3,"path":"react/react-router/lu-you-chuan-can-fang-shi.md","ref":"react/react-router/lu-you-chuan-can-fang-shi.md","articles":[]},{"title":"编程式路由导航","level":"1.19.1.2","depth":3,"path":"react/react-router/bian-cheng-shi-lu-you-dao-hang.md","ref":"react/react-router/bian-cheng-shi-lu-you-dao-hang.md","articles":[]}]},{"title":"jsx和diff","level":"1.19.2","depth":2,"path":"react/jsx.md","ref":"react/jsx.md","articles":[]},{"title":"定义组件的方式","level":"1.19.3","depth":2,"path":"react/reactding-yi-zu-jian-de-fang-shi.md","ref":"react/reactding-yi-zu-jian-de-fang-shi.md","articles":[]},{"title":"定义ref的方式","level":"1.19.4","depth":2,"path":"react/ref.md","ref":"react/ref.md","articles":[]},{"title":"生命周期","level":"1.19.5","depth":2,"path":"react/sheng-ming-zhou-qi.md","ref":"react/sheng-ming-zhou-qi.md","articles":[]},{"title":"react脚手架配置代理的方式","level":"1.19.6","depth":2,"path":"react/reactjiao-shou-jia-pei-zhi-dai-li-de-fang-shi.md","ref":"react/reactjiao-shou-jia-pei-zhi-dai-li-de-fang-shi.md","articles":[]},{"title":"组件通信","level":"1.19.7","depth":2,"path":"react/zu-jian-tong-xin.md","ref":"react/zu-jian-tong-xin.md","articles":[]},{"title":"setState","level":"1.19.8","depth":2,"path":"react/setstate.md","ref":"react/setstate.md","articles":[]},{"title":"lazy-load","level":"1.19.9","depth":2,"path":"react/lazy-load.md","ref":"react/lazy-load.md","articles":[]},{"title":"hooks","level":"1.19.10","depth":2,"path":"react/hooks.md","ref":"react/hooks.md","articles":[]},{"title":"Fragment","level":"1.19.11","depth":2,"path":"react/fragment.md","ref":"react/fragment.md","articles":[]},{"title":"context","level":"1.19.12","depth":2,"path":"react/context.md","ref":"react/context.md","articles":[]},{"title":"PureComponent","level":"1.19.13","depth":2,"path":"react/purecomponent.md","ref":"react/purecomponent.md","articles":[]},{"title":"renderProps","level":"1.19.14","depth":2,"path":"react/renderprops.md","ref":"react/renderprops.md","articles":[]},{"title":"errorBoundary","level":"1.19.15","depth":2,"path":"react/errorboundary.md","ref":"react/errorboundary.md","articles":[]},{"title":"Redux","level":"1.19.16","depth":2,"path":"react/redux.md","ref":"react/redux.md","articles":[]}]},"previous":{"title":"ref和reactive声明响应式对象","level":"1.18.6","depth":2,"path":"vue3/reactive.md","ref":"vue3/reactive.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue3/watch.md","mtime":"2026-06-01T02:58:19.862Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-06-02T09:18:33.409Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
