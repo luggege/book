@@ -1232,7 +1232,7 @@
                 <a href="../httpxie-yi.html">
             
                     
-                    HTTP协议
+                    HTTP协议、DNS查询原理、TCP握手/挥手
             
                 </a>
             
@@ -2393,6 +2393,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.15.20" data-path="nexttick.html">
+            
+                <a href="nexttick.html">
+            
+                    
+                    vue2和vue3中nextTick的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -2664,19 +2677,6 @@
             
                     
                     keep-alive
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.18.9" data-path="nexttick.html">
-            
-                <a href="nexttick.html">
-            
-                    
-                    vue3 nextTick&和vue2的对比
             
                 </a>
             
@@ -3366,7 +3366,8 @@
 <li>vue2&#x7684;&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x539F;&#x7406;</li>
 </ul>
 <blockquote>
-<p>&#x9996;&#x5148;&#x5229;&#x7528;ES5 &#x7684; defineProperty&#x7684;get&#x3001;set&#x6765;&#x5B9A;&#x4E49;&#x83B7;&#x53D6;&#x5C5E;&#x6027;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;Ovserve&#x65B9;&#x6CD5;&#xFF0C;&#x542F;&#x7528;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#xFF0C;&#x5F53;&#x6570;&#x636E;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x4F1A;&#x901A;&#x77E5;watcher&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#xFF0C;&#x901A;&#x8FC7;compile&#x6A21;&#x7248;&#x6307;&#x4EE4;&#x66F4;&#x65B0;&#x89C6;&#x56FE;</p>
+<p>&#x9996;&#x5148;&#x5229;&#x7528;ES5 &#x7684; defineProperty&#x7684;get&#x3001;set&#x6765;&#x5B9A;&#x4E49;&#x83B7;&#x53D6;&#x5C5E;&#x6027;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;Ovserve&#x65B9;&#x6CD5;&#xFF0C;&#x542F;&#x7528;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#xFF0C;&#x5F53;&#x6570;&#x636E;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x4F1A;&#x901A;&#x77E5;watcher&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#xFF08;&#x6BCF;&#x4E2A;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x90FD;&#x4F1A;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;watcher&#x5B9E;&#x4F8B;&#xFF09;&#xFF0C;&#x901A;&#x8FC7;compile&#x6A21;&#x7248;&#x6307;&#x4EE4;&#x66F4;&#x65B0;&#x89C6;&#x56FE;&#xFF08;&#x7EC4;&#x4EF6;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF09;&#x3002;</p>
+<p>Vue&#x7684;DOM&#x66F4;&#x65B0;&#x662F;<strong>&#x5F02;&#x6B65;</strong>&#x6267;&#x884C;&#x7684;&#xFF0C;&#x8BE6;&#x89C1;&#xFF1A;vue2&#x548C;vue3&#x4E2D;nextTick&#x7684;&#x5BF9;&#x6BD4;</p>
 </blockquote>
 <pre><code class="lang-js"><span class="hljs-built_in">Object</span>.defineProperty(obj, key, {
       enumerable: <span class="hljs-literal">true</span>,
@@ -3463,7 +3464,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"vue2/vue3双向数据绑定、React单向数据流","level":"1.15.2","depth":2,"next":{"title":"Vue的安装及使用","level":"1.15.3","depth":2,"path":"vue/vuede-an-zhuang-ji-shi-yong.md","ref":"vue/vuede-an-zhuang-ji-shi-yong.md","articles":[]},"previous":{"title":"MVC和MVVM的区别","level":"1.15.1","depth":2,"path":"vue/mvc-he-mvvm-de-qu-bie.md","ref":"vue/mvc-he-mvvm-de-qu-bie.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/shuang-xiang-shu-ju-bang-ding.md","mtime":"2026-06-04T09:13:28.248Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-06-04T09:39:51.411Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"vue2/vue3双向数据绑定、React单向数据流","level":"1.15.2","depth":2,"next":{"title":"Vue的安装及使用","level":"1.15.3","depth":2,"path":"vue/vuede-an-zhuang-ji-shi-yong.md","ref":"vue/vuede-an-zhuang-ji-shi-yong.md","articles":[]},"previous":{"title":"MVC和MVVM的区别","level":"1.15.1","depth":2,"path":"vue/mvc-he-mvvm-de-qu-bie.md","ref":"vue/mvc-he-mvvm-de-qu-bie.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/shuang-xiang-shu-ju-bang-ding.md","mtime":"2026-06-07T08:02:03.955Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-06-07T10:41:12.260Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

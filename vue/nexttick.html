@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>vue3 nextTick&和vue2的对比 · GitBook</title>
+        <title>vue2和vue3中nextTick的对比 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../react.html" />
+    <link rel="next" href="vuex.html" />
     
     
-    <link rel="prev" href="../vue3/keep-alive.html" />
+    <link rel="prev" href="keepalive.html" />
     
 
     </head>
@@ -1232,7 +1232,7 @@
                 <a href="../httpxie-yi.html">
             
                     
-                    HTTP协议
+                    HTTP协议、DNS查询原理、TCP握手/挥手
             
                 </a>
             
@@ -2393,6 +2393,19 @@
             
         </li>
     
+        <li class="chapter active" data-level="1.15.20" data-path="nexttick.html">
+            
+                <a href="nexttick.html">
+            
+                    
+                    vue2和vue3中nextTick的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -2664,19 +2677,6 @@
             
                     
                     keep-alive
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.18.9" data-path="nexttick.html">
-            
-                <a href="nexttick.html">
-            
-                    
-                    vue3 nextTick&和vue2的对比
             
                 </a>
             
@@ -3346,7 +3346,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >vue3 nextTick&和vue2的对比</a>
+        <a href=".." >vue2和vue3中nextTick的对比</a>
     </h1>
 </div>
 
@@ -3363,9 +3363,9 @@
                                 
                                 <h3 id="nexttick">nextTick</h3>
 <blockquote>
-<p>vue&#x4E2D;&#x66F4;&#x6539;&#x54CD;&#x5E94;&#x5F0F;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x9A6C;&#x4E0A;&#x66F4;&#x65B0;DOM&#xFF0C;&#x800C;&#x662F;&#x5C06;&#x4ED6;&#x4EEC;&#x7F13;&#x5B58;&#x5230;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x76F4;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x201C;tick&#x201D;&#x624D;&#x4E00;&#x8D77;&#x6267;&#x884C;&#x3002;&#x8FD9;&#x6837;&#x662F;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x4E0D;&#x8BBA;&#x7EC4;&#x4EF6;&#x53D1;&#x751F;&#x591A;&#x5C11;&#x6B21;&#x72B6;&#x6001;&#x6539;&#x53D8;&#xFF0C;&#x90FD;&#x4EC5;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x66F4;&#x65B0;&#x3002;</p>
+<p>vue&#x5728;&#x66F4;&#x65B0;DOM&#x65F6;&#x662F;<strong>&#x5F02;&#x6B65;</strong>&#x6267;&#x884C;&#x7684;&#xFF1A;vue&#x4E2D;&#x66F4;&#x6539;&#x54CD;&#x5E94;&#x5F0F;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x9A6C;&#x4E0A;&#x66F4;&#x65B0;DOM&#xFF0C;&#x800C;&#x662F;&#x5C06;&#x4ED6;&#x4EEC;&#x7F13;&#x5B58;&#x5230;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x76F4;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x201C;tick&#x201D;&#x624D;&#x4E00;&#x8D77;&#x6267;&#x884C;&#x3002;&#x8FD9;&#x6837;&#x662F;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x4E0D;&#x8BBA;&#x7EC4;&#x4EF6;&#x53D1;&#x751F;&#x591A;&#x5C11;&#x6B21;&#x72B6;&#x6001;&#x6539;&#x53D8;&#xFF0C;&#x90FD;&#x4EC5;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x66F4;&#x65B0;&#x3002;</p>
 </blockquote>
-<p>nextTick() &#x53EF;&#x4EE5;&#x5728;&#x72B6;&#x6001;&#x6539;&#x53D8;&#x540E;&#x7ACB;&#x5373;&#x4F7F;&#x7528;&#xFF0C;&#x4EE5;&#x7B49;&#x5F85;DOM&#x66F4;&#x65B0;&#x5B8C;&#x6210;</p>
+<p><strong>nextTick</strong>(callback) &#x53EF;&#x4EE5;&#x5728;&#x72B6;&#x6001;&#x6539;&#x53D8;&#x540E;&#x7ACB;&#x5373;&#x4F7F;&#x7528;&#xFF0C;&#x8FD9;&#x6837;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5C06;&#x5728;<strong>DOM&#x66F4;&#x65B0;&#x5B8C;&#x6210;&#x540E;</strong>&#x88AB;&#x8C03;&#x7528;</p>
 <h3 id="vue2&#x548C;vue3&#x4E2D;&#x7684;nexttick&#x5BF9;&#x6BD4;">vue2&#x548C;vue3&#x4E2D;&#x7684;nextTick&#x5BF9;&#x6BD4;</h3>
 <ul>
 <li>vue2&#xFF0C;&#x65E9;&#x671F;&#x5F00;&#x53D1;&#x7531;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;Promise&#x7684;&#x652F;&#x6301;&#x8FD8;&#x4E0D;&#x662F;&#x5F88;&#x53CB;&#x597D;&#xFF0C;nextTIck&#x4E3A;&#x4E86;<strong>&#x517C;&#x5BB9;</strong>&#x65E7;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x91C7;&#x7528;&#x591A;&#x7EA7;&#x964D;&#x7EA7;&#x7B56;&#x7565;&#xFF0C;&#x5148;&#x5C1D;&#x8BD5;<strong>&#x5FAE;&#x4EFB;&#x52A1;</strong>&#xFF0C;&#x5230;&#x6700;&#x540E;&#x7684;<strong>&#x5B8F;&#x4EFB;&#x52A1;</strong>&#xFF0C;&#x4FDD;&#x8BC1;&#x80FD;&#x8FD0;&#x884C;</li>
@@ -3418,12 +3418,12 @@ nextTick(() =&gt; {
 
             
                 
-                <a href="../vue3/keep-alive.html" class="navigation navigation-prev " aria-label="Previous page: keep-alive">
+                <a href="keepalive.html" class="navigation navigation-prev " aria-label="Previous page: keep-alive活性组件">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../react.html" class="navigation navigation-next " aria-label="Next page: React">
+                <a href="vuex.html" class="navigation navigation-next " aria-label="Next page: Vuex">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -3434,7 +3434,7 @@ nextTick(() =&gt; {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"vue3 nextTick&和vue2的对比","level":"1.18.9","depth":2,"next":{"title":"React","level":"1.19","depth":1,"path":"react.md","ref":"react.md","articles":[{"title":"react-router","level":"1.19.1","depth":2,"path":"react/react-router.md","ref":"react/react-router.md","articles":[{"title":"路由传参方式","level":"1.19.1.1","depth":3,"path":"react/react-router/lu-you-chuan-can-fang-shi.md","ref":"react/react-router/lu-you-chuan-can-fang-shi.md","articles":[]},{"title":"编程式路由导航","level":"1.19.1.2","depth":3,"path":"react/react-router/bian-cheng-shi-lu-you-dao-hang.md","ref":"react/react-router/bian-cheng-shi-lu-you-dao-hang.md","articles":[]}]},{"title":"jsx和diff","level":"1.19.2","depth":2,"path":"react/jsx.md","ref":"react/jsx.md","articles":[]},{"title":"定义组件的方式","level":"1.19.3","depth":2,"path":"react/reactding-yi-zu-jian-de-fang-shi.md","ref":"react/reactding-yi-zu-jian-de-fang-shi.md","articles":[]},{"title":"定义ref的方式","level":"1.19.4","depth":2,"path":"react/ref.md","ref":"react/ref.md","articles":[]},{"title":"生命周期","level":"1.19.5","depth":2,"path":"react/sheng-ming-zhou-qi.md","ref":"react/sheng-ming-zhou-qi.md","articles":[]},{"title":"react脚手架配置代理的方式","level":"1.19.6","depth":2,"path":"react/reactjiao-shou-jia-pei-zhi-dai-li-de-fang-shi.md","ref":"react/reactjiao-shou-jia-pei-zhi-dai-li-de-fang-shi.md","articles":[]},{"title":"组件通信","level":"1.19.7","depth":2,"path":"react/zu-jian-tong-xin.md","ref":"react/zu-jian-tong-xin.md","articles":[]},{"title":"setState","level":"1.19.8","depth":2,"path":"react/setstate.md","ref":"react/setstate.md","articles":[]},{"title":"lazy-load","level":"1.19.9","depth":2,"path":"react/lazy-load.md","ref":"react/lazy-load.md","articles":[]},{"title":"hooks","level":"1.19.10","depth":2,"path":"react/hooks.md","ref":"react/hooks.md","articles":[]},{"title":"Fragment","level":"1.19.11","depth":2,"path":"react/fragment.md","ref":"react/fragment.md","articles":[]},{"title":"context","level":"1.19.12","depth":2,"path":"react/context.md","ref":"react/context.md","articles":[]},{"title":"PureComponent","level":"1.19.13","depth":2,"path":"react/purecomponent.md","ref":"react/purecomponent.md","articles":[]},{"title":"renderProps","level":"1.19.14","depth":2,"path":"react/renderprops.md","ref":"react/renderprops.md","articles":[]},{"title":"errorBoundary","level":"1.19.15","depth":2,"path":"react/errorboundary.md","ref":"react/errorboundary.md","articles":[]},{"title":"Redux","level":"1.19.16","depth":2,"path":"react/redux.md","ref":"react/redux.md","articles":[]}]},"previous":{"title":"keep-alive","level":"1.18.8","depth":2,"path":"vue3/keep-alive.md","ref":"vue3/keep-alive.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/nexttick.md","mtime":"2026-06-04T03:53:13.206Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-06-04T09:39:51.411Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"vue2和vue3中nextTick的对比","level":"1.15.20","depth":2,"next":{"title":"Vuex","level":"1.16","depth":1,"path":"vue/vuex.md","ref":"vue/vuex.md","articles":[{"title":"安装及使用","level":"1.16.1","depth":2,"path":"vue/vuex/an-zhuang-ji-shi-yong.md","ref":"vue/vuex/an-zhuang-ji-shi-yong.md","articles":[]},{"title":"修改state的三种方式","level":"1.16.2","depth":2,"path":"vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md","ref":"vue/vuex/xiu-gai-state-de-san-zhong-fang-shi.md","articles":[]},{"title":"严格模式","level":"1.16.3","depth":2,"path":"vue/vuex/yan-ge-mo-shi.md","ref":"vue/vuex/yan-ge-mo-shi.md","articles":[]},{"title":"四种辅助函数","level":"1.16.4","depth":2,"path":"vue/vuex/fu-zhu-han-shu.md","ref":"vue/vuex/fu-zhu-han-shu.md","articles":[]}]},"previous":{"title":"keep-alive活性组件","level":"1.15.19","depth":2,"path":"vue/keepalive.md","ref":"vue/keepalive.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/nexttick.md","mtime":"2026-06-07T07:09:23.821Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-06-07T10:41:12.260Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1232,7 +1232,7 @@
                 <a href="../httpxie-yi.html">
             
                     
-                    HTTP协议
+                    HTTP协议、DNS查询原理、TCP握手/挥手
             
                 </a>
             
@@ -2393,6 +2393,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.15.20" data-path="nexttick.html">
+            
+                <a href="nexttick.html">
+            
+                    
+                    vue2和vue3中nextTick的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -2664,19 +2677,6 @@
             
                     
                     keep-alive
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.18.9" data-path="nexttick.html">
-            
-                <a href="nexttick.html">
-            
-                    
-                    vue3 nextTick&和vue2的对比
             
                 </a>
             
@@ -3364,12 +3364,24 @@
                                 <h3 id="vueset">Vue.set()</h3>
 <p>&#x4F5C;&#x7528;&#xFF1A;</p>
 <ul>
-<li>&#x7ED9;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x54CD;&#x5E94;&#x5F0F;&#x5C5E;&#x6027;</li>
-<li>&#x66F4;&#x65B0;&#x6570;&#x7EC4;</li>
+<li>&#x5BF9;&#x4E8E;<strong>&#x5BF9;&#x8C61;</strong>&#xFF1A;&#x7ED9;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x54CD;&#x5E94;&#x5F0F;&#x5C5E;&#x6027;</li>
 </ul>
+<blockquote>
+<p>&#x5BF9;&#x4E8E;&#x5DF2;&#x7ECF;&#x521B;&#x5EFA;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;vue&#x4E0D;&#x5141;&#x8BB8;&#x52A8;&#x6001;&#x7684;&#x6DFB;&#x52A0;&#x6839;&#x7EA7;&#x522B;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x5C5E;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Vue.set(object, propertyName, value)&#x65B9;&#x6CD5;&#x5411;&#x5D4C;&#x5957;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x54CD;&#x5E94;&#x5F0F;&#x5C5E;&#x6027;</p>
+</blockquote>
+<ul>
+<li>&#x5BF9;&#x4E8E;<strong>&#x6570;&#x7EC4;</strong>&#xFF1A;&#x66F4;&#x65B0;&#x6570;&#x7EC4;</li>
+</ul>
+<blockquote>
+<p>&#x4EE5;&#x4E0B;&#x60C5;&#x51B5;&#xFF0C;vue&#x4E0D;&#x80FD;&#x68C0;&#x6D4B;&#x5230;&#x53D8;&#x5316;&#xFF1A;</p>
+<ul>
+<li>&#x5229;&#x7528;<strong>&#x7D22;&#x5F15;</strong>&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x6570;&#x7EC4;&#x9879;&#x65F6;</li>
+<li>&#x4FEE;&#x6539;<strong>&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;</strong>&#x65F6;</li>
+</ul>
+</blockquote>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
   data: {
-    a: <span class="hljs-number">1</span>,      <span class="hljs-comment">// &#x56E0;&#x4E3A;vue&#x5B9E;&#x4F8B;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;data&#x91CC;&#x7684;&#x6570;&#x636E;&#x624D;&#x80FD;getter/setter&#x8F6C;&#x6362;&#x5316;</span>
+    a: <span class="hljs-number">1</span>,      <span class="hljs-comment">// &#x56E0;&#x4E3A;vue&#x5B9E;&#x4F8B;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;data&#x91CC;&#x7684;&#x6570;&#x636E;&#x624D;&#x80FD;getter/setter&#x8F6C;&#x5316;</span>
     arr: [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
   }
 })
@@ -3379,10 +3391,8 @@ vm.b = <span class="hljs-number">2</span>
 <span class="hljs-comment">// `vm.b` &#x4E0D;&#x662F;&#x54CD;&#x5E94;&#x5F0F;&#x7684;</span>
 
 <span class="hljs-comment">// vm.arr[1] = &apos;G&apos;  // &#x4E0D;&#x662F;&#x54CD;&#x5E94;&#x5F0F;&#x7684;</span>
+<span class="hljs-comment">// vm.arr.length = 2  // &#x4E0D;&#x662F;&#x54CD;&#x5E94;&#x5F0F;&#x7684;</span>
 </code></pre>
-<blockquote>
-<p>vue&#x4E0D;&#x5141;&#x8BB8;&#x52A8;&#x6001;&#x7684;&#x6DFB;&#x52A0;&#x6839;&#x7EA7;&#x522B;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x5C5E;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Vue.set(object, propertyName, value)&#x65B9;&#x6CD5;&#x5411;&#x5D4C;&#x5957;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x54CD;&#x5E94;&#x5F0F;&#x5C5E;&#x6027;</p>
-</blockquote>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
   data: {
     userProfile: {
@@ -3396,7 +3406,7 @@ Vue.set(vm.userProfile, <span class="hljs-string">&apos;age&apos;</span>, <span 
 <span class="hljs-comment">// &#x6216;&#x8005;</span>
 vm.$set(vm.userProfile, <span class="hljs-string">&apos;age&apos;</span>, <span class="hljs-number">27</span>)
 </code></pre>
-<pre><code class="lang-js"><span class="hljs-comment">// &#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x4FEE;&#x6539;&#x6570;&#x7EC4;&#x3001;&#x4FEE;&#x6539;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#xFF0C;vue&#x662F;&#x4E0D;&#x80FD;&#x68C0;&#x6D4B;&#x5230;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x66F4;&#x65B0;&#x89C6;&#x56FE;</span>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x4FEE;&#x6539;&#x6570;&#x7EC4;&#x9879;&#x3001;&#x4FEE;&#x6539;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#xFF0C;vue&#x662F;&#x4E0D;&#x80FD;&#x68C0;&#x6D4B;&#x5230;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x66F4;&#x65B0;&#x89C6;&#x56FE;</span>
 <span class="hljs-comment">// &#x5176;&#x4ED6;&#x4FEE;&#x6539;&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x5F0F;</span>
 <span class="hljs-number">1.</span>set
 Vue.set(vm.arr, <span class="hljs-number">1</span>, <span class="hljs-string">&apos;w&apos;</span>)
@@ -3455,7 +3465,7 @@ vm.arr = [...vm.arr[<span class="hljs-number">1</span>]]
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"this.$set","level":"1.15.13","depth":2,"next":{"title":"this.$delete","level":"1.15.14","depth":2,"path":"vue/thisdelete.md","ref":"vue/thisdelete.md","articles":[]},"previous":{"title":"v-model","level":"1.15.12","depth":2,"path":"vue/v-model.md","ref":"vue/v-model.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/thisset.md","mtime":"2026-06-03T16:23:43.771Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-06-04T09:39:51.411Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"this.$set","level":"1.15.13","depth":2,"next":{"title":"this.$delete","level":"1.15.14","depth":2,"path":"vue/thisdelete.md","ref":"vue/thisdelete.md","articles":[]},"previous":{"title":"v-model","level":"1.15.12","depth":2,"path":"vue/v-model.md","ref":"vue/v-model.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/thisset.md","mtime":"2026-06-07T08:26:46.466Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-06-07T10:41:12.260Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
